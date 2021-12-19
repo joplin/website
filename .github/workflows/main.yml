@@ -4,15 +4,33 @@ jobs:
   Main:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout main Joplin repository
         uses: actions/checkout@v2
         with:
           repository: 'laurent22/joplin'
           ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
           path: 'joplin'
+
       - name: Checkout main Joplin website repository
         uses: actions/checkout@v2
         with:
           repository: 'joplin/website'
           ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
           path: 'joplin-website'
+
+      - name: Checkout main Joplin website repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'joplin/website'
+          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
+          path: 'joplin-website'
+
+      - name: Install Linux dependencies
+        run: |
+          sudo apt-get update || true
+          sudo apt-get install -y libsecret-1-dev
+
+      - name: Release website
+        run: |
+          ./joplin/packages/tools/release-website.sh
