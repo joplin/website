@@ -6,4 +6,6 @@ jobs:
     steps:
       - name: Checkout main Joplin repository
         uses: actions/checkout@v2
-        
+        with:
+          repository: 'laurent22/joplin'
+          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
