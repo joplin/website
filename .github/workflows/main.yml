@@ -1,7 +1,5 @@
 name: Build Joplin Website
 on:
-  push:
-  pull_request:
   schedule:
     - cron: "0 */6 * * *"
 jobs:
