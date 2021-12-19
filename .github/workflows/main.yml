@@ -1,0 +1,9 @@
+name: Build Joplin Website
+on: [push, pull_request]
+jobs:
+  Main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main Joplin repository
+        uses: actions/checkout@v2
+        
