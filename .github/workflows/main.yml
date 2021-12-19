@@ -9,3 +9,10 @@ jobs:
         with:
           repository: 'laurent22/joplin'
           ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
+          path: 'joplin'
+      - name: Checkout main Joplin website repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'joplin/website'
+          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
+          path: 'joplin-website'
