@@ -1,5 +1,9 @@
 name: Build Joplin Website
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 */6 * * *"
 jobs:
   Main:
     runs-on: ubuntu-latest
@@ -13,7 +17,7 @@ jobs:
           ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
           path: 'joplin'
 
-      - name: Checkout main Joplin website repository
+      - name: Checkout Joplin website repository
         uses: actions/checkout@v2
         with:
           repository: 'joplin/website'
