@@ -1,0 +1,44 @@
+name: Build Joplin Website
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 */6 * * *"
+jobs:
+  Main:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout main Joplin repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'laurent22/joplin'
+          ref: dev
+          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
+          path: 'joplin'
+
+      - name: Checkout Joplin website repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'joplin/website'
+          ref: master
+          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
+          path: 'joplin-website'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update || true
+          sudo apt-get install -y libsecret-1-dev
+
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Release website
+        env:
+            GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+            GIT_USER_NAME: Joplin Bot
+            IS_CONTINUOUS_INTEGRATION: 1
+        run: |
+          ./joplin/packages/tools/release-website.sh
