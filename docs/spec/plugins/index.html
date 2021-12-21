@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/e2ee.md and any manual change
+This file was auto-generated from readme/spec/plugins.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
+https://github.com/laurent22/joplin/blob/dev/readme/spec/plugins.md
 
 -->
 
@@ -41,7 +41,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=ab5af66096e59a1fae97ce6ddfac5980" as="style" />
-		<title>About End-To-End Encryption (E2EE) | Joplin</title>
+		<title>Plugin system architecture | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -203,7 +203,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 		</div>
 	</div>
 </div>
-			<div class="help-page-container page-e2ee">
+			<div class="help-page-container page-plugins">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -297,30 +297,75 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>About End-To-End Encryption (E2EE)<a name="about-end-to-end-encryption-e2ee" href="#about-end-to-end-encryption-e2ee" class="heading-anchor">🔗</a></h1>
-<p>End-to-end encryption (E2EE) is a system where only the owner of the data (i.e. notes, notebooks, tags or resources) can read it. It prevents potential eavesdroppers - including telecom providers, internet providers, and even the developers of Joplin from being able to access the data.</p>
-<p>The system is designed to defeat any attempts at surveillance or tampering because no third party can decipher the data being communicated or stored.</p>
-<p>There is a small overhead to using E2EE since data constantly has to be encrypted and decrypted so consider whether you really need the feature.</p>
-<h1>Enabling E2EE<a name="enabling-e2ee" href="#enabling-e2ee" class="heading-anchor">🔗</a></h1>
-<p>Due to the decentralised nature of Joplin, E2EE needs to be manually enabled on a single device first (this will create a Master Key for encryption secured by your password) and then it must be synced with all other remaining devices. It is recommended to start with the desktop or terminal application since they generally run on more powerful devices (unlike the mobile application), and so they can encrypt the initial data faster.</p>
-<p>To enable it, please follow these steps:</p>
-<ol>
-<li>On your first device (eg. on the desktop application), go to the Encryption Config screen and click &quot;Enable encryption&quot;</li>
-<li>Input your password. This is the Master Key password which will be used to encrypt all your notes. Make sure you do not forget it since, for security reason, it cannot be recovered.</li>
-<li>Now you need to synchronise all your notes so that they are sent encrypted to the sync target (eg. to OneDrive, Nextcloud, etc.). Wait for any synchronisation that might be in progress and click on &quot;Synchronise&quot;.</li>
-<li>Wait for this synchronisation operation to complete. Since all the data needs to be re-sent (encrypted) to the sync target, it may take a long time, especially if you have many notes and resources. Note that even if synchronisation seems stuck, most likely it is still running - do not cancel it and simply let it run over night if needed.</li>
-<li>Once this first synchronisation operation is done, open the next device you are synchronising with. Click &quot;Synchronise&quot; and wait for the sync operation to complete. The device will receive the master key, and you will need to provide the password for it. At this point E2EE will be automatically enabled on this device. Once done, click Synchronise again and wait for it to complete.</li>
-<li>Repeat step 5 for each device.</li>
-</ol>
-<p>Do not manually enable encryption on multiple devices in parallel, but rather wait for the other ones to sync with the first already encrypted device. Otherwise, you may end up with multiple encryption keys (which is supported by Joplin but most probably not what you want).</p>
-<p>Once all the devices are in sync with E2EE enabled, the encryption/decryption should be mostly transparent. Occasionally you may see encrypted items but they will get decrypted in the background eventually.</p>
-<h1>Disabling E2EE<a name="disabling-e2ee" href="#disabling-e2ee" class="heading-anchor">🔗</a></h1>
-<p>Follow the same procedure as above but instead disable E2EE on each device one by one. Again it might be simpler to do it one device at a time and to wait every time for the synchronisation to complete.</p>
-<h1>Technical specification<a name="technical-specification" href="#technical-specification" class="heading-anchor">🔗</a></h1>
-<p>For a more technical description, mostly relevant for development or to review the method being used, please see the <a href="/spec/e2ee/">Encryption specification</a>.</p>
+<h1>Plugin system architecture<a name="plugin-system-architecture" href="#plugin-system-architecture" class="heading-anchor">🔗</a></h1>
+<p>The plugin system assumes a multi-process architecture, which is safer and easier to manage. For example if a plugin freezes or crashes, it doesn't bring down the app with it. It also makes it easier to find the source of problem when there is one - eg. we know that process X has crashed so the problem is with the plugin running inside. The alternative, to run everything within the same process, would make it very hard to make such a diagnostic. Once a plugin call is frozen in an infinite loop or crashes the app, we can't know anything.</p>
+<h2>Main architecture elements<a name="main-architecture-elements" href="#main-architecture-elements" class="heading-anchor">🔗</a></h2>
+<h3>Plugin script<a name="plugin-script" href="#plugin-script" class="heading-anchor">🔗</a></h3>
+<p>Written by the user and loaded by Joplin, it's a simple JavaScript file that makes calls to the plugin API. It is loaded in a separate process.</p>
+<h3>Sandbox proxy<a name="sandbox-proxy" href="#sandbox-proxy" class="heading-anchor">🔗</a></h3>
+<p>It is loaded in the same process as the plugin script. Whenever the plugin script calls a plugin API function (eg. joplin.commands.execute) it goes through this proxy. The proxy then converts the call to a plain string and use IPC to send the call to the plugin host. The plugin host executes the function on the plugin API then sends back the result by IPC call again.</p>
+<h3>Plugin host<a name="plugin-host" href="#plugin-host" class="heading-anchor">🔗</a></h3>
+<p>The plugin host is simply the main application. Its role is to start and initialise the plugin service and to load plugins from the provided script files.</p>
+<h3>Plugin service<a name="plugin-service" href="#plugin-service" class="heading-anchor">🔗</a></h3>
+<p>It is used to load and run plugins. Running plugins is platform-specific, thus this part is injected into the service via a platform-specific Plugin Runner.</p>
+<h3>Plugin runner<a name="plugin-runner" href="#plugin-runner" class="heading-anchor">🔗</a></h3>
+<p>This is the platform-specfic way to load and run a plugin. For example, on desktop, it creates a new BrowserWindow (which is a new process), then load the script inside. On Cli, for now the &quot;vm&quot; package is used, so the plugin actually runs within the same process.</p>
+<p>The plugin runner also initialises the sandbox proxy and injects it into the plugin code.</p>
+<h3>Plugin API<a name="plugin-api" href="#plugin-api" class="heading-anchor">🔗</a></h3>
+<p>The plugin API is a light wrapper over Joplin's internal functions and services. All the platforms share some of the plugin API but there can also be some differences. For example, the desktop app exposes the text editor component commands, and so this part of the plugin API is available only on desktop. The difference between platforms is implemented using the PlatformImplementation class, which is injected in the plugin service on startup.</p>
+<h2>Handling events between the plugin and the host<a name="handling-events-between-the-plugin-and-the-host" href="#handling-events-between-the-plugin-and-the-host" class="heading-anchor">🔗</a></h2>
+<p>Handling events in plugins is relatively complicated due to the need to send IPC messages and the limitations of the IPC protocol, which in particular cannot transfer functions.</p>
+<p>For example, let's say we define a command in the plugin:</p>
+<pre><code class="language-typescript">joplin.commands.register({
+	name: 'testCommand1',
+	label: 'My Test Command 1',
+}, {
+	onExecute: (args:any) =&gt; {
+		alert('Testing plugin command 1');
+	},
+});
+</code></pre>
+<p>The &quot;onExecute&quot; event handler needs to be called whenever, for example, a toolbar button associated with this command is clicked. The problem is that it is not possible to send a function via IPC (which can only transfer plain objects), so there has to be a translation layer in between.</p>
+<p>The way it is done in Joplin is like so:</p>
+<p>In the <strong>sandbox proxy</strong>, the event handlers are converted to string event IDs and the original event handler is stored in a map before being sent to host via IPC. So in the example above, the command would be converted to this plain object:</p>
+<pre><code class="language-typescript">{
+	name: 'testCommand1',
+	label: 'My Test Command 1',
+}, {
+	onExecute: '___event_handler_123',
+}
+</code></pre>
+<p>Then, still in the sandbox proxy, we'll have a map called something like <code>eventHandlers</code>, which now will have this content:</p>
+<pre><code class="language-typescript">eventHandlers['___event_handler_123'] = (args:any) =&gt; {
+	alert('Testing plugin command 1');
+}
+</code></pre>
+<p>In the <strong>plugin runner</strong> (Host side), all the event IDs are converted to functions again, but instead of performing the action directly, it posts an IPC message back to the sandbox proxy using the provided event ID.</p>
+<p>So in the host, the command will now look like this:</p>
+<pre><code class="language-typescript">{
+	name: 'testCommand1',
+	label: 'My Test Command 1',
+}, {
+	onExecute: (args:any) =&gt; {
+		postMessage('pluginMessage', { eventId: '___event_handler_123', args: args });
+	};
+}
+</code></pre>
+<p>At this point, any code in the Joplin application can call the <code>onExecute</code> function as normal without having to know about the IPC translation layer.</p>
+<p>When the function onExecute is eventually called, the IPC message is sent back to the sandbox proxy, which will decode it and execute it.</p>
+<p>So on the <strong>sandbox proxy</strong>, we'll have something like this:</p>
+<pre><code class="language-typescript">window.addEventListener('message', ((event) =&gt; {
+	const eventId = getEventId(event); // Get back the event ID (implementation might be different)
+	const eventArgs = getEventArgs(event); // Get back the args (implementation might be different)
+	if (eventId) {
+		// And call the event handler
+		eventHandlers[eventId](...eventArgs);
+	}	
+}));
+</code></pre>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/plugins.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>

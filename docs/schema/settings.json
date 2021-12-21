@@ -80,27 +80,27 @@
 		"sync.8.path": {
 			"type": "string",
 			"default": "",
-			"description": "AWS S3 bucket. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/faq/"
+			"description": "S3 bucket. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/faq/"
 		},
 		"sync.8.url": {
 			"type": "string",
 			"default": "https://s3.amazonaws.com/",
-			"description": "AWS S3 URL"
+			"description": "S3 URL"
 		},
 		"sync.8.region": {
 			"type": "string",
 			"default": "",
-			"description": "AWS region"
+			"description": "S3 region"
 		},
 		"sync.8.username": {
 			"type": "string",
 			"default": "",
-			"description": "AWS access key"
+			"description": "S3 access key"
 		},
 		"sync.8.password": {
 			"type": "string",
 			"default": "",
-			"description": "AWS secret key",
+			"description": "S3 secret key",
 			"$comment": "private"
 		},
 		"sync.8.forcePathStyle": {
@@ -633,8 +633,8 @@
 		},
 		"showTrayIcon": {
 			"type": "boolean",
-			"default": false,
-			"description": "Show tray icon. Note: Does not work in all desktop environments."
+			"default": true,
+			"description": "Show tray icon. This will allow Joplin to run in the background. It is recommended to enable this setting so that your notes are constantly being synchronised, thus reducing the number of conflicts."
 		},
 		"startMinimized": {
 			"type": "boolean",
@@ -728,8 +728,7 @@
 		"autoUpdateEnabled": {
 			"type": "boolean",
 			"default": true,
-			"description": "Automatically update the application",
-			"$comment": "private"
+			"description": "Automatically update the application"
 		},
 		"autoUpdate.includePreReleases": {
 			"type": "boolean",

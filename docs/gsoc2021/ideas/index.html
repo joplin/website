@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/e2ee.md and any manual change
+This file was auto-generated from readme/gsoc2021/ideas.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
+https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md
 
 -->
 
@@ -41,7 +41,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=ab5af66096e59a1fae97ce6ddfac5980" as="style" />
-		<title>About End-To-End Encryption (E2EE) | Joplin</title>
+		<title>GSoC 2021 Ideas | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -203,7 +203,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 		</div>
 	</div>
 </div>
-			<div class="help-page-container page-e2ee">
+			<div class="help-page-container page-ideas">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -297,30 +297,75 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>About End-To-End Encryption (E2EE)<a name="about-end-to-end-encryption-e2ee" href="#about-end-to-end-encryption-e2ee" class="heading-anchor">🔗</a></h1>
-<p>End-to-end encryption (E2EE) is a system where only the owner of the data (i.e. notes, notebooks, tags or resources) can read it. It prevents potential eavesdroppers - including telecom providers, internet providers, and even the developers of Joplin from being able to access the data.</p>
-<p>The system is designed to defeat any attempts at surveillance or tampering because no third party can decipher the data being communicated or stored.</p>
-<p>There is a small overhead to using E2EE since data constantly has to be encrypted and decrypted so consider whether you really need the feature.</p>
-<h1>Enabling E2EE<a name="enabling-e2ee" href="#enabling-e2ee" class="heading-anchor">🔗</a></h1>
-<p>Due to the decentralised nature of Joplin, E2EE needs to be manually enabled on a single device first (this will create a Master Key for encryption secured by your password) and then it must be synced with all other remaining devices. It is recommended to start with the desktop or terminal application since they generally run on more powerful devices (unlike the mobile application), and so they can encrypt the initial data faster.</p>
-<p>To enable it, please follow these steps:</p>
-<ol>
-<li>On your first device (eg. on the desktop application), go to the Encryption Config screen and click &quot;Enable encryption&quot;</li>
-<li>Input your password. This is the Master Key password which will be used to encrypt all your notes. Make sure you do not forget it since, for security reason, it cannot be recovered.</li>
-<li>Now you need to synchronise all your notes so that they are sent encrypted to the sync target (eg. to OneDrive, Nextcloud, etc.). Wait for any synchronisation that might be in progress and click on &quot;Synchronise&quot;.</li>
-<li>Wait for this synchronisation operation to complete. Since all the data needs to be re-sent (encrypted) to the sync target, it may take a long time, especially if you have many notes and resources. Note that even if synchronisation seems stuck, most likely it is still running - do not cancel it and simply let it run over night if needed.</li>
-<li>Once this first synchronisation operation is done, open the next device you are synchronising with. Click &quot;Synchronise&quot; and wait for the sync operation to complete. The device will receive the master key, and you will need to provide the password for it. At this point E2EE will be automatically enabled on this device. Once done, click Synchronise again and wait for it to complete.</li>
-<li>Repeat step 5 for each device.</li>
-</ol>
-<p>Do not manually enable encryption on multiple devices in parallel, but rather wait for the other ones to sync with the first already encrypted device. Otherwise, you may end up with multiple encryption keys (which is supported by Joplin but most probably not what you want).</p>
-<p>Once all the devices are in sync with E2EE enabled, the encryption/decryption should be mostly transparent. Occasionally you may see encrypted items but they will get decrypted in the background eventually.</p>
-<h1>Disabling E2EE<a name="disabling-e2ee" href="#disabling-e2ee" class="heading-anchor">🔗</a></h1>
-<p>Follow the same procedure as above but instead disable E2EE on each device one by one. Again it might be simpler to do it one device at a time and to wait every time for the synchronisation to complete.</p>
-<h1>Technical specification<a name="technical-specification" href="#technical-specification" class="heading-anchor">🔗</a></h1>
-<p>For a more technical description, mostly relevant for development or to review the method being used, please see the <a href="/spec/e2ee/">Encryption specification</a>.</p>
+<h1>GSoC 2021 Ideas<a name="gsoc-2021-ideas" href="#gsoc-2021-ideas" class="heading-anchor">🔗</a></h1>
+<p>2021 is Joplin second round at Google Summer of Code. Detailed information on how to get involved and apply are given in the <a href="https://joplinapp.org/gsoc2021/index/">general Summer of Code introduction</a></p>
+<p><strong>These are all proposals! We are open to new ideas you might have!!</strong> Do you have an awesome idea you want to work on with Joplin but that is not among the ideas below? That's cool. We love that! But please do us a favour: Get in touch with a mentor early on and make sure your project is realistic and within the scope of Joplin. Just make sure your idea is within this year's theme:</p>
+<ul>
+<li><strong>Plugin development</strong> - implementing new features using Joplin's plugin system.</li>
+<li><strong>External desktop applications</strong> - build external Joplin applications by retrieving, creating or modifying notes via the Data API.</li>
+<li><strong>External server applications</strong> - leverage the Joplin Server API to provide online features to Joplin users.</li>
+</ul>
+<h1>Information for Students<a name="information-for-students" href="#information-for-students" class="heading-anchor">🔗</a></h1>
+<p>These ideas were contributed by our developers and users. They are sometimes vague or incomplete. If you wish to submit a proposal based on these ideas, you are urged to contact the developers and find out more about the particular suggestion you're looking at.</p>
+<p>Becoming accepted as a Google Summer of Code student is quite competitive. Accepted students typically have thoroughly researched the technologies of their proposed project and have been in frequent contact with potential mentors. <strong>Simply copying and pasting an idea here will not work.</strong> On the other hand, creating a completely new idea without first consulting potential mentors rarely works.</p>
+<h1>List of ideas<a name="list-of-ideas" href="#list-of-ideas" class="heading-anchor">🔗</a></h1>
+<h2>1. OCR plugin<a name="1-ocr-plugin" href="#1-ocr-plugin" class="heading-anchor">🔗</a></h2>
+<p>It is possible to add support for OCR content in Joplin via the <a href="http://tesseract.projectnaptha.com/">Tesseract library</a>. A first step would be to assess the feasibility of this project by integrating the lib in the desktop app and trying to OCR an image. OCR support should be implemented as a service of the desktop app. It would extract the text from the images, and append the content as plain text to the notes.</p>
+<p>Expected Outcome: A plugin for the desktop app that extract text from images and attach it to the note.</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: JavaScript, Image processing</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">laurent22</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a></p>
+<h2>2. Template plugin<a name="2-template-plugin" href="#2-template-plugin" class="heading-anchor">🔗</a></h2>
+<p>Joplin already supports templates however we would like to re-package this feature as a plugin. Thus you would remove it from the main app and create a new plugin for it. It should be compatible with existing templates. Once the plugin is created, it could be a good idea to improve the feature further, perhaps based on user feedback on GitHub or in the forum.</p>
+<p>Expected Outcome: A plugin for the desktop app that handle note templates.</p>
+<p>Difficulty Level: Medium</p>
+<p>Skills Required: JavaScript</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/tessus/">tessus</a></p>
+<h2>3. BibTex plugin<a name="3-bibtex-plugin" href="#3-bibtex-plugin" class="heading-anchor">🔗</a></h2>
+<p>Many of our users use Joplin for research note and as such a plugin that can add support for <a href="http://www.bibtex.org">BibTex</a> would be very useful. The plugin should use locally stored citations, then display popup with type-ahead to allow the user to enter the citation into the document. A content script should also be created so that these citations are rendered correctly in the note viewer.</p>
+<p>Expected Outcome: A plugin to enter BibTex citations</p>
+<p>Difficulty Level: Medium</p>
+<p>Skills Required: JavaScript, understanding of BibTex format</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a>, <a href="https://github.com/laurent22/">laurent22</a></p>
+<h2>4. Real-time collaboration on a note<a name="4-real-time-collaboration-on-a-note" href="#4-real-time-collaboration-on-a-note" class="heading-anchor">🔗</a></h2>
+<p>Create a web application that allows two or more users to collaborate in real time on the same note. Use the Joplin Server API to save and load the note.</p>
+<p>Expected Outcome: A web application that allows users to collaborate on a note</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: JavaScript, Text editor, Web development</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a></p>
+<h2>5. Paste special<a name="5-paste-special" href="#5-paste-special" class="heading-anchor">🔗</a></h2>
+<p>A plugin that will allow pasting special text into Joplin and have it converted to Markdown. For example, paste an Excel or CSV table, and have it converted to a Markdown table. Paste some HTML or PDF text and again have it converted to formatted Markdown. This could be one plugin, or a collection of plugins, one for each &quot;paste special&quot; operation.</p>
+<p>Expected Outcome: One or more plugins that allow pasting special text.</p>
+<p>Difficulty Level: Normal</p>
+<p>Skills Required: JavaScript, Markdown, HTML, and knowledge of various text file formats (PDF, RTF, HTML, etc.)</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/tessus/">tessus</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a></p>
+<h2>6. Plugin system on mobile<a name="6-plugin-system-on-mobile" href="#6-plugin-system-on-mobile" class="heading-anchor">🔗</a></h2>
+<p>The plugin system is currently available on desktop and CLI. We believe it could work on mobile too although some work will have to be done to make the plugin API compatible, as well as add a mechanism to load plugins.</p>
+<p>Expected Outcome: Allow loading and running plugins on mobile</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: JavaScript, React Native</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a>, <a href="https://github.com/laurent22/">laurent22</a></p>
+<h2>7. Conflict resolution editor plugin<a name="7-conflict-resolution-editor-plugin" href="#7-conflict-resolution-editor-plugin" class="heading-anchor">🔗</a></h2>
+<p>When a note is modified on two different devices, a &quot;conflict note&quot; is generated. It would be useful to create a plugin that allows taking this &quot;conflict note&quot; and the current version of the note, and compare them using a colored diff editor. It could be a built-in editor, or perhaps the plugin could leverage existing diff editors and feed the note versions to it.</p>
+<p>Expected Outcome: Allow resolving note conflicts using a merge editor</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: JavaScript, Markdown, Understanding of diff and merging conflicts</p>
+<p>Potential Mentor(s): <a href="https://github.com/tessus/">tessus</a>, <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
+<h2>8. Kanban plugin<a name="8-kanban-plugin" href="#8-kanban-plugin" class="heading-anchor">🔗</a></h2>
+<p>Use Joplin built-in types - notes, to-dos and tags to implement <a href="https://discourse.joplinapp.org/t/kanban-for-tasks/7342">Kanban for Tasks</a>.</p>
+<p>Expected Outcome: A Kanban plugin to allow organising tasks</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: JavaScript</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">laurent22</a></p>
+<h1>More info<a name="more-info" href="#more-info" class="heading-anchor">🔗</a></h1>
+<ul>
+<li>Make sure you read the <a href="https://joplinapp.org/gsoc2021/index/">Joplin Google Summer of Code Introduction</a></li>
+<li>To build the application, please read <a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">BUILD.md</a></li>
+<li>And before creating a pull request, please read the <a href="https://joplinapp.org/gsoc2021/pull_request_guidelines/">pull request guidelines</a></li>
+</ul>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>

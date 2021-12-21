@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/e2ee.md and any manual change
+This file was auto-generated from readme/api/get_started/plugins.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
+https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md
 
 -->
 
@@ -41,7 +41,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=ab5af66096e59a1fae97ce6ddfac5980" as="style" />
-		<title>About End-To-End Encryption (E2EE) | Joplin</title>
+		<title>Getting started with plugin development | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -203,7 +203,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 		</div>
 	</div>
 </div>
-			<div class="help-page-container page-e2ee">
+			<div class="help-page-container page-plugins">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -297,30 +297,55 @@ https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>About End-To-End Encryption (E2EE)<a name="about-end-to-end-encryption-e2ee" href="#about-end-to-end-encryption-e2ee" class="heading-anchor">🔗</a></h1>
-<p>End-to-end encryption (E2EE) is a system where only the owner of the data (i.e. notes, notebooks, tags or resources) can read it. It prevents potential eavesdroppers - including telecom providers, internet providers, and even the developers of Joplin from being able to access the data.</p>
-<p>The system is designed to defeat any attempts at surveillance or tampering because no third party can decipher the data being communicated or stored.</p>
-<p>There is a small overhead to using E2EE since data constantly has to be encrypted and decrypted so consider whether you really need the feature.</p>
-<h1>Enabling E2EE<a name="enabling-e2ee" href="#enabling-e2ee" class="heading-anchor">🔗</a></h1>
-<p>Due to the decentralised nature of Joplin, E2EE needs to be manually enabled on a single device first (this will create a Master Key for encryption secured by your password) and then it must be synced with all other remaining devices. It is recommended to start with the desktop or terminal application since they generally run on more powerful devices (unlike the mobile application), and so they can encrypt the initial data faster.</p>
-<p>To enable it, please follow these steps:</p>
+<h1>Getting started with plugin development<a name="getting-started-with-plugin-development" href="#getting-started-with-plugin-development" class="heading-anchor">🔗</a></h1>
+<p>In this article you will learn the basic steps to build and test a plugin in Joplin.</p>
+<h2>Setting up your environment<a name="setting-up-your-environment" href="#setting-up-your-environment" class="heading-anchor">🔗</a></h2>
+<p>First you need to setup your environment:</p>
+<ul>
+<li>Make sure you have <a href="https://nodejs.org/">Node.js</a> and <a href="https://git-scm.com">git</a> installed.</li>
+<li>Install <a href="https://joplinapp.org/">Joplin</a></li>
+</ul>
+<p>But first install <a href="https://yeoman.io/">Yeoman</a> and the <a href="https://github.com/laurent22/joplin/tree/dev/packages/generator-joplin">Joplin Plugin Generator</a>:</p>
+<pre><code>npm install -g yo generator-joplin
+</code></pre>
+<p>Then, in the directory where you plan to develop the plugin, run:</p>
+<pre><code>yo joplin
+</code></pre>
+<p>This will generate the basic scaffolding of the plugin. At the root of it, there are a number of configuration files which you normally won't need to change. Then the <code>src/</code> directory will contain your code. By default, the project uses TypeScript, but you are free to use plain JavaScript too - eventually the project is compiled to plain JS in any case.</p>
+<p>The <code>src/</code> directory also contains a <a href="/api/references/plugin_manifest/">manifest.json</a> file, which contains the various information about the plugin that was set in the initial generation of the scaffolding, such as its name, homepage URL, etc. You can edit this at any time, but editing it after it has been published may cause users to have to download it again.</p>
+<h2>Setup Source Control<a name="setup-source-control" href="#setup-source-control" class="heading-anchor">🔗</a></h2>
+<p>In your plugin directory, run:</p>
+<pre><code>git init 
+</code></pre>
+<p>This will setup source control.</p>
+<h2>Run Joplin in Development Mode<a name="run-joplin-in-development-mode" href="#run-joplin-in-development-mode" class="heading-anchor">🔗</a></h2>
+<p>You should test your plugin in <a href="/api/references/development_mode/">Development Mode</a>. Doing so means that Joplin will run using a different profile, so you can experiment with the plugin without risking to accidentally change or delete your data.</p>
+<h2>Building the plugin<a name="building-the-plugin" href="#building-the-plugin" class="heading-anchor">🔗</a></h2>
+<p>From the scaffolding, <code>src/index.ts</code> now contains the basic code for a Hello World plugin.</p>
+<p>Two things to note:</p>
 <ol>
-<li>On your first device (eg. on the desktop application), go to the Encryption Config screen and click &quot;Enable encryption&quot;</li>
-<li>Input your password. This is the Master Key password which will be used to encrypt all your notes. Make sure you do not forget it since, for security reason, it cannot be recovered.</li>
-<li>Now you need to synchronise all your notes so that they are sent encrypted to the sync target (eg. to OneDrive, Nextcloud, etc.). Wait for any synchronisation that might be in progress and click on &quot;Synchronise&quot;.</li>
-<li>Wait for this synchronisation operation to complete. Since all the data needs to be re-sent (encrypted) to the sync target, it may take a long time, especially if you have many notes and resources. Note that even if synchronisation seems stuck, most likely it is still running - do not cancel it and simply let it run over night if needed.</li>
-<li>Once this first synchronisation operation is done, open the next device you are synchronising with. Click &quot;Synchronise&quot; and wait for the sync operation to complete. The device will receive the master key, and you will need to provide the password for it. At this point E2EE will be automatically enabled on this device. Once done, click Synchronise again and wait for it to complete.</li>
-<li>Repeat step 5 for each device.</li>
+<li>It contains a call to <a href="https://joplinapp.org/api/references/plugin_api/classes/joplinplugins.html#register">joplin.plugins.register</a>. All plugins call this to register the plugin in the app.</li>
+<li>An <code>onStart()</code> event handler method, which is called when the plugin starts.</li>
 </ol>
-<p>Do not manually enable encryption on multiple devices in parallel, but rather wait for the other ones to sync with the first already encrypted device. Otherwise, you may end up with multiple encryption keys (which is supported by Joplin but most probably not what you want).</p>
-<p>Once all the devices are in sync with E2EE enabled, the encryption/decryption should be mostly transparent. Occasionally you may see encrypted items but they will get decrypted in the background eventually.</p>
-<h1>Disabling E2EE<a name="disabling-e2ee" href="#disabling-e2ee" class="heading-anchor">🔗</a></h1>
-<p>Follow the same procedure as above but instead disable E2EE on each device one by one. Again it might be simpler to do it one device at a time and to wait every time for the synchronisation to complete.</p>
-<h1>Technical specification<a name="technical-specification" href="#technical-specification" class="heading-anchor">🔗</a></h1>
-<p>For a more technical description, mostly relevant for development or to review the method being used, please see the <a href="/spec/e2ee/">Encryption specification</a>.</p>
+<p>To try this basic plugin, compile the app by running the following from the root of the project:</p>
+<pre><code>npm run dist
+</code></pre>
+<p>Doing so should compile all the files into the <code>dist/</code> directory. This is where Joplin will load the plugin.</p>
+<h2>Install the plugin<a name="install-the-plugin" href="#install-the-plugin" class="heading-anchor">🔗</a></h2>
+<p>Open Joplin <strong>Configuration &gt; Plugins</strong> section. Under Advanced Settings, add the plugin path in the <strong>Development plugins</strong> text field.<br>
+This should be the path to your main plugin directory, i.e. <code>path/to/your/root/plugin/directory</code>.</p>
+<h2>Test the Plugin, Hello World!<a name="test-the-plugin-hello-world" href="#test-the-plugin-hello-world" class="heading-anchor">🔗</a></h2>
+<p>Restart the Development app from the command line/terminal, and Joplin should load the plugin and execute its <code>onStart</code> handler. If all went well you should see the test message in the plugin console: &quot;Hello world. Test plugin started!&quot;. You will also be able to see the information from the manifest in the <strong>Settings &gt; Plugins</strong></p>
+<h1>Next steps<a name="next-steps" href="#next-steps" class="heading-anchor">🔗</a></h1>
+<p>Great, you now have the basics of a working plugin!</p>
+<ul>
+<li>Start the <a href="/api/tutorials/toc_plugin/">plugin tutorial</a> to learn how to use the plugin API.</li>
+<li>See what the plugin API supports, <a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API reference</a>.</li>
+<li>For plugin feature ideas, see this thread: <a href="https://discourse.joplinapp.org/t/any-suggestions-on-what-plugins-could-be-created/9479">https://discourse.joplinapp.org/t/any-suggestions-on-what-plugins-could-be-created/9479</a></li>
+</ul>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>
