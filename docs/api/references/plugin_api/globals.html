@@ -74,6 +74,7 @@
 								<li class="tsd-kind-enum"><a href="enums/importmoduleoutputformat.html" class="tsd-kind-icon">Import<wbr>Module<wbr>Output<wbr>Format</a></li>
 								<li class="tsd-kind-enum"><a href="enums/itemchangeeventtype.html" class="tsd-kind-icon">Item<wbr>Change<wbr>Event<wbr>Type</a></li>
 								<li class="tsd-kind-enum"><a href="enums/menuitemlocation.html" class="tsd-kind-icon">Menu<wbr>Item<wbr>Location</a></li>
+								<li class="tsd-kind-enum"><a href="enums/modeltype.html" class="tsd-kind-icon">Model<wbr>Type</a></li>
 								<li class="tsd-kind-enum"><a href="enums/settingitemtype.html" class="tsd-kind-icon">Setting<wbr>Item<wbr>Type</a></li>
 								<li class="tsd-kind-enum"><a href="enums/settingstorage.html" class="tsd-kind-icon">Setting<wbr>Storage</a></li>
 								<li class="tsd-kind-enum"><a href="enums/toolbarbuttonlocation.html" class="tsd-kind-icon">Toolbar<wbr>Button<wbr>Location</a></li>
@@ -110,6 +111,7 @@
 								<li class="tsd-kind-interface"><a href="interfaces/createmenuitemoptions.html" class="tsd-kind-icon">Create<wbr>Menu<wbr>Item<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/dialogresult.html" class="tsd-kind-icon">Dialog<wbr>Result</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/disposable.html" class="tsd-kind-icon">Disposable</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/editcontextmenufilterobject.html" class="tsd-kind-icon">Edit<wbr>Context<wbr>Menu<wbr>Filter<wbr>Object</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/editorcommand.html" class="tsd-kind-icon">Editor<wbr>Command</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/exportcontext.html" class="tsd-kind-icon">Export<wbr>Context</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/exportmodule.html" class="tsd-kind-icon">Export<wbr>Module</a></li>
@@ -130,6 +132,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias"><a href="globals.html#buttonid" class="tsd-kind-icon">Button<wbr>Id</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#changehandler" class="tsd-kind-icon">Change<wbr>Handler</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#filterhandler" class="tsd-kind-icon">Filter<wbr>Handler</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#itemchangehandler" class="tsd-kind-icon">Item<wbr>Change<wbr>Handler</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#path" class="tsd-kind-icon">Path</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#postmessagehandler" class="tsd-kind-icon">Post<wbr>Message<wbr>Handler</a></li>
@@ -185,6 +188,44 @@
 										</ul>
 										<!-- JOPLINCHANGE
     <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+
+
+-->
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="filterhandler" class="tsd-anchor"></a>
+					<h3>Filter<wbr>Handler</h3>
+					<div class="tsd-signature tsd-kind-icon">Filter<wbr>Handler&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>object: <span class="tsd-signature-type">T</span></h5>
+											</li>
+										</ul>
+										<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 
 
 -->
@@ -391,6 +432,9 @@
 						<a href="enums/menuitemlocation.html" class="tsd-kind-icon">MenuItemLocation</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="enums/modeltype.html" class="tsd-kind-icon">ModelType</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="enums/settingitemtype.html" class="tsd-kind-icon">SettingItemType</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -469,6 +513,9 @@
 						<a href="interfaces/disposable.html" class="tsd-kind-icon">Disposable</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/editcontextmenufilterobject.html" class="tsd-kind-icon">EditContextMenuFilterObject</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/editorcommand.html" class="tsd-kind-icon">EditorCommand</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -512,6 +559,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#changehandler" class="tsd-kind-icon">ChangeHandler</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#filterhandler" class="tsd-kind-icon">FilterHandler</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#itemchangehandler" class="tsd-kind-icon">ItemChangeHandler</a>
