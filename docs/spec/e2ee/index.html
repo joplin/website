@@ -342,7 +342,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee.md
 </tr>
 </tbody>
 </table>
-<p>See <code>lib/services/EncryptionService.js</code> for the list of available encryption methods.</p>
+<p>See <code>lib/services/e2ee/EncryptionService.ts</code> for the list of available encryption methods.</p>
 <h3>Data chunk<a name="data-chunk" href="#data-chunk" class="heading-anchor">🔗</a></h3>
 <p>The data is encoded in one or more chunks for performance reasons. That way it is possible to take a block of data from one file and encrypt it to another block in another file. Encrypting/decrypting the whole file in one go would not work (on mobile especially).</p>
 <table class="table">
@@ -364,7 +364,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee.md
 </tbody>
 </table>
 <h2>Master Keys<a name="master-keys" href="#master-keys" class="heading-anchor">🔗</a></h2>
-<p>The master keys are used to encrypt and decrypt data. They can be generated from the Encryption Service and are saved to the database. They are themselves encrypted via a user password using a <a href="https://github.com/laurent22/joplin/blob/f21199a7f38b43d1f350ee81f84d4f335cb285b3/packages/lib/services/EncryptionService.js#L374">strong encryption method</a>.</p>
+<p>The master keys are used to encrypt and decrypt data. They can be generated from the Encryption Service and are saved to the database. They are themselves encrypted via a user password using a <a href="https://github.com/laurent22/joplin/blob/b5b02d8d7bce2c07c89fef50103e1399d792b75e/packages/lib/services/e2ee/EncryptionService.ts#L373">strong encryption method</a>.</p>
 <p>These encrypted master keys are transmitted with the sync data so that they can be available to each client. Each client will need to supply the user password to decrypt each key.</p>
 <p>The application supports multiple master keys in order to handle cases where one offline client starts encrypting notes, then another offline client starts encrypting notes too, and later both sync. Both master keys will have to be decrypted separately with the user password.</p>
 <p>Only one master key can be active for encryption purposes. For decryption, the algorithm will check the Master Key ID in the header, then check if it's available to the current app and, if so, use this for decryption.</p>
