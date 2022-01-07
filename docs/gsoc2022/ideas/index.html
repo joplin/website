@@ -298,7 +298,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/ideas.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>GSoC 2022 Ideas<a name="gsoc-2022-ideas" href="#gsoc-2022-ideas" class="heading-anchor">🔗</a></h1>
-<p>2022 is Joplin second round at Google Summer of Code. Detailed information on how to get involved and apply are given in the <a href="https://joplinapp.org/gsoc2022/index/">general Summer of Code introduction</a></p>
+<p>2022 is Joplin third round at Google Summer of Code. Detailed information on how to get involved and apply are given in the <a href="https://joplinapp.org/gsoc2022/index/">general Summer of Code introduction</a></p>
 <p><strong>These are all proposals! We are open to new ideas you might have!!</strong> Do you have an awesome idea you want to work on with Joplin but that is not among the ideas below? That's cool. We love that! But please do us a favour: Get in touch with a mentor early on and make sure your project is realistic and within the scope of Joplin. Just make sure your idea is within this year's theme:</p>
 <ul>
 <li><strong>Plugin development</strong> - implementing new features using Joplin's plugin system.</li>
@@ -345,6 +345,33 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/ideas.md
 Also read the document about limitations of the editor: <a href="https://joplinapp.org/rich_text_editor/">https://joplinapp.org/rich_text_editor/</a></p>
 <p>Difficulty level: High</p>
 <p>Skills Required: Typescript, Javascript, CSS, HTML, Markdown rendering. You will also need to learn about TinyMCE if you're not already familiar with it.</p>
+<h2>7. Improve PDF export<a name="7-improve-pdf-export" href="#7-improve-pdf-export" class="heading-anchor">🔗</a></h2>
+<p>Joplin uses Chrome's built-in print to PDF function which is very limited. This can be improved by using a 3rd party library to convert notes to PDF. Applies to desktop and CLI versions.</p>
+<p>Potential benefits:</p>
+<ul>
+<li>Export multiple notes as a single PDF</li>
+<li>Embedding attachments (see <a href="https://github.com/laurent22/joplin/issues/5943">https://github.com/laurent22/joplin/issues/5943</a>)</li>
+<li>Delay export until the note is fully rendered (<a href="https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159">https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159</a>)</li>
+</ul>
+<p>Difficulty level: Medium</p>
+<p>Skills Required: Typescript, Javascript.</p>
+<h2>8. Replace built-in PDF renderer with a library<a name="8-replace-built-in-pdf-renderer-with-a-library" href="#8-replace-built-in-pdf-renderer-with-a-library" class="heading-anchor">🔗</a></h2>
+<p>Just like with export, Joplin relies on the built-in PDF renderer to show PDF attachments. Replacing it with a 3rd-party library has a number of advantages:</p>
+<ul>
+<li>Joplin can preserve PDF viewer state when a note is re-rendered. For instance currently after opening and closing settings, PDF are reset to the 1st page.</li>
+<li>It may be possible to link to a specific page or even a location within a PDF document.</li>
+<li>Annotate PDF documents from Joplin</li>
+</ul>
+<p>Difficulty level: Medium</p>
+<p>Skills Required: Typescript, Javascript.</p>
+<h2>9. Rebuild file system sync on Android<a name="9-rebuild-file-system-sync-on-android" href="#9-rebuild-file-system-sync-on-android" class="heading-anchor">🔗</a></h2>
+<p>A recent update broke file system synchronization on Android, as applications are now required to use a new API to access storage. Currently there are no libraries that would proxy this API for React Native. If we want to get file system sync working again it has to be written from scratch.</p>
+<p>Difficulty level: High</p>
+<p>Skills Required: Android, Java/Kotlin, Typescript.</p>
+<h2>10. Tablet layout<a name="10-tablet-layout" href="#10-tablet-layout" class="heading-anchor">🔗</a></h2>
+<p>On wide screens devices like tables Joplin could use a different layout, e.g. with note list always showing, or have both editor and viewer visible at the same time.</p>
+<p>Difficulty Level: Medium</p>
+<p>Skills Required: React, Typescript, CSS.</p>
 <h1>More info<a name="more-info" href="#more-info" class="heading-anchor">🔗</a></h1>
 <ul>
 <li>Make sure you read the <a href="https://joplinapp.org/gsoc2022/index/">Joplin Google Summer of Code Introduction</a></li>
