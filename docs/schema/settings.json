@@ -728,7 +728,7 @@
 		"autoUpdateEnabled": {
 			"type": "boolean",
 			"default": true,
-			"description": "Automatically update the application"
+			"description": "Automatically check for updates"
 		},
 		"autoUpdate.includePreReleases": {
 			"type": "boolean",
