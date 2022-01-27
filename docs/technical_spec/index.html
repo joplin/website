@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/config_screen.md and any manual change
+This file was auto-generated from readme/technical_spec.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md
+https://github.com/laurent22/joplin/blob/dev/readme/technical_spec.md
 
 -->
 
@@ -41,7 +41,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=46d42e775ea6678161defe16442e237f" as="style" />
-		<title>Configuration screen | Joplin</title>
+		<title>Guide to writing a technical spec | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -216,7 +216,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md
 		</div>
 	</div>
 </div>
-			<div class="help-page-container page-config_screen">
+			<div class="help-page-container page-technical_spec">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -311,23 +311,65 @@ https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>Configuration screen<a name="configuration-screen" href="#configuration-screen" class="heading-anchor">🔗</a></h1>
-<p>Opening the configuration screen depends on the application and sometimes operating system your are using.</p>
-<h2>Desktop application<a name="desktop-application" href="#desktop-application" class="heading-anchor">🔗</a></h2>
-<p>As a shortcut you can press <kbd>Ctrl</kbd>+<kbd>,</kbd> on Windows and Linux, or <kbd>Cmd</kbd>+<kbd>,</kbd> on macOS.</p>
-<h3>Windows and Linux<a name="windows-and-linux" href="#windows-and-linux" class="heading-anchor">🔗</a></h3>
-<p>In the menu, click on <strong>Tools &gt; Options</strong>.</p>
-<p>Or press <kbd>Ctrl</kbd>+<kbd>,</kbd>.</p>
-<h3>macOS<a name="macos" href="#macos" class="heading-anchor">🔗</a></h3>
-<p>In the menu, click on <strong>Joplin &gt; Preferences</strong></p>
-<p>Or press <kbd>Cmd</kbd>+<kbd>,</kbd>.</p>
-<h2>Mobile application<a name="mobile-application" href="#mobile-application" class="heading-anchor">🔗</a></h2>
-<p>Tap on the <strong>burger icon ≡</strong> in the top left corner, and select <strong>Configuration</strong>.</p>
-<h2>CLI<a name="cli" href="#cli" class="heading-anchor">🔗</a></h2>
-<p>Type <code>:help config</code> for information on how to set config values and for the complete list of available options.</p>
+<h1>Guide to writing a technical spec<a name="guide-to-writing-a-technical-spec" href="#guide-to-writing-a-technical-spec" class="heading-anchor">🔗</a></h1>
+<p>This article borrows from the StackOverflow's article &quot;<a href="https://stackoverflow.blog/2020/04/06/a-practical-guide-to-writing-technical-specs/">A practical guide to writing technical specs</a>&quot;. It is strongly recommended to read this article introduction for more complete information on the topic!</p>
+<p>The technical spec template they provide however is too detailed for our needs, so instead use the one in this document.</p>
+<h2>What is a technical specification document?<a name="what-is-a-technical-specification-document" href="#what-is-a-technical-specification-document" class="heading-anchor">🔗</a></h2>
+<blockquote>
+<p>A technical specification document outlines how you’re going to address a technical problem by designing and building a solution for it.</p>
+</blockquote>
+<h2>Why is writing a technical spec important?<a name="why-is-writing-a-technical-spec-important" href="#why-is-writing-a-technical-spec-important" class="heading-anchor">🔗</a></h2>
+<h3>Benefits to engineers<a name="benefits-to-engineers" href="#benefits-to-engineers" class="heading-anchor">🔗</a></h3>
+<blockquote>
+<p>By writing a technical spec, engineers are forced to examine a problem before going straight into code, where they may overlook some aspect of the solution.</p>
+</blockquote>
+<h3>Benefits to a project<a name="benefits-to-a-project" href="#benefits-to-a-project" class="heading-anchor">🔗</a></h3>
+<blockquote>
+<p>Investing in a technical spec ultimately results in a superior product.  Since the team is aligned and in agreement on what needs to be done through the spec, big projects can progress faster.</p>
+</blockquote>
+<h1>Tehnical spec template<a name="tehnical-spec-template" href="#tehnical-spec-template" class="heading-anchor">🔗</a></h1>
+<h2>Overview<a name="overview" href="#overview" class="heading-anchor">🔗</a></h2>
+<p>Give a general overview of the issue. You should <strong>always start from the user's perspective</strong>: what specific problem does the user have? Provide as much context as possible and provide links to relevant forum threads or GitHub issues.</p>
+<p>Then give a general idea on how you propose to solve it. Do NOT go into technical details at this point (no code, no filenames, etc.).</p>
+<h2>Problem description<a name="problem-description" href="#problem-description" class="heading-anchor">🔗</a></h2>
+<p>This is where you provide more details about the problem that needs to be solved. You can provide user stories, or quote from forum threads.</p>
+<p>In this section, your goal is also to explain why this problem is actually worth solving.</p>
+<h2>Solution<a name="solution" href="#solution" class="heading-anchor">🔗</a></h2>
+<h3>User experience<a name="user-experience" href="#user-experience" class="heading-anchor">🔗</a></h3>
+<p>Again, <strong>always start from the user's perspective</strong>:</p>
+<ul>
+<li>How will the user interface look?</li>
+<li>What actions will the user do to use your feature?</li>
+<li>Provide as much details as you can: where will the new UI elements, such as buttons, list, etc. go?</li>
+<li>How will you label the buttons or tooltip</li>
+<li>If you're adding a keyboard shortcut, what keys should the user press, etc.</li>
+</ul>
+<p>All these details are very important because they give a clear picture of what you are going to do, and it helps reviewer assess the implementation.</p>
+<p>It's also an easy way for everybody, even non-technical people, to get involved and help you refine your spec.</p>
+<p>Also, if you can, provide UI mockups.</p>
+<h3>Technical solution<a name="technical-solution" href="#technical-solution" class="heading-anchor">🔗</a></h3>
+<p>Explain in general terms how you are going to a solve the issue at a technical level.</p>
+<p>Please describe what will be the impact and risks associated with your change. For example if it's just adding a button to change text formatting, it's probably low impact. If it's modifying the sync algorithm it's high impact, because there's a potential for data loss.</p>
+<p>Mention what services or parts of the application you'll need to modify and how.</p>
+<p>In this section you may mention code and filenames, but try not to go into too much technical details. These tend to become obsolete very quickly, unlike the rest of the spec.</p>
+<h2>Testing plan<a name="testing-plan" href="#testing-plan" class="heading-anchor">🔗</a></h2>
+<p>How do you plan to test your changes?</p>
+<p>Please provide test units if possible.</p>
+<p>If it's for GSoC, test units are compulsory. We don't accept pull requests without.</p>
+<p>In general try to think how you can unit test your code - sometimes it means refactoring some parts of it into a few functions, which can then be easily unit tested. Integration tests may be trickier so they are not always required.</p>
+<p>Additionally, if the unit tests are not sufficient, please provide a manual testing plan, which should include detailed steps on:</p>
+<ul>
+<li>
+<p>How to test that your feature is working. Include at least 5 tests. Try to think of the possible inputs - if it's a list, how does it work with 0 elements, or 1, or 10, or 100,000. If it's a text input, how does it work with an empty string, or a very large string, etc. Basically don't just put one test that check the best case scenario.</p>
+</li>
+<li>
+<p>How to verify that related parts of the applications are not broken. For example if you changed the note loading logic, check that the toolbar is still working as expected (and not modifying the previously loaded note for example), check that switching from one note to another still works. Look at the note list and verify that the note title is updated there too, etc.</p>
+</li>
+</ul>
+<p>A reviewer should be able to run the app with your changes, then do the above steps to verify that everything's working as expected.</p>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/technical_spec.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>
