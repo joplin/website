@@ -332,7 +332,8 @@
 			"description": "Time format",
 			"enum": [
 				"HH:mm",
-				"h:mm A"
+				"h:mm A",
+				"HH.mm"
 			]
 		},
 		"theme": {
