@@ -144,6 +144,14 @@ https://github.com/laurent22/joplin/blob/dev/
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
+<h1><a href="/news/20220215-142000/">Automatic deletion of disabled accounts on Joplin Cloud</a><a name="automatic-deletion-of-disabled-accounts-on-joplin-cloud-news-20220215-142000" href="#automatic-deletion-of-disabled-accounts-on-joplin-cloud-news-20220215-142000" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>16 Feb 2022</strong></em></p>
+<p>As of 15 Feb 2022, disabled accounts on Joplin Cloud will be automatically deleted after 90 days. A disabled account is one where the Stripe subscription has been cancelled either by the user or automatically (eg for unpaid invoices).</p>
+<p>Although it is an automated system, I will manually verify each account that's queued for deletion over the next few days for additional safety (for now everything's working as expected).</p>
+<p>When an account is queued for deletion, all notes, notebooks, tags, etc are removed from the system within 2 days, and permanently deleted within 7 days. User information, in particular email and full name will be removed from the system within 2 days, but archived for an additional 90 days for legal reasons, after which they will be deleted too.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
+<hr>
 <h1><a href="/news/20211217-120324/">Joplin 2.6 is available!</a><a name="joplin-2-6-is-available-news-20211217-120324" href="#joplin-2-6-is-available-news-20211217-120324" class="heading-anchor">🔗</a></h1>
 <p><em>Published on <strong>17 Dec 2021</strong></em></p>
 <p>Many changes in this new release, available on mobile, desktop and CLI:</p>
@@ -491,15 +499,6 @@ https://github.com/laurent22/joplin/blob/dev/
 <li>Agree with the students how many times per week they should write a progress report. Ensure that they deliver this report on time each week, and evaluate their progress.</li>
 <li>You might have adjust goals based on their progress.</li>
 </ul>
-<hr>
-<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
-<hr>
-<h1><a href="/news/20210413-091132/">Getting close to being mainly a TypeScript project</a><a name="getting-close-to-being-mainly-a-typescript-project-news-20210413-091132" href="#getting-close-to-being-mainly-a-typescript-project-news-20210413-091132" class="heading-anchor">🔗</a></h1>
-<p><em>Published on <strong>13 Apr 2021</strong></em></p>
-<p>Been checking the numbers now and then and I see there will soon be more TypeScript than JavaScript code in the repo:</p>
-<p><img src="/images/news/20210413-091132_0.png" alt=""></p>
-<p>Probably a good part of the JS code is in the CLI app, which hasn't been updated much. Critical parts of the app are now in TypeScript, including the synchronizer, database and encryption service. Joplin Server is also entirely in TypeScript. Even the database rows are now typed thanks to sql-ts.</p>
-<p>So anyway TypeScript has been a big win for the project as it made it possible to refactor and modernise many parts of it in a safe way, and make the code future proof and easier to work with! I expect we should get to over 50% over the next few months.</p>
 <hr>
 <p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
 
