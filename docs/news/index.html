@@ -143,6 +143,26 @@ https://github.com/laurent22/joplin/blob/dev/
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
+<h1><a href="/news/20220224-release-2-7/">Joplin 2.7 is available!</a><a name="joplin-2-7-is-available-news-20220224-release-2-7" href="#joplin-2-7-is-available-news-20220224-release-2-7" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>24 Feb 2022</strong></em></p>
+<p>This new release is largely focused on bug fixing and optimising various parts of the apps. There's about 26 improvements and 25 bugs and security fixes included - as always many of these apply to both the mobile and desktop app (see the <a href="https://joplinapp.org/changelog/">desktop changelog</a> and <a href="https://joplinapp.org/changelog_android/">mobile changelog</a>).</p>
+<p>Many thanks to all the contributors who helped create this release!</p>
+<p>Below are some of the more noticeable changes:</p>
+<h1>Notebook custom icons<a name="notebook-custom-icons" href="#notebook-custom-icons" class="heading-anchor">🔗</a></h1>
+<p>Since version 2.6 it was possible to assign an emoji icon to a notebook, and with this new version it's now possible to assign any custom icon. The icon may be a PNG or JPG file of any size. The app will then import the file and resize it to the correct size. To use a custom icon, follow these steps:</p>
+<p>Right-click on a notebook, and select &quot;Edit&quot;:</p>
+<p><img src="/images/news/20220224-edit-notebook.png" alt=""></p>
+<p>In the &quot;Edit notebook&quot; dialog, click &quot;Select file...&quot; and browse to your icon image:</p>
+<p><img src="/images/news/20220224-edit-dialog.png" alt=""></p>
+<p>Click &quot;OK&quot; and the icon will now appear next to the notebook:</p>
+<p><img src="/images/news/20220224-notebook-icon.png" alt=""></p>
+<p>The icon can be changed only from the desktop application at the moment, but it will sync and be displayed correctly on the mobile app too.</p>
+<h1>Plugin API improvements<a name="plugin-api-improvements" href="#plugin-api-improvements" class="heading-anchor">🔗</a></h1>
+<p>This version also includes a number of improvements to the plugin API, in particular it is now easier to customise the editor context menu from a plugin and dynamically add items to it depending on the context. For example, with the Rich Markdown plugin it will be possible to right-click on an image and open it, or copy it to the clipboard.</p>
+<p>A few additional functions have also been added to make plugin development simpler - in particular a command to open any item, whether it's a notebook, note, tag or attachement; and functions to work with attachements, in particular to reveal an attachement in the system file explorer, and to track changes to an attachement.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
+<hr>
 <h1><a href="/news/20220215-142000/">Automatic deletion of disabled accounts on Joplin Cloud</a><a name="automatic-deletion-of-disabled-accounts-on-joplin-cloud-news-20220215-142000" href="#automatic-deletion-of-disabled-accounts-on-joplin-cloud-news-20220215-142000" class="heading-anchor">🔗</a></h1>
 <p><em>Published on <strong>24 Feb 2022</strong></em></p>
 <p>As of 15 Feb 2022, disabled accounts on Joplin Cloud will be automatically deleted after 90 days. A disabled account is one where the Stripe subscription has been cancelled either by the user or automatically (eg for unpaid invoices).</p>
@@ -473,31 +493,6 @@ https://github.com/laurent22/joplin/blob/dev/
 <p><em>Published on <strong>6 May 2021</strong></em></p>
 <p>Google has announced the project slots for GSoC 2021 and granted us 6 this year. That's a big step up from our first GSoC last year when we got 2!</p>
 <p>In the coming weeks we will be reviewing the student applications again and select the 6 candidates as well as mentors. By the way if you might be interested in co-mentoring a project, feel free to let me know (More info in <a href="https://www.patreon.com/posts/call-for-google-50662125">this post</a>).</p>
-<hr>
-<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
-<hr>
-<h1><a href="/news/20210430-083248/">Call for Google Summer of Code mentors!</a><a name="call-for-google-summer-of-code-mentors-news-20210430-083248" href="#call-for-google-summer-of-code-mentors-news-20210430-083248" class="heading-anchor">🔗</a></h1>
-<p><em>Published on <strong>30 Apr 2021</strong></em></p>
-<p>A message from PackElend, who's been helping us organise GSoC this year (and last year)</p>
-<p>* * *</p>
-<p>Hi Community,</p>
-<p>we are going to apply for the GSoC student slots next week, soon we know what can be done this season.</p>
-<p>To put us in a comfortable position it would be appreciated if there would another handful of people who would mentor a project.</p>
-<p>Is there anyone interested in doing so?</p>
-<p>* * *</p>
-<p>Here is some information about the role of a mentor:</p>
-<h3>After student selection<a name="after-student-selection" href="#after-student-selection" class="heading-anchor">🔗</a></h3>
-<ul>
-<li>Ensure your student is ready &amp; active. They should have a dev environment, be regularly communicating in the community, and have prepared a project plan together with you.</li>
-<li>Read the GSoC Mentoring Manual and ask questions if you have them.</li>
-<li>If the student is not active during the community bonding period, please contact the organization administrators.</li>
-</ul>
-<h3>During the program<a name="during-the-program" href="#during-the-program" class="heading-anchor">🔗</a></h3>
-<ul>
-<li>Help your student be successful. Commit to spending a minimum of 4 hours each week answering questions, giving advice, working with your student on blockers.</li>
-<li>Agree with the students how many times per week they should write a progress report. Ensure that they deliver this report on time each week, and evaluate their progress.</li>
-<li>You might have adjust goals based on their progress.</li>
-</ul>
 <hr>
 <p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
 
