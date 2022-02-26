@@ -332,94 +332,165 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/ideas.md
 <p>Expected Outcome: Allow loading and running plugins on mobile</p>
 <p>Difficulty Level: High</p>
 <p>Skills Required: TypeScript, React Native</p>
-<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a>, <a href="https://github.com/laurent22/">laurent22</a></p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project:</p>
 <h2>2. Seamless desktop application updates<a name="2-seamless-desktop-application-updates" href="#2-seamless-desktop-application-updates" class="heading-anchor">🔗</a></h2>
 <p>The desktop application currently supports automatic updates, however the process is not particularly smooth: the user is presented with a modal dialog, where they need to click &quot;Download&quot; and that opens the default browser to download the file. Then they need to run this file and go through the installer.</p>
 <p>We would like to make this process smoother:</p>
 <ul>
-<li>The installer should be automatically downloaded in the background</li>
-<li>It should then install the app automatically when the next time the app is started</li>
-<li>And this should work at least on Windows and macOS (Linux may be special due to the different distribution methods)</li>
+<li>
+<p>The installer should be automatically downloaded in the background</p>
+</li>
+<li>
+<p>It should then install the app automatically when the next time the app is started</p>
+</li>
+<li>
+<p>And this should work at least on Windows and macOS (Linux may be special due to the different distribution methods)</p>
+</li>
 </ul>
+<p>Expected Outcome: The app shall inform the user that an update is available. If an update shall be applied, the installer runs the update process fully automatically in the background during the next startup. It shall be explored if a live update is feasible and how conflicts can be resolved as used files are to be replaced.</p>
 <p>Difficulty Level: Medium</p>
 <p>Skills Required: TypeScript, React. Some knowledge of Electron and electron-builder.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/tessus/">tessus</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
+<p>Expected size of project: 175 hours</p>
 <h2>3. Refactor the project documentation<a name="3-refactor-the-project-documentation" href="#3-refactor-the-project-documentation" class="heading-anchor">🔗</a></h2>
 <p>The current documentation (under <a href="https://joplinapp.org/help">joplinapp.org/help</a>) is mainly a giant <a href="http://README.md">README.md</a> file and various smaller Markdown files under /readme. All this is then built into the HTML website by a script.</p>
 <p>We would like to improve this by splitting the main readme into smaller sections, have a new menu that would reorganise the help into various topics, and of course the build script will need to be updated.</p>
 <p>A good part of this project will be about researching how other projects organise their documentation, proposing a way that would work well for Joplin, and discussing your ideas with the mentors and users. You will need to be proactive and propose your own solution on how to structure the documentation - which sections and sub-sections should be created, how to split the existing README into smaller parts, etc.</p>
 <p>This is still a technical project though since you will need to deal with TypeScript, Markdown, HTML and CSS (and any other technology that might help) to build the new documentation.</p>
+<p>Expected Outcome: A new documentation with complete scripts to build it along with CI integration.</p>
 <p>Difficulty Level: High</p>
 <p>Skills Required: TypeScript, JavaScript, CSS, HTML, Markdown rendering.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/Daeraxa">Daeraxa</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project:</p>
 <h2>4. Implement default plugins on desktop application<a name="4-implement-default-plugins-on-desktop-application" href="#4-implement-default-plugins-on-desktop-application" class="heading-anchor">🔗</a></h2>
 <p>We would like to bundle certain plugins with the desktop application, such as the Backup or Rich Markdown plugin. Some process needs to be implemented so that they are bundled and updated automatically. You'll have to consider how it will work on CI, and across platform. The process should be fault tolerant and retry when something fails.</p>
+<p>Expected Outcome: A system for bundling certain plugins with Joplin releases, along with accompanying documentation on how to bundle plugins.</p>
 <p>Difficulty Level: High</p>
 <p>Skills Required: TypeScript, JavaScript, knowledge of Electron and GitHub Actions.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/tessus/">tessus</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://discourse.joplinapp.org/u/JackGruber">JackGruber</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>5. Implement a toolbar for the mobile beta code editor<a name="5-implement-a-toolbar-for-the-mobile-beta-code-editor" href="#5-implement-a-toolbar-for-the-mobile-beta-code-editor" class="heading-anchor">🔗</a></h2>
 <p>We would like the Beta code editor to eventually become the main editor, and for that a number of changes need to be made. The main one would be the addition of a toolbar to it, to set the various styles, such as Bold, Bullet list, Header, etc. Additionally there are number of bugs that will have to be fixed to get the editor ready for production - you will find them in the list of issues (under the &quot;high&quot; and &quot;mobile&quot; label).</p>
+<p>Expected Outcome: Main: A new mobile editor toolbar. Secondary: Fix the bugs in the beta editor</p>
 <p>Difficulty Level: High</p>
 <p>Skills Required: TypeScript, JavaScript, React Native, React Hooks. You'll also need to learn about CodeMirror 6 if you're not already familiar with it.</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>6. Improve integration of the richtext/WYSIWYG editor<a name="6-improve-integration-of-the-richtext-wysiwyg-editor" href="#6-improve-integration-of-the-richtext-wysiwyg-editor" class="heading-anchor">🔗</a></h2>
 <p>Joplin offers a richtext/WYSIWYG typing experience alongside the Markdown editor but there are a number of areas that could do with improvement when it comes to integration with Joplin as a whole.</p>
-<p>Areas for consideration include increasing compatibility with Joplin-wide keybindings (many are currently static), limiting features of the editor not compatible with markdown formatting, reducing the impact of data changes caused by swapping between editors.<br>
-Also read the document about limitations of the editor: <a href="https://joplinapp.org/rich_text_editor/">https://joplinapp.org/rich_text_editor/</a></p>
+<p>Areas for consideration include increasing compatibility with Joplin-wide keybindings (many are currently static), limiting features of the editor not compatible with markdown formatting, reducing the impact of data changes caused by swapping between editors.</p>
+<p>Also read the document about limitations of the editor: <a href="https://joplinapp.org/rich_text_editor/">https://joplinapp.org/rich_text_editor/</a></p>
+<p>Expected Outcome: Removal of non-functional formatting options, alignment of generic Joplin editor options as well general improvements in editor usability.</p>
 <p>Difficulty level: High</p>
 <p>Skills Required: Typescript, Javascript, CSS, HTML, Markdown rendering. You will also need to learn about TinyMCE if you're not already familiar with it.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/Daeraxa">Daeraxa</a></p>
+<p>Expected size of project: 175 hours</p>
 <h2>7. Improve PDF export<a name="7-improve-pdf-export" href="#7-improve-pdf-export" class="heading-anchor">🔗</a></h2>
 <p>Joplin uses Chrome's built-in print to PDF function which is very limited. This can be improved by using a 3rd party library to convert notes to PDF. Applies to desktop and CLI versions.</p>
 <p>Potential benefits:</p>
 <ul>
-<li>Export multiple notes as a single PDF</li>
-<li>Embedding attachments (see <a href="https://github.com/laurent22/joplin/issues/5943">https://github.com/laurent22/joplin/issues/5943</a>)</li>
-<li>Delay export until the note is fully rendered (<a href="https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159">https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159</a>)</li>
+<li>
+<p>Export multiple notes as a single PDF</p>
+</li>
+<li>
+<p>Embedding attachments (see <a href="https://github.com/laurent22/joplin/issues/5943">https://github.com/laurent22/joplin/issues/5943</a>)</p>
+</li>
+<li>
+<p>Delay export until the note is fully rendered (<a href="https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159">https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159</a>)</p>
+</li>
 </ul>
+<p>Expected Outcome: PDF export no longer relies on Chrome print to pdf</p>
 <p>Difficulty level: Medium</p>
 <p>Skills Required: Typescript, Javascript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>8. Replace built-in PDF renderer with a library<a name="8-replace-built-in-pdf-renderer-with-a-library" href="#8-replace-built-in-pdf-renderer-with-a-library" class="heading-anchor">🔗</a></h2>
 <p>Just like with export, Joplin relies on the built-in PDF renderer to show PDF attachments. Replacing it with a 3rd-party library has a number of advantages:</p>
 <ul>
-<li>Joplin can preserve PDF viewer state when a note is re-rendered. For instance currently after opening and closing settings, PDF are reset to the 1st page.</li>
-<li>It may be possible to link to a specific page or even a location within a PDF document.</li>
-<li>Annotate PDF documents from Joplin</li>
+<li>
+<p>Joplin can preserve PDF viewer state when a note is re-rendered. For instance currently after opening and closing settings, PDF are reset to the 1st page.</p>
+</li>
+<li>
+<p>It may be possible to link to a specific page or even a location within a PDF document.</p>
+</li>
+<li>
+<p>Annotate PDF documents from Joplin</p>
+</li>
 </ul>
+<p>Expected Outcome: a library is used to render PDFs</p>
 <p>Difficulty level: Medium</p>
 <p>Skills Required: Typescript, Javascript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>9. Rebuild file system sync on Android<a name="9-rebuild-file-system-sync-on-android" href="#9-rebuild-file-system-sync-on-android" class="heading-anchor">🔗</a></h2>
 <p>A recent update broke file system synchronization on Android, as applications are now required to use a new API to access storage. Currently there are no libraries that would proxy this API for React Native. If we want to get file system sync working again it has to be written from scratch.</p>
+<p>Expected Outcome: File system sync works on all Android versions</p>
 <p>Difficulty level: High</p>
 <p>Skills Required: Android, Java/Kotlin, Typescript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a></p>
+<p>Expected size of project: 175 hours</p>
 <h2>10. Tablet layout<a name="10-tablet-layout" href="#10-tablet-layout" class="heading-anchor">🔗</a></h2>
-<p>On wide screens devices like tables Joplin could use a different layout, e.g. with note list always showing, or have both editor and viewer visible at the same time.</p>
-<p>Difficulty Level: Medium</p>
+<p>On wide screens devices like tables Joplin could use a different layout, e.g. with note list always showing, or have both editor and viewer visible at the same time. What component is visible shoud be optional - for example, the user may want to see the note list, but hide the sidebar. This change will have to be implemented in such a way that it doesn't break the regular, mobile-only layout.</p>
+<p>Expected Outcome: A new tablet-specific layout, with sidebar, note list and editor always visible.</p>
+<p>Difficulty Level: High</p>
 <p>Skills Required: React, Typescript, CSS.</p>
+<p>Potential Mentor(s): <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>11. Improve plugin search and discoverability<a name="11-improve-plugin-search-and-discoverability" href="#11-improve-plugin-search-and-discoverability" class="heading-anchor">🔗</a></h2>
-<p>As there are more and more plugins it would be good to improve how they are discovered, and to improve search - in particular improve search relevance. We are open to hear ideas about this, but a few things that could be done, for example are:</p>
+<p>As there are more and more plugins it would be good to improve how they are discovered, and to improve search - in particular improve search relevance.</p>
+<p>In practice, we would want the following:</p>
 <ul>
-<li>Improve the <a href="https://github.com/joplin/plugins#readme">page that lists all the plugin</a> by adding a download count (based on stats.json) and make the list sortable by download count.</li>
-<li>In the app, use the info from stats.json to order the plugin - those with more downloads going on top for example</li>
-<li>Create a dynamically generated page (using GitHub Actions) under <a href="http://joplinapp.org">joplinapp.org</a> that shows some recommended plugins, trending plugins, etc. similar to <a href="https://addons.mozilla.org/en-GB/firefox/">Add-ons for Firefox</a></li>
+<li>
+<p>A page under <code>joplinapp.org/plugins</code> that lists recommended plugins, trending plugins, etc. similar to <a href="https://addons.mozilla.org/en-GB/firefox/">Add-ons for Firefox</a>. From here it should also be possible to search for plugins.</p>
+</li>
+<li>
+<p>Each plugin should have a page under <code>joplinapp.org/plugins/PLUGIN_NAME</code> that provides detailed info about the plugin (info would come from manifest.json). If the plugin manifest links to a README file perhaps we can also fetch it and display it there?</p>
+</li>
+<li>
+<p>In the app, use the info from stats.json to order the plugin - those with more downloads going on top for example</p>
+</li>
 </ul>
-<p>Those are just ideas and we're open to hearing more from you.</p>
+<p>All the above can be done using the <a href="https://github.com/joplin/plugins#readme">info from the plugin repo</a>, in particular using manifests.json and stats.json. You would use this to implement the above functionalities. Moreover, the <code>joplinapp.org</code> pages should be dynamically generated using a script and this should be integrated with CI.</p>
+<p>Expected Outcome: Primary: An automatically generated website under <code>joplinapp.org/plugins</code>. Secondary: Improved plugin search in the desktop app</p>
 <p>Difficulty Level: Medium</p>
 <p>Skills Required: Typescript, CSS, GitHub Actions.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/tessus/">tessus</a>, <a href="https://discourse.joplinapp.org/u/JackGruber">JackGruber</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>12. Email plugin<a name="12-email-plugin" href="#12-email-plugin" class="heading-anchor">🔗</a></h2>
 <p>Create a plugin to fetch mail via IMAP and convert messages to notes (including attachments). The plugin should be able to filter what messages it donwloads, e.g. based on the folder.</p>
 <p>Additional features to consider:</p>
 <ul>
-<li>support more than one account</li>
-<li>convert HTML to Markdown</li>
-<li>delete/move received emails</li>
+<li>
+<p>support more than one account</p>
+</li>
+<li>
+<p>convert HTML to Markdown</p>
+</li>
+<li>
+<p>delete/move received emails</p>
+</li>
 </ul>
+<p>Expected Outcome: Email plugin (with the features described above) is available to install from the plugin repo.</p>
 <p>Difficulty Level: Medium</p>
 <p>Skills Required: TypeScript, JavaScript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>13. Desktop application integration testing<a name="13-desktop-application-integration-testing" href="#13-desktop-application-integration-testing" class="heading-anchor">🔗</a></h2>
 <p>The desktop app front end has a few unit tests to verify things like React hooks and certain utility functions. However we currently have no integration testing to verify for example that a change in one component didn't break something in another component. This project would be about setting up this integration testing for the desktop app. You would do the setup and probably also write a few tests to demonstrate that it's working as expected. More info at <a href="https://www.electronjs.org/docs/latest/tutorial/automated-testing">https://www.electronjs.org/docs/latest/tutorial/automated-testing</a></p>
+<p>Expected Outcome: The student will have a good understanding on how to setup automated testing of the desktop app, and will have implemented automated testing for at least a subset of the application (e.g. Markdown editor and WYSIWYG editor)</p>
 <p>Difficulty Level: High</p>
 <p>Skills Required: TypeScript, JavaScript, Electron.</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
 <h2>14. Client settings sync<a name="14-client-settings-sync" href="#14-client-settings-sync" class="heading-anchor">🔗</a></h2>
-<p>Whenever settings are changed on one client these are not replicated to other clients connected to the same sync target.<br>
-This project would be about creating synchronisation between clients to allow a single configuration rather than having to set them up separately on each e.g. keyboard shortcuts, installed plugins, Markdown plugins, note history etc.</p>
+<p>Whenever settings are changed on one client these are not replicated to other clients connected to the same sync target.</p>
+<p>This project would be about creating synchronisation between clients to allow a single configuration rather than having to set them up separately on each e.g. keyboard shortcuts, installed plugins, Markdown plugins, note history etc.</p>
+<p>Expected Outcome: Generic cross platform options synchronisation as well as options specific to particular platform via the existing synchronisation feature.</p>
 <p>Difficulty Level: High</p>
 <p>Skills Required: TypeScript, JavaScript</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/Daeraxa">Daeraxa</a>, <a href="https://discourse.joplinapp.org/u/JackGruber">JackGruber</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
 <h1>More info<a name="more-info" href="#more-info" class="heading-anchor">🔗</a></h1>
 <ul>
 <li>Make sure you read the <a href="https://joplinapp.org/gsoc2022/index/">Joplin Google Summer of Code Introduction</a></li>
