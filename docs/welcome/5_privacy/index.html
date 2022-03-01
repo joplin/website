@@ -26,12 +26,12 @@ https://github.com/laurent22/joplin/blob/dev/readme/welcome/5_privacy.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="Joplin values your privacy by giving you complete control over your information and digital footprint. Joplin applications do not send any data to any service without your authorisation. Any data t..." />
+	<meta name="description" content="The Joplin applications, including the Android, iOS, Windows, macOS and Linux applications, do not send any data to any service without your authorisation. Any data that Joplin saves, such as notes..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
 	<meta property="og:url" content="https://joplinapp.org/welcome/5_privacy/index.html" />
-	<meta property="og:title" content="Privacy policy" />
-	<meta property="og:description" content="Joplin values your privacy by giving you complete control over your information and digital footprint. Joplin applications do not send any data to any service without your authorisation. Any data t..." />
+	<meta property="og:title" content="Joplin Privacy Policy" />
+	<meta property="og:description" content="The Joplin applications, including the Android, iOS, Windows, macOS and Linux applications, do not send any data to any service without your authorisation. Any data that Joplin saves, such as notes..." />
 		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -46,7 +46,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/welcome/5_privacy.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=7ed2ae55b61de5eedd69b48d4e6b5400" as="style" />
-		<title>Privacy policy | Joplin</title>
+		<title>Joplin Privacy Policy | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -315,10 +315,10 @@ https://github.com/laurent22/joplin/blob/dev/readme/welcome/5_privacy.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>Privacy policy<a name="privacy-policy" href="#privacy-policy" class="heading-anchor">🔗</a></h1>
-<p>Joplin values your privacy by giving you complete control over your information and digital footprint.</p>
-<p>Joplin applications do not send any data to any service without your authorisation. Any data that Joplin saves, such as notes or images, are saved to your own device and you are free to delete this data at any time.</p>
-<p>Joplin has many modern features, some of which use third-party services. You can disable most of these features in the application settings. These features are:</p>
+<h1>Joplin Privacy Policy<a name="joplin-privacy-policy" href="#joplin-privacy-policy" class="heading-anchor">🔗</a></h1>
+<p>The Joplin applications, including the Android, iOS, Windows, macOS and Linux applications, do not send any data to any service without your authorisation. Any data that Joplin saves, such as notes or images, are saved to your own device and you are free to delete this data at any time.</p>
+<p>If you choose to synchronise with a third-party, such as OneDrive or Dropbox, the notes will be sent to that account, in which case the third-party privacy policy applies.</p>
+<p>In order to provide certain features, Joplin may need to connect to third-party services. You can disable most of these features in the application settings:</p>
 <table class="table">
 <thead>
 <tr>
@@ -353,11 +353,23 @@ https://github.com/laurent22/joplin/blob/dev/readme/welcome/5_privacy.md
 <td>Enabled</td>
 <td>No <sup>(1)</sup></td>
 </tr>
+<tr>
+<td>Spellchecker dictionary</td>
+<td>On Linux and Windows, the desktop application downloads the spellchecker dictionary from <code>redirector.gvt1.com</code>.</td>
+<td>Enabled</td>
+<td>Yes <sup>(2)</sup></td>
+</tr>
+<tr>
+<td>Plugin repository</td>
+<td>The desktop application downloads the list of available plugins from the <a href="https://github.com/joplin/plugins">official GitHub repository</a>. If this repository is not accessible (eg. in China) the app will try to get the plugin list from <a href="https://github.com/laurent22/joplin/blob/8ac6017c02017b6efd59f5fcab7e0b07f8d44164/packages/lib/services/plugins/RepositoryApi.ts#L22">various mirrors</a>, in which case the plugin screen <a href="https://github.com/laurent22/joplin/issues/5161#issuecomment-925226975">works slightly differently</a>.</td>
+<td>Enabled</td>
+<td>No</td>
+</tr>
 </tbody>
 </table>
-<p>(1) <a href="https://github.com/laurent22/joplin/issues/5705">https://github.com/laurent22/joplin/issues/5705</a></p>
-<p>Joplin is developed as an open-source application and the source code is freely available online to inspect.</p>
-<p>For any question about Joplin privacy, please leave a message on the <a href="https://discourse.joplinapp.org/">Joplin Forum</a>.</p>
+<p><sup>(1) <a href="https://github.com/laurent22/joplin/issues/5705">https://github.com/laurent22/joplin/issues/5705</a></sup><br/><br>
+<sup>(2) If the spellchecker is disabled, <a href="https://discourse.joplinapp.org/t/new-version-of-joplin-contacting-google-servers-on-startup/23000/40?u=laurent">it will not download the dictionary</a>.</sup></p>
+<p>For any question about Joplin privacy policy, please leave a message <a href="https://discourse.joplinapp.org/">on the forum</a>.</p>
 
 								<div class="bottom-links">
 										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/welcome/5_privacy.md">
