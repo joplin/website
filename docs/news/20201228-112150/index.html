@@ -148,18 +148,16 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20201228-112150.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>The macOS app is now notarised<a name="the-macos-app-is-now-notarised" href="#the-macos-app-is-now-notarised" class="heading-anchor">🔗</a></h1>
+<h1><a href="/news/20201228-112150/">The macOS app is now notarised</a><a name="the-macos-app-is-now-notarised-news-20201228-112150" href="#the-macos-app-is-now-notarised-news-20201228-112150" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>28 Dec 2020</strong></em></p>
 <p>From version 1.5, the macOS application will now be notarised. It means that when you install it you will no longer see a warning telling you that the app hasn't been checked for malware. You also won't need to go in the OS security settings to launch the app.</p>
 <p>Notarisation has been around since macOS Catalina, however it took a while to implement it for Joplin as the process is complex and error prone.</p>
 <p>First the app has to be built and uploaded to Apple's servers. They then automatically check the app for any malware, a process that can take 5 to 15 minutes (and presumably more if the app is incorrectly flagged as malware). Once it's done, Apple creates a notarisation ticket for the app.</p>
 <p>Then whenever the app is started, Apple check on their server if the app has a notarisation ticket (a process that recently caused &quot;<a href="https://arstechnica.com/gadgets/2020/11/macos-big-sur-launch-appears-to-cause-temporary-slowdown-in-even-non-big-sur-macs/">apps taking minutes to launch, stuttering and non-responsiveness throughout macOS</a>&quot;). It's also possible to staple this notarisation ticket to the app, so that it's possible to check the ticket even when the computer is offline.</p>
 <p>All that has now been automated in the Joplin build pipeline, and will apply to all macOS app future versions.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
 
-								<div class="bottom-links">
-										<a class="bottom-link" href="https://discourse.joplinapp.org/c/news/9">
-											<i class="fab fa-discourse"></i></i> Discuss on the forum
-										</a>
-								</div>
 						</div>
 					</div>
 				</div>

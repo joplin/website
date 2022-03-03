@@ -148,26 +148,24 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20211102-150403.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>Potential breaking change in next Joplin Server update (2.5.10)<a name="potential-breaking-change-in-next-joplin-server-update-2-5-10" href="#potential-breaking-change-in-next-joplin-server-update-2-5-10" class="heading-anchor">🔗</a></h1>
+<h1><a href="/news/20211102-150403/">Potential breaking change in next Joplin Server update (2.5.10)</a><a name="potential-breaking-change-in-next-joplin-server-update-2-5-10-news-20211102-150403" href="#potential-breaking-change-in-next-joplin-server-update-2-5-10-news-20211102-150403" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>2 Nov 2021</strong></em></p>
 <p>Just a head up that the next Joplin Server update could potentially include a breaking change, depending on your data.</p>
 <p>One of the database migration is going to add an &quot;owner_id&quot; column to the &quot;items&quot; table (where all notes, notebooks, etc. are stored), and automatically populate it. Normally that shouldn't take too long but you might want to make sure you won't need the server right away when you process this.</p>
 <p>The second database migration will add a unique constraint on <a href="http://items.name">items.name</a> and items.owner_id and that's where the breaking change might be. Normally this data is already unique because that's enforced by the application but in some rare cases, due a race condition, there could be duplicate data in there. If that happens the migration will fail and the server will not start.</p>
 <p>If that happens, you'll need to decide what to do with the data, as it's not possible to automatically decide. You can find all duplicates using this query:</p>
-<p>&lt;code&gt;<strong>select</strong> count(<em>), name, owner_id<br>
+<p><code><strong>select</strong> count(<em>), name, owner_id<br>
 <strong>from</strong> items <strong>group</strong> <strong>by</strong> name, owner_id<br>
-<strong>having</strong> count(</em>) &gt; 1;&lt;/code&gt;</p>
+<strong>having</strong> count(</em>) &gt; 1;</code></p>
 <p>Once you have the list of IDs you have a few options:</p>
 <ul>
 <li>Find the corresponding item in Joplin (it can unfortunately be anything - a note, resource, folder, etc.), then delete it and sync.</li>
 <li>Or, just delete the data directly in the database. You'll want to delete the corresponding item_id from the user_items table too.</li>
 </ul>
 <p>But really in most cases you should be fine. Especially if you don't have that many notes it's unlikely you have duplicates.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
 
-								<div class="bottom-links">
-										<a class="bottom-link" href="https://discourse.joplinapp.org/c/news/9">
-											<i class="fab fa-discourse"></i></i> Discuss on the forum
-										</a>
-								</div>
 						</div>
 					</div>
 				</div>

@@ -148,7 +148,8 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20200906-172325.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>Improving the sync process in Joplin<a name="improving-the-sync-process-in-joplin" href="#improving-the-sync-process-in-joplin" class="heading-anchor">🔗</a></h1>
+<h1><a href="/news/20200906-172325/">Improving the sync process in Joplin</a><a name="improving-the-sync-process-in-joplin-news-20200906-172325" href="#improving-the-sync-process-in-joplin-news-20200906-172325" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>6 Sep 2020</strong></em></p>
 <p>The latest version of Joplin includes a mechanism to upgrade the  structure of a sync target. When you startup the app you will be asked  to upgrade before being able to sync. Once you start the process, the  app will briefly display an information screen, upgrade the sync target,  and then restart the app. You’ll then be able to sync with the new sync  target format. That first upgrade is quite simple as the goal for now  is to put the mechanism in place and verify that it works well.</p>
 <p>From a user perspective this feature doesn’t do anything visible, although <a href="https://github.com/laurent22/joplin/issues/3692#issuecomment-685679213">it caused some issues</a>, so one might wonder why it’s even there. This post is meant to clarify this.</p>
 <p>The structure of the sync target hasn’t really changed since the day  Joplin was released. It works well however it has some shortcomings that  should be fixed eventually for sync to remain performant.</p>
@@ -170,12 +171,9 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20200906-172325.md
 <p>The folder that contains file attachments is named “.resources” on  the sync target. This causes troubles because certain platforms will  hide directories that start with dot “.”, and perhaps they will be  excluded from backup or skipped when moved somewhere else. Being able to  upgrade the sync target means we can rename this folder to just  “resources” instead.</p>
 <h3>Conclusion<a name="conclusion" href="#conclusion" class="heading-anchor">🔗</a></h3>
 <p>That’s obviously a lot of possible improvements and it won’t be done  overnight, but having the sync upgrade mechanism in place means we can  start considering these options. Some of these, such as renaming the  “resources” dir are simpler and could be done relatively soon. Perhaps  other more complex ones will be group within one sync target upgrade to  minimise disruption. In any case, I hope this clarifies the reason for  this recent sync upgrade and that it gives some ideas of what to expect  in the future.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
 
-								<div class="bottom-links">
-										<a class="bottom-link" href="https://discourse.joplinapp.org/c/news/9">
-											<i class="fab fa-discourse"></i></i> Discuss on the forum
-										</a>
-								</div>
 						</div>
 					</div>
 				</div>
