@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/gsoc2021/ideas.md and any manual change
+This file was auto-generated from readme/spec/desktop_styling.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md
+https://github.com/laurent22/joplin/blob/dev/readme/spec/desktop_styling.md
 
 -->
 
@@ -26,14 +26,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="2021 is Joplin second round at Google Summer of Code. Detailed information on how to get involved and apply are given in the general Summer of Code introduction These are all proposals! We are open..." />
+	<meta name="description" content="The desktop application went through three styling methods: Directly setting the style on the element - eg. &amp;lt;div style&#x3D;{{ fontWeight: &#39;bold&#39; }}&#x2F;&gt;. We no longer use this method as it lacks flexib..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
-	<meta property="og:url" content="https://joplinapp.org/gsoc2021/ideas/index.html" />
-	<meta property="og:title" content="GSoC 2021 Ideas" />
-	<meta property="twitter:title" content="GSoC 2021 Ideas" />
-	<meta property="og:description" content="2021 is Joplin second round at Google Summer of Code. Detailed information on how to get involved and apply are given in the general Summer of Code introduction These are all proposals! We are open..." />
-	<meta property="twitter:description" content="2021 is Joplin second round at Google Summer of Code. Detailed information on how to get involved and apply are given in the general Summer of Code introduction These are all proposals! We are open..." />
+	<meta property="og:url" content="https://joplinapp.org/spec/desktop_styling/index.html" />
+	<meta property="og:title" content="Desktop application styling" />
+	<meta property="twitter:title" content="Desktop application styling" />
+	<meta property="og:description" content="The desktop application went through three styling methods: Directly setting the style on the element - eg. &amp;lt;div style&#x3D;{{ fontWeight: &#39;bold&#39; }}&#x2F;&gt;. We no longer use this method as it lacks flexib..." />
+	<meta property="twitter:description" content="The desktop application went through three styling methods: Directly setting the style on the element - eg. &amp;lt;div style&#x3D;{{ fontWeight: &#39;bold&#39; }}&#x2F;&gt;. We no longer use this method as it lacks flexib..." />
 		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -48,7 +48,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=7ed2ae55b61de5eedd69b48d4e6b5400" as="style" />
-		<title>GSoC 2021 Ideas | Joplin</title>
+		<title>Desktop application styling | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -223,7 +223,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md
 		</div>
 	</div>
 </div>
-			<div class="help-page-container page-ideas">
+			<div class="help-page-container page-desktop_styling">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -319,75 +319,74 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>GSoC 2021 Ideas<a name="gsoc-2021-ideas" href="#gsoc-2021-ideas" class="heading-anchor">🔗</a></h1>
-<p>2021 is Joplin second round at Google Summer of Code. Detailed information on how to get involved and apply are given in the <a href="https://joplinapp.org/gsoc2021/index/">general Summer of Code introduction</a></p>
-<p><strong>These are all proposals! We are open to new ideas you might have!!</strong> Do you have an awesome idea you want to work on with Joplin but that is not among the ideas below? That's cool. We love that! But please do us a favour: Get in touch with a mentor early on and make sure your project is realistic and within the scope of Joplin. Just make sure your idea is within this year's theme:</p>
+<h1>Desktop application styling<a name="desktop-application-styling" href="#desktop-application-styling" class="heading-anchor">🔗</a></h1>
+<p>The desktop application went through three styling methods:</p>
 <ul>
-<li><strong>Plugin development</strong> - implementing new features using Joplin's plugin system.</li>
-<li><strong>External desktop applications</strong> - build external Joplin applications by retrieving, creating or modifying notes via the Data API.</li>
-<li><strong>External server applications</strong> - leverage the Joplin Server API to provide online features to Joplin users.</li>
+<li>
+<p>Directly setting the style on the element - eg. <code>&lt;div style={{ fontWeight: 'bold' }}/&gt;</code>. We no longer use this method as it lacks flexibility, and it makes it hard to change the style via a custom stylesheet.</p>
+</li>
+<li>
+<p>Using the styled-components package. This makes the style cleaner and more reusable. However, creating special components for each style is a bit of an overhead, and styled-components has a few glitches that can make styling fail.</p>
+</li>
+<li>
+<p>The third and current method is simply using SCSS and plain CSS classes. This method is described below, and in general that's what should be used for new components. It makes customisation easier and has less overhead than styled-components</p>
+</li>
 </ul>
-<h1>Information for Students<a name="information-for-students" href="#information-for-students" class="heading-anchor">🔗</a></h1>
-<p>These ideas were contributed by our developers and users. They are sometimes vague or incomplete. If you wish to submit a proposal based on these ideas, you are urged to contact the developers and find out more about the particular suggestion you're looking at.</p>
-<p>Becoming accepted as a Google Summer of Code student is quite competitive. Accepted students typically have thoroughly researched the technologies of their proposed project and have been in frequent contact with potential mentors. <strong>Simply copying and pasting an idea here will not work.</strong> On the other hand, creating a completely new idea without first consulting potential mentors rarely works.</p>
-<h1>List of ideas<a name="list-of-ideas" href="#list-of-ideas" class="heading-anchor">🔗</a></h1>
-<h2>1. OCR plugin<a name="1-ocr-plugin" href="#1-ocr-plugin" class="heading-anchor">🔗</a></h2>
-<p>It is possible to add support for OCR content in Joplin via the <a href="http://tesseract.projectnaptha.com/">Tesseract library</a>. A first step would be to assess the feasibility of this project by integrating the lib in the desktop app and trying to OCR an image. OCR support should be implemented as a service of the desktop app. It would extract the text from the images, and append the content as plain text to the notes.</p>
-<p>Expected Outcome: A plugin for the desktop app that extract text from images and attach it to the note.</p>
-<p>Difficulty Level: High</p>
-<p>Skills Required: JavaScript, Image processing</p>
-<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">laurent22</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a></p>
-<h2>2. Template plugin<a name="2-template-plugin" href="#2-template-plugin" class="heading-anchor">🔗</a></h2>
-<p>Joplin already supports templates however we would like to re-package this feature as a plugin. Thus you would remove it from the main app and create a new plugin for it. It should be compatible with existing templates. Once the plugin is created, it could be a good idea to improve the feature further, perhaps based on user feedback on GitHub or in the forum.</p>
-<p>Expected Outcome: A plugin for the desktop app that handle note templates.</p>
-<p>Difficulty Level: Medium</p>
-<p>Skills Required: JavaScript</p>
-<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/tessus/">tessus</a></p>
-<h2>3. BibTex plugin<a name="3-bibtex-plugin" href="#3-bibtex-plugin" class="heading-anchor">🔗</a></h2>
-<p>Many of our users use Joplin for research note and as such a plugin that can add support for <a href="http://www.bibtex.org">BibTex</a> would be very useful. The plugin should use locally stored citations, then display popup with type-ahead to allow the user to enter the citation into the document. A content script should also be created so that these citations are rendered correctly in the note viewer.</p>
-<p>Expected Outcome: A plugin to enter BibTex citations</p>
-<p>Difficulty Level: Medium</p>
-<p>Skills Required: JavaScript, understanding of BibTex format</p>
-<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a>, <a href="https://github.com/laurent22/">laurent22</a></p>
-<h2>4. Real-time collaboration on a note<a name="4-real-time-collaboration-on-a-note" href="#4-real-time-collaboration-on-a-note" class="heading-anchor">🔗</a></h2>
-<p>Create a web application that allows two or more users to collaborate in real time on the same note. Use the Joplin Server API to save and load the note.</p>
-<p>Expected Outcome: A web application that allows users to collaborate on a note</p>
-<p>Difficulty Level: High</p>
-<p>Skills Required: JavaScript, Text editor, Web development</p>
-<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a></p>
-<h2>5. Paste special<a name="5-paste-special" href="#5-paste-special" class="heading-anchor">🔗</a></h2>
-<p>A plugin that will allow pasting special text into Joplin and have it converted to Markdown. For example, paste an Excel or CSV table, and have it converted to a Markdown table. Paste some HTML or PDF text and again have it converted to formatted Markdown. This could be one plugin, or a collection of plugins, one for each &quot;paste special&quot; operation.</p>
-<p>Expected Outcome: One or more plugins that allow pasting special text.</p>
-<p>Difficulty Level: Normal</p>
-<p>Skills Required: JavaScript, Markdown, HTML, and knowledge of various text file formats (PDF, RTF, HTML, etc.)</p>
-<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/tessus/">tessus</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a></p>
-<h2>6. Plugin system on mobile<a name="6-plugin-system-on-mobile" href="#6-plugin-system-on-mobile" class="heading-anchor">🔗</a></h2>
-<p>The plugin system is currently available on desktop and CLI. We believe it could work on mobile too although some work will have to be done to make the plugin API compatible, as well as add a mechanism to load plugins.</p>
-<p>Expected Outcome: Allow loading and running plugins on mobile</p>
-<p>Difficulty Level: High</p>
-<p>Skills Required: JavaScript, React Native</p>
-<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">roman_r_m</a>, <a href="https://github.com/laurent22/">laurent22</a></p>
-<h2>7. Conflict resolution editor plugin<a name="7-conflict-resolution-editor-plugin" href="#7-conflict-resolution-editor-plugin" class="heading-anchor">🔗</a></h2>
-<p>When a note is modified on two different devices, a &quot;conflict note&quot; is generated. It would be useful to create a plugin that allows taking this &quot;conflict note&quot; and the current version of the note, and compare them using a colored diff editor. It could be a built-in editor, or perhaps the plugin could leverage existing diff editors and feed the note versions to it.</p>
-<p>Expected Outcome: Allow resolving note conflicts using a merge editor</p>
-<p>Difficulty Level: High</p>
-<p>Skills Required: JavaScript, Markdown, Understanding of diff and merging conflicts</p>
-<p>Potential Mentor(s): <a href="https://github.com/tessus/">tessus</a>, <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
-<h2>8. Kanban plugin<a name="8-kanban-plugin" href="#8-kanban-plugin" class="heading-anchor">🔗</a></h2>
-<p>Use Joplin built-in types - notes, to-dos and tags to implement <a href="https://discourse.joplinapp.org/t/kanban-for-tasks/7342">Kanban for Tasks</a>.</p>
-<p>Expected Outcome: A Kanban plugin to allow organising tasks</p>
-<p>Difficulty Level: High</p>
-<p>Skills Required: JavaScript</p>
-<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">laurent22</a></p>
-<h1>More info<a name="more-info" href="#more-info" class="heading-anchor">🔗</a></h1>
+<h2>SCSS support<a name="scss-support" href="#scss-support" class="heading-anchor">🔗</a></h2>
+<p>The application stylesheet is generated by building <code>packages/app-desktop/style.scss</code></p>
+<p>When creating a new component, create a new stylesheet file too, for example in <code>MyComponent/style.scss</code>, then add this file to the root style.scss file.</p>
+<p>Additionally global styles can go in the root <code>main.scss</code> file.</p>
+<p>Whenever the app is built, this root style.scss file is compiled and a style.css file is generated. It's this final style.css file that's included into the app.</p>
+<h2>CSS class framework<a name="css-class-framework" href="#css-class-framework" class="heading-anchor">🔗</a></h2>
+<p>We use <a href="https://rscss.io/index.html">rscss</a> to structure the components and classes. The main things to remember are:</p>
 <ul>
-<li>Make sure you read the <a href="https://joplinapp.org/gsoc2021/index/">Joplin Google Summer of Code Introduction</a></li>
-<li>To build the application, please read <a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">BUILD.md</a></li>
-<li>And before creating a pull request, please read the <a href="https://joplinapp.org/gsoc2021/pull_request_guidelines/">pull request guidelines</a></li>
+<li>
+<p>Components should be named with <strong>at least two words</strong>. eg <code>.search-form</code></p>
+</li>
+<li>
+<p>Component element classes should have only <strong>one word</strong>. eg <code>.field</code>, <code>textinput</code></p>
+</li>
+<li>
+<p>Always use the <code>&gt;</code> child selector. This prevents bleeding through nested components.</p>
+</li>
 </ul>
+<p>For example, in the code below there are two components (<code>order-form</code> and <code>slider-box</code>), and each has one or more elements.</p>
+<pre><code class="language-html">&lt;form class=&quot;order-form&quot;&gt;
+	&lt;input class=&quot;firstname&quot; type=&quot;text&quot;/&gt;
+	&lt;input class=&quot;lastname&quot; type=&quot;text&quot;/&gt;
+	&lt;div class=&quot;slider-box&quot;&gt;
+		Select quantity: &lt;div class=&quot;knob&quot;&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<p>The components and their elements would be styled this way:</p>
+<pre><code class="language-css">.order-form &gt; firstname,
+.order-form &gt; lastname {
+	padding: 10px;
+}
+
+.slider-box &gt; knob {
+	border-width: 1px;
+}
+</code></pre>
+<p>What if you want to apply a style to <code>slider-box</code> when it is inside <code>order-form</code>?</p>
+<p>Do <strong>NOT</strong> do this:</p>
+<pre><code>.order-form &gt; .slider-box { } /* WRONG */
+</code></pre>
+<p><code>slider-box</code> is a component but also an element of <code>order-form</code>. So in that case, name the element, for example as <code>quantityslider</code>, then you can style it:</p>
+<pre><code class="language-html">&lt;div class=&quot;slider-box quantityslider&quot;&gt;
+	Select quantity: &lt;div class=&quot;knob&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.order-form &gt; .quantityslider {
+	margin-left: 10px;
+}
+</code></pre>
+<p>The goal of this approach is to specifically target the elements that you need and nothing else. Over the long term is makes managing the CSS easier.</p>
+<p>For more details, see the <a href="https://rscss.io/index.html">RSCSS documentation</a>.</p>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/desktop_styling.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>
