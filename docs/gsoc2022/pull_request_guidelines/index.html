@@ -321,9 +321,23 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/pull_request_guidel
 </div>
 <h1>Pull request guidelines<a name="pull-request-guidelines" href="#pull-request-guidelines" class="heading-anchor">🔗</a></h1>
 <p>Due to our limited resources and in order to give everyone a chance to submit a pull request, we have put restrictions in place this year. If you want to submit a pull request, please take into account the following rules:</p>
+<ol start="0">
+<li>
+<p>In general please only work on issues that have been triaged - those are issues with labels such as &quot;high&quot;, &quot;medium&quot; or &quot;enhancement&quot;. It means an admin looked at it and added it to the backlog.</p>
 <ol>
 <li>
-<p>Pull requests must be based on an issue that existed <strong>before GSoC was started</strong>, or based on an issue created by a moderator.</p>
+<p>Bug fixes are always welcome. Start by reviewing the list of bugs with <a href="https://github.com/laurent22/joplin/issues?utf8=%E2%9C%93&amp;q=is%3Aopen+is%3Aissue+label%3Abug+label%3Ahigh">high priority</a> or <a href="https://github.com/laurent22/joplin/issues?utf8=%E2%9C%93&amp;q=is%3Aopen+is%3Aissue+label%3Abug+label%3Amedium">medium priority</a>.</p>
+</li>
+<li>
+<p>Alternatively you may look at the <a href="https://github.com/laurent22/joplin/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">Good first issues</a>.</p>
+</li>
+<li>
+<p>And finally check the backlog of possible <a href="https://github.com/laurent22/joplin/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement">feature requests</a>. Some of those are complex and not a good fit for a first pull request, but others are more simple so you might want to consider these.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>You may not work on issues created by yourself (or your friends). It is likely we will close such issues.</p>
 </li>
 <li>
 <p>Each contributor <strong>may only create one pull request at a time</strong>. Once your pull request has been merged, you can post a second one. We have this rule in place due to our limited resources - if everyone was allowed to post multiple pull requests we will not be able to review them properly. It is also better for you because you only need to care about one PR - so spend time making sure it is as good as it can be - make sure it works well, has test units, documentation and screenshots (if relevant).</p>
@@ -332,7 +346,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/pull_request_guidel
 <p>If the pull request has serious issues, or would require a significant rewrite to be acceptable, we might close it and you will not be allowed to open a new one. So <strong>please be careful when posting a PR</strong>.</p>
 </li>
 <li>
-<p><strong>If you are borrowing code, please disclose it</strong>. It is fine and sometimes even recommended to borrow code, but we need to know about it to assess your work. If we find out that your pull request contains a lot of code copied from elsewhere, we will close the pull request.</p>
+<p><strong>If you are borrowing code, please disclose it</strong>. It is fine and sometimes even recommended to borrow code, but we need to know about it to assess your work.</p>
 </li>
 <li>
 <p><strong>All pull request must have test units</strong>. In some cases it might be almost impossible to add such tests (for example integration tests), but for anything else we insist on having them, and we may close the pull request if we see they could have been added but weren't. If you don't know how to add test units, please ask on the forum or Discord. If really it's not possible to add tests, we'll let you know at this point. Also please check again the <a href="https://github.com/laurent22/joplin/blob/dev/CONTRIBUTING.md#automated-tests">Automated Tests</a> documentation for more information.</p>
