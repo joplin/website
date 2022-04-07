@@ -38,5 +38,7 @@ jobs:
             GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
             GIT_USER_NAME: Joplin Bot
             IS_CONTINUOUS_INTEGRATION: 1
+            DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
+            DISCOURSE_USERNAME: ${{ secrets.DISCOURSE_USERNAME }}
         run: |
           ./joplin/packages/tools/release-website.sh
