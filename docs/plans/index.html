@@ -39,7 +39,7 @@ https://github.com/laurent22/joplin/blob/dev/
 			media="all"
 			onload="this.media='all'; this.onload = null"
 		/>
-		<link rel="stylesheet" href="/css/site.css?h=7ed2ae55b61de5eedd69b48d4e6b5400" as="style" />
+		<link rel="stylesheet" href="/css/site.css?h=48d853dd389c4aa024d008a0719918bf" as="style" />
 		<title>Joplin Cloud Plans | Joplin</title>
 
 		<script
@@ -48,7 +48,7 @@ https://github.com/laurent22/joplin/blob/dev/
 			as="script"
 		></script>
 	</head>
-	<body class="website-env-prod">
+	<body class="website-env-dev">
 		<div class="container-fluid generic-template plans-page" id="main-container">
 
 <div class=" navbar-main white-bg" id="nav-section">
@@ -137,9 +137,9 @@ https://github.com/laurent22/joplin/blob/dev/
 
 						<div class="main-content">
 							<div class="alert alert-danger alert-env-dev" role="alert">
-								Running in prod mode!
+								Running in dev mode!
 							</div>
-							<div id="plans-section" class="env-prod">
+							<div id="plans-section" class="env-dev">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 title-box">
@@ -197,26 +197,30 @@ https://github.com/laurent22/joplin/blob/dev/
 			</div>
 		</div>
 
-			<p><i class="fas fa-check feature feature-on"></i>Max 10 MB per note or attachment</p>
+			<p><i class="fas fa-check feature feature-on"></i>10 MB per note or attachment</p>
+			<p><i class="fas fa-check feature feature-on"></i>1 GB storage space</p>
 			<p><i class="fas fa-check feature feature-on"></i>Publish notes to the internet</p>
 			<p><i class="fas fa-check feature feature-on"></i>Sync as many devices as you want</p>
 			<p><i class="fas fa-check feature feature-on"></i>Web Clipper</p>
-			<p><i class="fas fa-check feature feature-on"></i>1 GB storage space</p>
 
 			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Share and collaborate on a notebook</p>
-			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Up to 10 users</p>
+			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Manage multiple users</p>
+			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Consolidated billing</p>
+			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Sharing access control</p>
 			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Priority support</p>
 		
 		<p class="text-center subscribe-wrapper">
 			<a id="subscribeButton-basic" href="" class="button-link btn-white subscribeButton">Try it now</a>
 		</p>
+
+		
 	</div>
 
 	<script>
 		(function() {
 			const stripePricesIds = {
-				monthly: 'price_1JAzWBLx4fybOTqJw64zxJRJ',
-				yearly: 'price_1JJIPZLx4fybOTqJHvxiQ7bV',
+				monthly: 'price_1JAx31Lx4fybOTqJRcGdsSfg',
+				yearly: 'price_1JIb4fLx4fybOTqJHnOUPVdf',
 			};
 			const planName = 'basic';
 			const buttonId = 'subscribeButton-' + planName;
@@ -270,26 +274,30 @@ https://github.com/laurent22/joplin/blob/dev/
 			</div>
 		</div>
 
-			<p><i class="fas fa-check feature feature-on"></i>Max 200 MB per note or attachment</p>
+			<p><i class="fas fa-check feature feature-on"></i>200 MB per note or attachment</p>
+			<p><i class="fas fa-check feature feature-on"></i>200 GB storage space</p>
 			<p><i class="fas fa-check feature feature-on"></i>Publish notes to the internet</p>
 			<p><i class="fas fa-check feature feature-on"></i>Sync as many devices as you want</p>
 			<p><i class="fas fa-check feature feature-on"></i>Web Clipper</p>
-			<p><i class="fas fa-check feature feature-on"></i>10 GB storage space</p>
 			<p><i class="fas fa-check feature feature-on"></i>Share and collaborate on a notebook</p>
 
-			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Up to 10 users</p>
+			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Manage multiple users</p>
+			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Consolidated billing</p>
+			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Sharing access control</p>
 			<p class="unchecked-text"><i class="fas fa-times feature feature-off"></i>Priority support</p>
 		
 		<p class="text-center subscribe-wrapper">
 			<a id="subscribeButton-pro" href="" class="button-link btn-white subscribeButton">Try it now</a>
 		</p>
+
+		
 	</div>
 
 	<script>
 		(function() {
 			const stripePricesIds = {
-				monthly: 'price_1JB1OVLx4fybOTqJOvp3NGM6',
-				yearly: 'price_1JJIQ7Lx4fybOTqJsQNv1QUp',
+				monthly: 'price_1JAx1eLx4fybOTqJ5VhkxaKC',
+				yearly: 'price_1JJFp7Lx4fybOTqJ0f4w2UvY',
 			};
 			const planName = 'pro';
 			const buttonId = 'subscribeButton-' + planName;
@@ -325,46 +333,50 @@ https://github.com/laurent22/joplin/blob/dev/
 	<div class="price-container ">
 		<div class="price-row">
 			<div class="plan-type">
-				<img src="&#x2F;images/business-icon.png"/>&nbsp;Business
+				<img src="&#x2F;images/business-icon.png"/>&nbsp;Teams
 			</div>
 
 			<div class="plan-price plan-price-monthly">
-				49.99€<sub class="per-month">&nbsp;/month</sub>
+				7.99€<sub class="per-month">&nbsp;/month (*)</sub>
 			</div>
 
 			<div class="plan-price plan-price-yearly">
-				39.99€<sub class="per-month">&nbsp;/month</sub>
+				6.69€<sub class="per-month">&nbsp;/month (*)</sub>
 			</div>
 		</div>
 
 		<div class="plan-price-yearly-per-year">
 			<div>
-				(479.88€<sub class="per-year">&nbsp;/year</sub>)
+				(80.28€<sub class="per-year">&nbsp;/year</sub>)
 			</div>
 		</div>
 
-			<p><i class="fas fa-check feature feature-on"></i>Max 200 MB per note or attachment</p>
+			<p><i class="fas fa-check feature feature-on"></i>200 MB per note or attachment</p>
+			<p><i class="fas fa-check feature feature-on"></i>200 GB storage space</p>
 			<p><i class="fas fa-check feature feature-on"></i>Publish notes to the internet</p>
 			<p><i class="fas fa-check feature feature-on"></i>Sync as many devices as you want</p>
 			<p><i class="fas fa-check feature feature-on"></i>Web Clipper</p>
-			<p><i class="fas fa-check feature feature-on"></i>10 GB storage space</p>
 			<p><i class="fas fa-check feature feature-on"></i>Share and collaborate on a notebook</p>
-			<p><i class="fas fa-check feature feature-on"></i>Up to 10 users</p>
+			<p><i class="fas fa-check feature feature-on"></i>Manage multiple users</p>
+			<p><i class="fas fa-check feature feature-on"></i>Consolidated billing</p>
+			<p><i class="fas fa-check feature feature-on"></i>Sharing access control</p>
 			<p><i class="fas fa-check feature feature-on"></i>Priority support</p>
 
 		
 		<p class="text-center subscribe-wrapper">
-			<a id="subscribeButton-business" href="mailto:business@joplincloud.com?subject&#x3D;Joplin%20Cloud%20Business%20Account%20Order&amp;body&#x3D;Hello%2C%0A%0AThis%20is%20an%20automatically%20generated%20email.%20The%20Business%20feature%20is%20coming%20soon%2C%20and%20in%20the%20meantime%20we%20offer%20a%20business%20discount%20if%20you%20would%20like%20to%20register%20multiple%20users.%0A%0AIf%20so%20please%20let%20us%20know%20the%20following%20details%20and%20we%20will%20get%20back%20to%20you%20as%20soon%20as%20possible%3A%0A%0A-%20Name%3A%20%0A%0A-%20Email%3A%20%0A%0A-%20Number%20of%20users%3A%20" class="button-link btn-white subscribeButton">Contact us</a>
+			<a id="subscribeButton-teams" href="" class="button-link btn-white subscribeButton">Try it now</a>
 		</p>
+
+		<sub>(*) Per user. Minimum of 2 users.</sub>
 	</div>
 
 	<script>
 		(function() {
 			const stripePricesIds = {
-				monthly: '',
-				yearly: '',
+				monthly: 'price_1Kl9uBLx4fybOTqJhx7q4zzj',
+				yearly: 'price_1Kl9uNLx4fybOTqJpsB2l3Kg',
 			};
-			const planName = 'business';
+			const planName = 'teams';
 			const buttonId = 'subscribeButton-' + planName;
 			const buttonElement = document.getElementById(buttonId);
 
@@ -398,6 +410,88 @@ https://github.com/laurent22/joplin/blob/dev/
 		</div>
 
 		<div class="row">
+			<div>
+				<h1>Feature comparison</h1>
+				<div class="joplin-cloud-feature-list">
+					<table class="table">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Basic</th>
+<th>Pro</th>
+<th>Teams</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Publish notes to the internet</td>
+<td>10 MB</td>
+<td>200 MB</td>
+<td>200 MB</td>
+</tr>
+<tr>
+<td>Storage space</td>
+<td>1 GB</td>
+<td>200 GB</td>
+<td>200 GB</td>
+</tr>
+<tr>
+<td>Publish notes to the internet</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Sync as many devices as you want</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Web Clipper</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Share and collaborate on a notebook</td>
+<td>-</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Manage multiple users</td>
+<td>-</td>
+<td>-</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Consolidated billing</td>
+<td>-</td>
+<td>-</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Sharing access control</td>
+<td>-</td>
+<td>-</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Priority support</td>
+<td>-</td>
+<td>-</td>
+<td>✔️</td>
+</tr>
+</tbody>
+</table>
+
+				</div>
+				<p>&nbsp;</p>
+			</div>
+		</div>
+
+		<div class="row">
 			<h1>FAQ</h1>
 <h2>What is Joplin Cloud?</h2>
 <p><a href="https://joplincloud.com">Joplin Cloud</a> allows you to synchronise your notes automatically to all your devices. Moreover, this service gives you access to additional features:</p>
@@ -425,7 +519,7 @@ https://github.com/laurent22/joplin/blob/dev/
 	<script>
 		const urlQuery = new URLSearchParams(location.search);
 		let subscriptionPeriod = 'monthly';
-		const stripe = Stripe('pk_live_51IvkOPLx4fybOTqJow8RFsWs0eDznPeBlXMw6s8SIDQeCM8bAFNYlBdDsyonAwRcJgBCoSlvFzAbhJgLFxzzTu4r0006aw846C');
+		const stripe = Stripe('pk_test_51IvkOPLx4fybOTqJetV23Y5S9YHU9KoOtE6Ftur0waWoWahkHdENjDKSVcl7v3y8Y0Euv7Uwd7O7W4UFasRwd0wE00MPcprz9Q');
 
 		let checkoutSessionUser = null;
 
@@ -452,7 +546,7 @@ https://github.com/laurent22/joplin/blob/dev/
 
 			console.info('Creating Stripe session for price:', priceId, 'Promotion code:', promotionCode);
 
-			return fetch("https://joplincloud.com/stripe/createCheckoutSession", {
+			return fetch("http://joplincloud.local:22300/stripe/createCheckoutSession", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
