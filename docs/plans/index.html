@@ -48,7 +48,7 @@ https://github.com/laurent22/joplin/blob/dev/
 			as="script"
 		></script>
 	</head>
-	<body class="website-env-dev">
+	<body class="website-env-prod">
 		<div class="container-fluid generic-template plans-page" id="main-container">
 
 <div class=" navbar-main white-bg" id="nav-section">
@@ -137,9 +137,9 @@ https://github.com/laurent22/joplin/blob/dev/
 
 						<div class="main-content">
 							<div class="alert alert-danger alert-env-dev" role="alert">
-								Running in dev mode!
+								Running in prod mode!
 							</div>
-							<div id="plans-section" class="env-dev">
+							<div id="plans-section" class="env-prod">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 title-box">
@@ -219,8 +219,8 @@ https://github.com/laurent22/joplin/blob/dev/
 	<script>
 		(function() {
 			const stripePricesIds = {
-				monthly: 'price_1JAx31Lx4fybOTqJRcGdsSfg',
-				yearly: 'price_1JIb4fLx4fybOTqJHnOUPVdf',
+				monthly: 'price_1JAzWBLx4fybOTqJw64zxJRJ',
+				yearly: 'price_1JJIPZLx4fybOTqJHvxiQ7bV',
 			};
 			const planName = 'basic';
 			const buttonId = 'subscribeButton-' + planName;
@@ -296,8 +296,8 @@ https://github.com/laurent22/joplin/blob/dev/
 	<script>
 		(function() {
 			const stripePricesIds = {
-				monthly: 'price_1JAx1eLx4fybOTqJ5VhkxaKC',
-				yearly: 'price_1JJFp7Lx4fybOTqJ0f4w2UvY',
+				monthly: 'price_1JB1OVLx4fybOTqJOvp3NGM6',
+				yearly: 'price_1JJIQ7Lx4fybOTqJsQNv1QUp',
 			};
 			const planName = 'pro';
 			const buttonId = 'subscribeButton-' + planName;
@@ -373,8 +373,8 @@ https://github.com/laurent22/joplin/blob/dev/
 	<script>
 		(function() {
 			const stripePricesIds = {
-				monthly: 'price_1Kl9uBLx4fybOTqJhx7q4zzj',
-				yearly: 'price_1Kl9uNLx4fybOTqJpsB2l3Kg',
+				monthly: 'price_1Kl9jyLx4fybOTqJN0i1A88B',
+				yearly: 'price_1Kl9nLLx4fybOTqJYTtts35z',
 			};
 			const planName = 'teams';
 			const buttonId = 'subscribeButton-' + planName;
@@ -519,7 +519,7 @@ https://github.com/laurent22/joplin/blob/dev/
 	<script>
 		const urlQuery = new URLSearchParams(location.search);
 		let subscriptionPeriod = 'monthly';
-		const stripe = Stripe('pk_test_51IvkOPLx4fybOTqJetV23Y5S9YHU9KoOtE6Ftur0waWoWahkHdENjDKSVcl7v3y8Y0Euv7Uwd7O7W4UFasRwd0wE00MPcprz9Q');
+		const stripe = Stripe('pk_live_51IvkOPLx4fybOTqJow8RFsWs0eDznPeBlXMw6s8SIDQeCM8bAFNYlBdDsyonAwRcJgBCoSlvFzAbhJgLFxzzTu4r0006aw846C');
 
 		let checkoutSessionUser = null;
 
@@ -546,7 +546,7 @@ https://github.com/laurent22/joplin/blob/dev/
 
 			console.info('Creating Stripe session for price:', priceId, 'Promotion code:', promotionCode);
 
-			return fetch("http://joplincloud.local:22300/stripe/createCheckoutSession", {
+			return fetch("https://joplincloud.com/stripe/createCheckoutSession", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
