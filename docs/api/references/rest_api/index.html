@@ -908,8 +908,11 @@ async function fetchAllNotes() {
 <p>Creating a new resource is special because you also need to upload the file. Unlike other API calls, this one must have the &quot;multipart/form-data&quot; Content-Type. The file data must be passed to the &quot;data&quot; form field, and the other properties to the &quot;props&quot; form field. An example of a valid call with cURL would be:</p>
 <pre><code>curl -F 'data=@/path/to/file.jpg' -F 'props={&quot;title&quot;:&quot;my resource title&quot;}' http://localhost:41184/resources
 </code></pre>
-<p>Or to <strong>update</strong> a resource:</p>
+<p>To <strong>update</strong> the resource content, you can make a PUT request with the same arguments:</p>
 <pre><code>curl -X PUT -F 'data=@/path/to/file.jpg' -F 'props={&quot;title&quot;:&quot;my modified title&quot;}' http://localhost:41184/resources/8fe1417d7b184324bf6b0122b76c4696
+</code></pre>
+<p>Or if you only need to update the resource properties (title, etc.), without changing the content, you can make a regular PUT request:</p>
+<pre><code>curl -X PUT --data '{&quot;title&quot;: &quot;My new title&quot;}' http://localhost:41184/resources/8fe1417d7b184324bf6b0122b76c4696
 </code></pre>
 <p>The &quot;data&quot; field is required, while the &quot;props&quot; one is not. If not specified, default values will be used.</p>
 <p><strong>From a plugin</strong> the syntax to create a resource is also a bit special:</p>
