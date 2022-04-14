@@ -26,14 +26,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="v2.7.15 - 2022-03-17T13:03:23Z Improved: Handle invalid revision patches (#6209) Fixed: Clicking on folder button was no longer jumping to the right folder (#5584) Fixed: Ensure that note revision ..." />
+	<meta name="description" content="v2.8.2 (Pre-release) - 2022-04-14T11:35:45Z New: Add support for multiple profiles (#6385) (#591) New: Allow saving a Mermaid graph as a PNG or SVG via context menu (#6126) (#6100 by @asrient) New:..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
 	<meta property="og:url" content="https://joplinapp.org/changelog/index.html" />
 	<meta property="og:title" content="Joplin changelog" />
 	<meta property="twitter:title" content="Joplin changelog" />
-	<meta property="og:description" content="v2.7.15 - 2022-03-17T13:03:23Z Improved: Handle invalid revision patches (#6209) Fixed: Clicking on folder button was no longer jumping to the right folder (#5584) Fixed: Ensure that note revision ..." />
-	<meta property="twitter:description" content="v2.7.15 - 2022-03-17T13:03:23Z Improved: Handle invalid revision patches (#6209) Fixed: Clicking on folder button was no longer jumping to the right folder (#5584) Fixed: Ensure that note revision ..." />
+	<meta property="og:description" content="v2.8.2 (Pre-release) - 2022-04-14T11:35:45Z New: Add support for multiple profiles (#6385) (#591) New: Allow saving a Mermaid graph as a PNG or SVG via context menu (#6126) (#6100 by @asrient) New:..." />
+	<meta property="twitter:description" content="v2.8.2 (Pre-release) - 2022-04-14T11:35:45Z New: Add support for multiple profiles (#6385) (#591) New: Allow saving a Mermaid graph as a PNG or SVG via context menu (#6126) (#6100 by @asrient) New:..." />
 		<meta property="og:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 		<meta property="twitter:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 		<link
@@ -322,6 +322,23 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin changelog<a name="joplin-changelog" href="#joplin-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.8.2">v2.8.2</a> (Pre-release) - 2022-04-14T11:35:45Z<a name="v2-8-2-https-github-com-laurent22-joplin-releases-tag-v2-8-2-pre-release-2022-04-14t11-35-45z" href="#v2-8-2-https-github-com-laurent22-joplin-releases-tag-v2-8-2-pre-release-2022-04-14t11-35-45z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for multiple profiles (<a href="https://github.com/laurent22/joplin/issues/6385">#6385</a>) (<a href="https://github.com/laurent22/joplin/issues/591">#591</a>)</li>
+<li>New: Allow saving a Mermaid graph as a PNG or SVG via context menu (<a href="https://github.com/laurent22/joplin/issues/6126">#6126</a>) (<a href="https://github.com/laurent22/joplin/issues/6100">#6100</a> by <a href="https://github.com/asrient">@asrient</a>)</li>
+<li>New: Support for Joplin Cloud recursive linked notes (9d9420a)</li>
+<li>Improved: Don’t unpin app from taskbar on update (<a href="https://github.com/laurent22/joplin/issues/6271">#6271</a>) (<a href="https://github.com/laurent22/joplin/issues/4155">#4155</a> by Daniel Aleksandersen)</li>
+<li>Improved: Make search engine filter keywords case insensitive (<a href="https://github.com/laurent22/joplin/issues/6267">#6267</a>) (<a href="https://github.com/laurent22/joplin/issues/6266">#6266</a> by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Improved: Plugins: Add support for &quot;categories&quot; manifest field (<a href="https://github.com/laurent22/joplin/issues/6109">#6109</a>) (<a href="https://github.com/laurent22/joplin/issues/5867">#5867</a> by Mayank Bondre)</li>
+<li>Improved: Plugins: Allow updating a resource via the data API (74273cd)</li>
+<li>Improved: Automatically start sync after setting the sync parameters (ff066ba)</li>
+<li>Improved: Improve E2EE usability when accidentally creating multiple keys (<a href="https://github.com/laurent22/joplin/issues/6399">#6399</a>) (<a href="https://github.com/laurent22/joplin/issues/6338">#6338</a>)</li>
+<li>Improved: Improved handling of ENTER and ESCAPE keys in dialogs (<a href="https://github.com/laurent22/joplin/issues/6194">#6194</a>)</li>
+<li>Fixed: Fixed color of published note on Light theme (21706fa)</li>
+<li>Fixed: Fixed creation of empty notebooks when importing directory of files (<a href="https://github.com/laurent22/joplin/issues/6274">#6274</a>) (<a href="https://github.com/laurent22/joplin/issues/6197">#6197</a> by <a href="https://github.com/Retrove">@Retrove</a>)</li>
+<li>Fixed: Fixes right click menu on Markdown Editor (<a href="https://github.com/laurent22/joplin/issues/6132">#6132</a> by <a href="https://github.com/bishoy-magdy">@bishoy-magdy</a>)</li>
+<li>Fixed: Scroll jumps when typing if heavy scripts or many large elements are used (<a href="https://github.com/laurent22/joplin/issues/6383">#6383</a>) (<a href="https://github.com/laurent22/joplin/issues/6074">#6074</a> by Kenichi Kobayashi)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.7.15">v2.7.15</a> - 2022-03-17T13:03:23Z<a name="v2-7-15-https-github-com-laurent22-joplin-releases-tag-v2-7-15-2022-03-17t13-03-23z" href="#v2-7-15-https-github-com-laurent22-joplin-releases-tag-v2-7-15-2022-03-17t13-03-23z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Handle invalid revision patches (<a href="https://github.com/laurent22/joplin/issues/6209">#6209</a>)</li>
