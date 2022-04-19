@@ -26,14 +26,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="v2.8.2 (Pre-release) - 2022-04-14T11:35:45Z New: Add support for multiple profiles (#6385) (#591) New: Allow saving a Mermaid graph as a PNG or SVG via context menu (#6126) (#6100 by @asrient) New:..." />
+	<meta name="description" content="v2.8.4 (Pre-release) - 2022-04-19T18:00:09Z New: Multi-profiles: Added profile ID in CSS root class so that different profiles can have different styles (fd9fe5c) Improved: Enabled plugin throttlin..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
 	<meta property="og:url" content="https://joplinapp.org/changelog/index.html" />
 	<meta property="og:title" content="Joplin changelog" />
 	<meta property="twitter:title" content="Joplin changelog" />
-	<meta property="og:description" content="v2.8.2 (Pre-release) - 2022-04-14T11:35:45Z New: Add support for multiple profiles (#6385) (#591) New: Allow saving a Mermaid graph as a PNG or SVG via context menu (#6126) (#6100 by @asrient) New:..." />
-	<meta property="twitter:description" content="v2.8.2 (Pre-release) - 2022-04-14T11:35:45Z New: Add support for multiple profiles (#6385) (#591) New: Allow saving a Mermaid graph as a PNG or SVG via context menu (#6126) (#6100 by @asrient) New:..." />
+	<meta property="og:description" content="v2.8.4 (Pre-release) - 2022-04-19T18:00:09Z New: Multi-profiles: Added profile ID in CSS root class so that different profiles can have different styles (fd9fe5c) Improved: Enabled plugin throttlin..." />
+	<meta property="twitter:description" content="v2.8.4 (Pre-release) - 2022-04-19T18:00:09Z New: Multi-profiles: Added profile ID in CSS root class so that different profiles can have different styles (fd9fe5c) Improved: Enabled plugin throttlin..." />
 		<meta property="og:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 		<meta property="twitter:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 		<link
@@ -322,6 +322,21 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin changelog<a name="joplin-changelog" href="#joplin-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.8.4">v2.8.4</a> (Pre-release) - 2022-04-19T18:00:09Z<a name="v2-8-4-https-github-com-laurent22-joplin-releases-tag-v2-8-4-pre-release-2022-04-19t18-00-09z" href="#v2-8-4-https-github-com-laurent22-joplin-releases-tag-v2-8-4-pre-release-2022-04-19t18-00-09z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Multi-profiles: Added profile ID in CSS root class so that different profiles can have different styles (fd9fe5c)</li>
+<li>Improved: Enabled plugin throttling logic to prevent certain plugins from freezing the app (b716755)</li>
+<li>Improved: Multi-profiles: Improve performance when switching notes, when multiple plugins are loaded (<a href="https://github.com/laurent22/joplin/issues/6394">#6394</a>)</li>
+<li>Improved: Multi-profiles: Assign an ID to profiles and remove path (b4a6e17)</li>
+<li>Improved: Multi-profiles: Automatically restart the app when switching profiles on Linux (1797e84)</li>
+<li>Improved: Multi-profiles: Share UI layout between profiles (a111531)</li>
+<li>Improved: Multi-profiles: Share custom CSS between profiles (0cdef66)</li>
+<li>Improved: Multi-profiles: Share plugins between profiles (510df43)</li>
+<li>Improved: Multi-profiles: Locale was not being preserved when creating a new profile (<a href="https://github.com/laurent22/joplin/issues/6411">#6411</a>)</li>
+<li>Improved: Performance improvement when switching note while plugins are running (<a href="https://github.com/laurent22/joplin/issues/6409">#6409</a>) (<a href="https://github.com/laurent22/joplin/issues/5770">#5770</a> by Kenichi Kobayashi)</li>
+<li>Fixed: Editor context menu was broken (regression) (<a href="https://github.com/laurent22/joplin/issues/6422">#6422</a>) (<a href="https://github.com/laurent22/joplin/issues/6126">#6126</a> by <a href="https://github.com/asrient">@asrient</a>)</li>
+<li>Fixed: Opening a file with ctrl-click in the editor results in a 'network error' dialogue (<a href="https://github.com/laurent22/joplin/issues/6145">#6145</a>)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.8.2">v2.8.2</a> (Pre-release) - 2022-04-14T11:35:45Z<a name="v2-8-2-https-github-com-laurent22-joplin-releases-tag-v2-8-2-pre-release-2022-04-14t11-35-45z" href="#v2-8-2-https-github-com-laurent22-joplin-releases-tag-v2-8-2-pre-release-2022-04-14t11-35-45z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>New: Add support for multiple profiles (<a href="https://github.com/laurent22/joplin/issues/6385">#6385</a>) (<a href="https://github.com/laurent22/joplin/issues/591">#591</a>)</li>
