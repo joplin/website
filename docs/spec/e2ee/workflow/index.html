@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/debugging.md and any manual change
+This file was auto-generated from readme/spec/e2ee/workflow.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/debugging.md
+https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee/workflow.md
 
 -->
 
@@ -26,14 +26,16 @@ https://github.com/laurent22/joplin/blob/dev/readme/debugging.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="It is possible to get the apps to display or log more information that might help debug various issues. Desktop application If the application starts with a white screen, open Help &gt; Toggle Develop..." />
+	<meta name="description" content="E2EE setup This flowchart describes how E2EE is setup when the user enables it on a client (eg. desktop), and then what happens when they try to sync using a second client (eg. mobile). E2EE synchr..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
-	<meta property="og:url" content="https://joplinapp.org/debugging/index.html" />
-	<meta property="og:title" content="How to enable debugging" />
-	<meta property="twitter:title" content="How to enable debugging" />
-	<meta property="og:description" content="It is possible to get the apps to display or log more information that might help debug various issues. Desktop application If the application starts with a white screen, open Help &gt; Toggle Develop..." />
-	<meta property="twitter:description" content="It is possible to get the apps to display or log more information that might help debug various issues. Desktop application If the application starts with a white screen, open Help &gt; Toggle Develop..." />
+	<meta property="og:url" content="https://joplinapp.org/spec/e2ee/workflow/index.html" />
+	<meta property="og:title" content="E2EE workflow" />
+	<meta property="twitter:title" content="E2EE workflow" />
+	<meta property="og:description" content="E2EE setup This flowchart describes how E2EE is setup when the user enables it on a client (eg. desktop), and then what happens when they try to sync using a second client (eg. mobile). E2EE synchr..." />
+	<meta property="twitter:description" content="E2EE setup This flowchart describes how E2EE is setup when the user enables it on a client (eg. desktop), and then what happens when they try to sync using a second client (eg. mobile). E2EE synchr..." />
+		<meta property="og:image" content="https://joplinapp.org/images/e2ee/e2ee-setup.png" />
+		<meta property="twitter:image" content="https://joplinapp.org/images/e2ee/e2ee-setup.png" />
 		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -48,7 +50,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/debugging.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=48d853dd389c4aa024d008a0719918bf" as="style" />
-		<title>How to enable debugging | Joplin</title>
+		<title>E2EE workflow | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -224,7 +226,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/debugging.md
 		</div>
 	</div>
 </div>
-			<div class="help-page-container page-debugging">
+			<div class="help-page-container page-workflow">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -321,67 +323,21 @@ https://github.com/laurent22/joplin/blob/dev/readme/debugging.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>How to enable debugging<a name="how-to-enable-debugging" href="#how-to-enable-debugging" class="heading-anchor">🔗</a></h1>
-<p>It is possible to get the apps to display or log more information that might help debug various issues.</p>
-<h2>Desktop application<a name="desktop-application" href="#desktop-application" class="heading-anchor">🔗</a></h2>
-<p>If the application starts with a white screen, open <strong>Help &gt; Toggle Development Tools</strong> in the menu. Then check in the console if there is any error or warning and please let us know about it.</p>
-<p>Otherwise, follow these instructions:</p>
-<ul>
-<li>Click on menu <strong>Help &gt; Open Profile Directory</strong> and add a file named &quot;flags.txt&quot; in your directory with the following content: <code>--open-dev-tools --debug --log-level debug</code></li>
-<li>Restart the application</li>
-<li>The development tools should now be opened. Click the &quot;Console&quot; tab</li>
-<li>Now repeat the action that was causing problem. The console might output warnings or errors - please add them to the GitHub issue. Also open log.txt in the config folder and if there is any error or warning, please also add them to the issue.</li>
-</ul>
-<p>Make sure you disable debugging once you've finished. Leaving it enabled can cause your log.txt to grow very quickly. To disable debugging, simply delete the &quot;flags.txt&quot; file created.</p>
-<h2>CLI application<a name="cli-application" href="#cli-application" class="heading-anchor">🔗</a></h2>
-<ul>
-<li>Start the app with <code>joplin --debug --log-level debug</code></li>
-<li>Check log.txt as specified above for the desktop application and attach the log to the GitHub issue (or just the warnings/errors if any). The profile directory would be in <code>~/.config/joplin</code>.</li>
-</ul>
-<h2>Mobile application<a name="mobile-application" href="#mobile-application" class="heading-anchor">🔗</a></h2>
-<ul>
-<li>In the <a href="/config_screen/">Configuration screen</a>, press on the <strong>Log button</strong> and post a screenshot of any error/warning.</li>
-</ul>
-<h1>Creating a low-level bug report on Android<a name="creating-a-low-level-bug-report-on-android" href="#creating-a-low-level-bug-report-on-android" class="heading-anchor">🔗</a></h1>
-<p><a href="https://developer.android.com/studio/debug/bug-report">https://developer.android.com/studio/debug/bug-report</a></p>
-<p>To get a bug report directly from your device, do the following:</p>
-<ul>
-<li>Be sure you have <a href="https://developer.android.com/studio/debug/dev-options">Developer Options</a> enabled.</li>
-<li>In Developer options, tap Take bug report.</li>
-<li>Select the type of bug report you want and tap Report.</li>
-</ul>
-<p>After a moment you get a notification that the bug report is ready. To share the bug report, tap the notification.</p>
-<h1>Creating a low-level bug report on iOS<a name="creating-a-low-level-bug-report-on-ios" href="#creating-a-low-level-bug-report-on-ios" class="heading-anchor">🔗</a></h1>
-<p>Some crashes cannot be investigated using Joplin's own tools. In that case, it can be very helpful to provide a native iOS crash report.</p>
-<p>For this, please follow these instructions:</p>
-<p>You can send it to this address <a href="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/AdresseSupport.png">https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/AdresseSupport.png</a></p>
-<p><a href="https://developer.apple.com/library/content/qa/qa1747/_index.html">https://developer.apple.com/library/content/qa/qa1747/_index.html</a></p>
-<p>Getting Crash Logs Directly From a Device Without Xcode</p>
-<p>Your users can retrieve crash reports from their device and send them to you via email by following these instructions.</p>
-<p>(It is not possible to get device console logs directly from a device)</p>
-<ol>
-<li>
-<p>Open Settings app</p>
-</li>
-<li>
-<p>Go to Privacy, then Diagnostics &amp; Usage</p>
-</li>
-<li>
-<p>Select Diagnostics &amp; Usage Data</p>
-</li>
-<li>
-<p>Locate the log for the crashed app. The logs will be named in the format: <code>&lt;AppName&gt;_&lt;DateTime&gt;_&lt;DeviceName&gt;</code></p>
-</li>
-<li>
-<p>Select the desired log. Then, using the text selection UI select the entire text of the log. Once the text is selected, tap Copy</p>
-</li>
-<li>
-<p>Paste the copied text to Mail and send to an email address as desired</p>
-</li>
-</ol>
+<h1>E2EE workflow<a name="e2ee-workflow" href="#e2ee-workflow" class="heading-anchor">🔗</a></h1>
+<h2>E2EE setup<a name="e2ee-setup" href="#e2ee-setup" class="heading-anchor">🔗</a></h2>
+<p>This flowchart describes how E2EE is setup when the user enables it on a client (eg. desktop), and then what happens when they try to sync using a second client (eg. mobile).</p>
+<img alt="E2EE setup flowchart" src="/images/e2ee/e2ee-setup.png" width="100%"/>
+<h2>E2EE synchronisation<a name="e2ee-synchronisation" href="#e2ee-synchronisation" class="heading-anchor">🔗</a></h2>
+<p>This flowchart describes at a high level how synchronisation works while E2EE is enabled.</p>
+<img alt="E2EE synchronisation flowchart" src="/images/e2ee/e2ee-sync.png" width="100%"/>
+<h2>E2EE notebook share<a name="e2ee-notebook-share" href="#e2ee-notebook-share" class="heading-anchor">🔗</a></h2>
+<p>This flowchart describes how a user can share a notebook with another user.</p>
+<img alt="E2EE notebook share" src="/images/e2ee/e2ee-share.png" width="100%"/>
+<p>After the invitation has been received and the key exchanged, the process is the same as in a regular synchronisation operation.</p>
+<p>Both users have the notebook key encrypted with their own master password. That key is uploaded to Joplin Cloud too to allow other clients to retrieve the encrypted data.</p>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/debugging.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee/workflow.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>
