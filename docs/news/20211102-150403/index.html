@@ -154,7 +154,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20211102-150403.md
 <p><em>Published on <strong>2 Nov 2021</strong></em></p>
 <p>Just a head up that the next Joplin Server update could potentially include a breaking change, depending on your data.</p>
 <p>One of the database migration is going to add an &quot;owner_id&quot; column to the &quot;items&quot; table (where all notes, notebooks, etc. are stored), and automatically populate it. Normally that shouldn't take too long but you might want to make sure you won't need the server right away when you process this.</p>
-<p>The second database migration will add a unique constraint on <a href="http://items.name">items.name</a> and items.owner_id and that's where the breaking change might be. Normally this data is already unique because that's enforced by the application but in some rare cases, due a race condition, there could be duplicate data in there. If that happens the migration will fail and the server will not start.</p>
+<p>The second database migration will add a unique constraint on items.name and items.owner_id and that's where the breaking change might be. Normally this data is already unique because that's enforced by the application but in some rare cases, due a race condition, there could be duplicate data in there. If that happens the migration will fail and the server will not start.</p>
 <p>If that happens, you'll need to decide what to do with the data, as it's not possible to automatically decide. You can find all duplicates using this query:</p>
 <p><code><strong>select</strong> count(<em>), name, owner_id<br>
 <strong>from</strong> items <strong>group</strong> <strong>by</strong> name, owner_id<br>
