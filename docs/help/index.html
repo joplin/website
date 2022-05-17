@@ -660,8 +660,9 @@ Joplin is also capable of exporting to a number of other formats including HTML 
 <p>The whole UI can be customized by placing a custom editor style file in the profile directory <code>~/.config/joplin-desktop/userchrome.css</code>.</p>
 <p>Important: userstyle.css and userchrome.css are provided for your convenience, but they are advanced settings, and styles you define may break from one version to the next. If you want to use them, please know that it might require regular development work from you to keep them working. The Joplin team cannot make a commitment to keep the application HTML structure stable.</p>
 <h1>Plugins<a name="plugins" href="#plugins" class="heading-anchor">🔗</a></h1>
-<p>The <strong>desktop app</strong> has the ability to extend beyond its standard functionality by the way of plugins. These plugins adhere to the Joplin plugin API and can be installed &amp; configured within the application via the <code>Plugins</code> page in the <a href="/config_screen/">Configuration screen</a>. This menu allows the manual installation of the plugin using the single 'Joplin Plugin Archive' (*.jpl) file. Once the application is reloaded the plugins will appear within the plugins menu where they can be toggled on/off or removed entirely.</p>
-<p>Plugins are currently maintained by the community in the <a href="https://discourse.joplinapp.org/c/plugins/18">Joplin Discourse 'plugins' category</a>.</p>
+<p>The <strong>desktop app</strong> has the ability to extend beyond its standard functionality by the way of plugins. These plugins adhere to the Joplin <a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">plugin API</a> and can be installed &amp; configured within the application via the <code>Plugins</code> page of the <a href="/config_screen/">Configuration screen</a>.</p>
+<p>From this menu you can search for plugins uploaded to the <a href="https://github.com/joplin/plugins">Joplin plugins</a> repository as well as manual installation of plugins using a 'Joplin Plugin Archive' (*.jpl) file.<br>
+Once the application is reloaded the plugins will appear within the plugins menu where they can be toggled on/off or removed entirely.</p>
 <p>For more information see <a href="/plugins/">Plugins</a></p>
 <h1>Searching<a name="searching" href="#searching" class="heading-anchor">🔗</a></h1>
 <p>Joplin implements the SQLite Full Text Search (FTS4) extension. It means the content of all the notes is indexed in real time and search queries return results very fast. Both <a href="https://www.sqlite.org/fts3.html#simple_fts_queries">Simple FTS Queries</a> and <a href="https://www.sqlite.org/fts3.html#full_text_index_queries">Full-Text Index Queries</a> are supported. See below for the list of supported queries:</p>
@@ -920,7 +921,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Deutsch (Deutschland)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/de_DE.po">de_DE</a></td>
 <td><a href="mailto:pueblos_spatulas@aleeas.com">MrKanister</a></td>
-<td>98%</td>
+<td>100%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/ee.png" width="16px"/></td>
@@ -997,7 +998,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Magyar (Magyarország)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/hu_HU.po">hu_HU</a></td>
 <td><a href="mailto:balmag@gmail.com">Magyari Balázs</a></td>
-<td>75%</td>
+<td>86%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/be.png" width="16px"/></td>
@@ -1137,7 +1138,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>日本語 (日本)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ja_JP.po">ja_JP</a></td>
 <td><a href="mailto:genneko217@gmail.com">genneko</a></td>
-<td>98%</td>
+<td>100%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/kr.png" width="16px"/></td>
