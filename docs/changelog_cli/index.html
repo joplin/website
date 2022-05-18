@@ -14,8 +14,10 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_cli.md
 -->
 
 	<head>
-<!-- Donate button A/B testing -->
+<!-- Monthly/Yearly plan A/B testing -->
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
 
+<!-- Donate button A/B testing -->
 <!--
 <script async src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
 -->		<meta
@@ -26,14 +28,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_cli.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="cli-v2.6.2 - 2021-12-17T11:19:45Z New: Add date format YYYY&#x2F;MM&#x2F;DD (#5759 by Helmut K. C. Tessarek) New: Add support for faster built-in sync locks (#5662) New: Add support for more style of highlig..." />
+	<meta name="description" content="cli-v2.8.1 - 2022-05-18T13:02:48Z New: Add additional time format HH.mm (#6086 by @vincentjocodes) Improved: Do no duplicate resources when duplicating a note (721d008) Improved: Handle invalid rev..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
 	<meta property="og:url" content="https://joplinapp.org/changelog_cli/index.html" />
 	<meta property="og:title" content="Joplin terminal app changelog" />
 	<meta property="twitter:title" content="Joplin terminal app changelog" />
-	<meta property="og:description" content="cli-v2.6.2 - 2021-12-17T11:19:45Z New: Add date format YYYY&#x2F;MM&#x2F;DD (#5759 by Helmut K. C. Tessarek) New: Add support for faster built-in sync locks (#5662) New: Add support for more style of highlig..." />
-	<meta property="twitter:description" content="cli-v2.6.2 - 2021-12-17T11:19:45Z New: Add date format YYYY&#x2F;MM&#x2F;DD (#5759 by Helmut K. C. Tessarek) New: Add support for faster built-in sync locks (#5662) New: Add support for more style of highlig..." />
+	<meta property="og:description" content="cli-v2.8.1 - 2022-05-18T13:02:48Z New: Add additional time format HH.mm (#6086 by @vincentjocodes) Improved: Do no duplicate resources when duplicating a note (721d008) Improved: Handle invalid rev..." />
+	<meta property="twitter:description" content="cli-v2.8.1 - 2022-05-18T13:02:48Z New: Add additional time format HH.mm (#6086 by @vincentjocodes) Improved: Do no duplicate resources when duplicating a note (721d008) Improved: Handle invalid rev..." />
 		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -322,6 +324,20 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_cli.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin terminal app changelog<a name="joplin-terminal-app-changelog" href="#joplin-terminal-app-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/cli-v2.8.1">cli-v2.8.1</a> - 2022-05-18T13:02:48Z<a name="cli-v2-8-1-https-github-com-laurent22-joplin-releases-tag-cli-v2-8-1-2022-05-18t13-02-48z" href="#cli-v2-8-1-https-github-com-laurent22-joplin-releases-tag-cli-v2-8-1-2022-05-18t13-02-48z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add additional time format HH.mm (#6086 by <a href="https://github.com/vincentjocodes">@vincentjocodes</a>)</li>
+<li>Improved: Do no duplicate resources when duplicating a note (721d008)</li>
+<li>Improved: Handle invalid revision patches (#6209)</li>
+<li>Improved: Improve error message when revision metadata cannot be decoded, to improve debugging (a325bf6)</li>
+<li>Improved: Make search engine filter keywords case insensitive (#6267) (#6266 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Improved: Show login prompt for OneDrive (#5933 by Jonathan Heard)</li>
+<li>Fixed: Ensure that note revision markup type is set correctly (#6261)</li>
+<li>Fixed: Fixed creation of empty notebooks when importing directory of files (#6274) (#6197 by <a href="https://github.com/Retrove">@Retrove</a>)</li>
+<li>Fixed: Fixed issue where synchroniser would try to update a shared folder that is not longer accessible (667d642)</li>
+<li>Fixed: Note export could fail in some cases (regression) (#6203)</li>
+<li>Fixed: Shared resource was not encrypted with correct encryption key (#6092)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/cli-v2.6.2">cli-v2.6.2</a> - 2021-12-17T11:19:45Z<a name="cli-v2-6-2-https-github-com-laurent22-joplin-releases-tag-cli-v2-6-2-2021-12-17t11-19-45z" href="#cli-v2-6-2-https-github-com-laurent22-joplin-releases-tag-cli-v2-6-2-2021-12-17t11-19-45z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>New: Add date format YYYY/MM/DD (#5759 by Helmut K. C. Tessarek)</li>
