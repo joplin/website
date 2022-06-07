@@ -204,6 +204,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>About</p>
 <ul>
 <li><a href="/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/changelog_ios/">Changelog (iOS)</a></li>
 <li><a href="/changelog_cli/">Changelog (CLI App)</a></li>
 <li><a href="/changelog_server/">Changelog (Server)</a></li>
 <li><a href="/stats/">Stats</a></li>
@@ -317,6 +319,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>About</p>
 <ul>
 <li><a href="/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/changelog_ios/">Changelog (iOS)</a></li>
 <li><a href="/changelog_cli/">Changelog (CLI App)</a></li>
 <li><a href="/changelog_server/">Changelog (Server)</a></li>
 <li><a href="/stats/">Stats</a></li>
@@ -502,6 +506,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Custom CSS support for customisation of both the rendered markdown and overall user interface.</li>
 <li>Customisable layout allows toggling, movement and sizing of various elements.</li>
 <li>Keyboard shortcuts are editable and allow binding of most Joplin commands with export/import functionality.</li>
+<li>Multiple profile support.</li>
 </ul>
 <h1>Importing<a name="importing" href="#importing" class="heading-anchor">🔗</a></h1>
 <h2>Importing from Evernote<a name="importing-from-evernote" href="#importing-from-evernote" class="heading-anchor">🔗</a></h2>
@@ -736,7 +741,7 @@ Once the application is reloaded the plugins will appear within the plugins menu
 <tr>
 <td><strong>-</strong></td>
 <td>If placed before a text term, it excludes the notes that contain that term. You can also place it before a filter to negate it.</td>
-<td><code>-spam</code> searches for all notes without the word <code>spam</code>.<br><code>office -trash</code> searches for all notes with the word<code>office</code> and without the word <code>trash</code>.</td>
+<td><code>-spam</code> searches for all notes without the word <code>spam</code>.<br><code>office -trash</code> searches for all notes with the word <code>office</code> and without the word <code>trash</code>.</td>
 </tr>
 <tr>
 <td><strong>any:</strong></td>
@@ -808,6 +813,11 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <p>Notes are sorted by &quot;relevance&quot;. Currently it means the notes that contain the requested terms the most times are on top. For queries with multiple terms, it also matters how close to each other the terms are. This is a bit experimental so if you notice a search query that returns unexpected results, please report it in the forum, providing as many details as possible to replicate the issue.</p>
 <h1>Goto Anything<a name="goto-anything" href="#goto-anything" class="heading-anchor">🔗</a></h1>
 <p>In the desktop application, press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> and type a note title or part of its content to jump to it. Or type <kbd>#</kbd> followed by a tag name, or <kbd>@</kbd> followed by a notebook name.</p>
+<h1>Multiple profile support<a name="multiple-profile-support" href="#multiple-profile-support" class="heading-anchor">🔗</a></h1>
+<p>To create a new profile, open File &gt; Switch profile and select Create new profile, enter the profile name and press OK. The app will automatically switch to this new profile, which you can now configure.</p>
+<p>To switch back to the previous profile, again open File &gt; Switch profile and select Default.</p>
+<p>Note that profiles all share certain settings, such as language, font size, theme, etc. This is done so that you don't have reconfigure every details when switching profiles. Other settings such as sync configuration is per profile.</p>
+<p>The feature is available on desktop only for now, and should be ported to mobile relatively soon.</p>
 <h1>Donations<a name="donations" href="#donations" class="heading-anchor">🔗</a></h1>
 <p>Donations to Joplin support the development of the project. Developing quality applications mostly takes time, but there are also some expenses, such as digital certificates to sign the applications, app store fees, hosting, etc. Most of all, your donation will make it possible to keep up the current development standard.</p>
 <p>Please see the <a href="/donate/">donation page</a> for information on how to support the development of Joplin.</p>
