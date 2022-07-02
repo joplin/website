@@ -3756,6 +3756,126 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Removed certain log statements so that sensitive info doesn't end up in logs</li>
 <li>Fix: Handle case where resource blob is missing during sync</li>
 </ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.47">v0.10.47</a> - 2018-01-16T17:27:17Z<a name="v0-10-47-https-github-com-laurent22-joplin-releases-tag-v0-10-47-2018-01-16t17-27-17z" href="#v0-10-47-https-github-com-laurent22-joplin-releases-tag-v0-10-47-2018-01-16t17-27-17z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved the way new note are created, and automatically add a title. Made saving and loading notes more reliable.</li>
+<li>Fix: race condition when a note is being uploaded while it's being modified in the text editor</li>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/129">#129</a>: Tags are case insensitive</li>
+<li>Schedule sync only after 30 seconds</li>
+<li>Schedule sync after enabling or disabling encryption</li>
+<li>Display sync items being fetched</li>
+<li>Fixed logic of what note is used when right-clicking one or more notes</li>
+<li>Fix: Don't scroll back to top when note is reloaded via sync</li>
+<li>Display URL for links</li>
+<li>Fix: Move prompt to top to avoid issue with date picker being hidden</li>
+<li>Fixed table font size and family</li>
+<li>Fixed logic to save, and make sure scheduled save always happen even when changing note</li>
+<li>Fixed OneDrive sync when resync is requested</li>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/85">#85</a>: Don't record deleted_items entries for folders deleted via sync</li>
+<li>Updated translations</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.43">v0.10.43</a> - 2018-01-08T10:12:10Z<a name="v0-10-43-https-github-com-laurent22-joplin-releases-tag-v0-10-43-2018-01-08t10-12-10z" href="#v0-10-43-https-github-com-laurent22-joplin-releases-tag-v0-10-43-2018-01-08t10-12-10z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed saving and loading of settings, which could affect synchronisation</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.41">v0.10.41</a> - 2018-01-05T20:38:12Z<a name="v0-10-41-https-github-com-laurent22-joplin-releases-tag-v0-10-41-2018-01-05t20-38-12z" href="#v0-10-41-https-github-com-laurent22-joplin-releases-tag-v0-10-41-2018-01-05t20-38-12z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Added End-To-End Encryption support (E2EE)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.40">v0.10.40</a> - 2018-01-02T23:16:57Z<a name="v0-10-40-https-github-com-laurent22-joplin-releases-tag-v0-10-40-2018-01-02t23-16-57z" href="#v0-10-40-https-github-com-laurent22-joplin-releases-tag-v0-10-40-2018-01-02t23-16-57z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed undo in text editor</li>
+<li>Updated German translation</li>
+<li>Added Russian, Japanese and Chinese translations</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.39">v0.10.39</a> - 2017-12-11T21:19:44Z<a name="v0-10-39-https-github-com-laurent22-joplin-releases-tag-v0-10-39-2017-12-11t21-19-44z" href="#v0-10-39-https-github-com-laurent22-joplin-releases-tag-v0-10-39-2017-12-11t21-19-44z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/55">#55</a>: Added support for HTML tags found in ENEX files: colgroup, col, ins, kbd, address, caption, var, area, map</li>
+<li>Resolve <a href="https://github.com/laurent22/joplin/issues/7">#7</a>: Show storage location in Options screen</li>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/84">#84</a>: Fields losing focus in Config screen</li>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/86">#86</a>: App icon missing on Linux</li>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/87">#87</a>: Show warningn when deleting notebook that contains notes.</li>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/3">#3</a>: Paths with '.' would cause JSX compilation to fail</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.38">v0.10.38</a> - 2017-12-08T10:12:06Z<a name="v0-10-38-https-github-com-laurent22-joplin-releases-tag-v0-10-38-2017-12-08t10-12-06z" href="#v0-10-38-https-github-com-laurent22-joplin-releases-tag-v0-10-38-2017-12-08t10-12-06z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Dialog to export sync status</li>
+<li>Enabled support for filesystem sync</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.37">v0.10.37</a> - 2017-12-07T19:38:05Z<a name="v0-10-37-https-github-com-laurent22-joplin-releases-tag-v0-10-37-2017-12-07t19-38-05z" href="#v0-10-37-https-github-com-laurent22-joplin-releases-tag-v0-10-37-2017-12-07t19-38-05z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Better handling of items that cannot be synchronised (for example, if they exceed the max file size supported by the target)</li>
+<li>Added Synchronisation Status screen</li>
+<li>Improved Enex support:
+<ul>
+<li>Better handling of notes containing entire web pages (such as when imported via Web Clipper)</li>
+<li>Support for <code>&lt;img&gt;</code> tags</li>
+<li>Support for various other tags</li>
+<li>Improved importing web pages that contain tables within tables. In which case the outer tables (which are usually the website layout) are rendered as regular text block and only the inner tables are actually rendered as tables.</li>
+<li>Fixed many other minor warnings and errors</li>
+</ul>
+</li>
+<li>Allow setting installation directory in Windows</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.36">v0.10.36</a> - 2017-12-05T09:34:40Z<a name="v0-10-36-https-github-com-laurent22-joplin-releases-tag-v0-10-36-2017-12-05t09-34-40z" href="#v0-10-36-https-github-com-laurent22-joplin-releases-tag-v0-10-36-2017-12-05t09-34-40z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>All: Improved synchronisation when sync target has unreliable timestamps</li>
+<li>All: Fixed display issue - when items were modified during sync it could result in blank rows being displayed in note lists.</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.35">v0.10.35</a> - 2017-12-02T15:56:08Z<a name="v0-10-35-https-github-com-laurent22-joplin-releases-tag-v0-10-35-2017-12-02t15-56-08z" href="#v0-10-35-https-github-com-laurent22-joplin-releases-tag-v0-10-35-2017-12-02t15-56-08z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>All: Fixed sync issue and database migration issue</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.34">v0.10.34</a> - 2017-12-02T14:50:28Z<a name="v0-10-34-https-github-com-laurent22-joplin-releases-tag-v0-10-34-2017-12-02t14-50-28z" href="#v0-10-34-https-github-com-laurent22-joplin-releases-tag-v0-10-34-2017-12-02t14-50-28z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>All: fixed database creation error</li>
+<li>All: Improved Evernote import for blockquotes and sup tags</li>
+<li>CLI: Fixed crash when inputting command without closed quote</li>
+<li>CLI: Allow Backspace key to delete items on macOS</li>
+<li>Electron: Fixed header font sizes</li>
+<li>Electron: Fix <a href="https://github.com/laurent22/joplin/issues/33">#33</a>: Allow copy and paste in OneDrive login</li>
+<li>Electron: Fixes <a href="https://github.com/laurent22/joplin/issues/32">#32</a>: Error when manually input alarm date</li>
+<li>Electron: Allow attaching multiple files</li>
+<li>All: Allow attaching files of unknown mime type</li>
+<li>All: Added error for OneDrive for Business</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.33">v0.10.33</a> - 2017-12-02T13:20:39Z<a name="v0-10-33-https-github-com-laurent22-joplin-releases-tag-v0-10-33-2017-12-02t13-20-39z" href="#v0-10-33-https-github-com-laurent22-joplin-releases-tag-v0-10-33-2017-12-02t13-20-39z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved Evernote import for blockquotes and sup tags</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.31">v0.10.31</a> - 2017-12-01T09:56:44Z<a name="v0-10-31-https-github-com-laurent22-joplin-releases-tag-v0-10-31-2017-12-01t09-56-44z" href="#v0-10-31-https-github-com-laurent22-joplin-releases-tag-v0-10-31-2017-12-01t09-56-44z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixes <a href="https://github.com/laurent22/joplin/issues/22">#22</a> - keyboard cursor jumps while typing.</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.30">v0.10.30</a> - 2017-11-30T20:28:16Z<a name="v0-10-30-https-github-com-laurent22-joplin-releases-tag-v0-10-30-2017-11-30t20-28-16z" href="#v0-10-30-https-github-com-laurent22-joplin-releases-tag-v0-10-30-2017-11-30t20-28-16z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Added Spanish locale (thank you Erick Rodríguez Ponce)</li>
+<li>Fixed copy/cut/paste issue in macOS</li>
+<li>Fixed checkbox issue in Option screen.</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.28">v0.10.28</a> - 2017-11-30T01:07:46Z<a name="v0-10-28-https-github-com-laurent22-joplin-releases-tag-v0-10-28-2017-11-30t01-07-46z" href="#v0-10-28-https-github-com-laurent22-joplin-releases-tag-v0-10-28-2017-11-30t01-07-46z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Added toolbar to set alarms and attach files</li>
+<li>Fixed Evernote import of certain images</li>
+<li>Fixed note update issue</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.26">v0.10.26</a> - 2017-11-29T16:02:17Z<a name="v0-10-26-https-github-com-laurent22-joplin-releases-tag-v0-10-26-2017-11-29t16-02-17z" href="#v0-10-26-https-github-com-laurent22-joplin-releases-tag-v0-10-26-2017-11-29t16-02-17z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Added support for alarms (notifications)</li>
+<li>Fixed scrolling issue for long notes</li>
+<li>Improved OneDrive login and possibly fixed rare error</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.25">v0.10.25</a> - 2017-11-24T14:27:49Z<a name="v0-10-25-https-github-com-laurent22-joplin-releases-tag-v0-10-25-2017-11-24t14-27-49z" href="#v0-10-25-https-github-com-laurent22-joplin-releases-tag-v0-10-25-2017-11-24t14-27-49z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Allow multi-selection on note lists</li>
+<li>Allow drag and drop of notes</li>
+<li>Hide invalid characters (non-breaking spaces) in editor</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.23">v0.10.23</a> - 2017-11-21T19:38:41Z<a name="v0-10-23-https-github-com-laurent22-joplin-releases-tag-v0-10-23-2017-11-21t19-38-41z" href="#v0-10-23-https-github-com-laurent22-joplin-releases-tag-v0-10-23-2017-11-21t19-38-41z" class="heading-anchor">🔗</a></h2>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.22">v0.10.22</a> - 2017-11-20T21:45:57Z<a name="v0-10-22-https-github-com-laurent22-joplin-releases-tag-v0-10-22-2017-11-20t21-45-57z" href="#v0-10-22-https-github-com-laurent22-joplin-releases-tag-v0-10-22-2017-11-20t21-45-57z" class="heading-anchor">🔗</a></h2>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.21">v0.10.21</a> - 2017-11-18T00:53:15Z<a name="v0-10-21-https-github-com-laurent22-joplin-releases-tag-v0-10-21-2017-11-18t00-53-15z" href="#v0-10-21-https-github-com-laurent22-joplin-releases-tag-v0-10-21-2017-11-18t00-53-15z" class="heading-anchor">🔗</a></h2>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.20">v0.10.20</a> - 2017-11-17T17:18:25Z<a name="v0-10-20-https-github-com-laurent22-joplin-releases-tag-v0-10-20-2017-11-17t17-18-25z" href="#v0-10-20-https-github-com-laurent22-joplin-releases-tag-v0-10-20-2017-11-17t17-18-25z" class="heading-anchor">🔗</a></h2>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v0.10.19">v0.10.19</a> - 2017-11-20T18:59:48Z<a name="v0-10-19-https-github-com-laurent22-joplin-releases-tag-v0-10-19-2017-11-20t18-59-48z" href="#v0-10-19-https-github-com-laurent22-joplin-releases-tag-v0-10-19-2017-11-20t18-59-48z" class="heading-anchor">🔗</a></h2>
 
 								<div class="bottom-links">
 										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/changelog.md">
