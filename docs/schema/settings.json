@@ -829,6 +829,21 @@
 			"default": false,
 			"description": "Ignore TLS certificate errors"
 		},
+		"net.proxyEnabled": {
+			"type": "boolean",
+			"default": false,
+			"description": "Proxy enabled (beta)"
+		},
+		"net.proxyUrl": {
+			"type": "string",
+			"default": "",
+			"description": "Proxy URL (beta). e.g \"http://my.proxy.com:80\". You can also set via environment variables"
+		},
+		"net.proxyTimeout": {
+			"type": "integer",
+			"default": 1,
+			"description": "proxy timeout (seconds) (beta)"
+		},
 		"sync.wipeOutFailSafe": {
 			"type": "boolean",
 			"default": true,
