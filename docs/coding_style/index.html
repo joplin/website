@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/external_links.md and any manual change
+This file was auto-generated from readme/coding_style.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/external_links.md
+https://github.com/laurent22/joplin/blob/dev/readme/coding_style.md
 
 -->
 
@@ -36,14 +36,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="This feature allows creation of links to notes, folder, and tags. When opening such link Joplin will start, unless it&#39;s already running, and open the corresponding item. To create a link, right cli..." />
+	<meta name="description" content="Coding style is mostly enforced by a pre-commit hook that runs eslint. This hook is installed whenever running yarn install on any of the application directory. If for some reason the pre-commit ho..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
-	<meta property="og:url" content="https://joplinapp.org/external_links/index.html" />
-	<meta property="og:title" content="External URL links" />
-	<meta property="twitter:title" content="External URL links" />
-	<meta property="og:description" content="This feature allows creation of links to notes, folder, and tags. When opening such link Joplin will start, unless it&#39;s already running, and open the corresponding item. To create a link, right cli..." />
-	<meta property="twitter:description" content="This feature allows creation of links to notes, folder, and tags. When opening such link Joplin will start, unless it&#39;s already running, and open the corresponding item. To create a link, right cli..." />
+	<meta property="og:url" content="https://joplinapp.org/coding_style/index.html" />
+	<meta property="og:title" content="Coding style" />
+	<meta property="twitter:title" content="Coding style" />
+	<meta property="og:description" content="Coding style is mostly enforced by a pre-commit hook that runs eslint. This hook is installed whenever running yarn install on any of the application directory. If for some reason the pre-commit ho..." />
+	<meta property="twitter:description" content="Coding style is mostly enforced by a pre-commit hook that runs eslint. This hook is installed whenever running yarn install on any of the application directory. If for some reason the pre-commit ho..." />
 <link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=48d853dd389c4aa024d008a0719918bf" as="style" />
-		<title>External URL links | Joplin</title>
+		<title>Coding style | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -240,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 </div>
-			<div class="help-page-container page-external_links">
+			<div class="help-page-container page-coding_style">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -339,20 +339,177 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>External URL links<a name="external-url-links" href="#external-url-links" class="heading-anchor">🔗</a></h1>
-<p>This feature allows creation of links to notes, folder, and tags. When opening such link Joplin will start, unless it's already running, and open the corresponding item.</p>
-<p>To create a link, right click a note, a folder, or a tag in the sidebar and select &quot;Copy external link&quot;. The link will be copied to clipboard.</p>
-<h2>Link format<a name="link-format" href="#link-format" class="heading-anchor">🔗</a></h2>
+<h1>Coding style<a name="coding-style" href="#coding-style" class="heading-anchor">🔗</a></h1>
+<p>Coding style is mostly enforced by a pre-commit hook that runs <code>eslint</code>. This hook is installed whenever running <code>yarn install</code> on any of the application directory. If for some reason the pre-commit hook didn't get installed, you can manually install it by running <code>yarn install</code> at the root of the repository.</p>
+<h2>Use TypeScript for new files<a name="use-typescript-for-new-files" href="#use-typescript-for-new-files" class="heading-anchor">🔗</a></h2>
+<h3>Creating a new <code>.ts</code> file<a name="creating-a-new-ts-file" href="#creating-a-new-ts-file" class="heading-anchor">🔗</a></h3>
+<p>Because the TypeScript compiler generates <code>.js</code> files, be sure to add these new <code>.js</code> files to <code>.eslintignore</code> and <code>.gitignore</code>.</p>
+<p>To do this,</p>
+<ol>
+<li>If the TypeScript compiler has already generated a <code>.js</code> file for the new <code>.ts</code> file, delete it.</li>
+<li>Run <code>yarn run updateIgnored</code> in the root directory of the project (or <code>yarn run postinstall</code>)</li>
+</ol>
+<h3>Convert existing <code>.js</code> files to TypeScript before modifying<a name="convert-existing-js-files-to-typescript-before-modifying" href="#convert-existing-js-files-to-typescript-before-modifying" class="heading-anchor">🔗</a></h3>
+<p>Even if you are <strong>modifying</strong> a file that was originally in JavaScript you should ideally convert it first to TypeScript before modifying it.</p>
+<p>If this is a large file however please ask first if it needs to be converted. Some very old and large JS files are tricky to convert properly due to poorly defined types, so in some cases it's better to leave that for another day (or another PR).</p>
+<h2>Filenames<a name="filenames" href="#filenames" class="heading-anchor">🔗</a></h2>
 <ul>
-<li><code>joplin://x-callback-url/openNote?id=&lt;note id&gt;</code> for note</li>
-<li><code>joplin://x-callback-url/openFolder?id=&lt;folder id&gt;</code> for folder</li>
-<li><code>joplin://x-callback-url/openTag?id=&lt;tag id&gt;</code> for tag</li>
+<li><code>camelCase.ts</code>: Files that export multiple things.
+<ul>
+<li>Example: <a href="https://github.com/laurent22/joplin/blob/dev/packages/app-desktop/checkForUpdates.ts"><code>checkForUpdates.ts</code></a></li>
 </ul>
-<h2>Known problems<a name="known-problems" href="#known-problems" class="heading-anchor">🔗</a></h2>
-<p>On macOS if Joplin isn't running it will start but it won't open the note. If Joplin is running but on a different space as the external link, then Joplin will come to the foreground but without displaying the note.</p>
+</li>
+<li><code>PascalCase.ts</code>: <a href="https://github.com/laurent22/joplin/pull/6607#discussion_r906847156">Only if the file contains a single class, which is the default export.</a></li>
+<li><code>types.ts</code> or <code>fooTypes.ts</code>: <a href="https://github.com/laurent22/joplin/pull/6607#discussion_r906847156">Shared type definitions</a>
+<ul>
+<li>Example : <a href="https://github.com/laurent22/joplin/blob/dev/packages/server/src/utils/types.ts"><code>types.ts</code></a></li>
+</ul>
+</li>
+</ul>
+<h2>Use the same case for imported and exported members<a name="use-the-same-case-for-imported-and-exported-members" href="#use-the-same-case-for-imported-and-exported-members" class="heading-anchor">🔗</a></h2>
+<p>If you create a file that exports a single function called <code>processData()</code>, the file should be named <code>processData.ts</code>. When importing, it should be imported as <code>processData</code>, too. Basically, be consistent with naming, even though JS allows things to be named differently.</p>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">// ProcessDATA.ts
+export default const processData = () =&gt; {
+	// ...
+};
+
+// foo.ts
+import doDataProcessing from './ProcessDATA';
+
+doDataProcessing();
+...
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-ts">// processData.ts
+export default const processData = () =&gt; {
+	// ...
+};
+
+// foo.ts
+import processData from './processData';
+
+processData();
+...
+</code></pre>
+<h2>Use <code>camelCase</code> for <code>const</code>ants in new code<a name="use-camelcase-for-const-ants-in-new-code" href="#use-camelcase-for-const-ants-in-new-code" class="heading-anchor">🔗</a></h2>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">// Bad! Don't use in new code!
+const GRAVITY_ACCEL = 9.8;
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-ts">const gravityAccel = 9.8;
+</code></pre>
+<h2>Indent using <code>tab</code>s<a name="indent-using-tab-s" href="#indent-using-tab-s" class="heading-anchor">🔗</a></h2>
+<p><strong>VSCode</strong>: In <code>vscode</code>, be sure to check whether new files are created with <code>tab</code> or <code>space</code> indentation! <a href="https://code.visualstudio.com/docs/editor/codebasics#_autodetection">Spaces can be converted to tabs using the command palette.</a></p>
+<h2>Use strict equality<a name="use-strict-equality" href="#use-strict-equality" class="heading-anchor">🔗</a></h2>
+<p>Use <code>===</code> instead of <code>==</code>.</p>
+<p>Although the TypeScript compiler <em>will</em> give error messages if two different types are compared with <code>==</code> (e.g. <code>number == boolean</code>), its compiler error <a href="https://github.com/microsoft/TypeScript/issues/26592">messages in this case can be misleading</a>.</p>
+<h3>See also<a name="see-also" href="#see-also" class="heading-anchor">🔗</a></h3>
+<ul>
+<li><a href="https://basarat.gitbook.io/typescript/styleguide#or">Unofficial TypeScript style guide, <code>==</code> vs <code>===</code></a></li>
+<li><a href="https://stackoverflow.com/a/60669874">More about <code>==</code> vs <code>===</code> in TypeScript.</a></li>
+</ul>
+<h2>Declare variables just before their usage<a name="declare-variables-just-before-their-usage" href="#declare-variables-just-before-their-usage" class="heading-anchor">🔗</a></h2>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">// Bad!
+let foo, bar;
+
+const doThings = () =&gt; {
+	// do things unrelated to foo, bar
+};
+
+// Do things involving foo and bar
+foo = Math.random();
+bar = foo + Math.random() / 100;
+foo += Math.sin(bar + Math.tan(foo));
+...
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-ts">...
+const doThings = () =&gt; {
+	// do things unrelated to foo, bar
+};
+
+// Do things involving foo and bar
+let foo = Math.random();
+let bar = foo + Math.random() / 100;
+foo += Math.sin(bar + Math.tan(foo));
+...
+</code></pre>
+<p>Don't allow this to lead to duplicate code, however. If constants are used multiple times, it's okay to declare them at the top of a file or in a separate, imported file.</p>
+<h2>Prefer <code>const</code> to <code>let</code> (where possible)<a name="prefer-const-to-let-where-possible" href="#prefer-const-to-let-where-possible" class="heading-anchor">🔗</a></h2>
+<h2>Prefer <code>() =&gt; {}</code> to <code>function() { ... }</code><a name="prefer-to-function" href="#prefer-to-function" class="heading-anchor">🔗</a></h2>
+<p>Doing this avoids having to deal with the <code>this</code> keyword. Not having it makes it easier to refactor class components into React Hooks, because any use of <code>this</code> (used in classes) will be correctly detected as invalid by TypeScript.</p>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">// Bad!
+function foo() {
+	...
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-ts">const foo = () =&gt; {
+	...
+};
+</code></pre>
+<h3>See also<a name="see-also-1" href="#see-also-1" class="heading-anchor">🔗</a></h3>
+<ul>
+<li><a href="https://frontarm.com/james-k-nelson/when-to-use-arrow-functions/">Frontend Armory — When should I use arrow functions with React?</a></li>
+</ul>
+<h2>Avoid default and optional parameters<a name="avoid-default-and-optional-parameters" href="#avoid-default-and-optional-parameters" class="heading-anchor">🔗</a></h2>
+<p>As much as possible, avoid default parameters in <strong>function definitions</strong> and optional fields in <strong>interface definitions</strong>. When all parameters are required, it is much easier to refactor the code because the compiler will automatically catch any missing parameters.</p>
+<h1>React<a name="react" href="#react" class="heading-anchor">🔗</a></h1>
+<h2>Use function components for new code<a name="use-function-components-for-new-code" href="#use-function-components-for-new-code" class="heading-anchor">🔗</a></h2>
+<p>New code should use <a href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a> and <code>function</code> components, rather than objects that extend <code>Component</code>.</p>
+<p><strong>Bad:</strong></p>
+<pre><code class="language-tsx">// Don't do this in new code!
+class Example extends React.Component {
+	constructor(props: { text: string }) {
+		super(props);
+	}
+
+	render() {
+		return (
+			&lt;div&gt;${text}&lt;/div&gt;
+		);
+	}
+}
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-tsx">const Example = (props: { text: string }) =&gt; {
+	return (
+		&lt;div&gt;${text}&lt;/div&gt;
+	);
+};
+</code></pre>
+<h2>Use react <a href="https://reactjs.org/docs/hooks-custom.html">custom hooks</a> to simplify long code<a name="use-react-custom-hooks-https-reactjs-org-docs-hooks-custom-html-to-simplify-long-code" href="#use-react-custom-hooks-https-reactjs-org-docs-hooks-custom-html-to-simplify-long-code" class="heading-anchor">🔗</a></h2>
+<p>If <code>eslint</code> gives an error about <code>useFoo</code> being called outside of a component, be sure <a href="https://stackoverflow.com/a/55862839">the custom hook is titled appropriately</a>.</p>
+<h1>See also<a name="see-also-2" href="#see-also-2" class="heading-anchor">🔗</a></h1>
+<h2><strong>Other</strong> projects' style guides<a name="other-projects-style-guides" href="#other-projects-style-guides" class="heading-anchor">🔗</a></h2>
+<p>We aren't using these guides, but they may still be helpful!</p>
+<ul>
+<li><a href="https://basarat.gitbook.io/typescript/styleguide">TypeScript Deep Dive — Style Guide</a></li>
+<li><a href="https://google.github.io/styleguide/tsguide.html">Google TypeScript style guide</a>
+<ul>
+<li>See also <a href="https://ts.dev/style/#function-expressions"><code>ts.dev</code>'s style guide</a>, which is based on the Google style guide.</li>
+</ul>
+</li>
+<li><a href="https://standardjs.com/rules.html">Javascript standardstyle</a>
+<ul>
+<li>Possibly useful for adding to <code>.eslintrc.js</code>: lists <code>eslint</code> configuration flags for each of their suggestions</li>
+</ul>
+</li>
+</ul>
+<h2>Posts/resources related to Joplin's style<a name="posts-resources-related-to-joplin-s-style" href="#posts-resources-related-to-joplin-s-style" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Forum Post: <a href="https://discourse.joplinapp.org/t/troubleshooting-faq-and-collecting-topic-for-contributing-to-joplin-codebase/6501">Troubleshooting FAQ and collecting topic for contributing to Joplin codebase</a></li>
+<li>Forum Post: <a href="https://discourse.joplinapp.org/t/how-to-style-your-code/6502">How to style your code</a></li>
+<li>GSoC: <a href="gsoc2022/pull_request_guidelines.md">GSoC 2022 pull request guidelines</a></li>
+<li>GitHub: <a href="https://github.com/laurent22/joplin/blob/dev/.eslintrc.js"><code>.eslintrc.js</code></a></li>
+</ul>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/external_links.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/coding_style.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>
