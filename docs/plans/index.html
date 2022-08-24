@@ -580,16 +580,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			});
 		};
 
+		const applyPeriod = (period) => {
+			subscriptionPeriod = period;
+			$('.plan-group').removeClass(period === 'monthly' ? 'plan-prices-yearly' : 'plan-prices-monthly');
+			$('.plan-group').addClass('plan-prices-' + period);
+			$("#pay-" + period + '-radio').prop('checked', true);
+		}
+
 		$(() => {
 			$("input[name='pay-radio']").change(function() {
 				const period = $("input[type='radio'][name='pay-radio']:checked").val();
-				subscriptionPeriod = period;
-			
-				$('.plan-group').removeClass(period === 'monthly' ? 'plan-prices-yearly' : 'plan-prices-monthly');
-				$('.plan-group').addClass('plan-prices-' + period);
+				applyPeriod(period);
 			});
 
 			setupBetaHandling(urlQuery);
+			applyPeriod('yearly');
 		});
 	</script>
 </div>
