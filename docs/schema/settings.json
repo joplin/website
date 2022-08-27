@@ -931,6 +931,11 @@
 			"default": "",
 			"$comment": "private"
 		},
+		"spellChecker.languages": {
+			"type": "array",
+			"default": [],
+			"$comment": "private"
+		},
 		"windowContentZoomFactor": {
 			"type": "integer",
 			"default": 100,

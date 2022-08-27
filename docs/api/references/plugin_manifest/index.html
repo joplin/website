@@ -411,6 +411,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <td>No</td>
 <td><a href="#categories">Categories</a> that describes the functionality of the plugin.</td>
 </tr>
+<tr>
+<td><code>screenshots</code></td>
+<td>Screenshot[]</td>
+<td>No</td>
+<td><a href="#Screenshot">Screenshots</a> are used for listing on Joplin Plugin website.</td>
+</tr>
 </tbody>
 </table>
 <h2>Categories<a name="categories" href="#categories" class="heading-anchor">🔗</a></h2>
@@ -468,6 +474,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </tr>
 </tbody>
 </table>
+<h2>Screenshot<a name="screenshot" href="#screenshot" class="heading-anchor">🔗</a></h2>
+<table class="table">
+<thead>
+<tr>
+<th>Properties</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>a relative path to src dir.</td>
+</tr>
+<tr>
+<td>label</td>
+<td>description of the image.</td>
+</tr>
+</tbody>
+</table>
 <h2>Manifest example<a name="manifest-example" href="#manifest-example" class="heading-anchor">🔗</a></h2>
 <pre><code class="language-json">{
     &quot;manifest_version&quot;: 1,
@@ -476,7 +501,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     &quot;version&quot;: &quot;1.0.0&quot;,
     &quot;author&quot;: &quot;John Smith&quot;,
     &quot;app_min_version&quot;: &quot;1.4&quot;,
-    &quot;homepage_url&quot;: &quot;https://joplinapp.org&quot;
+    &quot;homepage_url&quot;: &quot;https://joplinapp.org&quot;,
+    &quot;screenshots&quot;: [{
+        &quot;src&quot;: &quot;path/to/image.png&quot;,
+        &quot;label&quot;: &quot;image description&quot;
+    }]
 }
 </code></pre>
 
