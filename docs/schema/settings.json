@@ -498,6 +498,11 @@
 			"default": false,
 			"description": "Opt-in to the editor beta. This beta adds list continuation and syntax highlighting. If you find bugs, please report them in the Discourse forum."
 		},
+		"editor.mobile.spellcheckEnabled": {
+			"type": "boolean",
+			"default": true,
+			"description": "Enable spellcheck in the beta editor"
+		},
 		"newTodoFocus": {
 			"type": "string",
 			"default": "title",
