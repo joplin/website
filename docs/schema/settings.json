@@ -982,6 +982,11 @@
 			"type": "boolean",
 			"default": true,
 			"$comment": "private"
+		},
+		"installedDefaultPlugins": {
+			"type": "array",
+			"default": [],
+			"$comment": "private"
 		}
 	}
 }
