@@ -36,14 +36,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-	<meta name="description" content="server-v2.7.4 - 2022-02-02T19:23:34Z New: Add task to automate deletion of disabled accounts (1afcb27) Improved: Always display Help link even when not logged in (00163f5) Improved: Call server sta..." />
+	<meta name="description" content="server-v2.9.5 - 2022-10-11T10:44:01Z New: Add support for sidebar in user pages (053dbab) Improved: Automatically delete expired sessions (d5dfecc) Improved: Cannot sort user deletions by email (8e..." />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@joplinapp" />
 	<meta property="og:url" content="https://joplinapp.org/changelog_server/index.html" />
 	<meta property="og:title" content="Joplin Server Changelog" />
 	<meta property="twitter:title" content="Joplin Server Changelog" />
-	<meta property="og:description" content="server-v2.7.4 - 2022-02-02T19:23:34Z New: Add task to automate deletion of disabled accounts (1afcb27) Improved: Always display Help link even when not logged in (00163f5) Improved: Call server sta..." />
-	<meta property="twitter:description" content="server-v2.7.4 - 2022-02-02T19:23:34Z New: Add task to automate deletion of disabled accounts (1afcb27) Improved: Always display Help link even when not logged in (00163f5) Improved: Call server sta..." />
+	<meta property="og:description" content="server-v2.9.5 - 2022-10-11T10:44:01Z New: Add support for sidebar in user pages (053dbab) Improved: Automatically delete expired sessions (d5dfecc) Improved: Cannot sort user deletions by email (8e..." />
+	<meta property="twitter:description" content="server-v2.9.5 - 2022-10-11T10:44:01Z New: Add support for sidebar in user pages (053dbab) Improved: Automatically delete expired sessions (d5dfecc) Improved: Cannot sort user deletions by email (8e..." />
 <link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -340,6 +340,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin Server Changelog<a name="joplin-server-changelog" href="#joplin-server-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/server-v2.9.5">server-v2.9.5</a> - 2022-10-11T10:44:01Z<a name="server-v2-9-5-https-github-com-laurent22-joplin-releases-tag-server-v2-9-5-2022-10-11t10-44-01z" href="#server-v2-9-5-https-github-com-laurent22-joplin-releases-tag-server-v2-9-5-2022-10-11t10-44-01z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for sidebar in user pages (053dbab)</li>
+<li>Improved: Automatically delete expired sessions (d5dfecc)</li>
+<li>Improved: Cannot sort user deletions by email (8e18024)</li>
+<li>Improved: Do not make checkboxes in published notes clickable (cb637e8)</li>
+<li>Improved: Improve admin email UI (e3c9bcb)</li>
+<li>Improved: Process user deletions once an hour (f99b8df)</li>
+<li>Improved: Use apt to install tini to enable multi-platform support (#6097 by Erik Thomsen)</li>
+<li>Fixed: Could not manually start task (#6491)</li>
+<li>Fixed: Fixed Unsupported File Type error when sharing certain notes (#6531)</li>
+<li>Fixed: Fixed removal of user deletion tasks (8f8cc12)</li>
+<li>Fixed: Fixed sidebar menu selection (422a5bf)</li>
+<li>Fixed: Fixed user deletion schedule (bfe5ee8)</li>
+<li>Fixed: Published note must be scrollable when it contains a large table (#6370)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/server-v2.7.4">server-v2.7.4</a> - 2022-02-02T19:23:34Z<a name="server-v2-7-4-https-github-com-laurent22-joplin-releases-tag-server-v2-7-4-2022-02-02t19-23-34z" href="#server-v2-7-4-https-github-com-laurent22-joplin-releases-tag-server-v2-7-4-2022-02-02t19-23-34z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>New: Add task to automate deletion of disabled accounts (1afcb27)</li>

@@ -341,6 +341,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <h1>Coding style<a name="coding-style" href="#coding-style" class="heading-anchor">🔗</a></h1>
 <p>Coding style is mostly enforced by a pre-commit hook that runs <code>eslint</code>. This hook is installed whenever running <code>yarn install</code> on any of the application directory. If for some reason the pre-commit hook didn't get installed, you can manually install it by running <code>yarn install</code> at the root of the repository.</p>
+<h2>Enforcing rules using eslint<a name="enforcing-rules-using-eslint" href="#enforcing-rules-using-eslint" class="heading-anchor">🔗</a></h2>
+<p>Whenever possible, coding style should be enforced using an eslint rule. To do so, add the relevant rule or plugin to <code>eslintrc.js</code>. To manually run the linter, run <code>yarn run linter ./</code> from the root of the project.</p>
+<p>When adding a rule, you will often find that many files will no longer pass the linter. In that case, you have two options:</p>
+<ul>
+<li>
+<p>Fix the files one by one. If there aren't too many files, and the changes are simple (they are unlikely to introduce regressions), this is the preferred solution.</p>
+</li>
+<li>
+<p>Or use <code>yarn run linter-interactive ./</code> to disable existing errors. The interactive tool will process all the files and you can then choose to disable any existing error that it finds (by adding a <code>eslint-disable-next-line</code> comment above it). This allows keeping the existing, working codebase as it is, and enforcing that new code follows the rule. When using this method, add the comment &quot;Old code before rule was applied&quot; so that we can easily find back all the lines that have been automatically disabled.</p>
+</li>
+</ul>
 <h2>Use TypeScript for new files<a name="use-typescript-for-new-files" href="#use-typescript-for-new-files" class="heading-anchor">🔗</a></h2>
 <h3>Creating a new <code>.ts</code> file<a name="creating-a-new-ts-file" href="#creating-a-new-ts-file" class="heading-anchor">🔗</a></h3>
 <p>Because the TypeScript compiler generates <code>.js</code> files, be sure to add these new <code>.js</code> files to <code>.eslintignore</code> and <code>.gitignore</code>.</p>

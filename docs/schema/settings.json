@@ -503,6 +503,11 @@
 			"default": true,
 			"description": "Enable spellcheck in the beta editor"
 		},
+		"editor.mobile.removeSpaceBelowToolbar": {
+			"type": "boolean",
+			"default": false,
+			"description": "Remove extra space below the markdown toolbar. Works around bug on some devices where the markdown toolbar does not touch the bottom of the screen."
+		},
 		"newTodoFocus": {
 			"type": "string",
 			"default": "title",
@@ -837,17 +842,17 @@
 		"net.proxyEnabled": {
 			"type": "boolean",
 			"default": false,
-			"description": "Proxy enabled (beta)"
+			"description": "Proxy enabled"
 		},
 		"net.proxyUrl": {
 			"type": "string",
 			"default": "",
-			"description": "Proxy URL (beta). e.g \"http://my.proxy.com:80\". You can also set via environment variables"
+			"description": "Proxy URL. For example \"http://my.proxy.com:80\""
 		},
 		"net.proxyTimeout": {
 			"type": "integer",
 			"default": 1,
-			"description": "proxy timeout (seconds) (beta)"
+			"description": "Proxy timeout (seconds)"
 		},
 		"sync.wipeOutFailSafe": {
 			"type": "boolean",

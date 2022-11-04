@@ -356,11 +356,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <tbody>
 <tr>
 <td>macOS, Linux, or Windows (via <a href="https://docs.microsoft.com/en-us/windows/wsl/faq">WSL</a>)</td>
-<td><strong>Important:</strong> First, <a href="https://nodejs.org/en/download/package-manager/">install Node 12+</a>.<br/><br/><code>NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin</code><br/><code>sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin</code><br><br>By default, the application binary will be installed under <code>~/.joplin-bin</code>. You may change this directory if needed. Alternatively, if your npm permissions are setup as described <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npms-default-directory-to-another-directory">here</a> (Option 2) then simply running <code>npm -g install joplin</code> would work.</td>
+<td>1. First, <a href="https://nodejs.org/en/download/package-manager/">install Node 12+</a>.<br/><br/>2. Issue the following commands to install Joplin Terminal: <br/><code>NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin</code><br/><code>sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin</code><br><br>3. Enter the following command to start Joplin Terminal:<br><code>joplin</code><br><br>By default, the application binary will be installed under <code>~/.joplin-bin</code>. You may change this directory if needed. Alternatively, if your npm permissions are setup as described <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npms-default-directory-to-another-directory">here</a> (Option 2) then simply running <code>npm -g install joplin</code> would work.</td>
 </tr>
 </tbody>
 </table>
-<p>To start it, type <code>joplin</code>.</p>
 <h2>Unsupported methods<a name="unsupported-methods" href="#unsupported-methods" class="heading-anchor">🔗</a></h2>
 <p>There are other ways to install the terminal application. However, they are not supported and problems must be reported to the upstream projects.</p>
 <table class="table">
