@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-gb">
 
 <!--
 
@@ -59,7 +59,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 			media="all"
 			onload="this.media='all'; this.onload = null"
 		/>
-		<link rel="stylesheet" href="/css/site.css?h=48d853dd389c4aa024d008a0719918bf" as="style" />
+		<link rel="stylesheet" href="/css/site.css?h=09268e91a54542f2e8341122e08dc737" as="style" />
 		<title>Joplin changelog | Joplin</title>
 
 		<script
@@ -843,6 +843,11 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <li>Improved: Prevent sync process from being stuck when the download state of a resource is invalid (<a href="https://github.com/laurent22/joplin/commit/5c6fd93">5c6fd93</a>)</li>
 <li>Fixed: Prevent app from crashing when loading a setting value that has been removed ([<a href="https://github.com/laurent22/joplin/issues/5086">#5086</a>](<a href="https://github.com/laurent22/joplin/issues/5086">https://github.com/laurent22/joplin/issues/5086</a>))</li>
 </ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.0.10">v2.0.10</a> - 2021-06-16T07:58:29Z<a name="v2-0-10-https-github-com-laurent22-joplin-releases-tag-v2-0-10-2021-06-16t07-58-29z" href="#v2-0-10-https-github-com-laurent22-joplin-releases-tag-v2-0-10-2021-06-16t07-58-29z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Ensure resources are decrypted when sharing a notebook with Joplin Server (<a href="https://github.com/laurent22/joplin/issues/5080">#5080</a>)</li>
+<li>Fixed: Fixed user content URLs when sharing note via Joplin Server (<a href="https://github.com/laurent22/joplin/commit/2cf7067">2cf7067</a>)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.0.9">v2.0.9</a> (Pre-release) - 2021-06-12T09:30:30Z<a name="v2-0-9-https-github-com-laurent22-joplin-releases-tag-v2-0-9-pre-release-2021-06-12t09-30-30z" href="#v2-0-9-https-github-com-laurent22-joplin-releases-tag-v2-0-9-pre-release-2021-06-12t09-30-30z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Conflict notes will now populate a new field with the ID of the conflict note. (<a href="https://github.com/laurent22/joplin/issues/5049">#5049</a> by <a href="https://github.com/Ahmad45123">@Ahmad45123</a>)</li>
@@ -1017,6 +1022,10 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <li>Improved: In config screen, click on a plugin name to open its home page</li>
 <li>Improved: Move plugin settings under separate section in config menu</li>
 <li>Improved: Some imported ENEX files incorrectly had invisible sections</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.7.9">v1.7.9</a> (Pre-release) - 2021-01-28T09:50:21Z<a name="v1-7-9-https-github-com-laurent22-joplin-releases-tag-v1-7-9-pre-release-2021-01-28t09-50-21z" href="#v1-7-9-https-github-com-laurent22-joplin-releases-tag-v1-7-9-pre-release-2021-01-28t09-50-21z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Plugins: Add support for <code>joplin.plugins.installationDir</code> to allow accessing external files packaged with the plugin</li>
 </ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.7.6">v1.7.6</a> (Pre-release) - 2021-01-27T10:36:05Z<a name="v1-7-6-https-github-com-laurent22-joplin-releases-tag-v1-7-6-pre-release-2021-01-27t10-36-05z" href="#v1-7-6-https-github-com-laurent22-joplin-releases-tag-v1-7-6-pre-release-2021-01-27t10-36-05z" class="heading-anchor">🔗</a></h2>
 <ul>
@@ -1210,6 +1219,10 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <li>Fixed: Fixed issues when importing hidden tables within hidden sections in Enex files</li>
 <li>Fixed: Prevent double paste when using Shift+Ctrl+V (<a href="https://github.com/laurent22/joplin/issues/4243">#4243</a>)</li>
 </ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.5.9">v1.5.9</a> (Pre-release) - 2020-12-23T18:01:08Z<a name="v1-5-9-https-github-com-laurent22-joplin-releases-tag-v1-5-9-pre-release-2020-12-23t18-01-08z" href="#v1-5-9-https-github-com-laurent22-joplin-releases-tag-v1-5-9-pre-release-2020-12-23t18-01-08z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Improved error handling when importing ENEX files</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.5.8">v1.5.8</a> (Pre-release) - 2020-12-20T09:45:19Z<a name="v1-5-8-https-github-com-laurent22-joplin-releases-tag-v1-5-8-pre-release-2020-12-20t09-45-19z" href="#v1-5-8-https-github-com-laurent22-joplin-releases-tag-v1-5-8-pre-release-2020-12-20t09-45-19z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>New: Plugins: Add support for content script asset files, for Markdown-it plugins</li>
@@ -1223,46 +1236,6 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <li>Fixed: Register Markdown editor commands with the Keyboard Shortcut editor (<a href="https://github.com/laurent22/joplin/issues/4136">#4136</a>) (<a href="https://github.com/laurent22/joplin/issues/4130">#4130</a> by Caleb John)</li>
 </ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.5.7">v1.5.7</a> (Pre-release) - 2020-12-10T12:58:33Z<a name="v1-5-7-https-github-com-laurent22-joplin-releases-tag-v1-5-7-pre-release-2020-12-10t12-58-33z" href="#v1-5-7-https-github-com-laurent22-joplin-releases-tag-v1-5-7-pre-release-2020-12-10t12-58-33z" class="heading-anchor">🔗</a></h2>
-<ul>
-<li>New: MacOS: Notarize application</li>
-<li>New: Add support for media players (video, audio and PDF)</li>
-<li>New: Added doc about Rich Text editor and added way to dismiss warning banner</li>
-<li>New: Plugins: Add support for workspace.onSyncStart event</li>
-<li>Improved: Improved warning banner colors</li>
-<li>Improved: Plugins: Commands would not show up in keymap editor when no shortcut was associated with them</li>
-<li>Improved: Restrict auto-detection of links, and added option to toggle linkify (<a href="https://github.com/laurent22/joplin/issues/4205">#4205</a>)</li>
-<li>Improved: Rich Text: Do not converts to markdown links URLs that would be linkified</li>
-<li>Improved: Translation: Update zh_CN (<a href="https://github.com/laurent22/joplin/issues/4195">#4195</a> by Zhang YANG)</li>
-<li>Improved: Update Mermaid: 8.8.1 -&gt; 8.8.4 (<a href="https://github.com/laurent22/joplin/issues/4193">#4193</a> by Helmut K. C. Tessarek)</li>
-<li>Improved: Plugins: Improved note change event handling.</li>
-<li>Fixed: Fixed basic search when executing a query in Chinese (<a href="https://github.com/laurent22/joplin/issues/4034">#4034</a> by Naveen M V)</li>
-<li>Fixed: Fixed importing ENEX files that contain empty resources</li>
-<li>Fixed: Fixed issue with note not being saved when a column is added or remove from Rich Text editor</li>
-<li>Fixed: Fixed numbered list bug in markdown editor (<a href="https://github.com/laurent22/joplin/issues/4116">#4116</a>) (<a href="https://github.com/laurent22/joplin/issues/3917">#3917</a> by <a href="https://github.com/MichBoi">@MichBoi</a>)</li>
-<li>Fixed: Fixed potential crash when watching note files or resources</li>
-<li>Fixed: Focus editor after pressing toolbar buttons (<a href="https://github.com/laurent22/joplin/issues/4037">#4037</a>) (<a href="https://github.com/laurent22/joplin/issues/4036">#4036</a> by <a href="https://github.com/CalebJohn">@CalebJohn</a>)</li>
-<li>Fixed: Prevents crash when invalid spell checker language is selected, and provide fallback for invalid language codes (<a href="https://github.com/laurent22/joplin/issues/4146">#4146</a>)</li>
-<li>Fixed: Fixed issue when searching for text that contains diacritic (<a href="https://github.com/laurent22/joplin/issues/4152">#4152</a>) (<a href="https://github.com/laurent22/joplin/issues/4025">#4025</a> by Roman Musin)</li>
-<li>Fixed: Fixed issue with attachment paths being invalid when user has spaces in home directory path.</li>
-<li>Fixed: Fixed title input field width on small windows</li>
-</ul>
-<h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.5.9">v1.5.9</a> (Pre-release) - 2020-12-23T18:01:08Z<a name="v1-5-9-https-github-com-laurent22-joplin-releases-tag-v1-5-9-pre-release-2020-12-23t18-01-08z" href="#v1-5-9-https-github-com-laurent22-joplin-releases-tag-v1-5-9-pre-release-2020-12-23t18-01-08z" class="heading-anchor">🔗</a></h2>
-<ul>
-<li>Improved: Improved error handling when importing ENEX files</li>
-</ul>
-<h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.5.8">v1.5.8</a> (Pre-release) - 2020-12-20T09:45:19Z<a name="v1-5-8-https-github-com-laurent22-joplin-releases-tag-v1-5-8-pre-release-2020-12-20t09-45-19z-1" href="#v1-5-8-https-github-com-laurent22-joplin-releases-tag-v1-5-8-pre-release-2020-12-20t09-45-19z-1" class="heading-anchor">🔗</a></h2>
-<ul>
-<li>New: Plugins: Add support for content script asset files, for Markdown-it plugins</li>
-<li>New: Plugins: Add support for context menu items on notebooks and tags</li>
-<li>New: Plugins: Added a way to execute commands from Markdown-it content scripts</li>
-<li>Improved: Use plugins whenever printing or exporting notes</li>
-<li>Fixed: Fix End key behavior with Codemirror spellcheck (<a href="https://github.com/laurent22/joplin/issues/4215">#4215</a> by Caleb John)</li>
-<li>Fixed: Fixed importing ENEX files that contain resources with invalid mime type</li>
-<li>Fixed: Fixed importing certain code blocks from ENEX</li>
-<li>Fixed: Plugins: Fixed disabling plugin files that start with &quot;_&quot;</li>
-<li>Fixed: Register Markdown editor commands with the Keyboard Shortcut editor (<a href="https://github.com/laurent22/joplin/issues/4136">#4136</a>) (<a href="https://github.com/laurent22/joplin/issues/4130">#4130</a> by Caleb John)</li>
-</ul>
-<h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.5.7">v1.5.7</a> (Pre-release) - 2020-12-10T12:58:33Z<a name="v1-5-7-https-github-com-laurent22-joplin-releases-tag-v1-5-7-pre-release-2020-12-10t12-58-33z-1" href="#v1-5-7-https-github-com-laurent22-joplin-releases-tag-v1-5-7-pre-release-2020-12-10t12-58-33z-1" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>New: MacOS: Notarize application</li>
 <li>New: Add support for media players (video, audio and PDF)</li>
