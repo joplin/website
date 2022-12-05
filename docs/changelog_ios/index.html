@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="ios-v12.8.1 - 2022-06-06T10:56:27Z Improved: Automatically start sync after setting the sync parameters (ff066ba) Improved: Color of Date-Time text changed to match theme (#6279 by Ayush Srivastava..." />
+			<meta name="description" content="ios-v12.9.1 - 2022-12-04T18:03:02Z New: Add Markdown toolbar (#6753 by Henry Heino) New: Add alt text&#x2F;roles to some buttons to improve accessibility (#6616 by Henry Heino) New: Add keyboard-activat..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/changelog_ios/index.html" />
 			<meta property="og:title" content="Joplin iOS app changelog" />
 			<meta property="twitter:title" content="Joplin iOS app changelog" />
-			<meta property="og:description" content="ios-v12.8.1 - 2022-06-06T10:56:27Z Improved: Automatically start sync after setting the sync parameters (ff066ba) Improved: Color of Date-Time text changed to match theme (#6279 by Ayush Srivastava..." />
-			<meta property="twitter:description" content="ios-v12.8.1 - 2022-06-06T10:56:27Z Improved: Automatically start sync after setting the sync parameters (ff066ba) Improved: Color of Date-Time text changed to match theme (#6279 by Ayush Srivastava..." />
+			<meta property="og:description" content="ios-v12.9.1 - 2022-12-04T18:03:02Z New: Add Markdown toolbar (#6753 by Henry Heino) New: Add alt text&#x2F;roles to some buttons to improve accessibility (#6616 by Henry Heino) New: Add keyboard-activat..." />
+			<meta property="twitter:description" content="ios-v12.9.1 - 2022-12-04T18:03:02Z New: Add Markdown toolbar (#6753 by Henry Heino) New: Add alt text&#x2F;roles to some buttons to improve accessibility (#6616 by Henry Heino) New: Add keyboard-activat..." />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -340,6 +340,43 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin iOS app changelog<a name="joplin-ios-app-changelog" href="#joplin-ios-app-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.9.1">ios-v12.9.1</a> - 2022-12-04T18:03:02Z<a name="ios-v12-9-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-9-1-2022-12-04t18-03-02z" href="#ios-v12-9-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-9-1-2022-12-04t18-03-02z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add Markdown toolbar (#6753 by Henry Heino)</li>
+<li>New: Add alt text/roles to some buttons to improve accessibility (#6616 by Henry Heino)</li>
+<li>New: Add keyboard-activatable markdown commands (e.g. bold, italicize) (#6707 by Henry Heino)</li>
+<li>New: Add long-press tooltips (#6758 by Henry Heino)</li>
+<li>New: Add note bar (#6772 by Tolulope Malomo)</li>
+<li>Improved: Convert empty bolded regions to bold-italic regions in beta editor (#6807) (#6808 by Henry Heino)</li>
+<li>Improved: Ctrl+F search support in beta editor (#6587 by Henry Heino)</li>
+<li>Improved: Disable multi-highlighting to fix context menu (9b348fd)</li>
+<li>Improved: Display icon for all notebooks if at least one notebook has an icon (ec97dd8)</li>
+<li>Improved: Enable long-press menu (#6738 by Henry Heino)</li>
+<li>Improved: Improve syntax highlighting on mobile beta editor (#6684 by Henry Heino)</li>
+<li>Improved: Increase the attachment size limit to 200MB (#6848 by Self Not Found)</li>
+<li>Improved: Removes whitespace above navigation component (#6597 by <a href="https://github.com/tom">@tom</a>)</li>
+<li>Improved: Respect system accessibility font size in rendered markdown (#6686) (#6685 by Henry Heino)</li>
+<li>Improved: Setting to disable spellcheck in beta editor (#6780 by Henry Heino)</li>
+<li>Improved: Show client ID in log (#6897 by Self Not Found)</li>
+<li>Improved: Supports attaching multiple files to a note at once (#6831 by Self Not Found)</li>
+<li>Improved: Translation: Update zh_TW (#6727 by Kevin Hsu)</li>
+<li>Improved: Update Mermaid 8.13.9 to 9.1.7 (#6849 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Add button to reduce space below markdown toolbar (#6823) (#6805 by Henry Heino)</li>
+<li>Fixed: Do not encrypt non-owned note if it was not shared encrypted (#6645)</li>
+<li>Fixed: Fix checklist continuation in beta editor (#6577) (#6576 by Henry Heino)</li>
+<li>Fixed: Fix default font in beta editor (#6760) (#6759 by Henry Heino)</li>
+<li>Fixed: Fix multiple webview instances (#6841 by Henry Heino)</li>
+<li>Fixed: Fix occasional overscroll when opening the keyboard (#6700) (#6636 by Henry Heino)</li>
+<li>Fixed: Fix resources sync when proxy is set (#6817) (#6688 by Self Not Found)</li>
+<li>Fixed: Fix side menu width on wide screen devices (#6662 by Tolulope Malomo)</li>
+<li>Fixed: Fixed crash when trying to move note to notebook (#6898)</li>
+<li>Fixed: Fixed notebook icon spacing (633c9ac)</li>
+<li>Fixed: Fixed notebook icons alignment (ea6b7ca)</li>
+<li>Fixed: Note links with HTML notation did not work (#6515)</li>
+<li>Fixed: Scroll selection into view in beta editor when window resizes (#6610) (#5949 by Henry Heino)</li>
+<li>Fixed: Support non-ASCII characters in OneDrive (#6916) (#6838 by Self Not Found)</li>
+<li>Security: Fix XSS when a specially crafted string is passed to the renderer (762b4e8)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.8.1">ios-v12.8.1</a> - 2022-06-06T10:56:27Z<a name="ios-v12-8-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-8-1-2022-06-06t10-56-27z" href="#ios-v12-8-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-8-1-2022-06-06t10-56-27z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Automatically start sync after setting the sync parameters (ff066ba)</li>
