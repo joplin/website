@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="v2.10.2 (Pre-release) - 2022-12-18T18:05:08Z Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by Helmut K. C. Tessarek) Fixed: Fix pasting plain text (#7045) (#7036 by Self Not Found) Fixed: Open ca..." />
+			<meta name="description" content="v2.10.3 (Pre-release) - 2022-12-31T15:53:23Z Improved: Resolve #6254: &amp;lt;details&gt; elements remain closed when exporting to PDF (#7515) (#6254 by Hitarth Thummar) Improved: Switch license to AGPL-3..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/changelog/index.html" />
 			<meta property="og:title" content="Joplin changelog" />
 			<meta property="twitter:title" content="Joplin changelog" />
-			<meta property="og:description" content="v2.10.2 (Pre-release) - 2022-12-18T18:05:08Z Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by Helmut K. C. Tessarek) Fixed: Fix pasting plain text (#7045) (#7036 by Self Not Found) Fixed: Open ca..." />
-			<meta property="twitter:description" content="v2.10.2 (Pre-release) - 2022-12-18T18:05:08Z Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by Helmut K. C. Tessarek) Fixed: Fix pasting plain text (#7045) (#7036 by Self Not Found) Fixed: Open ca..." />
+			<meta property="og:description" content="v2.10.3 (Pre-release) - 2022-12-31T15:53:23Z Improved: Resolve #6254: &amp;lt;details&gt; elements remain closed when exporting to PDF (#7515) (#6254 by Hitarth Thummar) Improved: Switch license to AGPL-3..." />
+			<meta property="twitter:description" content="v2.10.3 (Pre-release) - 2022-12-31T15:53:23Z Improved: Resolve #6254: &amp;lt;details&gt; elements remain closed when exporting to PDF (#7515) (#6254 by Hitarth Thummar) Improved: Switch license to AGPL-3..." />
 				<meta property="og:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 				<meta property="twitter:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
@@ -344,6 +344,17 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin changelog<a name="joplin-changelog" href="#joplin-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.10.3">v2.10.3</a> (Pre-release) - 2022-12-31T15:53:23Z<a name="v2-10-3-https-github-com-laurent22-joplin-releases-tag-v2-10-3-pre-release-2022-12-31t15-53-23z" href="#v2-10-3-https-github-com-laurent22-joplin-releases-tag-v2-10-3-pre-release-2022-12-31t15-53-23z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Resolve <a href="https://github.com/laurent22/joplin/issues/6254">#6254</a>: &lt;details&gt; elements remain closed when exporting to PDF (<a href="https://github.com/laurent22/joplin/issues/7515">#7515</a>) (<a href="https://github.com/laurent22/joplin/issues/6254">#6254</a> by Hitarth Thummar)</li>
+<li>Improved: Switch license to AGPL-3.0 (<a href="https://github.com/laurent22/joplin/commit/faf0a4e">faf0a4e</a>)</li>
+<li>Fixed: Fixed crash when closing PDF (<a href="https://github.com/laurent22/joplin/issues/7528">#7528</a>)</li>
+<li>Fixed: Fixes import of tasklists from enex files (<a href="https://github.com/laurent22/joplin/issues/7344">#7344</a>) (<a href="https://github.com/laurent22/joplin/issues/7329">#7329</a> by <a href="https://github.com/Wartijn">@Wartijn</a>)</li>
+<li>Fixed: Press Enter to select a tag (<a href="https://github.com/laurent22/joplin/issues/7493">#7493</a>)</li>
+<li>Fixed: Profile paths that contain special characters can break note rendering (<a href="https://github.com/laurent22/joplin/issues/7449">#7449</a>) (<a href="https://github.com/laurent22/joplin/issues/7434">#7434</a> by <a href="https://github.com/Wartijn">@Wartijn</a>)</li>
+<li>Fixed: Random crash when searching (<a href="https://github.com/laurent22/joplin/issues/7499">#7499</a>)</li>
+<li>Fixed: Search field doesn't get focus when pressing Ctrl+F (<a href="https://github.com/laurent22/joplin/issues/7529">#7529</a>) (<a href="https://github.com/laurent22/joplin/issues/7520">#7520</a> by Betty Alagwu)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.10.2">v2.10.2</a> (Pre-release) - 2022-12-18T18:05:08Z<a name="v2-10-2-https-github-com-laurent22-joplin-releases-tag-v2-10-2-pre-release-2022-12-18t18-05-08z" href="#v2-10-2-https-github-com-laurent22-joplin-releases-tag-v2-10-2-pre-release-2022-12-18t18-05-08z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Update Mermaid: 9.1.7 to 9.2.2 (<a href="https://github.com/laurent22/joplin/issues/7330">#7330</a> by Helmut K. C. Tessarek)</li>
