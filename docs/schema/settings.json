@@ -496,7 +496,13 @@
 		"editor.beta": {
 			"type": "boolean",
 			"default": false,
-			"description": "Opt-in to the editor beta. This beta adds list continuation and syntax highlighting. If you find bugs, please report them in the Discourse forum."
+			"description": "Opt-in to the editor beta. This beta adds list continuation and syntax highlighting. If you find bugs, please report them in the Discourse forum.",
+			"$comment": "private"
+		},
+		"editor.usePlainText": {
+			"type": "boolean",
+			"default": false,
+			"description": "Use the plain text editor. The plain text editor has various issues and is no longer supported. If you are having issues with the new editor however you can revert to the old one using this setting."
 		},
 		"editor.mobile.spellcheckEnabled": {
 			"type": "boolean",
@@ -852,7 +858,8 @@
 		"net.proxyTimeout": {
 			"type": "integer",
 			"default": 1,
-			"description": "Proxy timeout (seconds)"
+			"description": "Proxy timeout (seconds)",
+			"maximum": 60
 		},
 		"sync.wipeOutFailSafe": {
 			"type": "boolean",
