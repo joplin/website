@@ -999,6 +999,22 @@
 			"type": "array",
 			"default": [],
 			"$comment": "private"
+		},
+		"security.biometricsEnabled": {
+			"type": "boolean",
+			"default": false,
+			"description": "Use biometrics to secure access to the app",
+			"$comment": "private"
+		},
+		"security.biometricsSupportedSensors": {
+			"type": "string",
+			"default": "",
+			"$comment": "private"
+		},
+		"security.biometricsInitialPromptDone": {
+			"type": "boolean",
+			"default": false,
+			"$comment": "private"
 		}
 	}
 }
