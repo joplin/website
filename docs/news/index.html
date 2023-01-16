@@ -166,6 +166,22 @@ https://github.com/laurent22/joplin/blob/dev/
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
+<h1><a href="/news/20230116-github-actions-log-viewer/">Introducing the &quot;GitHub Actions Raw Log Viewer&quot; extension for Chrome</a><a name="introducing-the-github-actions-raw-log-viewer-extension-for-chrome-news-20230116-github-actions-log-viewer" href="#introducing-the-github-actions-raw-log-viewer-extension-for-chrome-news-20230116-github-actions-log-viewer" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>16 Jan 2023</strong></em></p>
+<p>If you've ever used GitHub Actions, you will find that they provide by default a nice coloured output for the log. It looks good and it's even interactive! (You can click to collapse/expand blocks of text) But unfortunately it doesn't scale to large workflows, like we have for Joplin - the log can freeze and it will take forever to search for something. Indeed searching is done in &quot;real time&quot;... which mostly means it will freeze for a minute or two for each letter you type in the search box. Not great.</p>
+<p>Thankfully GitHub provides an alternative access: the raw logs. This is much better because they will open as plain text, without any styling or JS magic, which means you can use the browser native search and it will be fast.</p>
+<p>But now the problem is that raw logs look like this:</p>
+<p><img src="/images/news/20230116-ga-raw-log.png" alt="Raw log without extension"></p>
+<p>While it's not impossible to read, all colours that would display nicely in a terminal are gone and replaced by <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI codes</a>. You can find what you need in there but it's not particularly easy.</p>
+<p>This is where the new <strong>GitHub Action Raw Log Viewer</strong> extension for Chrome can help. It will parse your raw log and convert the ANSI codes to proper colours. This results in a much more readable rendering:</p>
+<p><img src="/images/news/20230116-ga-raw-log-colored.png" alt="Raw log with extension"></p>
+<p>The extension is fast even for very large logs and it's of course easy to search for text since it simply works with your browser built-in search.</p>
+<p>The extension is open source, with the code available here: <a href="https://github.com/laurent22/github-actions-logs-extension">https://github.com/laurent22/github-actions-logs-extension</a></p>
+<p>And to install it, follow this link:</p>
+<p><a href="https://chrome.google.com/webstore/detail/github-action-raw-log-vie/lgejlnoopmcdglhfjblaeldbcfnmjddf"><img src="/images/news/20230116-extension-get-it-now.png" alt="Download GitHub Action Raw Log Viewer extension"></a></p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
+<hr>
 <h1><a href="/news/20221221-agpl/">Joplin is switching to the GNU Affero General Public License v3 (AGPL-3.0)</a><a name="joplin-is-switching-to-the-gnu-affero-general-public-license-v3-agpl-3-0-news-20221221-agpl" href="#joplin-is-switching-to-the-gnu-affero-general-public-license-v3-agpl-3-0-news-20221221-agpl" class="heading-anchor">🔗</a></h1>
 <p><em>Published on <strong>21 Dec 2022</strong></em></p>
 <p>As was <a href="https://discourse.joplinapp.org/t/rfc-switch-to-agpl-license-for-joplin-server/16529">discussed last year</a>, Joplin is switching to the GNU Affero General Public License v3 (AGPL-3.0) for the desktop, mobile and CLI applications, as well as the web clipper.</p>
@@ -548,16 +564,6 @@ https://github.com/laurent22/joplin/blob/dev/
 <p>For now, since we don't have a review process, the recommended plugins are those developed by the Joplin team and frequent contributors, because we know those are safe to use.</p>
 <p>Later we might have a review process and add more recommended plugins. That being said, in the meantime even if a plugin is not marked as recommended, there's a good chance it is still safe and have good performance too. Often you can search for it on the forum and if it's active with many users commenting, you're most likely good to go.</p>
 <p>But if there's any doubt, the recommended tag is a good way to be sure.</p>
-<hr>
-<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
-<hr>
-<h1><a href="/news/20210831-154354/">Joplin Cloud is officially production ready!</a><a name="joplin-cloud-is-officially-production-ready-news-20210831-154354" href="#joplin-cloud-is-officially-production-ready-news-20210831-154354" class="heading-anchor">🔗</a></h1>
-<p><em>Published on <strong>31 Aug 2021</strong></em></p>
-<p><a href="https://joplinapp.org/plans/">Joplin Cloud</a> has been out of beta for a few weeks now and since then it has been quietly running without any troubles. There is no known bugs and the service is running smoothly so it's now safe to say that it is production ready!</p>
-<p>As a reminder, Joplin Cloud is meant to provide a more seamless Joplin experience - if you want to quickly get started, it's as easy as downloading the app and getting a Joplin Cloud account. Besides improved sync performance, that will give you the ability to collaborate on notebooks with others, as well as publishing and sharing notes.</p>
-<p>Of course Joplin still supports other sync options such as Nextcloud, Dropbox and OneDrive or AWS S3. You can also self host using Joplin Server. The advantage of Joplin Cloud being that you don't need to maintain a server yourself - for a small fee you'll get that taken care of.</p>
-<p>Additionally, subscribing to Joplin Cloud is a great way to support the project as a whole, including the open source applications. Such support is needed in the long term to provide bug and security fixes, add new features, and provide support.</p>
-<p>At some level it is also an experiment, to see if such a service is financially viable and can allow me to work full time on the project. This is certainly something I would like, and perhaps Joplin Cloud combined with your donations will allow that.</p>
 <hr>
 <p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
 
