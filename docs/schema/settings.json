@@ -820,6 +820,11 @@
 				"landscape"
 			]
 		},
+		"useCustomPdfViewer": {
+			"type": "boolean",
+			"default": false,
+			"description": "Use custom PDF viewer (Beta). The custom PDF viewer remembers the last page that was viewed, however it has some technical issues."
+		},
 		"editor.keyboardMode": {
 			"type": "string",
 			"default": "",
