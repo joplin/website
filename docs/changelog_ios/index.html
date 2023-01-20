@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="ios-v12.10.1 - 2022-12-28T15:08:39Z Improved: Switch license to AGPL-3.0 (faf0a4e) Improved: Tag search case insensitive (#7368 by @JackGruber) Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by He..." />
+			<meta name="description" content="ios-v12.10.2 - 2023-01-20T17:41:13Z New: Add support for locking the app using biometrics (f10d9f7) New: Add support for multiple profiles (6bb52d5) New: Add support for realtime search (767213c) I..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/changelog_ios/index.html" />
 			<meta property="og:title" content="Joplin iOS app changelog" />
 			<meta property="twitter:title" content="Joplin iOS app changelog" />
-			<meta property="og:description" content="ios-v12.10.1 - 2022-12-28T15:08:39Z Improved: Switch license to AGPL-3.0 (faf0a4e) Improved: Tag search case insensitive (#7368 by @JackGruber) Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by He..." />
-			<meta property="twitter:description" content="ios-v12.10.1 - 2022-12-28T15:08:39Z Improved: Switch license to AGPL-3.0 (faf0a4e) Improved: Tag search case insensitive (#7368 by @JackGruber) Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by He..." />
+			<meta property="og:description" content="ios-v12.10.2 - 2023-01-20T17:41:13Z New: Add support for locking the app using biometrics (f10d9f7) New: Add support for multiple profiles (6bb52d5) New: Add support for realtime search (767213c) I..." />
+			<meta property="twitter:description" content="ios-v12.10.2 - 2023-01-20T17:41:13Z New: Add support for locking the app using biometrics (f10d9f7) New: Add support for multiple profiles (6bb52d5) New: Add support for realtime search (767213c) I..." />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -57,7 +57,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
 			media="all"
 			onload="this.media='all'; this.onload = null"
 		/>
-		<link rel="stylesheet" href="/css/site.css?h=31ab3f762d9ee1922b1f602151cc4e4b" as="style" />
+		<link rel="stylesheet" href="/css/site.css?h=9c4904a4faf833c863bf288e77d49fce" as="style" />
 		<title>Joplin iOS app changelog | Joplin</title>
 
 		<script
@@ -342,6 +342,23 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin iOS app changelog<a name="joplin-ios-app-changelog" href="#joplin-ios-app-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.10.2">ios-v12.10.2</a> - 2023-01-20T17:41:13Z<a name="ios-v12-10-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-2-2023-01-20t17-41-13z" href="#ios-v12-10-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-2-2023-01-20t17-41-13z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for locking the app using biometrics (f10d9f7)</li>
+<li>New: Add support for multiple profiles (6bb52d5)</li>
+<li>New: Add support for realtime search (767213c)</li>
+<li>Improved: Configurable editor font size (#7596 by Henry Heino)</li>
+<li>Improved: Confirm closing settings with unsaved changes (#7566 by Henry Heino)</li>
+<li>Improved: Improve dialogue spacing in Fountain renderer (#7628) (#7627 by <a href="https://github.com/Elleo">@Elleo</a>)</li>
+<li>Improved: Make the new text editor the default one (f5ef318)</li>
+<li>Improved: Upgrade to React Native 0.70 (4bdb3d0)</li>
+<li>Fixed: Enable autocorrect with spellcheck (#7532) (#6175 by Henry Heino)</li>
+<li>Fixed: Fix Dropdown accessibility (#7564) (#7553 by Henry Heino)</li>
+<li>Fixed: Fixed issue when floating keyboard is visible (#7593) (#6682 by Henry Heino)</li>
+<li>Fixed: Fixed proxy timeout setting UI (275c80a)</li>
+<li>Fixed: Remove gray line around text editor (#7595) (#7594 by Henry Heino)</li>
+<li>Fixed: Settings save button visible even when no settings have been changed (#7503)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.10.1">ios-v12.10.1</a> - 2022-12-28T15:08:39Z<a name="ios-v12-10-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-1-2022-12-28t15-08-39z" href="#ios-v12-10-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-1-2022-12-28t15-08-39z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Switch license to AGPL-3.0 (faf0a4e)</li>
