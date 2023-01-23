@@ -1062,7 +1062,11 @@ Feature comparison
 			});
 
 			setupBetaHandling(urlQuery);
-			applyPeriod('yearly');
+			if (urlQuery.get('period') === 'monthly') {
+				// Nothing - this is the default
+			} else {
+				applyPeriod('yearly');
+			}
 		});
 	
 </script>
