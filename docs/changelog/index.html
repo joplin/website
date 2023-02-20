@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="v2.10.4 (Pre-release) - 2023-01-05T13:09:20Z Fixed: Fixed certain plugins that were using the sqlite3 database (a43ce33) Fixed: Plugin API DirectoryPath edit problems when path contain spaces (#701..." />
+			<meta name="description" content="v2.10.6 (Pre-release) - 2023-02-20T14:00:05Z New: Add &#39;Paste as text&#39; to the Context menu of the Rich Text Editor (#7769 by @pedr) New: Add a menu option to reset the application layout (#7786 by @..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/changelog/index.html" />
 			<meta property="og:title" content="Joplin changelog" />
 			<meta property="twitter:title" content="Joplin changelog" />
-			<meta property="og:description" content="v2.10.4 (Pre-release) - 2023-01-05T13:09:20Z Fixed: Fixed certain plugins that were using the sqlite3 database (a43ce33) Fixed: Plugin API DirectoryPath edit problems when path contain spaces (#701..." />
-			<meta property="twitter:description" content="v2.10.4 (Pre-release) - 2023-01-05T13:09:20Z Fixed: Fixed certain plugins that were using the sqlite3 database (a43ce33) Fixed: Plugin API DirectoryPath edit problems when path contain spaces (#701..." />
+			<meta property="og:description" content="v2.10.6 (Pre-release) - 2023-02-20T14:00:05Z New: Add &#39;Paste as text&#39; to the Context menu of the Rich Text Editor (#7769 by @pedr) New: Add a menu option to reset the application layout (#7786 by @..." />
+			<meta property="twitter:description" content="v2.10.6 (Pre-release) - 2023-02-20T14:00:05Z New: Add &#39;Paste as text&#39; to the Context menu of the Rich Text Editor (#7769 by @pedr) New: Add a menu option to reset the application layout (#7786 by @..." />
 				<meta property="og:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 				<meta property="twitter:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
@@ -344,6 +344,29 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin changelog<a name="joplin-changelog" href="#joplin-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.10.6">v2.10.6</a> (Pre-release) - 2023-02-20T14:00:05Z<a name="v2-10-6-https-github-com-laurent22-joplin-releases-tag-v2-10-6-pre-release-2023-02-20t14-00-05z" href="#v2-10-6-https-github-com-laurent22-joplin-releases-tag-v2-10-6-pre-release-2023-02-20t14-00-05z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add 'Paste as text' to the Context menu of the Rich Text Editor (<a href="https://github.com/laurent22/joplin/issues/7769">#7769</a> by <a href="https://github.com/pedr">@pedr</a>)</li>
+<li>New: Add a menu option to reset the application layout (<a href="https://github.com/laurent22/joplin/issues/7786">#7786</a> by <a href="https://github.com/pedr">@pedr</a>)</li>
+<li>Improved: Allow 'Paste as Text' on the Rich Text Editor (<a href="https://github.com/laurent22/joplin/issues/7751">#7751</a> by <a href="https://github.com/pedr">@pedr</a>)</li>
+<li>Improved: Disable custom PDF viewer by default (<a href="https://github.com/laurent22/joplin/issues/7506">#7506</a>)</li>
+<li>Improved: Fix copy text with no selection (<a href="https://github.com/laurent22/joplin/issues/7641">#7641</a>) (<a href="https://github.com/laurent22/joplin/issues/7602">#7602</a> by Betty Alagwu)</li>
+<li>Improved: Improve dialogue spacing in Fountain renderer (<a href="https://github.com/laurent22/joplin/issues/7628">#7628</a>) (<a href="https://github.com/laurent22/joplin/issues/7627">#7627</a> by <a href="https://github.com/Elleo">@Elleo</a>)</li>
+<li>Improved: New design for &quot;New note&quot; and &quot;New todo&quot; buttons (<a href="https://github.com/laurent22/joplin/issues/7780">#7780</a> by <a href="https://github.com/julien">@julien</a>)</li>
+<li>Improved: Remove auto-matching for greater than character (<a href="https://github.com/laurent22/joplin/issues/7669">#7669</a> by Self Not Found)</li>
+<li>Improved: Show installed plugins in Help - About Joplin (<a href="https://github.com/laurent22/joplin/issues/7711">#7711</a>) (<a href="https://github.com/laurent22/joplin/issues/6143">#6143</a> by <a href="https://github.com/julien">@julien</a>)</li>
+<li>Fixed: App freezes and displays fatal error when text provided in the search bar is too long (<a href="https://github.com/laurent22/joplin/issues/7764">#7764</a>) (<a href="https://github.com/laurent22/joplin/issues/7634">#7634</a> by <a href="https://github.com/pedr">@pedr</a>)</li>
+<li>Fixed: Certain plugins could create invalid settings, which could result in a crash (<a href="https://github.com/laurent22/joplin/issues/7621">#7621</a>)</li>
+<li>Fixed: Clicking on Save saves changes when updating a link (<a href="https://github.com/laurent22/joplin/issues/7753">#7753</a>) (<a href="https://github.com/laurent22/joplin/issues/7658">#7658</a> by <a href="https://github.com/julien">@julien</a>)</li>
+<li>Fixed: Ctrl-X behaviour when no text is selected (<a href="https://github.com/laurent22/joplin/issues/7778">#7778</a>) (<a href="https://github.com/laurent22/joplin/issues/7662">#7662</a> by <a href="https://github.com/melsonic">@melsonic</a>)</li>
+<li>Fixed: Custom sort order not synchronized (<a href="https://github.com/laurent22/joplin/issues/7729">#7729</a>) (<a href="https://github.com/laurent22/joplin/issues/6956">#6956</a> by Tao Klerks)</li>
+<li>Fixed: Fix highlighting in GotoAnything dialogue (<a href="https://github.com/laurent22/joplin/issues/7592">#7592</a> by <a href="https://github.com/andy1631">@andy1631</a>)</li>
+<li>Fixed: Fix open files with non-ASCII characters in path (<a href="https://github.com/laurent22/joplin/issues/7679">#7679</a>) (<a href="https://github.com/laurent22/joplin/issues/7678">#7678</a> by Self Not Found)</li>
+<li>Fixed: Fix text editor text highlighting when used with special IME methods (<a href="https://github.com/laurent22/joplin/issues/7630">#7630</a>) (<a href="https://github.com/laurent22/joplin/issues/7565">#7565</a> by <a href="https://github.com/light">@light</a>)</li>
+<li>Fixed: Markdown editor not surrounding highlighted text with backticks (<a href="https://github.com/laurent22/joplin/issues/7697">#7697</a>) (<a href="https://github.com/laurent22/joplin/issues/7694">#7694</a> by Helmut K. C. Tessarek)</li>
+<li>Fixed: Mermaid images are incorrectly sized when exported as PNG (<a href="https://github.com/laurent22/joplin/issues/7546">#7546</a>) (<a href="https://github.com/laurent22/joplin/issues/7521">#7521</a> by Adarsh Singh)</li>
+<li>Fixed: Note editor scrolls back to top when editing certain notes (<a href="https://github.com/laurent22/joplin/issues/7617">#7617</a>)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.10.4">v2.10.4</a> (Pre-release) - 2023-01-05T13:09:20Z<a name="v2-10-4-https-github-com-laurent22-joplin-releases-tag-v2-10-4-pre-release-2023-01-05t13-09-20z" href="#v2-10-4-https-github-com-laurent22-joplin-releases-tag-v2-10-4-pre-release-2023-01-05t13-09-20z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Fixed: Fixed certain plugins that were using the sqlite3 database (<a href="https://github.com/laurent22/joplin/commit/a43ce33">a43ce33</a>)</li>
