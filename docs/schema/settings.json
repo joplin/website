@@ -1020,6 +1020,11 @@
 			"type": "boolean",
 			"default": false,
 			"$comment": "private"
+		},
+		"sync.allowUnsupportedProviders": {
+			"type": "integer",
+			"default": -1,
+			"$comment": "private"
 		}
 	}
 }
