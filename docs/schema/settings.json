@@ -507,7 +507,7 @@
 		"editor.mobile.spellcheckEnabled": {
 			"type": "boolean",
 			"default": true,
-			"description": "Enable spellcheck in the beta editor"
+			"description": "Enable spellcheck in the text editor"
 		},
 		"editor.mobile.removeSpaceBelowToolbar": {
 			"type": "boolean",
