@@ -365,6 +365,8 @@ https://github.com/laurent22/joplin/blob/dev/readme/coding_style.md
 <h3>Convert existing <code>.js</code> files to TypeScript before modifying<a name="convert-existing-js-files-to-typescript-before-modifying" href="#convert-existing-js-files-to-typescript-before-modifying" class="heading-anchor">🔗</a></h3>
 <p>Even if you are <strong>modifying</strong> a file that was originally in JavaScript you should ideally convert it first to TypeScript before modifying it.</p>
 <p>If this is a large file however please ask first if it needs to be converted. Some very old and large JS files are tricky to convert properly due to poorly defined types, so in some cases it's better to leave that for another day (or another PR).</p>
+<h3>Prefer <code>import</code> to <code>require</code><a name="prefer-import-to-require" href="#prefer-import-to-require" class="heading-anchor">🔗</a></h3>
+<p>In TypeScript files prefer <code>import</code> to <code>require</code> so that we can benefit from type-checking. If it does not work, you may have to add the type using <code>yarn add @types/NAME_OF_PACKAGE</code>. If you are trying to import an old package, it may not have TypeScript types and in this case using <code>require()</code> is acceptable.</p>
 <h2>Filenames<a name="filenames" href="#filenames" class="heading-anchor">🔗</a></h2>
 <ul>
 <li><code>camelCase.ts</code>: Files that export multiple things.
@@ -405,6 +407,18 @@ import processData from './processData';
 processData();
 ...
 </code></pre>
+<h2>Only import what you need<a name="only-import-what-you-need" href="#only-import-what-you-need" class="heading-anchor">🔗</a></h2>
+<p>Only import what you need so that we can potentially benefit from <a href="https://webpack.js.org/guides/tree-shaking/">tree shaking</a> if we ever implement it.</p>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">import * as fs from 'fs-extra';
+// ...
+fs.writeFile('example.md', 'example');
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-ts">import { writeFile } from 'fs-extra';
+// ...
+writeFile('example.md', 'example');
+</code></pre>
 <h2>Use <code>camelCase</code> for <code>const</code>ants in new code<a name="use-camelcase-for-const-ants-in-new-code" href="#use-camelcase-for-const-ants-in-new-code" class="heading-anchor">🔗</a></h2>
 <p><strong>BAD:</strong></p>
 <pre><code class="language-ts">// Bad! Don't use in new code!
@@ -413,16 +427,6 @@ const GRAVITY_ACCEL = 9.8;
 <p><strong>Good:</strong></p>
 <pre><code class="language-ts">const gravityAccel = 9.8;
 </code></pre>
-<h2>Indent using <code>tab</code>s<a name="indent-using-tab-s" href="#indent-using-tab-s" class="heading-anchor">🔗</a></h2>
-<p><strong>VSCode</strong>: In <code>vscode</code>, be sure to check whether new files are created with <code>tab</code> or <code>space</code> indentation! <a href="https://code.visualstudio.com/docs/editor/codebasics#_autodetection">Spaces can be converted to tabs using the command palette.</a></p>
-<h2>Use strict equality<a name="use-strict-equality" href="#use-strict-equality" class="heading-anchor">🔗</a></h2>
-<p>Use <code>===</code> instead of <code>==</code>.</p>
-<p>Although the TypeScript compiler <em>will</em> give error messages if two different types are compared with <code>==</code> (e.g. <code>number == boolean</code>), its compiler error <a href="https://github.com/microsoft/TypeScript/issues/26592">messages in this case can be misleading</a>.</p>
-<h3>See also<a name="see-also" href="#see-also" class="heading-anchor">🔗</a></h3>
-<ul>
-<li><a href="https://basarat.gitbook.io/typescript/styleguide#or">Unofficial TypeScript style guide, <code>==</code> vs <code>===</code></a></li>
-<li><a href="https://stackoverflow.com/a/60669874">More about <code>==</code> vs <code>===</code> in TypeScript.</a></li>
-</ul>
 <h2>Declare variables just before their usage<a name="declare-variables-just-before-their-usage" href="#declare-variables-just-before-their-usage" class="heading-anchor">🔗</a></h2>
 <p><strong>BAD:</strong></p>
 <pre><code class="language-ts">// Bad!
@@ -465,7 +469,7 @@ function foo() {
 	...
 };
 </code></pre>
-<h3>See also<a name="see-also-1" href="#see-also-1" class="heading-anchor">🔗</a></h3>
+<h3>See also<a name="see-also" href="#see-also" class="heading-anchor">🔗</a></h3>
 <ul>
 <li><a href="https://frontarm.com/james-k-nelson/when-to-use-arrow-functions/">Frontend Armory — When should I use arrow functions with React?</a></li>
 </ul>
@@ -497,7 +501,7 @@ class Example extends React.Component {
 </code></pre>
 <h2>Use react <a href="https://reactjs.org/docs/hooks-custom.html">custom hooks</a> to simplify long code<a name="use-react-custom-hooks-https-reactjs-org-docs-hooks-custom-html-to-simplify-long-code" href="#use-react-custom-hooks-https-reactjs-org-docs-hooks-custom-html-to-simplify-long-code" class="heading-anchor">🔗</a></h2>
 <p>If <code>eslint</code> gives an error about <code>useFoo</code> being called outside of a component, be sure <a href="https://stackoverflow.com/a/55862839">the custom hook is titled appropriately</a>.</p>
-<h1>See also<a name="see-also-2" href="#see-also-2" class="heading-anchor">🔗</a></h1>
+<h1>See also<a name="see-also-1" href="#see-also-1" class="heading-anchor">🔗</a></h1>
 <h2><strong>Other</strong> projects' style guides<a name="other-projects-style-guides" href="#other-projects-style-guides" class="heading-anchor">🔗</a></h2>
 <p>We aren't using these guides, but they may still be helpful!</p>
 <ul>
