@@ -367,6 +367,20 @@ https://github.com/laurent22/joplin/blob/dev/readme/coding_style.md
 <p>If this is a large file however please ask first if it needs to be converted. Some very old and large JS files are tricky to convert properly due to poorly defined types, so in some cases it's better to leave that for another day (or another PR).</p>
 <h3>Prefer <code>import</code> to <code>require</code><a name="prefer-import-to-require" href="#prefer-import-to-require" class="heading-anchor">🔗</a></h3>
 <p>In TypeScript files prefer <code>import</code> to <code>require</code> so that we can benefit from type-checking. If it does not work, you may have to add the type using <code>yarn add @types/NAME_OF_PACKAGE</code>. If you are trying to import an old package, it may not have TypeScript types and in this case using <code>require()</code> is acceptable.</p>
+<h3>Avoid inline styles<a name="avoid-inline-styles" href="#avoid-inline-styles" class="heading-anchor">🔗</a></h3>
+<p>In general please define types separately as it improves readability and it means the type can be re-used.</p>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">const config: { [key: string]: Knex.Config } = {
+	// ...
+}	
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-ts">type Config = Record&lt;string, Knex.Config&gt;;
+
+const config: Config = {
+	// ...
+}	
+</code></pre>
 <h2>Filenames<a name="filenames" href="#filenames" class="heading-anchor">🔗</a></h2>
 <ul>
 <li><code>camelCase.ts</code>: Files that export multiple things.
