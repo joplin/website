@@ -495,11 +495,11 @@ function foo() {
 <p><strong>Bad:</strong></p>
 <pre><code class="language-tsx">// Don't do this in new code!
 class Example extends React.Component {
-	constructor(props: { text: string }) {
+	public constructor(props: { text: string }) {
 		super(props);
 	}
 
-	render() {
+	public render() {
 		return (
 			&lt;div&gt;${text}&lt;/div&gt;
 		);
