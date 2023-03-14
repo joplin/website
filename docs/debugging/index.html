@@ -354,6 +354,17 @@ https://github.com/laurent22/joplin/blob/dev/readme/debugging.md
 <li>Now repeat the action that was causing problem. The console might output warnings or errors - please add them to the GitHub issue. Also open log.txt in the config folder and if there is any error or warning, please also add them to the issue.</li>
 </ul>
 <p>Make sure you disable debugging once you've finished. Leaving it enabled can cause your log.txt to grow very quickly. To disable debugging, simply delete the &quot;flags.txt&quot; file created.</p>
+<h3>Safe mode<a name="safe-mode" href="#safe-mode" class="heading-anchor">🔗</a></h3>
+<p>Safe mode is a special mode that disables all plugins and renders the notes as plain text. You can use this if, for example, the app is crashing or freezing on startup, or is very slow to run. By starting in safe mode you can verify if it's an issue with the app itself or with one of the plugins. In some rare cases, certain notes can also freeze the app, and safe mode would allow you to either change the note or delete it if it causing problems.</p>
+<p>There's two ways to start in safe mode:</p>
+<ol>
+<li>
+<p>From the app, click on <strong>Help &gt; Toggle safe mode</strong>. The app will restart in safe mode.</p>
+</li>
+<li>
+<p>If that doesn't work, if for example the app freezes before you can access this menu, you can set a debug flag in &quot;flags.txt&quot; file, <a href="#desktop-application">as described above</a>. Simply set the content to <code>--safe-mode --open-dev-tools --debug --log-level debug</code>.</p>
+</li>
+</ol>
 <h2>CLI application<a name="cli-application" href="#cli-application" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Start the app with <code>joplin --debug --log-level debug</code></li>
