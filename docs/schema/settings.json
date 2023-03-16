@@ -509,6 +509,11 @@
 			"default": true,
 			"description": "Enable spellcheck in the text editor"
 		},
+		"editor.mobile.toolbarEnabled": {
+			"type": "boolean",
+			"default": true,
+			"description": "Enable the Markdown toolbar"
+		},
 		"editor.mobile.removeSpaceBelowToolbar": {
 			"type": "boolean",
 			"default": false,
