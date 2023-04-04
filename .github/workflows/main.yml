@@ -41,5 +41,6 @@ jobs:
             IS_CONTINUOUS_INTEGRATION: 1
             DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
             DISCOURSE_USERNAME: ${{ secrets.DISCOURSE_USERNAME }}
+            JOPLIN_GITHUB_OAUTH_TOKEN: ${{ secrets.JOPLIN_GITHUB_OAUTH_TOKEN }}
         run: |
           ./joplin/packages/tools/release-website.sh
