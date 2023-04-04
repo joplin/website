@@ -490,6 +490,87 @@ function foo() {
 </ul>
 <h2>Avoid default and optional parameters<a name="avoid-default-and-optional-parameters" href="#avoid-default-and-optional-parameters" class="heading-anchor">🔗</a></h2>
 <p>As much as possible, avoid default parameters in <strong>function definitions</strong> and optional fields in <strong>interface definitions</strong>. When all parameters are required, it is much easier to refactor the code because the compiler will automatically catch any missing parameters.</p>
+<h2>Escape variables<a name="escape-variables" href="#escape-variables" class="heading-anchor">🔗</a></h2>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">XSS</a> is one of the most common vulnerabilities in today's code. These vulnerabilities are often difficult to spot because they are not errors, they often won't fail any test units and the program will work just fine with 99% of input. Yet that remaining 1% can be exploited and used to steal user information, crash the app, etc.</p>
+<p>If you search for <a href="https://github.com/laurent22/joplin/search?q=xss&amp;type=commits">&quot;XSS&quot; in the Joplin git log</a> you'll find several security vulnerabilities that have been fixed over the year, and that happened in various places that are hard to predict. So we need to be careful with this and make sure we correctly escape user content.</p>
+<p>How you escape the data depends on where you are going to insert it so there's no single function that's going to cover all cases.</p>
+<h3>To insert into a JS script<a name="to-insert-into-a-js-script" href="#to-insert-into-a-js-script" class="heading-anchor">🔗</a></h3>
+<p>Use <code>JSON.stringify()</code>. For example:</p>
+<pre><code class="language-ts">const jsCode = `const data = ${JSON.stringify(dynamicallyGeneratedData)};`
+</code></pre>
+<h3>To insert into an HTML string<a name="to-insert-into-an-html-string" href="#to-insert-into-an-html-string" class="heading-anchor">🔗</a></h3>
+<p>You need to convert special characters to HTML entities, which we usually do using the <code>html-entities</code> package. For example:</p>
+<pre><code class="language-ts">// We generally use this rather verbose pattern, but there
+// are also helper functions that you may be able to use
+// depending on the package.
+const Entities = require('html-entities').AllHtmlEntities;
+const htmlentities = new Entities().encode;
+const html = `&lt;a href=&quot;${htmlentities(attributes)}&quot;&gt;${htmlentities(content)}&lt;/a&gt;`;
+</code></pre>
+<h3>To insert into a URL<a name="to-insert-into-a-url" href="#to-insert-into-a-url" class="heading-anchor">🔗</a></h3>
+<p>It depends on what you're trying to do. To insert a query parameter, use <code>encodeURIComponent</code></p>
+<pre><code class="language-ts">const url = `https://example.com/?page=${encodeURIComponent(page)}`;
+</code></pre>
+<p>If you want to encode a full URL, use <code>encodeURI</code>:</p>
+<pre><code class="language-ts">encodeURI('https://domain.com/path to a document.pdf');
+// 'https://domain.com/path%20to%20a%20document.pdf'
+</code></pre>
+<h3>Escape as late as possible<a name="escape-as-late-as-possible" href="#escape-as-late-as-possible" class="heading-anchor">🔗</a></h3>
+<p>Ideally the application should only deal with raw, unencoded data, so it means data should be decoded and encoded at the application boundaries. Doing so means we avoid accidentally double-escaping data, or having to encode/decode within the app, which is error prone.</p>
+<p>In practice it means as soon as we get user input, we should decode it to the application-specific format (for example by calling <code>JSON.parse</code> on the input). And likewise we should only escape the data when it needs to be printed or exported.</p>
+<p><strong>BAD</strong></p>
+<pre><code class="language-ts">let parameters = `id=${encodeURIComponent(id)}&amp;time=${encodeURIComponent(Date.now())}`;
+
+// Clumsy string concatenation because we're dealing with already escaped data.
+// and we have to remember to encode every time:
+parameters += `&amp;other=${encodeURIComponent(otherParam)}`; 
+
+const url = `https://example.com?${parameters}`
+</code></pre>
+<p><strong>GOOD</strong></p>
+<pre><code class="language-ts">// Keep the data as an object
+const parameters = {
+	id: id,
+	timestamp: Date.now(),
+};
+
+// Then we can easily add to it without string concatenation:
+parameters.other = otherParam;
+
+// We escape only when it is needed:
+const url = `https://example.com?${new URLSearchParams(parameters).toString()}`
+</code></pre>
+<h3>Make wrong code look wrong<a name="make-wrong-code-look-wrong" href="#make-wrong-code-look-wrong" class="heading-anchor">🔗</a></h3>
+<p>To name variables that are already escaped we used the technique described in &quot;<a href="https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/">Make wrong code look wrong</a>&quot;. We add a suffix to indicate the content of the variable and to make it clear it has already been escaped. It means that the code will look wrong if a variable is inserted in a string and it does not have a suffix. For example:</p>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">const userContent = queryParameters.page;
+
+// ...
+// later:
+// ...
+
+const html = `&lt;div&gt;${userContent}&lt;/div&gt;`
+
+// The above code looks wrong because it appears we're
+// inserting user input as is in the document, and
+// indeed we are. Wrong code looks wrong.
+</code></pre>
+<p><strong>GOOD:</strong></p>
+<pre><code class="language-ts">// Here we escape the data immediately - and we add an
+// &quot;html&quot; prefix to specify that we have escaped the data
+// and that the variable content is actual HTML.
+const userContentHtml = htmlentities(queryParameters.page);
+
+// ...
+// later:
+// ...
+
+const html = `&lt;div&gt;${userContentHtml}&lt;/div&gt;`
+
+// This is correct and because we've added the &quot;html&quot; suffix
+// we know that this variable can be safely added to an HTML
+// string.
+</code></pre>
 <h1>React<a name="react" href="#react" class="heading-anchor">🔗</a></h1>
 <h2>Use function components for new code<a name="use-function-components-for-new-code" href="#use-function-components-for-new-code" class="heading-anchor">🔗</a></h2>
 <p>New code should use <a href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a> and <code>function</code> components, rather than objects that extend <code>Component</code>.</p>
