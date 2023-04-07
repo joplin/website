@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/api/references/plugin_theming.md and any manual change
+This file was auto-generated from readme/spec/server_items.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_theming.md
+https://github.com/laurent22/joplin/blob/dev/readme/spec/server_items.md
 
 -->
 
@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_themin
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="CSS Plugins add custom content to the UI using webview panels. The HTML content of a a panel is styled with CSS. To keep the look and feel of a plugin consistent with the rest of the Joplin UI, you..." />
+			<meta name="description" content="To upload an item to Joplin Server: Call PUT &#x2F;api&#x2F;items with the serialized Joplin item. Examples of serialized items are described in packages&#x2F;app-cli&#x2F;tests&#x2F;support&#x2F;syncTargetSnapshots That route ..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
-			<meta property="og:url" content="https://joplinapp.org/api/references/plugin_theming/index.html" />
-			<meta property="og:title" content="Plugin theming" />
-			<meta property="twitter:title" content="Plugin theming" />
-			<meta property="og:description" content="CSS Plugins add custom content to the UI using webview panels. The HTML content of a a panel is styled with CSS. To keep the look and feel of a plugin consistent with the rest of the Joplin UI, you..." />
-			<meta property="twitter:description" content="CSS Plugins add custom content to the UI using webview panels. The HTML content of a a panel is styled with CSS. To keep the look and feel of a plugin consistent with the rest of the Joplin UI, you..." />
+			<meta property="og:url" content="https://joplinapp.org/spec/server_items/index.html" />
+			<meta property="og:title" content="Joplin Server items" />
+			<meta property="twitter:title" content="Joplin Server items" />
+			<meta property="og:description" content="To upload an item to Joplin Server: Call PUT &#x2F;api&#x2F;items with the serialized Joplin item. Examples of serialized items are described in packages&#x2F;app-cli&#x2F;tests&#x2F;support&#x2F;syncTargetSnapshots That route ..." />
+			<meta property="twitter:description" content="To upload an item to Joplin Server: Call PUT &#x2F;api&#x2F;items with the serialized Joplin item. Examples of serialized items are described in packages&#x2F;app-cli&#x2F;tests&#x2F;support&#x2F;syncTargetSnapshots That route ..." />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -58,7 +58,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_themin
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=8d66912f54c6632d962cb12681148083" as="style" />
-		<title>Plugin theming | Joplin</title>
+		<title>Joplin Server items | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -244,7 +244,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_themin
 						</div>
 					</div>
 				</div>
-			<div class="help-page-container page-plugin_theming">
+			<div class="help-page-container page-server_items">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -344,48 +344,39 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_themin
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>Plugin theming<a name="plugin-theming" href="#plugin-theming" class="heading-anchor">🔗</a></h1>
-<h2>CSS<a name="css" href="#css" class="heading-anchor">🔗</a></h2>
-<p>Plugins add custom content to the UI using<br>
-<a href="https://joplinapp.org/api/references/plugin_api/classes/joplinviewspanels.html">webview panels</a>.<br>
-The HTML content of a a panel is styled with CSS.</p>
-<p>To keep the look and feel of a plugin consistent with the rest of the Joplin UI,<br>
-you are automatically provided with variables derived from the current theme.</p>
-<p>Variables follow the naming convention <code>--joplin-{property}</code> and are used<br>
-in your plugin's stylesheet as shown here.</p>
-<pre><code class="language-css">/* webview.css */
-.container {
-	color: var(--joplin-color);
-	font-family: var(--joplin-font-family);
-}
-</code></pre>
-<h2>Icons<a name="icons" href="#icons" class="heading-anchor">🔗</a></h2>
-<p>In addition to variables, you have access to a set of standard font assets that ship with Joplin.<br>
-These include:</p>
+<h1>Joplin Server items<a name="joplin-server-items" href="#joplin-server-items" class="heading-anchor">🔗</a></h1>
+<p>To upload an item to Joplin Server:</p>
 <ul>
-<li><a href="https://fonts.google.com/specimen/Roboto?preview.text_type=custom">Roboto</a> - (the standard UI font, <code>font-family</code> referenced above)</li>
-<li><a href="https://fontawesome.com/icons?d=gallery&amp;p=2&amp;m=free">Font Awesome</a> - icon library</li>
-<li><a href="https://icomoon.io/#preview-free">icoMoon</a> - icon library (subset, see <a href="https://github.com/laurent22/joplin/blob/dev/packages/app-desktop/style/icons/style.css">style.css</a>)</li>
+<li>
+<p>Call <code>PUT /api/items</code> with the serialized Joplin item. Examples of serialized items are described in <code>packages/app-cli/tests/support/syncTargetSnapshots</code></p>
+</li>
+<li>
+<p>That route is in <code>packages/server/src/routes/api/items.ts</code>. In there it's going to do some basic processing on the item, and eventually will call <code>models.item().saveFromRawContent</code></p>
+</li>
+<li>
+<p>This <code>saveFromRawContent</code> is where most of the job is done - it's going to detect what the item is, whether it's a note, notebook, etc. (this is the serialised content, as described above), or a binary file (resource).</p>
+<ul>
+<li>
+<p>If it's a resource, the content is going to be saved as-is in the database</p>
+</li>
+<li>
+<p>If it's an item, it's going to deserialise it because we want to save certain properties separately in the database, such as the parent ID, the type (whether it's a note, notebook, etc.). We save these properties separately purely for performance reasons. Once the properties have been extracted, the rest of the object is serialised back to JSON and saved to the database.</p>
+</li>
 </ul>
-<p>To display an icon, use CSS and HTML like the following.</p>
-<pre><code class="language-css">/* style icons to match the theme */
-.toolbarIcon {
-    font-size: var(--joplin-toolbar-icon-size);
-}
-.primary {
-    color: var(--joplin-color);
-}
-.secondary {
-    color: var(--joplin-color-2);
-}
-</code></pre>
-<pre><code class="language-html">&lt;i class=&quot;toolbarIcon primary fas fa-music&quot;&gt;&lt;/i&gt; Font Awesome music icon
-&lt;br /&gt;
-&lt;i class=&quot;toolbarIcon secondary icon-notebooks&quot;&gt;&lt;/i&gt; icoMoon notebook icon
-</code></pre>
+</li>
+<li>
+<p>In the end, the content is saved to the <code>items</code> table. The JSON item or the resource binary content will be saved to the <code>content</code> field. Other Joplin items properties will be saved to the <code>jop_*</code> fields. For example, the ID, the parent ID, whether encryption is enabled, etc.</p>
+</li>
+<li>
+<p><code>items.jop_id</code> is the ID as it was generated on the client. <code>items.id</code> is the server-side ID. We need two different IDs because we have no way to guarantee that <code>items.jop_id</code> is globally unique since it's generated client-side.</p>
+</li>
+<li>
+<p>In <code>ItemModel</code> there are various utility functions to deal with the content. This is because it may be saved in different places depending on configuration. It can be saved to the <code>items.content</code> field in the database, or it can be saved to S3, or to the filesystem. This is why any code that deals with item content must used these utility functions.</p>
+</li>
+</ul>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_theming.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/server_items.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>
