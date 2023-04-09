@@ -1848,43 +1848,6 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <li>Fixed: Fixed toggleNoteList and toggleSidebar commands</li>
 <li>Fixed: Fixed Toggle Editor button toolip and icon</li>
 </ul>
-<h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.3.9">v1.3.9</a> (Pre-release) - 2020-10-23T16:04:26Z<a name="v1-3-9-https-github-com-laurent22-joplin-releases-tag-v1-3-9-pre-release-2020-10-23t16-04-26z" href="#v1-3-9-https-github-com-laurent22-joplin-releases-tag-v1-3-9-pre-release-2020-10-23t16-04-26z" class="heading-anchor">🔗</a></h2>
-<ul>
-<li>New: Added <code>openProfileDirectory</code> command and menu item</li>
-<li>Improved: Make “update is available” dialog box easier to use (<a href="https://github.com/laurent22/joplin/issues/3877">#3877</a> by <a href="https://github.com/roryokane">@roryokane</a>)</li>
-<li>Improved: Sort tags in a case-insensitive way</li>
-<li>Fixed: Fix invalid tag state issue when importing notes or syncing</li>
-<li>Fixed: Fix search filters when language is in Korean or with accents (<a href="https://github.com/laurent22/joplin/issues/3947">#3947</a> by Naveen M V)</li>
-<li>Fixed: Fixed Cut menu item</li>
-</ul>
-<hr>
-<ul>
-<li>New: Add support for application plugins (<a href="https://github.com/laurent22/joplin/issues/3257">#3257</a>)</li>
-<li>New: Added Thunderbird count for desktop client (<a href="https://github.com/laurent22/joplin/issues/3880">#3880</a> by <a href="https://github.com/Technik-J">@Technik-J</a>)</li>
-<li>New: Added support for Menu API for plugins</li>
-<li>New: Added support for plugins packaged as JS bundles</li>
-<li>Improved: Display more info while an ENEX file is being imported</li>
-<li>Improved: Made toolbar buttons bigger and swap order of bullet and number lists</li>
-<li>Improved: Api: Allow preserving timestamps when updating a note</li>
-<li>Improved: Added support for a custom S3 URL (<a href="https://github.com/laurent22/joplin/issues/3921">#3921</a>) (<a href="https://github.com/laurent22/joplin/issues/3691">#3691</a> by <a href="https://github.com/aaron">@aaron</a>)</li>
-<li>Improved: Actually enter insert mode after pressing o/O in CodeMirror vim mode (<a href="https://github.com/laurent22/joplin/issues/3897">#3897</a> by Caleb John)</li>
-<li>Improved: Simplified and improve command service, and added command palette</li>
-<li>Improved: Tray: Exit -&gt; Quit (<a href="https://github.com/laurent22/joplin/issues/3945">#3945</a> by Helmut K. C. Tessarek)</li>
-<li>Improved: Import <code>&lt;strike&gt;</code>, <code>&lt;s&gt;</code> tags (strikethrough) from Evernote (<a href="https://github.com/laurent22/joplin/issues/3936">#3936</a> by Ian Slinger)</li>
-<li>Improved: Make sidebar item font weight normal (not bold)</li>
-<li>Improved: Plugin API - added support for settings.globalValue method</li>
-<li>Improved: Remove Hide Joplin menu item on Linux and Windows</li>
-<li>Improved: Removed OneDrive Dev sync target which was not really useful</li>
-<li>Improved: Allow setting note geolocation attributes via API (<a href="https://github.com/laurent22/joplin/issues/3884">#3884</a>)</li>
-<li>Improved: Disabled emoji highlighting in editor when emoji plugin is disabled (<a href="https://github.com/laurent22/joplin/issues/3852">#3852</a> by Rahil Sarvaiya)</li>
-<li>Improved: Sort search results by average of multiple criteria, including 'Sort notes by' field setting (<a href="https://github.com/laurent22/joplin/issues/3777">#3777</a> by <a href="https://github.com/shawnaxsom">@shawnaxsom</a>)</li>
-<li>Fixed: Fixed freeze when importing ENEX as HTML, and fixed potential error when importing resources (<a href="https://github.com/laurent22/joplin/issues/3958">#3958</a>)</li>
-<li>Fixed: Fixed setting issue that would cause a password to be saved in plain text in the database, even when the keychain is working</li>
-<li>Fixed: Fixed sidebar performance issue when there are many notebooks or tags (<a href="https://github.com/laurent22/joplin/issues/3893">#3893</a>)</li>
-<li>Fixed: Allows toggling external editing off and on again (<a href="https://github.com/laurent22/joplin/issues/3886">#3886</a>)</li>
-<li>Fixed: Fixed toggleNoteList and toggleSidebar commands</li>
-<li>Fixed: Fixed Toggle Editor button toolip and icon</li>
-</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.3.8">v1.3.8</a> (Pre-release) - 2020-10-21T18:46:29Z<a name="v1-3-8-https-github-com-laurent22-joplin-releases-tag-v1-3-8-pre-release-2020-10-21t18-46-29z" href="#v1-3-8-https-github-com-laurent22-joplin-releases-tag-v1-3-8-pre-release-2020-10-21t18-46-29z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>New: Plugins: Added support for content scripts</li>
@@ -2414,6 +2377,13 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <li>Fixed: Prevent desktop.ini file from breaking sync lock (<a href="https://github.com/laurent22/joplin/issues/3381">#3381</a>)</li>
 </ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.0.220">v1.0.220</a> - 2020-06-13T18:26:22Z<a name="v1-0-220-https-github-com-laurent22-joplin-releases-tag-v1-0-220-2020-06-13t18-26-22z" href="#v1-0-220-https-github-com-laurent22-joplin-releases-tag-v1-0-220-2020-06-13t18-26-22z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Improved escaping of Markdown titles in links (<a href="https://github.com/laurent22/joplin/issues/3333">#3333</a>)</li>
+<li>Improved: Refactored themes to allow using the same ones in both desktop and mobile version</li>
+<li>Fixed: Fixed issue with setting filename for edited attachments</li>
+<li>Fixed: Prevent notebook to be the parent of itself (<a href="https://github.com/laurent22/joplin/issues/3334">#3334</a>)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v1.0.220">v1.0.220</a> - 2020-06-13T18:26:22Z<a name="v1-0-220-https-github-com-laurent22-joplin-releases-tag-v1-0-220-2020-06-13t18-26-22z-1" href="#v1-0-220-https-github-com-laurent22-joplin-releases-tag-v1-0-220-2020-06-13t18-26-22z-1" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Improved escaping of Markdown titles in links (<a href="https://github.com/laurent22/joplin/issues/3333">#3333</a>)</li>
 <li>Improved: Refactored themes to allow using the same ones in both desktop and mobile version</li>
