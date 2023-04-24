@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<!--
+
+!!! WARNING !!!
+
+This file was auto-generated from readme/spec/default_plugins.md and any manual change
+made to it will be overwritten. To make a change to this file please modify
+the source Markdown file:
+
+https://github.com/laurent22/joplin/blob/dev/readme/spec/default_plugins.md
+
+-->
+
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-579DTGX');</script>
+		<!-- End Google Tag Manager -->		<!-- Monthly/Yearly plan A/B testing -->
+		<!--
+		<script src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->
+
+		<!-- Donate button A/B testing -->
+		<!--
+		<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->		<meta
+			charset="utf-8"
+			http-equiv="X-UA-Compatible"
+			content="IE=edge,chrome=1"
+		/>
+		<link rel="icon" href="&#x2F;images/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+			<meta name="description" content="To add a new default plugin for desktop: Add the plugin ID and pinned version to defaultPlugins object located in desktopDefaultPluginsInfo.ts If necessary, you can also add default settings for th..." />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@joplinapp" />
+			<meta property="og:url" content="https://joplinapp.org/cn/spec/default_plugins/index.html" />
+			<meta property="og:title" content="How to add a new default plugin" />
+			<meta property="twitter:title" content="How to add a new default plugin" />
+			<meta property="og:description" content="To add a new default plugin for desktop: Add the plugin ID and pinned version to defaultPlugins object located in desktopDefaultPluginsInfo.ts If necessary, you can also add default settings for th..." />
+			<meta property="twitter:description" content="To add a new default plugin for desktop: Add the plugin ID and pinned version to defaultPlugins object located in desktopDefaultPluginsInfo.ts If necessary, you can also add default settings for th..." />
+		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
+			rel="stylesheet"
+			href="&#x2F;css/bootstrap5.0.2.min.css"
+			as="style"
+		/>
+		<link rel="stylesheet" href="/css/fontawesome-all.min.css?h=ecd507b3125edc4d2a03aa6ae5d07da9">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+			as="style"
+			media="all"
+			onload="this.media='all'; this.onload = null"
+		/>
+		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
+		<title>How to add a new default plugin | Joplin</title>
+
+		<script
+			src="&#x2F;js/jquery-3.6.0.min.js"
+			rel="preload"
+			as="script"
+		></script>
+	</head>
+	<body class="website-env-prod">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-579DTGX"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->		
+		<div class="container-fluid generic-template -page" id="main-container">
+
+				<div class=" navbar-main white-bg" id="nav-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-3">
+								<a href="/">
+									<img
+										src="&#x2F;images/logo-text-blue.svg"
+										alt=""
+										id="top-logo"
+										width="180"
+									/>
+								</a>
+							</div>
+							<div class="col-9 text-right d-none d-md-block">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/news/" class="fw500">News</a>
+								<a href="/help/" class="fw500">Help</a>
+								<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500">Forum</a>
+								<a href="/cn/" class="fw500">中文</a>
+
+								<!--
+								<div class="dropdown language-switcher">
+									<button class="fw500" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										Language
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+								-->
+
+
+									<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>							</div>
+							<div class="col-9 text-right d-block d-md-none navbar-mobile-content">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/cn/" class="fw500 chinese-page-link">中文</a>
+								<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>
+								<span class="pointer"
+									><img
+										src="&#x2F;images/mobile-menu-black-open-icon.png"
+										id="open-menu-mobile"
+										alt=""
+								/></span>
+								&nbsp;&nbsp;
+
+								<div id="menu-mobile">
+									<div>
+										<div class="text-right">
+											<img
+												src="&#x2F;images/close-icon.png"
+												alt=""
+												class="pointer"
+												id="close-menu-mobile"
+											/>
+										</div>
+
+										<div class="text-center menu-mobile-top">
+											<a href="/news/" class="fw500 mobile-menu-link">News</a>
+											<a href="/help/" class="fw500 mobile-menu-link">Help</a>
+											<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500 mobile-menu-link">Forum</a>
+										</div>
+
+										<div class="menu-mobile-buttons">
+												<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>											<a class="button-link btn-blue sponsor-button" href="/donate">
+												<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+											</a>										</div>
+									</div>
+
+										<div id="toc-mobile"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/cn/desktop/">Desktop application</a></li>
+<li><a href="/cn/mobile/">Mobile applications</a></li>
+<li><a href="/cn/terminal/">Terminal application</a></li>
+<li><a href="/cn/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/cn/markdown/">Markdown Guide</a></li>
+<li><a href="/cn/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/cn/conflict/">What is a conflict?</a></li>
+<li><a href="/cn/debugging/">How to enable debug mode</a></li>
+<li><a href="/cn/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/cn/external_links/">External links</a></li>
+<li><a href="/cn/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/cn/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/cn/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/cn/api/overview/">Joplin API Overview</a></li>
+<li><a href="/cn/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/cn/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/cn/api/references/rest_api/">Data API</a></li>
+<li><a href="/cn/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/cn/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/cn/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/cn/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/cn/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/cn/spec/history/">Note History spec</a></li>
+<li><a href="/cn/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/cn/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/cn/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/cn/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/cn/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/cn/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/cn/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/cn/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/cn/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/cn/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/cn/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/cn/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/cn/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/cn/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/cn/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/cn/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/cn/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/cn/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/cn/stats/">Stats</a></li>
+<li><a href="/cn/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+									<div class="row">
+										<div class="col-12 col-md-12 social-links">
+											<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+											<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+											<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+											<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+											<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+											<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+											<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+										</div>
+									</div>
+									
+									<div>
+										<p class="light-blue mobile-menu-link-bottom text-center">
+											Copyright &copy; 2016-2023 Laurent&nbsp;Cozic
+											<br/>
+											<a href="/privacy/" class="fw500">Privacy Policy</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="help-page-container page-default_plugins">
+				<div class="container">
+					<div class="row content-wrapper">
+						<div id="toc"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/cn/desktop/">Desktop application</a></li>
+<li><a href="/cn/mobile/">Mobile applications</a></li>
+<li><a href="/cn/terminal/">Terminal application</a></li>
+<li><a href="/cn/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/cn/markdown/">Markdown Guide</a></li>
+<li><a href="/cn/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/cn/conflict/">What is a conflict?</a></li>
+<li><a href="/cn/debugging/">How to enable debug mode</a></li>
+<li><a href="/cn/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/cn/external_links/">External links</a></li>
+<li><a href="/cn/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/cn/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/cn/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/cn/api/overview/">Joplin API Overview</a></li>
+<li><a href="/cn/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/cn/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/cn/api/references/rest_api/">Data API</a></li>
+<li><a href="/cn/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/cn/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/cn/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/cn/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/cn/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/cn/spec/history/">Note History spec</a></li>
+<li><a href="/cn/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/cn/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/cn/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/cn/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/cn/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/cn/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/cn/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/cn/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/cn/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/cn/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/cn/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/cn/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/cn/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/cn/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/cn/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/cn/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/cn/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/cn/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/cn/stats/">Stats</a></li>
+<li><a href="/cn/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+						<div class="main-content">
+							<div class="alert alert-danger alert-env-dev" role="alert">
+								Running in prod mode!
+							</div>
+							<div class="donate-links">
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+</div>
+<h1>How to add a new default plugin<a name="how-to-add-a-new-default-plugin" href="#how-to-add-a-new-default-plugin" class="heading-anchor">🔗</a></h1>
+<p>To add a new default plugin for desktop:</p>
+<ul>
+<li>
+<p>Add the plugin ID and pinned version to <code>defaultPlugins</code> object located in <a href="https://github.com/laurent22/joplin/blob/eb7083d7888433ff6ef76ccfb7fb87ba951d513f/packages/lib/services/plugins/defaultPlugins/desktopDefaultPluginsInfo.ts#L5">desktopDefaultPluginsInfo.ts</a></p>
+</li>
+<li>
+<p>If necessary, you can also add default settings for the plugins.</p>
+</li>
+<li>
+<p>For example, if you wanted to add 2 default settings, <code>settingName1</code> and <code>settingName2</code>, then you will modify the <code>defaultPlugins</code> object in following way:</p>
+<pre><code>const defaultPlugins = {
+    'samplePluginId': {
+        version: '1.0.0',
+        settings: {
+            'settingName1': 'setting-value1',
+            'settingName2': 'setting-value2',
+        },
+    },
+};
+</code></pre>
+</li>
+</ul>
+<h2>Bundling of default plugins<a name="bundling-of-default-plugins" href="#bundling-of-default-plugins" class="heading-anchor">🔗</a></h2>
+<p>Script for bundling default plugins is present in <a href="https://github.com/laurent22/joplin/blob/eb7083d7888433ff6ef76ccfb7fb87ba951d513f/packages/tools/bundleDefaultPlugins.ts">bundleDefaultPlugins.ts</a></p>
+<p>Every time a new desktop release is being built, we compare the local default plugins version with pinned plugin version mentioned in <a href="https://github.com/laurent22/joplin/blob/eb7083d7888433ff6ef76ccfb7fb87ba951d513f/packages/lib/services/plugins/defaultPlugins/desktopDefaultPluginsInfo.ts">desktopDefaultPluginsInfo.ts</a></p>
+<p>If there is a newer version available, we will pull the <code>tgz</code> file of plugin from NPM registry and extract it. We will then move <code>manifest.json</code> and <code>plugin.jpl</code> to the build folder of desktop.</p>
+<h2>Installing of default plugins<a name="installing-of-default-plugins" href="#installing-of-default-plugins" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>All the functions related to default plugins are located in <a href="https://github.com/laurent22/joplin/blob/eb7083d7888433ff6ef76ccfb7fb87ba951d513f/packages/lib/services/plugins/defaultPlugins/defaultPluginsUtils.ts">defaultPluginsUtils.ts</a></li>
+<li>On every startup, we check if there are new plugins available in build folder that have not been installed yet. After installing the new plugin, we update the <code>installedDefaultPlugins</code> array in <code>Setting.ts</code> with respective plugin ID for future reference.</li>
+<li>After installing is complete, we apply the default settings for each default plugin. Default settings are located in <a href="https://github.com/laurent22/joplin/blob/eb7083d7888433ff6ef76ccfb7fb87ba951d513f/packages/lib/services/plugins/defaultPlugins/desktopDefaultPluginsInfo.ts">desktopDefaultPluginsInfo.ts</a></li>
+<li>If the plugin is already installed by the user, then we don't apply default settings to avoid overriding user's settings.</li>
+</ul>
+
+								<div class="bottom-links">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/default_plugins.md">
+											<i class="fab fa-github"></i> Improve this doc
+										</a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<footer class="darkblue-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-12 social-links">
+							<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+							<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+							<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+							<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+							<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+							<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+							<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+
+					<div class="row bottom-links-row">
+						<div class="col-12 col-md-6">
+							<p class="text-center-sm">Copyright &copy; 2016-2023 Laurent Cozic</p>
+						</div>
+						<div class="col-12 col-md-6">
+							<p class="text-right text-center-sm right-links">
+								<span class="footer-right">
+									<a href="/privacy/">Privacy Policy</a>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>		</div>
+
+		<script
+			src="&#x2F;js/bootstrap5.0.2.bundle.min.js"
+			rel="preload"
+			as="script"
+		></script>
+		<script src="/js/script.js?h=46b3b58d72c94591621551affbb8c6e3"></script>
+
+		<script>
+			if (window.location.hostname !== 'localhost') {
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-103586105-1', 'auto');
+				ga('send', 'pageview');
+			}
+		</script>	</body>
+</html>

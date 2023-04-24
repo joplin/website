@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<!--
+
+!!! WARNING !!!
+
+This file was auto-generated from readme/changelog_android.md and any manual change
+made to it will be overwritten. To make a change to this file please modify
+the source Markdown file:
+
+https://github.com/laurent22/joplin/blob/dev/readme/changelog_android.md
+
+-->
+
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-579DTGX');</script>
+		<!-- End Google Tag Manager -->		<!-- Monthly/Yearly plan A/B testing -->
+		<!--
+		<script src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->
+
+		<!-- Donate button A/B testing -->
+		<!--
+		<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->		<meta
+			charset="utf-8"
+			http-equiv="X-UA-Compatible"
+			content="IE=edge,chrome=1"
+		/>
+		<link rel="icon" href="&#x2F;images/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+			<meta name="description" content="android-v2.11.2 (Pre-release) - 2023-04-09T12:04:06Z Improved: Resolve #8022: Editor syntax highlighting was broken (#8023) (#8022 by Henry Heino) Improved: Updated packages @react-native-community..." />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@joplinapp" />
+			<meta property="og:url" content="https://joplinapp.org/cn/changelog_android/index.html" />
+			<meta property="og:title" content="Joplin Android app changelog" />
+			<meta property="twitter:title" content="Joplin Android app changelog" />
+			<meta property="og:description" content="android-v2.11.2 (Pre-release) - 2023-04-09T12:04:06Z Improved: Resolve #8022: Editor syntax highlighting was broken (#8023) (#8022 by Henry Heino) Improved: Updated packages @react-native-community..." />
+			<meta property="twitter:description" content="android-v2.11.2 (Pre-release) - 2023-04-09T12:04:06Z Improved: Resolve #8022: Editor syntax highlighting was broken (#8023) (#8022 by Henry Heino) Improved: Updated packages @react-native-community..." />
+		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
+			rel="stylesheet"
+			href="&#x2F;css/bootstrap5.0.2.min.css"
+			as="style"
+		/>
+		<link rel="stylesheet" href="/css/fontawesome-all.min.css?h=ecd507b3125edc4d2a03aa6ae5d07da9">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+			as="style"
+			media="all"
+			onload="this.media='all'; this.onload = null"
+		/>
+		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
+		<title>Joplin Android app changelog | Joplin</title>
+
+		<script
+			src="&#x2F;js/jquery-3.6.0.min.js"
+			rel="preload"
+			as="script"
+		></script>
+	</head>
+	<body class="website-env-prod">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-579DTGX"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->		
+		<div class="container-fluid generic-template -page" id="main-container">
+
+				<div class=" navbar-main white-bg" id="nav-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-3">
+								<a href="/">
+									<img
+										src="&#x2F;images/logo-text-blue.svg"
+										alt=""
+										id="top-logo"
+										width="180"
+									/>
+								</a>
+							</div>
+							<div class="col-9 text-right d-none d-md-block">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/news/" class="fw500">News</a>
+								<a href="/help/" class="fw500">Help</a>
+								<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500">Forum</a>
+								<a href="/cn/" class="fw500">中文</a>
+
+								<!--
+								<div class="dropdown language-switcher">
+									<button class="fw500" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										Language
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+								-->
+
+
+									<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>							</div>
+							<div class="col-9 text-right d-block d-md-none navbar-mobile-content">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/cn/" class="fw500 chinese-page-link">中文</a>
+								<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>
+								<span class="pointer"
+									><img
+										src="&#x2F;images/mobile-menu-black-open-icon.png"
+										id="open-menu-mobile"
+										alt=""
+								/></span>
+								&nbsp;&nbsp;
+
+								<div id="menu-mobile">
+									<div>
+										<div class="text-right">
+											<img
+												src="&#x2F;images/close-icon.png"
+												alt=""
+												class="pointer"
+												id="close-menu-mobile"
+											/>
+										</div>
+
+										<div class="text-center menu-mobile-top">
+											<a href="/news/" class="fw500 mobile-menu-link">News</a>
+											<a href="/help/" class="fw500 mobile-menu-link">Help</a>
+											<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500 mobile-menu-link">Forum</a>
+										</div>
+
+										<div class="menu-mobile-buttons">
+												<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>											<a class="button-link btn-blue sponsor-button" href="/donate">
+												<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+											</a>										</div>
+									</div>
+
+										<div id="toc-mobile"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/cn/desktop/">Desktop application</a></li>
+<li><a href="/cn/mobile/">Mobile applications</a></li>
+<li><a href="/cn/terminal/">Terminal application</a></li>
+<li><a href="/cn/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/cn/markdown/">Markdown Guide</a></li>
+<li><a href="/cn/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/cn/conflict/">What is a conflict?</a></li>
+<li><a href="/cn/debugging/">How to enable debug mode</a></li>
+<li><a href="/cn/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/cn/external_links/">External links</a></li>
+<li><a href="/cn/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/cn/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/cn/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/cn/api/overview/">Joplin API Overview</a></li>
+<li><a href="/cn/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/cn/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/cn/api/references/rest_api/">Data API</a></li>
+<li><a href="/cn/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/cn/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/cn/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/cn/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/cn/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/cn/spec/history/">Note History spec</a></li>
+<li><a href="/cn/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/cn/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/cn/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/cn/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/cn/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/cn/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/cn/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/cn/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/cn/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/cn/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/cn/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/cn/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/cn/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/cn/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/cn/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/cn/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/cn/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/cn/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/cn/stats/">Stats</a></li>
+<li><a href="/cn/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+									<div class="row">
+										<div class="col-12 col-md-12 social-links">
+											<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+											<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+											<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+											<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+											<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+											<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+											<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+										</div>
+									</div>
+									
+									<div>
+										<p class="light-blue mobile-menu-link-bottom text-center">
+											Copyright &copy; 2016-2023 Laurent&nbsp;Cozic
+											<br/>
+											<a href="/privacy/" class="fw500">Privacy Policy</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="help-page-container page-changelog_android">
+				<div class="container">
+					<div class="row content-wrapper">
+						<div id="toc"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/cn/desktop/">Desktop application</a></li>
+<li><a href="/cn/mobile/">Mobile applications</a></li>
+<li><a href="/cn/terminal/">Terminal application</a></li>
+<li><a href="/cn/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/cn/markdown/">Markdown Guide</a></li>
+<li><a href="/cn/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/cn/conflict/">What is a conflict?</a></li>
+<li><a href="/cn/debugging/">How to enable debug mode</a></li>
+<li><a href="/cn/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/cn/external_links/">External links</a></li>
+<li><a href="/cn/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/cn/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/cn/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/cn/api/overview/">Joplin API Overview</a></li>
+<li><a href="/cn/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/cn/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/cn/api/references/rest_api/">Data API</a></li>
+<li><a href="/cn/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/cn/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/cn/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/cn/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/cn/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/cn/spec/history/">Note History spec</a></li>
+<li><a href="/cn/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/cn/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/cn/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/cn/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/cn/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/cn/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/cn/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/cn/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/cn/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/cn/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/cn/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/cn/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/cn/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/cn/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/cn/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/cn/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/cn/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/cn/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/cn/stats/">Stats</a></li>
+<li><a href="/cn/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+						<div class="main-content">
+							<div class="alert alert-danger alert-env-dev" role="alert">
+								Running in prod mode!
+							</div>
+							<div class="donate-links">
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+</div>
+<h1>Joplin Android app changelog<a name="joplin-android-app-changelog" href="#joplin-android-app-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.11.2">android-v2.11.2</a> (Pre-release) - 2023-04-09T12:04:06Z<a name="android-v2-11-2-https-github-com-laurent22-joplin-releases-tag-android-v2-11-2-pre-release-2023-04-09t12-04-06z" href="#android-v2-11-2-https-github-com-laurent22-joplin-releases-tag-android-v2-11-2-pre-release-2023-04-09t12-04-06z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Resolve #8022: Editor syntax highlighting was broken (#8023) (#8022 by Henry Heino)</li>
+<li>Improved: Updated packages @react-native-community/netinfo (v9.3.8)</li>
+<li>Fixed: Removed <code>MasterKey</code> from Sync Status report (#8026) (#7940 by Arun Kumar)</li>
+<li>Security: Prevent bypassing fingerprint lock on certain devices (6b72f86)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.11.1">android-v2.11.1</a> (Pre-release) - 2023-04-08T08:49:19Z<a name="android-v2-11-1-https-github-com-laurent22-joplin-releases-tag-android-v2-11-1-pre-release-2023-04-08t08-49-19z" href="#android-v2-11-1-https-github-com-laurent22-joplin-releases-tag-android-v2-11-1-pre-release-2023-04-08t08-49-19z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add log info for biometrics feature (efdbaeb)</li>
+<li>New: Add setting to enable/disable the markdown toolbar (#7929 by Henry Heino)</li>
+<li>Fixed: Encode the non-ASCII characters in OneDrive URI (#7868) (#7851 by Self Not Found)</li>
+<li>Fixed: Fix OneDrive sync attempting to call method on <code>null</code> variable (#7987) (#7986 by Henry Heino)</li>
+<li>Updated packages @lezer/highlight (v1.1.4), fs-extra (v11.1.1), jsdom (v21.1.1), markdown-it-multimd-table (v4.2.1), nanoid (v3.3.6), node-persist (v3.1.3), nodemon (v2.0.22), react-native-document-picker (v8.1.4), react-native-image-picker (v5.3.1), react-native-paper (v5.4.1), react-native-share (v8.2.1), sass (v1.59.3), sqlite3 (v5.1.6), turndown (v7.1.2), yargs (v17.7.1)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.9">android-v2.10.9</a> (Pre-release) - 2023-03-22T18:40:57Z<a name="android-v2-10-9-https-github-com-laurent22-joplin-releases-tag-android-v2-10-9-pre-release-2023-03-22t18-40-57z" href="#android-v2-10-9-https-github-com-laurent22-joplin-releases-tag-android-v2-10-9-pre-release-2023-03-22t18-40-57z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Mark biometrics feature as beta and ensure no call is made if it is not enabled (e44a934)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.8">android-v2.10.8</a> (Pre-release) - 2023-02-28T18:09:21Z<a name="android-v2-10-8-https-github-com-laurent22-joplin-releases-tag-android-v2-10-8-pre-release-2023-02-28t18-09-21z" href="#android-v2-10-8-https-github-com-laurent22-joplin-releases-tag-android-v2-10-8-pre-release-2023-02-28t18-09-21z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by <a href="https://github.com/julien">@julien</a>)</li>
+<li>Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerks)</li>
+<li>Fixed: Fix camera attachment (#7775) (#7675 by <a href="https://github.com/vikneshwar">@vikneshwar</a>)</li>
+<li>Fixed: Fixed duplicate sharing issue (#7799) (#7791 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+<li>Fixed: Fixed error when sharing a file (#7801) (#6942 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+<li>Fixed: Fixed issue where app would close after sharing a file (#7791)</li>
+<li>Fixed: Hide main content while biometric is enabled and not authenticated (#7781) (#7762 by <a href="https://github.com/pedr">@pedr</a>)</li>
+<li>Fixed: Sharing pictures to Joplin creates recurring duplications (#7807) (#7791 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.6">android-v2.10.6</a> (Pre-release) - 2023-02-10T16:22:28Z<a name="android-v2-10-6-https-github-com-laurent22-joplin-releases-tag-android-v2-10-6-pre-release-2023-02-10t16-22-28z" href="#android-v2-10-6-https-github-com-laurent22-joplin-releases-tag-android-v2-10-6-pre-release-2023-02-10t16-22-28z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Add create sub-notebook feature (#7728) (#1044 by <a href="https://github.com/carlosngo">@carlosngo</a>)</li>
+<li>Fixed: Fix double-scroll issue in long notes (#7701) (#7700 by Henry Heino)</li>
+<li>Fixed: Fix startup error (#7688) (#7687 by Henry Heino)</li>
+<li>Fixed: Sharing file to Joplin does not work (#7691)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.5">android-v2.10.5</a> (Pre-release) - 2023-01-21T14:21:23Z<a name="android-v2-10-5-https-github-com-laurent22-joplin-releases-tag-android-v2-10-5-pre-release-2023-01-21t14-21-23z" href="#android-v2-10-5-https-github-com-laurent22-joplin-releases-tag-android-v2-10-5-pre-release-2023-01-21t14-21-23z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Improve dialogue spacing in Fountain renderer (#7628) (#7627 by <a href="https://github.com/Elleo">@Elleo</a>)</li>
+<li>Improved: Improve filesystem sync performance (#7637) (#6942 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+<li>Fixed: Fixes non-working alarms (138bc81)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.4">android-v2.10.4</a> (Pre-release) - 2023-01-14T17:30:34Z<a name="android-v2-10-4-https-github-com-laurent22-joplin-releases-tag-android-v2-10-4-pre-release-2023-01-14t17-30-34z" href="#android-v2-10-4-https-github-com-laurent22-joplin-releases-tag-android-v2-10-4-pre-release-2023-01-14t17-30-34z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for multiple profiles (6bb52d5)</li>
+<li>Improved: Configurable editor font size (#7596 by Henry Heino)</li>
+<li>Improved: Confirm closing settings with unsaved changes (#7566 by Henry Heino)</li>
+<li>Improved: Upgrade to React Native 0.69 (7e29804)</li>
+<li>Improved: Upgrade to React Native 0.70 (4bdb3d0)</li>
+<li>Fixed: Fixed biometics prompt on new devices (9eff7e6)</li>
+<li>Fixed: Fixed issue when floating keyboard is visible (#7593) (#6682 by Henry Heino)</li>
+<li>Fixed: Remove gray line around text editor (#7595) (#7594 by Henry Heino)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.3">android-v2.10.3</a> (Pre-release) - 2023-01-05T11:29:06Z<a name="android-v2-10-3-https-github-com-laurent22-joplin-releases-tag-android-v2-10-3-pre-release-2023-01-05t11-29-06z" href="#android-v2-10-3-https-github-com-laurent22-joplin-releases-tag-android-v2-10-3-pre-release-2023-01-05t11-29-06z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for locking the app using biometrics (f10d9f7)</li>
+<li>Improved: Make the new text editor the default one (f5ef318)</li>
+<li>Fixed: Fixed proxy timeout setting UI (275c80a)</li>
+<li>Fixed: Settings save button visible even when no settings have been changed (#7503)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.2">android-v2.10.2</a> (Pre-release) - 2023-01-02T17:44:15Z<a name="android-v2-10-2-https-github-com-laurent22-joplin-releases-tag-android-v2-10-2-pre-release-2023-01-02t17-44-15z" href="#android-v2-10-2-https-github-com-laurent22-joplin-releases-tag-android-v2-10-2-pre-release-2023-01-02t17-44-15z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for realtime search (767213c)</li>
+<li>Fixed: Enable autocorrect with spellcheck (#7532) (#6175 by Henry Heino)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.10.1">android-v2.10.1</a> (Pre-release) - 2022-12-29T13:55:48Z<a name="android-v2-10-1-https-github-com-laurent22-joplin-releases-tag-android-v2-10-1-pre-release-2022-12-29t13-55-48z" href="#android-v2-10-1-https-github-com-laurent22-joplin-releases-tag-android-v2-10-1-pre-release-2022-12-29t13-55-48z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Switch license to AGPL-3.0 (faf0a4e)</li>
+<li>Improved: Tag search case insensitive (#7368 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by Helmut K. C. Tessarek)</li>
+<li>Improved: Upgrade to react-native 0.68.5 (e2d59ee)</li>
+<li>Fixed: Could not attach images to notes anymore (#7471)</li>
+<li>Fixed: Fix CodeMirror syntax highlighting (#7386 by Henry Heino)</li>
+<li>Fixed: Fix attaching multiple files (#7196) (#7195 by Self Not Found)</li>
+<li>Fixed: Update CodeMirror (#7262) (#7253 by Henry Heino)</li>
+<li>Security: Fix XSS when a specially crafted string is passed to the renderer (762b4e8)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.9.8">android-v2.9.8</a> (Pre-release) - 2022-11-01T15:45:36Z<a name="android-v2-9-8-https-github-com-laurent22-joplin-releases-tag-android-v2-9-8-pre-release-2022-11-01t15-45-36z" href="#android-v2-9-8-https-github-com-laurent22-joplin-releases-tag-android-v2-9-8-pre-release-2022-11-01t15-45-36z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Updated translations</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.9.7">android-v2.9.7</a> (Pre-release) - 2022-10-30T10:25:01Z<a name="android-v2-9-7-https-github-com-laurent22-joplin-releases-tag-android-v2-9-7-pre-release-2022-10-30t10-25-01z" href="#android-v2-9-7-https-github-com-laurent22-joplin-releases-tag-android-v2-9-7-pre-release-2022-10-30t10-25-01z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Fixed notebook icons alignment (ea6b7ca)</li>
+<li>Fixed: Fixed crash when attaching a file.</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.9.6">android-v2.9.6</a> (Pre-release) - 2022-10-23T16:23:25Z<a name="android-v2-9-6-https-github-com-laurent22-joplin-releases-tag-android-v2-9-6-pre-release-2022-10-23t16-23-25z" href="#android-v2-9-6-https-github-com-laurent22-joplin-releases-tag-android-v2-9-6-pre-release-2022-10-23t16-23-25z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add monochrome icon (#6954 by Tom Bursch)</li>
+<li>Fixed: Fix file system sync issues (#6943 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+<li>Fixed: Fix note attachment issue (#6932 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+<li>Fixed: Fixed notebook icon spacing (633c9ac)</li>
+<li>Fixed: Support non-ASCII characters in OneDrive (#6916) (#6838 by Self Not Found)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.9.5">android-v2.9.5</a> (Pre-release) - 2022-10-11T13:52:00Z<a name="android-v2-9-5-https-github-com-laurent22-joplin-releases-tag-android-v2-9-5-pre-release-2022-10-11t13-52-00z" href="#android-v2-9-5-https-github-com-laurent22-joplin-releases-tag-android-v2-9-5-pre-release-2022-10-11t13-52-00z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Disable multi-highlighting to fix context menu (9b348fd)</li>
+<li>Improved: Display icon for all notebooks if at least one notebook has an icon (ec97dd8)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.9.3">android-v2.9.3</a> (Pre-release) - 2022-10-07T11:12:56Z<a name="android-v2-9-3-https-github-com-laurent22-joplin-releases-tag-android-v2-9-3-pre-release-2022-10-07t11-12-56z" href="#android-v2-9-3-https-github-com-laurent22-joplin-releases-tag-android-v2-9-3-pre-release-2022-10-07t11-12-56z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Convert empty bolded regions to bold-italic regions in beta editor (#6807) (#6808 by Henry Heino)</li>
+<li>Improved: Increase the attachment size limit to 200MB (#6848 by Self Not Found)</li>
+<li>Improved: Show client ID in log (#6897 by Self Not Found)</li>
+<li>Improved: Supports attaching multiple files to a note at once (#6831 by Self Not Found)</li>
+<li>Improved: Update Mermaid 8.13.9 to 9.1.7 (#6849 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Double/triple-tap selection doesn't show context menu  (#6803) (#6802 by Henry Heino)</li>
+<li>Fixed: Fix multiple webview instances (#6841 by Henry Heino)</li>
+<li>Fixed: Fix resources sync when proxy is set (#6817) (#6688 by Self Not Found)</li>
+<li>Fixed: Fixed crash when trying to move note to notebook (#6898)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.9.2">android-v2.9.2</a> (Pre-release) - 2022-09-01T11:14:58Z<a name="android-v2-9-2-https-github-com-laurent22-joplin-releases-tag-android-v2-9-2-pre-release-2022-09-01t11-14-58z" href="#android-v2-9-2-https-github-com-laurent22-joplin-releases-tag-android-v2-9-2-pre-release-2022-09-01t11-14-58z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add Markdown toolbar (#6753 by Henry Heino)</li>
+<li>New: Add long-press tooltips (#6758 by Henry Heino)</li>
+<li>Improved: Enable spellcheck by default on beta editor (#6778 by Henry Heino)</li>
+<li>Improved: Setting to disable spellcheck in beta editor (#6780 by Henry Heino)</li>
+<li>Fixed: Don't reload the application on screen rotation (#6737) (#6732 by Henry Heino)</li>
+<li>Fixed: Fix default font in beta editor (#6760) (#6759 by Henry Heino)</li>
+<li>Fixed: Fix side menu width on wide screen devices (#6662 by Tolulope Malomo)</li>
+<li>Fixed: Fixed Android filesystem sync (resources) (#6789) (#6779 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+<li>Fixed: Fixed handling of normal paths in filesystem sync (#6792) (#6791 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.9.1">android-v2.9.1</a> (Pre-release) - 2022-08-12T17:14:49Z<a name="android-v2-9-1-https-github-com-laurent22-joplin-releases-tag-android-v2-9-1-pre-release-2022-08-12t17-14-49z" href="#android-v2-9-1-https-github-com-laurent22-joplin-releases-tag-android-v2-9-1-pre-release-2022-08-12t17-14-49z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add alt text/roles to some buttons to improve accessibility (#6616 by Henry Heino)</li>
+<li>New: Add keyboard-activatable markdown commands (e.g. bold, italicize) on text editor (#6707 by Henry Heino)</li>
+<li>Improved: Ctrl+F search support in beta editor (#6587 by Henry Heino)</li>
+<li>Improved: Improve syntax highlighting on mobile beta editor (#6684 by Henry Heino)</li>
+<li>Improved: Removes whitespace above navigation component (#6597 by <a href="https://github.com/tmclo">@tmclo</a>)</li>
+<li>Fixed: Do not encrypt non-owned note if it was not shared encrypted (#6645)</li>
+<li>Fixed: Fix checklist continuation in beta editor (#6577) (#6576 by Henry Heino)</li>
+<li>Fixed: Fixed android filesystem sync (#6395) (#5779 by <a href="https://github.com/jd1378">@jd1378</a>)</li>
+<li>Fixed: Note links with HTML notation did not work (#6515)</li>
+<li>Fixed: Scroll selection into view in beta editor when window resizes (#6610) (#5949 by Henry Heino)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.8.1">android-v2.8.1</a> (Pre-release) - 2022-05-18T13:35:01Z<a name="android-v2-8-1-https-github-com-laurent22-joplin-releases-tag-android-v2-8-1-pre-release-2022-05-18t13-35-01z" href="#android-v2-8-1-https-github-com-laurent22-joplin-releases-tag-android-v2-8-1-pre-release-2022-05-18t13-35-01z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Allow filtering tags in tag dialog (#6221 by <a href="https://github.com/shinglyu">@shinglyu</a>)</li>
+<li>Improved: Automatically start sync after setting the sync parameters (ff066ba)</li>
+<li>Improved: Color of Date-Time text changed to match theme (#6279 by Ayush Srivastava)</li>
+<li>Improved: Handle invalid revision patches (#6209)</li>
+<li>Improved: Improve error message when revision metadata cannot be decoded, to improve debugging (a325bf6)</li>
+<li>Improved: Make search engine filter keywords case insensitive (#6267) (#6266 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Improved: Sort sync target options (814a5a0)</li>
+<li>Fixed: &quot;Move Note&quot; dropdown menu can be very narrow (#6306) (#3564 by Ayush Srivastava)</li>
+<li>Fixed: Cursor hard to see in dark mode (#6307) (#5987 by Henry Heino)</li>
+<li>Fixed: Ensure that note revision markup type is set correctly (#6261)</li>
+<li>Fixed: Error when pressing undo or redo button while editor is closed (#6426) (#6328 by Tolulope Malomo)</li>
+<li>Fixed: Long path in &quot;Export profile&quot; prevents tapping OK button (#6359) (#6026 by Tolulope Malomo)</li>
+<li>Fixed: Prevent multiline note titles (#6144) (#5482 by <a href="https://github.com/Daeraxa">@Daeraxa</a>)</li>
+<li>Fixed: Support inserting attachments from Beta Editor (#6325) (#6324 by Henry Heino)</li>
+<li>Fixed: The camera button remains clickable after taking a photo bug (#6222 by <a href="https://github.com/shinglyu">@shinglyu</a>)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.7.2">android-v2.7.2</a> (Pre-release) - 2022-02-12T12:51:29Z<a name="android-v2-7-2-https-github-com-laurent22-joplin-releases-tag-android-v2-7-2-pre-release-2022-02-12t12-51-29z" href="#android-v2-7-2-https-github-com-laurent22-joplin-releases-tag-android-v2-7-2-pre-release-2022-02-12t12-51-29z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add additional time format HH.mm (#6086 by <a href="https://github.com/vincentjocodes">@vincentjocodes</a>)</li>
+<li>Improved: Do not duplicate resources when duplicating a note (721d008)</li>
+<li>Improved: Make heading 4, 5 and 6 styling more consistent (fca5875)</li>
+<li>Improved: Show login prompt for OneDrive (#5933 by Jonathan Heard)</li>
+<li>Improved: Update Mermaid 8.13.5 -&gt; 8.13.9 and Katex dependencies (#6039 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Shared resource was not encrypted with correct encryption key (#6092)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.6.9">android-v2.6.9</a> - 2021-12-20T14:58:42Z<a name="android-v2-6-9-https-github-com-laurent22-joplin-releases-tag-android-v2-6-9-2021-12-20t14-58-42z" href="#android-v2-6-9-https-github-com-laurent22-joplin-releases-tag-android-v2-6-9-2021-12-20t14-58-42z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Fixed issue where synchroniser would try to update a shared folder that is not longer accessible (667d642)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.6.8">android-v2.6.8</a> - 2021-12-17T10:15:00Z<a name="android-v2-6-8-https-github-com-laurent22-joplin-releases-tag-android-v2-6-8-2021-12-17t10-15-00z" href="#android-v2-6-8-https-github-com-laurent22-joplin-releases-tag-android-v2-6-8-2021-12-17t10-15-00z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Update Mermaid: 8.12.1 -&gt; 8.13.5 (#5831 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Links in flowchart Mermaid diagrams (#5830) (#5801 by Helmut K. C. Tessarek)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.6.5">android-v2.6.5</a> (Pre-release) - 2021-12-13T09:41:18Z<a name="android-v2-6-5-https-github-com-laurent22-joplin-releases-tag-android-v2-6-5-pre-release-2021-12-13t09-41-18z" href="#android-v2-6-5-https-github-com-laurent22-joplin-releases-tag-android-v2-6-5-pre-release-2021-12-13t09-41-18z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Fixed &quot;Invalid lock client type&quot; error when migrating sync target (e0e93c4)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.6.4">android-v2.6.4</a> (Pre-release) - 2021-12-01T11:38:49Z<a name="android-v2-6-4-https-github-com-laurent22-joplin-releases-tag-android-v2-6-4-pre-release-2021-12-01t11-38-49z" href="#android-v2-6-4-https-github-com-laurent22-joplin-releases-tag-android-v2-6-4-pre-release-2021-12-01t11-38-49z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Also duplicate resources when duplicating a note (c0a8c33)</li>
+<li>Improved: Improved S3 sync error handling and reliability, and upgraded S3 SDK (#5312 by Lee Matos)</li>
+<li>Fixed: Alarm setting buttons were no longer visible (#5777)</li>
+<li>Fixed: Alarms were not being triggered in some cases (#5798) (#5216 by Roman Musin)</li>
+<li>Fixed: Fixed opening attachments (6950c40)</li>
+<li>Fixed: Handle duplicate attachments when the parent notebook is shared (#5796)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.6.3">android-v2.6.3</a> (Pre-release) - 2021-11-21T16:59:46Z<a name="android-v2-6-3-https-github-com-laurent22-joplin-releases-tag-android-v2-6-3-pre-release-2021-11-21t16-59-46z" href="#android-v2-6-3-https-github-com-laurent22-joplin-releases-tag-android-v2-6-3-pre-release-2021-11-21t16-59-46z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add date format YYYY/MM/DD (#5759 by Helmut K. C. Tessarek)</li>
+<li>New: Add support for faster built-in sync locks (#5662)</li>
+<li>New: Add support for sharing notes when E2EE is enabled (#5529)</li>
+<li>New: Added support for notebook icons (e97bb78)</li>
+<li>Improved: Improved error message when synchronising with Joplin Server (#5754)</li>
+<li>Improved: Makes it impossible to have multiple instances of the app open (#5587 by Filip Stanis)</li>
+<li>Improved: Remove non-OSS dependencies (#5735 by <a href="https://github.com/muelli">@muelli</a>)</li>
+<li>Fixed: Fixed issue that could cause application to needlessly lock the sync target (0de6e9e)</li>
+<li>Fixed: Fixed issue with parts of HTML notes not being displayed in some cases (#5687)</li>
+<li>Fixed: Sharing multiple notebooks via Joplin Server with the same user results in an error (#5721)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.6.1">android-v2.6.1</a> (Pre-release) - 2021-11-02T20:49:53Z<a name="android-v2-6-1-https-github-com-laurent22-joplin-releases-tag-android-v2-6-1-pre-release-2021-11-02t20-49-53z" href="#android-v2-6-1-https-github-com-laurent22-joplin-releases-tag-android-v2-6-1-pre-release-2021-11-02t20-49-53z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Upgraded React Native from 0.64 to 0.66 (66e79cc)</li>
+<li>Fixed: Fixed potential infinite loop when Joplin Server session is invalid (c5569ef)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.5.5">android-v2.5.5</a> (Pre-release) - 2021-10-31T11:03:16Z<a name="android-v2-5-5-https-github-com-laurent22-joplin-releases-tag-android-v2-5-5-pre-release-2021-10-31t11-03-16z" href="#android-v2-5-5-https-github-com-laurent22-joplin-releases-tag-android-v2-5-5-pre-release-2021-10-31t11-03-16z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add padding around beta text editor (365e152)</li>
+<li>Improved: Capitalise first word of sentence in beta editor (4128be9)</li>
+<li>Fixed: Do not render very large code blocks to prevent app from freezing (#5593)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.5.3">android-v2.5.3</a> (Pre-release) - 2021-10-28T21:47:18Z<a name="android-v2-5-3-https-github-com-laurent22-joplin-releases-tag-android-v2-5-3-pre-release-2021-10-28t21-47-18z" href="#android-v2-5-3-https-github-com-laurent22-joplin-releases-tag-android-v2-5-3-pre-release-2021-10-28t21-47-18z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for public-private key pairs and improved master password support (#5438)</li>
+<li>New: Added mechanism to migrate default settings to new values (72db8e4)</li>
+<li>Improved: Ensure that shared notebook children are not deleted when shared, unshared and shared again, and a conflict happens (ccf9882)</li>
+<li>Improved: Improve delete dialog message (#5481) (#4701 by Helmut K. C. Tessarek)</li>
+<li>Improved: Improved Joplin Server configuration check to better handle disabled accounts (72c1235)</li>
+<li>Improved: Improved handling of expired sessions when using Joplin Server (33249ca)</li>
+<li>Fixed: Certain attachments were not being automatically deleted (#932)</li>
+<li>Fixed: Fixed logic of setting master password in Encryption screen (#5585)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.4.3">android-v2.4.3</a> - 2021-09-29T18:47:24Z<a name="android-v2-4-3-https-github-com-laurent22-joplin-releases-tag-android-v2-4-3-2021-09-29t18-47-24z" href="#android-v2-4-3-https-github-com-laurent22-joplin-releases-tag-android-v2-4-3-2021-09-29t18-47-24z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Fix default sync target (4b39d30)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.4.2">android-v2.4.2</a> (Pre-release) - 2021-09-22T17:02:37Z<a name="android-v2-4-2-https-github-com-laurent22-joplin-releases-tag-android-v2-4-2-pre-release-2021-09-22t17-02-37z" href="#android-v2-4-2-https-github-com-laurent22-joplin-releases-tag-android-v2-4-2-pre-release-2021-09-22t17-02-37z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Allow disabling any master key, including default or active one (9407efd)</li>
+<li>Improved: Update Mermaid 8.10.2 -&gt; 8.12.1 and fix gitGraph crash (#5448) (#5295 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Misinterpreted search term after filter in quotation marks (#5445) (#5444 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.4.1">android-v2.4.1</a> (Pre-release) - 2021-08-30T13:37:34Z<a name="android-v2-4-1-https-github-com-laurent22-joplin-releases-tag-android-v2-4-1-pre-release-2021-08-30t13-37-34z" href="#android-v2-4-1-https-github-com-laurent22-joplin-releases-tag-android-v2-4-1-pre-release-2021-08-30t13-37-34z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add a way to disable a master key (7faa58e)</li>
+<li>New: Add support for single master password, to simplify handling of multiple encryption keys (ce89ee5)</li>
+<li>New: Added &quot;None&quot; sync target to allow disabling synchronisation (f5f05e6)</li>
+<li>Improved: Do not display master key upgrade warnings for new master keys (70efadd)</li>
+<li>Improved: Improved sync locks so that they do not prevent upgrading a sync target (06ed58b)</li>
+<li>Improved: Show the used tags first in the tagging dialog (#5315 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Fixed: Fixed crash when a required master key does not exist (#5391)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.3.4">android-v2.3.4</a> (Pre-release) - 2021-08-15T13:27:57Z<a name="android-v2-3-4-https-github-com-laurent22-joplin-releases-tag-android-v2-3-4-pre-release-2021-08-15t13-27-57z" href="#android-v2-3-4-https-github-com-laurent22-joplin-releases-tag-android-v2-3-4-pre-release-2021-08-15t13-27-57z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Bump hightlight.js to v11.2 (#5278) (#5245 by Roman Musin)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.3.3">android-v2.3.3</a> (Pre-release) - 2021-08-12T20:46:15Z<a name="android-v2-3-3-https-github-com-laurent22-joplin-releases-tag-android-v2-3-3-pre-release-2021-08-12t20-46-15z" href="#android-v2-3-3-https-github-com-laurent22-joplin-releases-tag-android-v2-3-3-pre-release-2021-08-12t20-46-15z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Improved E2EE usability by making its state a property of the sync target (#5276)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.2.5">android-v2.2.5</a> (Pre-release) - 2021-08-11T10:54:38Z<a name="android-v2-2-5-https-github-com-laurent22-joplin-releases-tag-android-v2-2-5-pre-release-2021-08-11t10-54-38z" href="#android-v2-2-5-https-github-com-laurent22-joplin-releases-tag-android-v2-2-5-pre-release-2021-08-11t10-54-38z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Revert &quot;Plugins: Add ability to make dialogs fit the application window (#5219)&quot; as it breaks several plugin webviews.</li>
+<li>Revert &quot;Resolves #4810, Resolves #4610: Fix AWS S3 sync error and upgrade framework to v3 (#5212)&quot; due to incompatibility with some AWS providers.</li>
+<li>Improved: Upgraded React Native to v0.64 (afb7e1a)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.2.3">android-v2.2.3</a> (Pre-release) - 2021-08-09T18:48:29Z<a name="android-v2-2-3-https-github-com-laurent22-joplin-releases-tag-android-v2-2-3-pre-release-2021-08-09t18-48-29z" href="#android-v2-2-3-https-github-com-laurent22-joplin-releases-tag-android-v2-2-3-pre-release-2021-08-09t18-48-29z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Ensure that timestamps are not changed when sharing or unsharing a note (cafaa9c)</li>
+<li>Improved: Fix AWS S3 sync error and upgrade framework to v3 (#5212) (#4810 by Lee Matos)</li>
+<li>Improved: Handles OneDrive throttling responses and sets User-Agent based on Microsoft best practices (#5246) (#5244 by <a href="https://github.com/alec">@alec</a>)</li>
+<li>Improved: Make sync icon spin in the right direction (#5275) (#4588 by Lee Matos)</li>
+<li>Fixed: Fixed issue with orphaned resource being created in case of a resource conflict (#5223)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.2.1">android-v2.2.1</a> (Pre-release) - 2021-07-13T17:37:38Z<a name="android-v2-2-1-https-github-com-laurent22-joplin-releases-tag-android-v2-2-1-pre-release-2021-07-13t17-37-38z" href="#android-v2-2-1-https-github-com-laurent22-joplin-releases-tag-android-v2-2-1-pre-release-2021-07-13t17-37-38z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Added improved editor (beta)</li>
+<li>Improved: Disable backup to Google Drive (#5114 by Roman Musin)</li>
+<li>Improved: Interpret only valid search filters (#5103) (#3871 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Improved: Removed old editor code (e01a175)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.1.4">android-v2.1.4</a> - 2021-07-03T08:31:36Z<a name="android-v2-1-4-https-github-com-laurent22-joplin-releases-tag-android-v2-1-4-2021-07-03t08-31-36z" href="#android-v2-1-4-https-github-com-laurent22-joplin-releases-tag-android-v2-1-4-2021-07-03t08-31-36z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Fixes #5133: Items keep being uploaded to Joplin Server after a note has been shared.</li>
+<li>Fixed: Fixed issue where untitled notes where created after a note had been shared and synced</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.1.3">android-v2.1.3</a> - 2021-06-27T13:34:12Z<a name="android-v2-1-3-https-github-com-laurent22-joplin-releases-tag-android-v2-1-3-2021-06-27t13-34-12z" href="#android-v2-1-3-https-github-com-laurent22-joplin-releases-tag-android-v2-1-3-2021-06-27t13-34-12z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for X-API-MIN-VERSION header (51f3c00)</li>
+<li>Improved: Activate Joplin Server optimisations (3d03321)</li>
+<li>Improved: Also allow disabling TLS errors for Joplin Cloud to go around error UNABLE_TO_GET_ISSUER_CERT_LOCALLY (118a2f9)</li>
+<li>Fixed: Fixed search when the index contains non-existing notes (5ecac21)</li>
+<li>Fixed: Fixed version number on config screen (65e9268)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.1.2">android-v2.1.2</a> (Pre-release) - 2021-06-20T18:36:23Z<a name="android-v2-1-2-https-github-com-laurent22-joplin-releases-tag-android-v2-1-2-pre-release-2021-06-20t18-36-23z" href="#android-v2-1-2-https-github-com-laurent22-joplin-releases-tag-android-v2-1-2-pre-release-2021-06-20t18-36-23z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Fixed error that could prevent a revision from being created, and that would prevent the revision service from processing the rest of the notes (#5051)</li>
+<li>Fixed: Fixed issue when trying to sync an item associated with a share that no longer exists (5bb68ba)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.1.1">android-v2.1.1</a> (Pre-release) - 2021-06-19T16:42:57Z<a name="android-v2-1-1-https-github-com-laurent22-joplin-releases-tag-android-v2-1-1-pre-release-2021-06-19t16-42-57z" href="#android-v2-1-1-https-github-com-laurent22-joplin-releases-tag-android-v2-1-1-pre-release-2021-06-19t16-42-57z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add version number to log (525ab01)</li>
+<li>New: Added feature flags to disable Joplin Server sync optimisations by default, so that it still work with server 2.0 (326fef4)</li>
+<li>Improved: Allow enabling and disabling feature flags (5b368e3)</li>
+<li>Improved: Allow uploading items in batch when synchronising with Joplin Server (0222c0f)</li>
+<li>Improved: Improved first sync speed when synchronising with Joplin Server (4dc1210)</li>
+<li>Improved: Mask auth token and password in log (0d33955)</li>
+<li>Improved: Optimise first synchronisation, when items have never been synced before (15ce5cd)</li>
+<li>Improved: Update Mermaid: 8.8.4 -&gt; 8.10.2 (#5092 by Helmut K. C. Tessarek)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.0.4">android-v2.0.4</a> - 2021-06-16T12:15:56Z<a name="android-v2-0-4-https-github-com-laurent22-joplin-releases-tag-android-v2-0-4-2021-06-16t12-15-56z" href="#android-v2-0-4-https-github-com-laurent22-joplin-releases-tag-android-v2-0-4-2021-06-16t12-15-56z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Prevent sync process from being stuck when the download state of a resource is invalid (5c6fd93)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.0.3">android-v2.0.3</a> (Pre-release) - 2021-06-16T09:48:58Z<a name="android-v2-0-3-https-github-com-laurent22-joplin-releases-tag-android-v2-0-3-pre-release-2021-06-16t09-48-58z" href="#android-v2-0-3-https-github-com-laurent22-joplin-releases-tag-android-v2-0-3-pre-release-2021-06-16t09-48-58z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Verbose mode for synchronizer (4bbb3d1)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/android-v2.0.2">android-v2.0.2</a> - 2021-06-15T20:03:21Z<a name="android-v2-0-2-https-github-com-laurent22-joplin-releases-tag-android-v2-0-2-2021-06-15t20-03-21z" href="#android-v2-0-2-https-github-com-laurent22-joplin-releases-tag-android-v2-0-2-2021-06-15t20-03-21z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Conflict notes will now populate a new field with the ID of the conflict note. (#5049 by <a href="https://github.com/Ahmad45123">@Ahmad45123</a>)</li>
+<li>Improved: Filter out form elements from note body to prevent potential XSS (thanks to Dmytro Vdovychinskiy for the PoC) (feaecf7)</li>
+<li>Improved: Focus note editor where tapped instead of scrolling to the end (#4998) (#4216 by Roman Musin)</li>
+<li>Improved: Improve search with Asian scripts (#5018) (#4613 by <a href="https://github.com/mablin7">@mablin7</a>)</li>
+<li>Fixed: Fixed and improved alarm notifications (#4984) (#4912 by Roman Musin)</li>
+<li>Fixed: Fixed opening URLs that contain non-alphabetical characters (#4494)</li>
+<li>Fixed: Fixed user content URLs when sharing note via Joplin Server (2cf7067)</li>
+<li>Fixed: Inline Katex gets broken when editing in Rich Text editor (#5052) (#5025 by <a href="https://github.com/Subhra264">@Subhra264</a>)</li>
+<li>Fixed: Items are filtered in the API search (#5017) (#5007 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Fixed: Wrong field removed in API search (#5066 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+</ul>
+
+								<div class="bottom-links">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/changelog_android.md">
+											<i class="fab fa-github"></i> Improve this doc
+										</a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<footer class="darkblue-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-12 social-links">
+							<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+							<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+							<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+							<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+							<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+							<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+							<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+
+					<div class="row bottom-links-row">
+						<div class="col-12 col-md-6">
+							<p class="text-center-sm">Copyright &copy; 2016-2023 Laurent Cozic</p>
+						</div>
+						<div class="col-12 col-md-6">
+							<p class="text-right text-center-sm right-links">
+								<span class="footer-right">
+									<a href="/privacy/">Privacy Policy</a>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>		</div>
+
+		<script
+			src="&#x2F;js/bootstrap5.0.2.bundle.min.js"
+			rel="preload"
+			as="script"
+		></script>
+		<script src="/js/script.js?h=46b3b58d72c94591621551affbb8c6e3"></script>
+
+		<script>
+			if (window.location.hostname !== 'localhost') {
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-103586105-1', 'auto');
+				ga('send', 'pageview');
+			}
+		</script>	</body>
+</html>

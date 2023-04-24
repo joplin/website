@@ -59,7 +59,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20220224-release-2-7.md
 			media="all"
 			onload="this.media='all'; this.onload = null"
 		/>
-		<link rel="stylesheet" href="/css/site.css?h=8d66912f54c6632d962cb12681148083" as="style" />
+		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
 		<title>Joplin 2.7 is available! | Joplin</title>
 
 		<script
@@ -93,6 +93,21 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20220224-release-2-7.md
 								<a href="/help/" class="fw500">Help</a>
 								<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500">Forum</a>
 								<a href="/cn/" class="fw500">中文</a>
+
+								<!--
+								<div class="dropdown language-switcher">
+									<button class="fw500" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										Language
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+								-->
+
+
 									<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
 									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
 								</a>							</div>
@@ -169,7 +184,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20220224-release-2-7.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1><a href="/news/20220224-release-2-7/">Joplin 2.7 is available!</a><a name="joplin-2-7-is-available-news-20220224-release-2-7" href="#joplin-2-7-is-available-news-20220224-release-2-7" class="heading-anchor">🔗</a></h1>
+<h1><a href="/fr/news/20220224-release-2-7/">Joplin 2.7 is available!</a><a name="joplin-2-7-is-available-fr-news-20220224-release-2-7" href="#joplin-2-7-is-available-fr-news-20220224-release-2-7" class="heading-anchor">🔗</a></h1>
 <p><em>Published on <strong>24 Feb 2022</strong></em></p>
 <p>This new release is largely focused on bug fixing and optimising various parts of the apps. There's about 26 improvements and 25 bugs and security fixes included - as always many of these apply to both the mobile and desktop app (see the <a href="https://joplinapp.org/changelog/">desktop changelog</a> and <a href="https://joplinapp.org/changelog_android/">mobile changelog</a>).</p>
 <p>Many thanks to all the contributors who helped create this release!</p>
@@ -177,11 +192,11 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20220224-release-2-7.md
 <h1>Notebook custom icons<a name="notebook-custom-icons" href="#notebook-custom-icons" class="heading-anchor">🔗</a></h1>
 <p>Since version 2.6 it was possible to assign an emoji icon to a notebook, and with this new version it's now possible to assign any custom icon. The icon may be a PNG or JPG file of any size. The app will then import the file and resize it to the correct size. To use a custom icon, follow these steps:</p>
 <p>Right-click on a notebook, and select &quot;Edit&quot;:</p>
-<p><img src="/images/news/20220224-edit-notebook.png" alt=""></p>
+<p><img src="/fr/images/news/20220224-edit-notebook.png" alt=""></p>
 <p>In the &quot;Edit notebook&quot; dialog, click &quot;Select file...&quot; and browse to your icon image:</p>
-<p><img src="/images/news/20220224-edit-dialog.png" alt=""></p>
+<p><img src="/fr/images/news/20220224-edit-dialog.png" alt=""></p>
 <p>Click &quot;OK&quot; and the icon will now appear next to the notebook:</p>
-<p><img src="/images/news/20220224-notebook-icon.png" alt=""></p>
+<p><img src="/fr/images/news/20220224-notebook-icon.png" alt=""></p>
 <p>The icon can be changed only from the desktop application at the moment, but it will sync and be displayed correctly on the mobile app too.</p>
 <h1>Plugin API improvements<a name="plugin-api-improvements" href="#plugin-api-improvements" class="heading-anchor">🔗</a></h1>
 <p>This version also includes a number of improvements to the plugin API, in particular it is now easier to customise the editor context menu from a plugin and dynamically add items to it depending on the context. For example, with the Rich Markdown plugin it will be possible to right-click on an image and open it, or copy it to the clipboard.</p>
@@ -224,6 +239,11 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20220224-release-2-7.md
 				</div>
 			</footer>		</div>
 
+		<script
+			src="&#x2F;js/bootstrap5.0.2.bundle.min.js"
+			rel="preload"
+			as="script"
+		></script>
 		<script src="/js/script.js?h=46b3b58d72c94591621551affbb8c6e3"></script>
 
 		<script>

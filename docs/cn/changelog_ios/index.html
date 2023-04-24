@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<!--
+
+!!! WARNING !!!
+
+This file was auto-generated from readme/changelog_ios.md and any manual change
+made to it will be overwritten. To make a change to this file please modify
+the source Markdown file:
+
+https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
+
+-->
+
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-579DTGX');</script>
+		<!-- End Google Tag Manager -->		<!-- Monthly/Yearly plan A/B testing -->
+		<!--
+		<script src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->
+
+		<!-- Donate button A/B testing -->
+		<!--
+		<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->		<meta
+			charset="utf-8"
+			http-equiv="X-UA-Compatible"
+			content="IE=edge,chrome=1"
+		/>
+		<link rel="icon" href="&#x2F;images/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+			<meta name="description" content="ios-v12.10.5 - 2023-03-06T14:43:37Z Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by @julien) Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerk..." />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@joplinapp" />
+			<meta property="og:url" content="https://joplinapp.org/cn/changelog_ios/index.html" />
+			<meta property="og:title" content="Joplin iOS app changelog" />
+			<meta property="twitter:title" content="Joplin iOS app changelog" />
+			<meta property="og:description" content="ios-v12.10.5 - 2023-03-06T14:43:37Z Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by @julien) Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerk..." />
+			<meta property="twitter:description" content="ios-v12.10.5 - 2023-03-06T14:43:37Z Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by @julien) Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerk..." />
+		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
+			rel="stylesheet"
+			href="&#x2F;css/bootstrap5.0.2.min.css"
+			as="style"
+		/>
+		<link rel="stylesheet" href="/css/fontawesome-all.min.css?h=ecd507b3125edc4d2a03aa6ae5d07da9">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+			as="style"
+			media="all"
+			onload="this.media='all'; this.onload = null"
+		/>
+		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
+		<title>Joplin iOS app changelog | Joplin</title>
+
+		<script
+			src="&#x2F;js/jquery-3.6.0.min.js"
+			rel="preload"
+			as="script"
+		></script>
+	</head>
+	<body class="website-env-prod">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-579DTGX"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->		
+		<div class="container-fluid generic-template -page" id="main-container">
+
+				<div class=" navbar-main white-bg" id="nav-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-3">
+								<a href="/">
+									<img
+										src="&#x2F;images/logo-text-blue.svg"
+										alt=""
+										id="top-logo"
+										width="180"
+									/>
+								</a>
+							</div>
+							<div class="col-9 text-right d-none d-md-block">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/news/" class="fw500">News</a>
+								<a href="/help/" class="fw500">Help</a>
+								<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500">Forum</a>
+								<a href="/cn/" class="fw500">中文</a>
+
+								<!--
+								<div class="dropdown language-switcher">
+									<button class="fw500" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										Language
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+								-->
+
+
+									<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>							</div>
+							<div class="col-9 text-right d-block d-md-none navbar-mobile-content">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/cn/" class="fw500 chinese-page-link">中文</a>
+								<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>
+								<span class="pointer"
+									><img
+										src="&#x2F;images/mobile-menu-black-open-icon.png"
+										id="open-menu-mobile"
+										alt=""
+								/></span>
+								&nbsp;&nbsp;
+
+								<div id="menu-mobile">
+									<div>
+										<div class="text-right">
+											<img
+												src="&#x2F;images/close-icon.png"
+												alt=""
+												class="pointer"
+												id="close-menu-mobile"
+											/>
+										</div>
+
+										<div class="text-center menu-mobile-top">
+											<a href="/news/" class="fw500 mobile-menu-link">News</a>
+											<a href="/help/" class="fw500 mobile-menu-link">Help</a>
+											<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500 mobile-menu-link">Forum</a>
+										</div>
+
+										<div class="menu-mobile-buttons">
+												<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>											<a class="button-link btn-blue sponsor-button" href="/donate">
+												<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+											</a>										</div>
+									</div>
+
+										<div id="toc-mobile"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/cn/desktop/">Desktop application</a></li>
+<li><a href="/cn/mobile/">Mobile applications</a></li>
+<li><a href="/cn/terminal/">Terminal application</a></li>
+<li><a href="/cn/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/cn/markdown/">Markdown Guide</a></li>
+<li><a href="/cn/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/cn/conflict/">What is a conflict?</a></li>
+<li><a href="/cn/debugging/">How to enable debug mode</a></li>
+<li><a href="/cn/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/cn/external_links/">External links</a></li>
+<li><a href="/cn/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/cn/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/cn/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/cn/api/overview/">Joplin API Overview</a></li>
+<li><a href="/cn/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/cn/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/cn/api/references/rest_api/">Data API</a></li>
+<li><a href="/cn/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/cn/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/cn/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/cn/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/cn/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/cn/spec/history/">Note History spec</a></li>
+<li><a href="/cn/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/cn/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/cn/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/cn/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/cn/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/cn/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/cn/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/cn/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/cn/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/cn/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/cn/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/cn/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/cn/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/cn/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/cn/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/cn/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/cn/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/cn/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/cn/stats/">Stats</a></li>
+<li><a href="/cn/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+									<div class="row">
+										<div class="col-12 col-md-12 social-links">
+											<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+											<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+											<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+											<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+											<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+											<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+											<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+										</div>
+									</div>
+									
+									<div>
+										<p class="light-blue mobile-menu-link-bottom text-center">
+											Copyright &copy; 2016-2023 Laurent&nbsp;Cozic
+											<br/>
+											<a href="/privacy/" class="fw500">Privacy Policy</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="help-page-container page-changelog_ios">
+				<div class="container">
+					<div class="row content-wrapper">
+						<div id="toc"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/cn/desktop/">Desktop application</a></li>
+<li><a href="/cn/mobile/">Mobile applications</a></li>
+<li><a href="/cn/terminal/">Terminal application</a></li>
+<li><a href="/cn/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/cn/markdown/">Markdown Guide</a></li>
+<li><a href="/cn/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/cn/conflict/">What is a conflict?</a></li>
+<li><a href="/cn/debugging/">How to enable debug mode</a></li>
+<li><a href="/cn/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/cn/external_links/">External links</a></li>
+<li><a href="/cn/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/cn/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/cn/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/cn/api/overview/">Joplin API Overview</a></li>
+<li><a href="/cn/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/cn/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/cn/api/references/rest_api/">Data API</a></li>
+<li><a href="/cn/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/cn/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/cn/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/cn/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/cn/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/cn/spec/history/">Note History spec</a></li>
+<li><a href="/cn/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/cn/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/cn/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/cn/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/cn/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/cn/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/cn/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/cn/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/cn/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/cn/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/cn/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/cn/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/cn/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/cn/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/cn/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/cn/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/cn/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/cn/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/cn/stats/">Stats</a></li>
+<li><a href="/cn/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+						<div class="main-content">
+							<div class="alert alert-danger alert-env-dev" role="alert">
+								Running in prod mode!
+							</div>
+							<div class="donate-links">
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+</div>
+<h1>Joplin iOS app changelog<a name="joplin-ios-app-changelog" href="#joplin-ios-app-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.10.5">ios-v12.10.5</a> - 2023-03-06T14:43:37Z<a name="ios-v12-10-5-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-5-2023-03-06t14-43-37z" href="#ios-v12-10-5-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-5-2023-03-06t14-43-37z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by <a href="https://github.com/julien">@julien</a>)</li>
+<li>Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerks)</li>
+<li>Fixed: Fix camera attachment (#7775) (#7675 by <a href="https://github.com/vikneshwar">@vikneshwar</a>)</li>
+<li>Fixed: Fix double-scroll issue in long notes (#7701) (#7700 by Henry Heino)</li>
+<li>Fixed: Fix startup error (#7688) (#7687 by Henry Heino)</li>
+<li>Fixed: Fixed sharing file (ed0edcb)</li>
+<li>Fixed: Hide main content while biometric is enabled and not authenticated (#7781) (#7762 by <a href="https://github.com/pedr">@pedr</a>)</li>
+<li>Fixed: Sharing pictures to Joplin creates recurring duplications (#7791)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.10.2">ios-v12.10.2</a> - 2023-01-20T17:41:13Z<a name="ios-v12-10-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-2-2023-01-20t17-41-13z" href="#ios-v12-10-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-2-2023-01-20t17-41-13z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add support for locking the app using biometrics (f10d9f7)</li>
+<li>New: Add support for multiple profiles (6bb52d5)</li>
+<li>New: Add support for realtime search (767213c)</li>
+<li>Improved: Configurable editor font size (#7596 by Henry Heino)</li>
+<li>Improved: Confirm closing settings with unsaved changes (#7566 by Henry Heino)</li>
+<li>Improved: Improve dialogue spacing in Fountain renderer (#7628) (#7627 by <a href="https://github.com/Elleo">@Elleo</a>)</li>
+<li>Improved: Make the new text editor the default one (f5ef318)</li>
+<li>Improved: Upgrade to React Native 0.70 (4bdb3d0)</li>
+<li>Fixed: Enable autocorrect with spellcheck (#7532) (#6175 by Henry Heino)</li>
+<li>Fixed: Fix Dropdown accessibility (#7564) (#7553 by Henry Heino)</li>
+<li>Fixed: Fixed issue when floating keyboard is visible (#7593) (#6682 by Henry Heino)</li>
+<li>Fixed: Fixed proxy timeout setting UI (275c80a)</li>
+<li>Fixed: Remove gray line around text editor (#7595) (#7594 by Henry Heino)</li>
+<li>Fixed: Settings save button visible even when no settings have been changed (#7503)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.10.1">ios-v12.10.1</a> - 2022-12-28T15:08:39Z<a name="ios-v12-10-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-1-2022-12-28t15-08-39z" href="#ios-v12-10-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-1-2022-12-28t15-08-39z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Switch license to AGPL-3.0 (faf0a4e)</li>
+<li>Improved: Tag search case insensitive (#7368 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Improved: Update Mermaid: 9.1.7 to 9.2.2 (#7330 by Helmut K. C. Tessarek)</li>
+<li>Improved: Upgrade to react-native 0.68.5 (e2d59ee)</li>
+<li>Fixed: Fix CodeMirror syntax highlighting (#7386 by Henry Heino)</li>
+<li>Fixed: Fix attaching multiple files (#7196) (#7195 by Self Not Found)</li>
+<li>Fixed: Note viewer inertial scroll is slower than native inertial scrolling (#7470) (#7469 by Henry Heino)</li>
+<li>Fixed: Update CodeMirror (#7262) (#7253 by Henry Heino)</li>
+<li>Security: Fix XSS when a specially crafted string is passed to the renderer (a2de167)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.9.2">ios-v12.9.2</a> - 2022-12-22T12:42:26Z<a name="ios-v12-9-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-9-2-2022-12-22t12-42-26z" href="#ios-v12-9-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-9-2-2022-12-22t12-42-26z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Fixed: Could not attach images to notes anymore (#7471)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.9.1">ios-v12.9.1</a> - 2022-12-04T18:03:02Z<a name="ios-v12-9-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-9-1-2022-12-04t18-03-02z" href="#ios-v12-9-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-9-1-2022-12-04t18-03-02z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add Markdown toolbar (#6753 by Henry Heino)</li>
+<li>New: Add alt text/roles to some buttons to improve accessibility (#6616 by Henry Heino)</li>
+<li>New: Add keyboard-activatable markdown commands (e.g. bold, italicize) (#6707 by Henry Heino)</li>
+<li>New: Add long-press tooltips (#6758 by Henry Heino)</li>
+<li>New: Add note bar (#6772 by Tolulope Malomo)</li>
+<li>Improved: Convert empty bolded regions to bold-italic regions in beta editor (#6807) (#6808 by Henry Heino)</li>
+<li>Improved: Ctrl+F search support in beta editor (#6587 by Henry Heino)</li>
+<li>Improved: Disable multi-highlighting to fix context menu (9b348fd)</li>
+<li>Improved: Display icon for all notebooks if at least one notebook has an icon (ec97dd8)</li>
+<li>Improved: Enable long-press menu (#6738 by Henry Heino)</li>
+<li>Improved: Improve syntax highlighting on mobile beta editor (#6684 by Henry Heino)</li>
+<li>Improved: Increase the attachment size limit to 200MB (#6848 by Self Not Found)</li>
+<li>Improved: Removes whitespace above navigation component (#6597 by <a href="https://github.com/tom">@tom</a>)</li>
+<li>Improved: Respect system accessibility font size in rendered markdown (#6686) (#6685 by Henry Heino)</li>
+<li>Improved: Setting to disable spellcheck in beta editor (#6780 by Henry Heino)</li>
+<li>Improved: Show client ID in log (#6897 by Self Not Found)</li>
+<li>Improved: Supports attaching multiple files to a note at once (#6831 by Self Not Found)</li>
+<li>Improved: Translation: Update zh_TW (#6727 by Kevin Hsu)</li>
+<li>Improved: Update Mermaid 8.13.9 to 9.1.7 (#6849 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Add button to reduce space below markdown toolbar (#6823) (#6805 by Henry Heino)</li>
+<li>Fixed: Do not encrypt non-owned note if it was not shared encrypted (#6645)</li>
+<li>Fixed: Fix checklist continuation in beta editor (#6577) (#6576 by Henry Heino)</li>
+<li>Fixed: Fix default font in beta editor (#6760) (#6759 by Henry Heino)</li>
+<li>Fixed: Fix multiple webview instances (#6841 by Henry Heino)</li>
+<li>Fixed: Fix occasional overscroll when opening the keyboard (#6700) (#6636 by Henry Heino)</li>
+<li>Fixed: Fix resources sync when proxy is set (#6817) (#6688 by Self Not Found)</li>
+<li>Fixed: Fix side menu width on wide screen devices (#6662 by Tolulope Malomo)</li>
+<li>Fixed: Fixed crash when trying to move note to notebook (#6898)</li>
+<li>Fixed: Fixed notebook icon spacing (633c9ac)</li>
+<li>Fixed: Fixed notebook icons alignment (ea6b7ca)</li>
+<li>Fixed: Note links with HTML notation did not work (#6515)</li>
+<li>Fixed: Scroll selection into view in beta editor when window resizes (#6610) (#5949 by Henry Heino)</li>
+<li>Fixed: Support non-ASCII characters in OneDrive (#6916) (#6838 by Self Not Found)</li>
+<li>Security: Fix XSS when a specially crafted string is passed to the renderer (762b4e8)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.8.1">ios-v12.8.1</a> - 2022-06-06T10:56:27Z<a name="ios-v12-8-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-8-1-2022-06-06t10-56-27z" href="#ios-v12-8-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-8-1-2022-06-06t10-56-27z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Automatically start sync after setting the sync parameters (ff066ba)</li>
+<li>Improved: Color of Date-Time text changed to match theme (#6279 by Ayush Srivastava)</li>
+<li>Improved: Make search engine filter keywords case insensitive (#6267) (#6266 by <a href="https://github.com/JackGruber">@JackGruber</a>)</li>
+<li>Improved: Sort sync target options (814a5a0)</li>
+<li>Fixed: &quot;Move Note&quot; dropdown menu can be very narrow (#6306) (#3564 by Ayush Srivastava)</li>
+<li>Fixed: Error when pressing undo or redo button while editor is closed (#6426) (#6328 by Tolulope Malomo)</li>
+<li>Fixed: IOS and Dropbox synchronisation not working on iOS 15 (#6375)</li>
+<li>Fixed: Remove white border around Beta Editor (#6326) (#6318 by Henry Heino)</li>
+<li>Fixed: Support inserting attachments from Beta Editor (#6325) (#6324 by Henry Heino)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.7.2">ios-v12.7.2</a> - 2022-04-15T11:07:27Z<a name="ios-v12-7-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-7-2-2022-04-15t11-07-27z" href="#ios-v12-7-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-7-2-2022-04-15t11-07-27z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Allow filtering tags in tag dialog (#6221 by <a href="https://github.com/shinglyu">@shinglyu</a>)</li>
+<li>Improved: Handle invalid revision patches (#6209)</li>
+<li>Improved: Improve error message when revision metadata cannot be decoded, to improve debugging (a325bf6)</li>
+<li>Fixed: Ensure that note revision markup type is set correctly (#6261)</li>
+<li>Fixed: IOS and Dropbox synchronisation not working on iOS 15 (#6375)</li>
+<li>Fixed: The camera button remains clickable after taking a photo bug (#6222 by <a href="https://github.com/shinglyu">@shinglyu</a>)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.7.1">ios-v12.7.1</a> - 2022-02-14T14:10:49Z<a name="ios-v12-7-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-7-1-2022-02-14t14-10-49z" href="#ios-v12-7-1-https-github-com-laurent22-joplin-releases-tag-ios-v12-7-1-2022-02-14t14-10-49z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add additional time format HH.mm (#6086 by <a href="https://github.com/vincentjocodes">@vincentjocodes</a>)</li>
+<li>Improved: Do no duplicate resources when duplicating a note (721d008)</li>
+<li>Improved: Make heading 4, 5 and 6 styling more consistent (fca5875)</li>
+<li>Improved: Show login prompt for OneDrive (#5933 by Jonathan Heard)</li>
+<li>Improved: Update Mermaid 8.13.5 -&gt; 8.13.9 and Katex dependencies (#6039 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Fixed issue where synchroniser would try to update a shared folder that is not longer accessible (667d642)</li>
+<li>Fixed: Prevent multiline note titles (#6144) (#5482 by <a href="https://github.com/Daeraxa">@Daeraxa</a>)</li>
+<li>Fixed: Shared resource was not encrypted with correct encryption key (#6092)</li>
+</ul>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.6.2">ios-v12.6.2</a> - 2021-12-17T09:59:16Z<a name="ios-v12-6-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-6-2-2021-12-17t09-59-16z" href="#ios-v12-6-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-6-2-2021-12-17t09-59-16z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add date format YYYY/MM/DD (#5759 by Helmut K. C. Tessarek)</li>
+<li>New: Add support for faster built-in sync locks (#5662)</li>
+<li>New: Add support for sharing notes when E2EE is enabled (#5529)</li>
+<li>New: Added support for notebook icons (e97bb78)</li>
+<li>Improved: Also duplicate resources when duplicating a note (c0a8c33)</li>
+<li>Improved: Improved S3 sync error handling and reliability, and upgraded S3 SDK (#5312 by Lee Matos)</li>
+<li>Improved: Improved error message when synchronising with Joplin Server (#5754)</li>
+<li>Improved: Ping joplinapp.org domain instead of Google when doing the WiFi connection check (#5705)</li>
+<li>Improved: Set min supported iOS version to 13.0 (298e85f)</li>
+<li>Improved: Update Mermaid: 8.12.1 -&gt; 8.13.5 (#5831 by Helmut K. C. Tessarek)</li>
+<li>Improved: Upgraded React Native from 0.64 to 0.66 (66e79cc)</li>
+<li>Fixed: Alarm setting buttons were no longer visible (#5777)</li>
+<li>Fixed: Fixed &quot;Invalid lock client type&quot; error when migrating sync target (e0e93c4)</li>
+<li>Fixed: Fixed iOS 12 crash that prevents the app from starting (#5671)</li>
+<li>Fixed: Fixed issue that could cause application to needlessly lock the sync target (0de6e9e)</li>
+<li>Fixed: Fixed issue with parts of HTML notes not being displayed in some cases (#5687)</li>
+<li>Fixed: Handle duplicate attachments when the parent notebook is shared (#5796)</li>
+<li>Fixed: Links in flowchart Mermaid diagrams (#5830) (#5801 by Helmut K. C. Tessarek)</li>
+<li>Fixed: Sharing multiple notebooks via Joplin Server with the same user results in an error (#5721)</li>
+</ul>
+
+								<div class="bottom-links">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md">
+											<i class="fab fa-github"></i> Improve this doc
+										</a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<footer class="darkblue-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-12 social-links">
+							<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+							<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+							<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+							<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+							<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+							<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+							<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+
+					<div class="row bottom-links-row">
+						<div class="col-12 col-md-6">
+							<p class="text-center-sm">Copyright &copy; 2016-2023 Laurent Cozic</p>
+						</div>
+						<div class="col-12 col-md-6">
+							<p class="text-right text-center-sm right-links">
+								<span class="footer-right">
+									<a href="/privacy/">Privacy Policy</a>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>		</div>
+
+		<script
+			src="&#x2F;js/bootstrap5.0.2.bundle.min.js"
+			rel="preload"
+			as="script"
+		></script>
+		<script src="/js/script.js?h=46b3b58d72c94591621551affbb8c6e3"></script>
+
+		<script>
+			if (window.location.hostname !== 'localhost') {
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-103586105-1', 'auto');
+				ga('send', 'pageview');
+			}
+		</script>	</body>
+</html>

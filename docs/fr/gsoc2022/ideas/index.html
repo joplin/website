@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<!--
+
+!!! WARNING !!!
+
+This file was auto-generated from readme/gsoc2022/ideas.md and any manual change
+made to it will be overwritten. To make a change to this file please modify
+the source Markdown file:
+
+https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/ideas.md
+
+-->
+
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-579DTGX');</script>
+		<!-- End Google Tag Manager -->		<!-- Monthly/Yearly plan A/B testing -->
+		<!--
+		<script src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->
+
+		<!-- Donate button A/B testing -->
+		<!--
+		<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->		<meta
+			charset="utf-8"
+			http-equiv="X-UA-Compatible"
+			content="IE=edge,chrome=1"
+		/>
+		<link rel="icon" href="&#x2F;images/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+			<meta name="description" content="2022 is Joplin third round at Google Summer of Code. Detailed information on how to get involved and apply are given in the general Summer of Code introduction These are all proposals! We are open ..." />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@joplinapp" />
+			<meta property="og:url" content="https://joplinapp.org/fr/gsoc2022/ideas/index.html" />
+			<meta property="og:title" content="GSoC 2022 Ideas" />
+			<meta property="twitter:title" content="GSoC 2022 Ideas" />
+			<meta property="og:description" content="2022 is Joplin third round at Google Summer of Code. Detailed information on how to get involved and apply are given in the general Summer of Code introduction These are all proposals! We are open ..." />
+			<meta property="twitter:description" content="2022 is Joplin third round at Google Summer of Code. Detailed information on how to get involved and apply are given in the general Summer of Code introduction These are all proposals! We are open ..." />
+		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
+			rel="stylesheet"
+			href="&#x2F;css/bootstrap5.0.2.min.css"
+			as="style"
+		/>
+		<link rel="stylesheet" href="/css/fontawesome-all.min.css?h=ecd507b3125edc4d2a03aa6ae5d07da9">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+			as="style"
+			media="all"
+			onload="this.media='all'; this.onload = null"
+		/>
+		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
+		<title>GSoC 2022 Ideas | Joplin</title>
+
+		<script
+			src="&#x2F;js/jquery-3.6.0.min.js"
+			rel="preload"
+			as="script"
+		></script>
+	</head>
+	<body class="website-env-prod">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-579DTGX"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->		
+		<div class="container-fluid generic-template -page" id="main-container">
+
+				<div class=" navbar-main white-bg" id="nav-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-3">
+								<a href="/">
+									<img
+										src="&#x2F;images/logo-text-blue.svg"
+										alt=""
+										id="top-logo"
+										width="180"
+									/>
+								</a>
+							</div>
+							<div class="col-9 text-right d-none d-md-block">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/news/" class="fw500">News</a>
+								<a href="/help/" class="fw500">Help</a>
+								<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500">Forum</a>
+								<a href="/cn/" class="fw500">中文</a>
+
+								<!--
+								<div class="dropdown language-switcher">
+									<button class="fw500" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										Language
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+								-->
+
+
+									<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>							</div>
+							<div class="col-9 text-right d-block d-md-none navbar-mobile-content">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/cn/" class="fw500 chinese-page-link">中文</a>
+								<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>
+								<span class="pointer"
+									><img
+										src="&#x2F;images/mobile-menu-black-open-icon.png"
+										id="open-menu-mobile"
+										alt=""
+								/></span>
+								&nbsp;&nbsp;
+
+								<div id="menu-mobile">
+									<div>
+										<div class="text-right">
+											<img
+												src="&#x2F;images/close-icon.png"
+												alt=""
+												class="pointer"
+												id="close-menu-mobile"
+											/>
+										</div>
+
+										<div class="text-center menu-mobile-top">
+											<a href="/news/" class="fw500 mobile-menu-link">News</a>
+											<a href="/help/" class="fw500 mobile-menu-link">Help</a>
+											<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500 mobile-menu-link">Forum</a>
+										</div>
+
+										<div class="menu-mobile-buttons">
+												<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>											<a class="button-link btn-blue sponsor-button" href="/donate">
+												<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+											</a>										</div>
+									</div>
+
+										<div id="toc-mobile"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/fr/desktop/">Desktop application</a></li>
+<li><a href="/fr/mobile/">Mobile applications</a></li>
+<li><a href="/fr/terminal/">Terminal application</a></li>
+<li><a href="/fr/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/fr/markdown/">Markdown Guide</a></li>
+<li><a href="/fr/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/fr/conflict/">What is a conflict?</a></li>
+<li><a href="/fr/debugging/">How to enable debug mode</a></li>
+<li><a href="/fr/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/fr/external_links/">External links</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/fr/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/fr/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/fr/api/overview/">Joplin API Overview</a></li>
+<li><a href="/fr/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/fr/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/fr/api/references/rest_api/">Data API</a></li>
+<li><a href="/fr/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/fr/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/fr/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/fr/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/fr/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/fr/spec/history/">Note History spec</a></li>
+<li><a href="/fr/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/fr/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/fr/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/fr/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/fr/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/fr/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/fr/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/fr/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/fr/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/fr/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/fr/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/fr/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/fr/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/fr/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/fr/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/fr/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/fr/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/fr/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/fr/stats/">Stats</a></li>
+<li><a href="/fr/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+									<div class="row">
+										<div class="col-12 col-md-12 social-links">
+											<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+											<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+											<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+											<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+											<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+											<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+											<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+										</div>
+									</div>
+									
+									<div>
+										<p class="light-blue mobile-menu-link-bottom text-center">
+											Copyright &copy; 2016-2023 Laurent&nbsp;Cozic
+											<br/>
+											<a href="/privacy/" class="fw500">Privacy Policy</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="help-page-container page-ideas">
+				<div class="container">
+					<div class="row content-wrapper">
+						<div id="toc"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/fr/desktop/">Desktop application</a></li>
+<li><a href="/fr/mobile/">Mobile applications</a></li>
+<li><a href="/fr/terminal/">Terminal application</a></li>
+<li><a href="/fr/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/fr/markdown/">Markdown Guide</a></li>
+<li><a href="/fr/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/fr/conflict/">What is a conflict?</a></li>
+<li><a href="/fr/debugging/">How to enable debug mode</a></li>
+<li><a href="/fr/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/fr/external_links/">External links</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/fr/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/fr/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/fr/api/overview/">Joplin API Overview</a></li>
+<li><a href="/fr/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/fr/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/fr/api/references/rest_api/">Data API</a></li>
+<li><a href="/fr/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/fr/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/fr/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/fr/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/fr/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/fr/spec/history/">Note History spec</a></li>
+<li><a href="/fr/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/fr/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/fr/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/fr/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/fr/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/fr/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/fr/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/fr/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/fr/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/fr/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/fr/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/fr/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/fr/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/fr/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/fr/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/fr/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/fr/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/fr/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/fr/stats/">Stats</a></li>
+<li><a href="/fr/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+						<div class="main-content">
+							<div class="alert alert-danger alert-env-dev" role="alert">
+								Running in prod mode!
+							</div>
+							<div class="donate-links">
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+</div>
+<h1>GSoC 2022 Ideas<a name="gsoc-2022-ideas" href="#gsoc-2022-ideas" class="heading-anchor">🔗</a></h1>
+<p>2022 is Joplin third round at Google Summer of Code. Detailed information on how to get involved and apply are given in the <a href="https://joplinapp.org/gsoc2022/">general Summer of Code introduction</a></p>
+<p><strong>These are all proposals! We are open to new ideas you might have!!</strong> Do you have an awesome idea you want to work on with Joplin but that is not among the ideas below? That's cool. We love that! But please do us a favour: Get in touch with a mentor early on and make sure your project is realistic and within the scope of Joplin. This year's themes are:</p>
+<ul>
+<li><strong>Mobile and tablet development</strong> - we want to improve the mobile/tablet application on iOS and Android.</li>
+<li><strong>Plugin and external apps</strong> - leverage the Joplin API to create plugins and external apps.</li>
+<li>And you are welcome to suggest your own ideas.</li>
+</ul>
+<h1>Information for Contributors<a name="information-for-contributors" href="#information-for-contributors" class="heading-anchor">🔗</a></h1>
+<p>These ideas were contributed by our developers and users. They are sometimes vague or incomplete. If you wish to submit a proposal based on these ideas, you are urged to contact the developers and find out more about the particular suggestion you're looking at.</p>
+<p>Becoming accepted as a Google Summer of Code contributor is quite competitive. Accepted contributors typically have thoroughly researched the technologies of their proposed project and have been in frequent contact with potential mentors. <strong>Simply copying and pasting an idea here will not work.</strong> On the other hand, creating a completely new idea without first consulting potential mentors rarely works.</p>
+<h1>List of ideas<a name="list-of-ideas" href="#list-of-ideas" class="heading-anchor">🔗</a></h1>
+<h2>1. Plugin system on mobile<a name="1-plugin-system-on-mobile" href="#1-plugin-system-on-mobile" class="heading-anchor">🔗</a></h2>
+<p>The plugin system is currently available on desktop and CLI. We believe it could work on mobile too although some work will have to be done to make the plugin API compatible, as well as add a mechanism to load plugins.</p>
+<p>Expected Outcome: Allow loading and running plugins on mobile</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: TypeScript, React Native</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/PackElend">PackElend</a>, <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>2. Seamless desktop application updates<a name="2-seamless-desktop-application-updates" href="#2-seamless-desktop-application-updates" class="heading-anchor">🔗</a></h2>
+<p>The desktop application currently supports automatic updates, however the process is not particularly smooth: the user is presented with a modal dialog, where they need to click &quot;Download&quot; and that opens the default browser to download the file. Then they need to run this file and go through the installer.</p>
+<p>We would like to make this process smoother:</p>
+<ul>
+<li>
+<p>The installer should be automatically downloaded in the background</p>
+</li>
+<li>
+<p>It should then install the app automatically when the next time the app is started</p>
+</li>
+<li>
+<p>And this should work at least on Windows and macOS (Linux may be special due to the different distribution methods)</p>
+</li>
+</ul>
+<p>Expected Outcome: The app shall inform the user that an update is available. If an update shall be applied, the installer runs the update process fully automatically in the background during the next startup. It shall be explored if a live update is feasible and how conflicts can be resolved as used files are to be replaced.</p>
+<p>Difficulty Level: Medium</p>
+<p>Skills Required: TypeScript, React. Some knowledge of Electron and electron-builder.</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
+<p>Expected size of project: 175 hours</p>
+<h2>3. Refactor the project documentation<a name="3-refactor-the-project-documentation" href="#3-refactor-the-project-documentation" class="heading-anchor">🔗</a></h2>
+<p>The current documentation (under <a href="https://joplinapp.org/help">joplinapp.org/help</a>) is mainly a giant README.md file and various smaller Markdown files under /readme. All this is then built into the HTML website by a script.</p>
+<p>We would like to improve this by splitting the main readme into smaller sections, have a new menu that would reorganise the help into various topics, and of course the build script will need to be updated.</p>
+<p>A good part of this project will be about researching how other projects organise their documentation, proposing a way that would work well for Joplin, and discussing your ideas with the mentors and users. You will need to be proactive and propose your own solution on how to structure the documentation - which sections and sub-sections should be created, how to split the existing README into smaller parts, etc.</p>
+<p>This is still a technical project though since you will need to deal with TypeScript, Markdown, HTML and CSS (and any other technology that might help) to build the new documentation.</p>
+<p>Expected Outcome: A new documentation with complete scripts to build it along with CI integration.</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: TypeScript, JavaScript, CSS, HTML, Markdown rendering.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/Daeraxa">Daeraxa</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>4. Implement default plugins on desktop application<a name="4-implement-default-plugins-on-desktop-application" href="#4-implement-default-plugins-on-desktop-application" class="heading-anchor">🔗</a></h2>
+<p>We would like to bundle certain plugins with the desktop application, such as the Backup or Rich Markdown plugin. Some process needs to be implemented so that they are bundled and updated automatically. You'll have to consider how it will work on CI, and across platform. The process should be fault tolerant and retry when something fails.</p>
+<p>Expected Outcome: A system for bundling certain plugins with Joplin releases, along with accompanying documentation on how to bundle plugins.</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: TypeScript, JavaScript, knowledge of Electron and GitHub Actions.</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://discourse.joplinapp.org/u/JackGruber">JackGruber</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>5. Implement a toolbar for the mobile beta code editor<a name="5-implement-a-toolbar-for-the-mobile-beta-code-editor" href="#5-implement-a-toolbar-for-the-mobile-beta-code-editor" class="heading-anchor">🔗</a></h2>
+<p>We would like the Beta code editor to eventually become the main editor, and for that a number of changes need to be made. The main one would be the addition of a toolbar to it, to set the various styles, such as Bold, Bullet list, Header, etc. Additionally there are number of bugs that will have to be fixed to get the editor ready for production - you will find them in the list of issues (under the &quot;high&quot; and &quot;mobile&quot; label).</p>
+<p>Expected Outcome: Main: A new mobile editor toolbar. Secondary: Fix the bugs in the beta editor</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: TypeScript, JavaScript, React Native, React Hooks. You'll also need to learn about CodeMirror 6 if you're not already familiar with it.</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>6. Improve integration of the richtext/WYSIWYG editor<a name="6-improve-integration-of-the-richtext-wysiwyg-editor" href="#6-improve-integration-of-the-richtext-wysiwyg-editor" class="heading-anchor">🔗</a></h2>
+<p>Joplin offers a richtext/WYSIWYG typing experience alongside the Markdown editor but there are a number of areas that could do with improvement when it comes to integration with Joplin as a whole.</p>
+<p>Areas for consideration include increasing compatibility with Joplin-wide keybindings (many are currently static), limiting features of the editor not compatible with markdown formatting, reducing the impact of data changes caused by swapping between editors.</p>
+<p>Also read the document about limitations of the editor: <a href="https://joplinapp.org/rich_text_editor/">https://joplinapp.org/rich_text_editor/</a></p>
+<p>Expected Outcome: Removal of non-functional formatting options, alignment of generic Joplin editor options as well general improvements in editor usability.</p>
+<p>Difficulty level: High</p>
+<p>Skills Required: Typescript, Javascript, CSS, HTML, Markdown rendering. You will also need to learn about TinyMCE if you're not already familiar with it.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/Daeraxa">Daeraxa</a></p>
+<p>Expected size of project: 175 hours</p>
+<h2>7. Improve PDF export<a name="7-improve-pdf-export" href="#7-improve-pdf-export" class="heading-anchor">🔗</a></h2>
+<p>Joplin uses Chrome's built-in print to PDF function which is very limited. This can be improved by using a 3rd party library to convert notes to PDF. Applies to desktop and CLI versions.</p>
+<p>Potential benefits:</p>
+<ul>
+<li>
+<p>Export multiple notes as a single PDF</p>
+</li>
+<li>
+<p>Embedding attachments (see <a href="https://github.com/laurent22/joplin/issues/5943">https://github.com/laurent22/joplin/issues/5943</a>)</p>
+</li>
+<li>
+<p>Delay export until the note is fully rendered (<a href="https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159">https://discourse.joplinapp.org/t/ability-to-delay-pdf-export-to-allow-plugins-to-render/22159</a>)</p>
+</li>
+</ul>
+<p>Expected Outcome: PDF export no longer relies on Chrome print to pdf</p>
+<p>Difficulty level: Medium</p>
+<p>Skills Required: Typescript, Javascript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>8. Replace built-in PDF renderer with a library<a name="8-replace-built-in-pdf-renderer-with-a-library" href="#8-replace-built-in-pdf-renderer-with-a-library" class="heading-anchor">🔗</a></h2>
+<p>Just like with export, Joplin relies on the built-in PDF renderer to show PDF attachments. Replacing it with a 3rd-party library has a number of advantages:</p>
+<ul>
+<li>
+<p>Joplin can preserve PDF viewer state when a note is re-rendered. For instance currently after opening and closing settings, PDF are reset to the 1st page.</p>
+</li>
+<li>
+<p>It may be possible to link to a specific page or even a location within a PDF document.</p>
+</li>
+<li>
+<p>Annotate PDF documents from Joplin</p>
+</li>
+</ul>
+<p>Expected Outcome: a library is used to render PDFs</p>
+<p>Difficulty level: Medium</p>
+<p>Skills Required: Typescript, Javascript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/CalebJohn/">CalebJohn</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>9. Rebuild file system sync on Android<a name="9-rebuild-file-system-sync-on-android" href="#9-rebuild-file-system-sync-on-android" class="heading-anchor">🔗</a></h2>
+<p>A recent update broke file system synchronization on Android, as applications are now required to use a new API to access storage. Currently there are no libraries that would proxy this API for React Native. If we want to get file system sync working again it has to be written from scratch.</p>
+<p>Expected Outcome: File system sync works on all Android versions</p>
+<p>Difficulty level: High</p>
+<p>Skills Required: Android, Java/Kotlin, Typescript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a></p>
+<p>Expected size of project: 175 hours</p>
+<h2>10. Tablet layout<a name="10-tablet-layout" href="#10-tablet-layout" class="heading-anchor">🔗</a></h2>
+<p>On wide screens devices like tables Joplin could use a different layout, e.g. with note list always showing, or have both editor and viewer visible at the same time. What component is visible shoud be optional - for example, the user may want to see the note list, but hide the sidebar. This change will have to be implemented in such a way that it doesn't break the regular, mobile-only layout.</p>
+<p>Expected Outcome: A new tablet-specific layout, with sidebar, note list and editor always visible.</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: React, Typescript, CSS.</p>
+<p>Potential Mentor(s): <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>11. Improve plugin search and discoverability<a name="11-improve-plugin-search-and-discoverability" href="#11-improve-plugin-search-and-discoverability" class="heading-anchor">🔗</a></h2>
+<p>As there are more and more plugins it would be good to improve how they are discovered, and to improve search - in particular improve search relevance.</p>
+<p>In practice, we would want the following:</p>
+<ul>
+<li>
+<p>A page under <code>joplinapp.org/plugins</code> that lists recommended plugins, trending plugins, etc. similar to <a href="https://addons.mozilla.org/en-GB/firefox/">Add-ons for Firefox</a>. From here it should also be possible to search for plugins.</p>
+</li>
+<li>
+<p>Each plugin should have a page under <code>joplinapp.org/plugins/PLUGIN_NAME</code> that provides detailed info about the plugin (info would come from manifest.json). If the plugin manifest links to a README file perhaps we can also fetch it and display it there?</p>
+</li>
+<li>
+<p>In the app, use the info from stats.json to order the plugin - those with more downloads going on top for example</p>
+</li>
+</ul>
+<p>All the above can be done using the <a href="https://github.com/joplin/plugins#readme">info from the plugin repo</a>, in particular using manifests.json and stats.json. You would use this to implement the above functionalities. Moreover, the <code>joplinapp.org</code> pages should be dynamically generated using a script and this should be integrated with CI.</p>
+<p>Expected Outcome: Primary: An automatically generated website under <code>joplinapp.org/plugins</code>. Secondary: Improved plugin search in the desktop app</p>
+<p>Difficulty Level: Medium</p>
+<p>Skills Required: Typescript, CSS, GitHub Actions.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/JackGruber">JackGruber</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>12. Email plugin<a name="12-email-plugin" href="#12-email-plugin" class="heading-anchor">🔗</a></h2>
+<p>Create a plugin to fetch mail via IMAP and convert messages to notes (including attachments). The plugin should be able to filter what messages it donwloads, e.g. based on the folder.</p>
+<p>Additional features to consider:</p>
+<ul>
+<li>
+<p>support more than one account</p>
+</li>
+<li>
+<p>convert HTML to Markdown</p>
+</li>
+<li>
+<p>delete/move received emails</p>
+</li>
+</ul>
+<p>Expected Outcome: Email plugin (with the features described above) is available to install from the plugin repo.</p>
+<p>Difficulty Level: Medium</p>
+<p>Skills Required: TypeScript, JavaScript.</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/roman_r_m">Roman</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>13. Desktop application integration testing<a name="13-desktop-application-integration-testing" href="#13-desktop-application-integration-testing" class="heading-anchor">🔗</a></h2>
+<p>The desktop app front end has a few unit tests to verify things like React hooks and certain utility functions. However we currently have no integration testing to verify for example that a change in one component didn't break something in another component. This project would be about setting up this integration testing for the desktop app. You would do the setup and probably also write a few tests to demonstrate that it's working as expected. More info at <a href="https://www.electronjs.org/docs/latest/tutorial/automated-testing">https://www.electronjs.org/docs/latest/tutorial/automated-testing</a></p>
+<p>Expected Outcome: The student will have a good understanding on how to setup automated testing of the desktop app, and will have implemented automated testing for at least a subset of the application (e.g. Markdown editor and WYSIWYG editor)</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: TypeScript, JavaScript, Electron.</p>
+<p>Potential Mentor(s): <a href="https://github.com/CalebJohn/">CalebJohn</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h2>14. Client settings sync<a name="14-client-settings-sync" href="#14-client-settings-sync" class="heading-anchor">🔗</a></h2>
+<p>Whenever settings are changed on one client these are not replicated to other clients connected to the same sync target.</p>
+<p>This project would be about creating synchronisation between clients to allow a single configuration rather than having to set them up separately on each e.g. keyboard shortcuts, installed plugins, Markdown plugins, note history etc.</p>
+<p>Expected Outcome: Generic cross platform options synchronisation as well as options specific to particular platform via the existing synchronisation feature.</p>
+<p>Difficulty Level: High</p>
+<p>Skills Required: TypeScript, JavaScript</p>
+<p>Potential Mentor(s): <a href="https://discourse.joplinapp.org/u/Daeraxa">Daeraxa</a>, <a href="https://discourse.joplinapp.org/u/JackGruber">JackGruber</a>, <a href="https://github.com/laurent22/">Laurent</a></p>
+<p>Expected size of project: 350 hours</p>
+<h1>More info<a name="more-info" href="#more-info" class="heading-anchor">🔗</a></h1>
+<ul>
+<li>Make sure you read the <a href="https://joplinapp.org/gsoc2022/">Joplin Google Summer of Code Introduction</a></li>
+<li>To build the application, please read <a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">BUILD.md</a></li>
+<li>And before creating a pull request, please read the <a href="https://joplinapp.org/gsoc2022/pull_request_guidelines/">pull request guidelines</a></li>
+</ul>
+
+								<div class="bottom-links">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/ideas.md">
+											<i class="fab fa-github"></i> Improve this doc
+										</a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<footer class="darkblue-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-12 social-links">
+							<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+							<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+							<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+							<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+							<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+							<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+							<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+
+					<div class="row bottom-links-row">
+						<div class="col-12 col-md-6">
+							<p class="text-center-sm">Copyright &copy; 2016-2023 Laurent Cozic</p>
+						</div>
+						<div class="col-12 col-md-6">
+							<p class="text-right text-center-sm right-links">
+								<span class="footer-right">
+									<a href="/privacy/">Privacy Policy</a>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>		</div>
+
+		<script
+			src="&#x2F;js/bootstrap5.0.2.bundle.min.js"
+			rel="preload"
+			as="script"
+		></script>
+		<script src="/js/script.js?h=46b3b58d72c94591621551affbb8c6e3"></script>
+
+		<script>
+			if (window.location.hostname !== 'localhost') {
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-103586105-1', 'auto');
+				ga('send', 'pageview');
+			}
+		</script>	</body>
+</html>

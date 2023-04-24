@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<!--
+
+!!! WARNING !!!
+
+This file was auto-generated from readme/spec/sync_scroll.md and any manual change
+made to it will be overwritten. To make a change to this file please modify
+the source Markdown file:
+
+https://github.com/laurent22/joplin/blob/dev/readme/spec/sync_scroll.md
+
+-->
+
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-579DTGX');</script>
+		<!-- End Google Tag Manager -->		<!-- Monthly/Yearly plan A/B testing -->
+		<!--
+		<script src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->
+
+		<!-- Donate button A/B testing -->
+		<!--
+		<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-PW3ZPK3"></script>
+		-->		<meta
+			charset="utf-8"
+			http-equiv="X-UA-Compatible"
+			content="IE=edge,chrome=1"
+		/>
+		<link rel="icon" href="&#x2F;images/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+			<meta name="description" content="Since Joplin 2.6, the synchronous scroll feature (Sync Scroll) for two-pane Markdown Editor is introduced. This document describes its detail. Motivation Joplin has two types of editors, two-pane M..." />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@joplinapp" />
+			<meta property="og:url" content="https://joplinapp.org/fr/spec/sync_scroll/index.html" />
+			<meta property="og:title" content="Synchronous Scroll" />
+			<meta property="twitter:title" content="Synchronous Scroll" />
+			<meta property="og:description" content="Since Joplin 2.6, the synchronous scroll feature (Sync Scroll) for two-pane Markdown Editor is introduced. This document describes its detail. Motivation Joplin has two types of editors, two-pane M..." />
+			<meta property="twitter:description" content="Since Joplin 2.6, the synchronous scroll feature (Sync Scroll) for two-pane Markdown Editor is introduced. This document describes its detail. Motivation Joplin has two types of editors, two-pane M..." />
+				<meta property="og:image" content="https://joplinapp.org/images/sync_scroll/abst-wo-sync2.png" />
+				<meta property="twitter:image" content="https://joplinapp.org/images/sync_scroll/abst-wo-sync2.png" />
+		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
+			rel="stylesheet"
+			href="&#x2F;css/bootstrap5.0.2.min.css"
+			as="style"
+		/>
+		<link rel="stylesheet" href="/css/fontawesome-all.min.css?h=ecd507b3125edc4d2a03aa6ae5d07da9">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+			as="style"
+			media="all"
+			onload="this.media='all'; this.onload = null"
+		/>
+		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
+		<title>Synchronous Scroll | Joplin</title>
+
+		<script
+			src="&#x2F;js/jquery-3.6.0.min.js"
+			rel="preload"
+			as="script"
+		></script>
+	</head>
+	<body class="website-env-prod">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-579DTGX"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->		
+		<div class="container-fluid generic-template -page" id="main-container">
+
+				<div class=" navbar-main white-bg" id="nav-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-3">
+								<a href="/">
+									<img
+										src="&#x2F;images/logo-text-blue.svg"
+										alt=""
+										id="top-logo"
+										width="180"
+									/>
+								</a>
+							</div>
+							<div class="col-9 text-right d-none d-md-block">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/news/" class="fw500">News</a>
+								<a href="/help/" class="fw500">Help</a>
+								<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500">Forum</a>
+								<a href="/cn/" class="fw500">中文</a>
+
+								<!--
+								<div class="dropdown language-switcher">
+									<button class="fw500" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										Language
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</div>
+								-->
+
+
+									<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>							</div>
+							<div class="col-9 text-right d-block d-md-none navbar-mobile-content">
+								<a href="https://twitter.com/joplinapp" title="Joplin Twitter feed" class="fw500 twitter-link"><i class="fab fa-twitter"></i></a>								<a href="/cn/" class="fw500 chinese-page-link">中文</a>
+								<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>								<a class="button-link btn-blue sponsor-button" href="/donate">
+									<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+								</a>
+								<span class="pointer"
+									><img
+										src="&#x2F;images/mobile-menu-black-open-icon.png"
+										id="open-menu-mobile"
+										alt=""
+								/></span>
+								&nbsp;&nbsp;
+
+								<div id="menu-mobile">
+									<div>
+										<div class="text-right">
+											<img
+												src="&#x2F;images/close-icon.png"
+												alt=""
+												class="pointer"
+												id="close-menu-mobile"
+											/>
+										</div>
+
+										<div class="text-center menu-mobile-top">
+											<a href="/news/" class="fw500 mobile-menu-link">News</a>
+											<a href="/help/" class="fw500 mobile-menu-link">Help</a>
+											<a href="https:&#x2F;&#x2F;discourse.joplinapp.org&#x2F;" class="fw500 mobile-menu-link">Forum</a>
+										</div>
+
+										<div class="menu-mobile-buttons">
+												<a href="/plans/" class="button-link btn-trans plans-button">Joplin Cloud</a>											<a class="button-link btn-blue sponsor-button" href="/donate">
+												<i class="fas fa-heart heart-full"></i><i class="far fa-heart heart-line"></i><span class="sponsor-button-label">&nbsp;Support us</span>
+											</a>										</div>
+									</div>
+
+										<div id="toc-mobile"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/fr/desktop/">Desktop application</a></li>
+<li><a href="/fr/mobile/">Mobile applications</a></li>
+<li><a href="/fr/terminal/">Terminal application</a></li>
+<li><a href="/fr/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/fr/markdown/">Markdown Guide</a></li>
+<li><a href="/fr/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/fr/conflict/">What is a conflict?</a></li>
+<li><a href="/fr/debugging/">How to enable debug mode</a></li>
+<li><a href="/fr/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/fr/external_links/">External links</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/fr/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/fr/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/fr/api/overview/">Joplin API Overview</a></li>
+<li><a href="/fr/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/fr/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/fr/api/references/rest_api/">Data API</a></li>
+<li><a href="/fr/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/fr/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/fr/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/fr/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/fr/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/fr/spec/history/">Note History spec</a></li>
+<li><a href="/fr/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/fr/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/fr/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/fr/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/fr/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/fr/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/fr/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/fr/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/fr/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/fr/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/fr/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/fr/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/fr/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/fr/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/fr/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/fr/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/fr/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/fr/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/fr/stats/">Stats</a></li>
+<li><a href="/fr/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+									<div class="row">
+										<div class="col-12 col-md-12 social-links">
+											<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+											<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+											<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+											<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+											<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+											<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+											<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+										</div>
+									</div>
+									
+									<div>
+										<p class="light-blue mobile-menu-link-bottom text-center">
+											Copyright &copy; 2016-2023 Laurent&nbsp;Cozic
+											<br/>
+											<a href="/privacy/" class="fw500">Privacy Policy</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="help-page-container page-sync_scroll">
+				<div class="container">
+					<div class="row content-wrapper">
+						<div id="toc"><div><ul>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="/fr/desktop/">Desktop application</a></li>
+<li><a href="/fr/mobile/">Mobile applications</a></li>
+<li><a href="/fr/terminal/">Terminal application</a></li>
+<li><a href="/fr/clipper/">Web Clipper</a></li>
+</ul>
+</li>
+<li>
+<p>Support</p>
+<ul>
+<li><a href="https://discourse.joplinapp.org">Joplin Forum</a></li>
+<li><a href="/fr/markdown/">Markdown Guide</a></li>
+<li><a href="/fr/e2ee/">How to enable end-to-end encryption</a></li>
+<li><a href="/fr/conflict/">What is a conflict?</a></li>
+<li><a href="/fr/debugging/">How to enable debug mode</a></li>
+<li><a href="/fr/rich_text_editor/">About the Rich Text editor limitations</a></li>
+<li><a href="/fr/external_links/">External links</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin Cloud</p>
+<ul>
+<li><a href="/fr/share_notebook/">Sharing a notebook</a></li>
+<li><a href="/fr/publish_note/">Publishing a note</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="/fr/api/overview/">Joplin API Overview</a></li>
+<li><a href="/fr/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="/fr/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="/fr/api/references/rest_api/">Data API</a></li>
+<li><a href="/fr/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="/fr/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
+<li><a href="/fr/api/references/plugin_theming/">Plugin theming</a></li>
+</ul>
+</li>
+<li>
+<p>Development</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
+<li><a href="/fr/technical_spec/">Writing a technical spec</a></li>
+<li><a href="/fr/spec/desktop_styling/">Desktop application styling</a></li>
+<li><a href="/fr/spec/history/">Note History spec</a></li>
+<li><a href="/fr/spec/sync/">Synchronisation spec</a></li>
+<li><a href="/fr/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="/fr/spec/sync_scroll/">Synchronous Scroll spec</a></li>
+<li><a href="/fr/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="/fr/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="/fr/spec/e2ee/">E2EE: Technical spec</a></li>
+<li><a href="/fr/spec/e2ee/workflow/">E2EE: Workflow</a></li>
+<li><a href="/fr/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="/fr/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="/fr/spec/server_sharing/">Server: Sharing</a></li>
+</ul>
+</li>
+<li>
+<p>Google Summer of Code 2022</p>
+<ul>
+<li><a href="/fr/gsoc2022/">Google Summer of Code 2022</a></li>
+<li><a href="/fr/gsoc2022/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="/fr/gsoc2022/ideas/">Project Ideas</a></li>
+</ul>
+</li>
+<li>
+<p>About</p>
+<ul>
+<li><a href="/fr/changelog/">Changelog (Desktop App)</a></li>
+<li><a href="/fr/changelog_android/">Changelog (Android)</a></li>
+<li><a href="/fr/changelog_ios/">Changelog (iOS)</a></li>
+<li><a href="/fr/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="/fr/changelog_server/">Changelog (Server)</a></li>
+<li><a href="/fr/stats/">Stats</a></li>
+<li><a href="/fr/donate/">Donate</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+
+						<div class="main-content">
+							<div class="alert alert-danger alert-env-dev" role="alert">
+								Running in prod mode!
+							</div>
+							<div class="donate-links">
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+</div>
+<h1>Synchronous Scroll<a name="synchronous-scroll" href="#synchronous-scroll" class="heading-anchor">🔗</a></h1>
+<p>Since Joplin 2.6, the synchronous scroll feature (Sync Scroll) for two-pane Markdown Editor is introduced. This document describes its detail.</p>
+<h2>Motivation<a name="motivation" href="#motivation" class="heading-anchor">🔗</a></h2>
+<p>Joplin has two types of editors, two-pane Markdown Editor and WYSIWYG Editor. Two-pane Markdown Editor consists of an editor pane displaying a Markdown text (Editor) and a viewer pane displaying the rendered Markdown in HTML (Viewer). Both panes have independent scroll bars, and they were linked and controlled by single scroll position expressed as a relative percentage.</p>
+<p><img src="/fr/images/sync_scroll/abst-wo-sync2.png" alt="Abstraction View without Sync Scroll"></p>
+<p>Since the height of a Markdown text line is not always proportional to the height of the corresponding HTML element, displayed contents in Editor and Viewer are often inconsistent.</p>
+<p>To keep the consistency of their displayed contents, both scroll bars needed to be controlled separatedly and synchronously.</p>
+<h2>Feature Specifications<a name="feature-specifications" href="#feature-specifications" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>
+<p>Markdown Editor and Viewer scroll synchronously.</p>
+<ul>
+<li>If you scroll Editor, Viewer is scrolled synchronously. The DOM elements corresponding to Markdown lines you are looking at in Editor's viewport are located in Viewer's viewport as possible.</li>
+<li>The same applies in reverse. (Viewer -&gt; Editor)</li>
+<li>During and after any operations, the consistency of scroll positions between Editor and Viewer is kept as possible.</li>
+</ul>
+</li>
+<li>
+<p>Performance requirement: Since scrolling is a basic GUI operation, its overhead should be minimized.</p>
+</li>
+</ul>
+<h2>Design<a name="design" href="#design" class="heading-anchor">🔗</a></h2>
+<h3>Abstraction View<a name="abstraction-view" href="#abstraction-view" class="heading-anchor">🔗</a></h3>
+<p>The following figure shows the abstraction view of Sync Scroll. To manage scroll positions, the percent of the line number of a Markdown text data (&quot;percent&quot; in the figure) is used. To handle GUI components and events, &quot;percent&quot; is translated from/to &quot;ePercent&quot; for Editor using translation function  E2L() / L2E(). The same is true for Viewer.</p>
+<p><img src="/fr/images/sync_scroll/abst-sync-lp2.png" alt="Abstraction View with Sync Scroll"></p>
+<p>The reasons why &quot;ePercent&quot; is not directly translated from &quot;vPercent&quot; and vice versa are:</p>
+<ul>
+<li>Line-based &quot;percent&quot; is good for maintaining, because it is GUI-independent. Both &quot;ePercent&quot; and &quot;vPercent&quot; depend on GUI components and are affected by many factors such as image loading, window resizing, pane hiding/showing.</li>
+<li>Direct conversion between Editor and Viewer needs both Editor and Viewer are present. If one of them is hidden, the information needed for conversion cannot be acquired.</li>
+<li>Editor and Viewer run in different processes, so separation between them makes things simpler and reduces timing issues.</li>
+</ul>
+<h3>Components and Data Interactions<a name="components-and-data-interactions" href="#components-and-data-interactions" class="heading-anchor">🔗</a></h3>
+<p>The next figure shows the components and data interactions related to Markdown Editor and Sync Scroll.</p>
+<p>First, underlying Markdown Editor is explained. Editor is implemented using <a href="https://codemirror.net/">CodeMirror</a>, and it provides the translation capability between line numbers of Markdown text and their pixel positions in Editor. A Markdown text being edited in Editor is converted to an HTML text using <a href="https://github.com/markdown-it/markdown-it">MarkdownIt</a>, and it is rendered by Viewer, which is implemented using <a href="https://www.electronjs.org/docs/latest/tutorial/web-embeds#iframes">Electron's <code>&lt;iframe&gt;</code></a>. Editor and Viewer run in different processes, so an HTML text is sent through inter-process communication (ipc). Viewer has the rendered HTML as a DOM and provides the translation capability between DOM elements and their pixel positions in Viewer.</p>
+<p>New additions for Sync Scroll are shown in the figure as red portions. Since a DOM don't know the mapping between lines and elements, mapping information is embedded into an HTML tag as an additional attribute <code>source-line</code> using MarkdownIt. By using the attributes, the translation capability between line numbers and their pixel positions in Viewer can be provided. The information required for the translation is cached in <code>scrollmap</code> described later.</p>
+<p><img src="/fr/images/sync_scroll/md-editor-components-pr.png" alt="Components and Data Interactions"></p>
+<h3>Scroll Position Translation<a name="scroll-position-translation" href="#scroll-position-translation" class="heading-anchor">🔗</a></h3>
+<p>The next figure explains the procedure of the translation from &quot;ePercent&quot; to &quot;percent&quot; and the translation from &quot;percent&quot; to &quot;vPercent&quot;. For the translation function E2L(), information acquired from CodeMirror used in Editor is used. For the translation function L2V(), information acquired from HTML DOM which is cached in  <code>scrollmap</code> is used.</p>
+<p>To estimate precise positions between lines/elements, linear interpolation algorithm is used as shown in the figure.</p>
+<p><img src="/fr/images/sync_scroll/trans-e2l-l2v-2.png" alt="Translation from Editor to Viewer"></p>
+<p>Similarly, the next figure explains the procedure of the translation from &quot;vPercent&quot; to &quot;percent&quot; and the translation from &quot;percent&quot; to &quot;ePercent&quot;.</p>
+<p><img src="/fr/images/sync_scroll/trans-v2l-l2e-2.png" alt="Translation from Viewer to Editor"></p>
+<h3>Caching Translation Map<a name="caching-translation-map" href="#caching-translation-map" class="heading-anchor">🔗</a></h3>
+<p>The translation from &quot;vPercent&quot; to &quot;percent&quot; is a costly task, because it involves scanning the whole DOM. To keep scrolling as light as possible, the information required for the translation is packed into a translation map named <code>scrollmap</code> and is cached for further reuses until outdated.</p>
+<p>Since <code>scrollmap</code> is already sorted, the binary search algorithm can be employed for querying lines or positions. It's faster than the linear search, and a query needed for one scrolling event/action is very light.</p>
+<p>For correct operation, the map should be discarded, when it becomes outdated, such as  when a note is switched, when a note is edited, and when the window is resized. Simultaneously, the frequency of recreations should be minimal for users' comfort.</p>
+<h3>Implementation Details<a name="implementation-details" href="#implementation-details" class="heading-anchor">🔗</a></h3>
+<p>The implementation details are out of the scope this document and described in the following pull requests.</p>
+<ul>
+<li><a href="https://github.com/laurent22/joplin/pull/5826">Desktop: Fix #5708: Scroll positions are remembered/preserved (Line-Percent-based Sync Scroll) by ken1kob - Pull Request #5826 - laurent22/joplin</a></li>
+<li><a href="https://github.com/laurent22/joplin/pull/5512">Desktop: Fix #2242: Sync-Scroll for Markdown Editor and Viewer by ken1kob - Pull Request #5512 - laurent22/joplin</a></li>
+</ul>
+
+								<div class="bottom-links">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/sync_scroll.md">
+											<i class="fab fa-github"></i> Improve this doc
+										</a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<footer class="darkblue-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-12 social-links">
+							<a class="social-link-twitter" href="https://twitter.com/joplinapp" title="Joplin Twitter feed"><i class="fab fa-twitter"></i></a>
+							<a class="social-link-mastodon" href="https://mastodon.social/@joplinapp" title="Joplin Mastodon feed"><i class="fab fa-mastodon"></i></a>
+							<a class="social-link-patreon" href="https://www.patreon.com/joplin" title="Joplin Patreon"><i class="fab fa-patreon"></i></a>
+							<a class="social-link-discord" href="https://discord.gg/VSj7AFHvpq" title="Joplin Discord chat"><i class="fab fa-discord"></i></a>
+							<a class="social-link-linkedin" href="https://www.linkedin.com/company/joplin" title="Joplin LinkedIn Feed"><i class="fab fa-linkedin"></i></a>
+							<a class="social-link-reddit" href="https://www.reddit.com/r/joplinapp/" title="Joplin Subreddit"><i class="fab fa-reddit"></i></a>
+							<a class="social-link-github" href="https://github.com/laurent22/joplin/" title="Joplin GitHub repository"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+
+					<div class="row bottom-links-row">
+						<div class="col-12 col-md-6">
+							<p class="text-center-sm">Copyright &copy; 2016-2023 Laurent Cozic</p>
+						</div>
+						<div class="col-12 col-md-6">
+							<p class="text-right text-center-sm right-links">
+								<span class="footer-right">
+									<a href="/privacy/">Privacy Policy</a>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>		</div>
+
+		<script
+			src="&#x2F;js/bootstrap5.0.2.bundle.min.js"
+			rel="preload"
+			as="script"
+		></script>
+		<script src="/js/script.js?h=46b3b58d72c94591621551affbb8c6e3"></script>
+
+		<script>
+			if (window.location.hostname !== 'localhost') {
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				ga('create', 'UA-103586105-1', 'auto');
+				ga('send', 'pageview');
+			}
+		</script>	</body>
+</html>
