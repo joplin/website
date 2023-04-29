@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="Joplin as a project is organised around three main components: The user applications (desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applications h..." />
+			<meta name="description" content="Joplin as a project is organised around three main components: The user applications: For desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applicatio..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/fr/spec/architecture/index.html" />
 			<meta property="og:title" content="Joplin architecture" />
 			<meta property="twitter:title" content="Joplin architecture" />
-			<meta property="og:description" content="Joplin as a project is organised around three main components: The user applications (desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applications h..." />
-			<meta property="twitter:description" content="Joplin as a project is organised around three main components: The user applications (desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applications h..." />
+			<meta property="og:description" content="Joplin as a project is organised around three main components: The user applications: For desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applicatio..." />
+			<meta property="twitter:description" content="Joplin as a project is organised around three main components: The user applications: For desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applicatio..." />
 				<meta property="og:image" content="https://joplinapp.org/images/architecture/Application.png" />
 				<meta property="twitter:image" content="https://joplinapp.org/images/architecture/Application.png" />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
@@ -366,9 +366,9 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
 <h1>Joplin architecture<a name="joplin-architecture" href="#joplin-architecture" class="heading-anchor">🔗</a></h1>
 <p>Joplin as a project is organised around three main components:</p>
 <ul>
-<li>The user applications (desktop, mobile and CLI)</li>
-<li>Joplin Server</li>
-<li>Web Clipper</li>
+<li>The user applications: For <a href="/fr/desktop/">desktop</a>, <a href="/fr/mobile/">mobile</a> and <a href="/fr/terminal/">CLI</a>)</li>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/packages/server/README.md">Joplin Server</a></li>
+<li><a href="/fr/clipper/">Web Clipper</a></li>
 </ul>
 <h2>User applications<a name="user-applications" href="#user-applications" class="heading-anchor">🔗</a></h2>
 <p>The desktop, mobile and CLI applications have the same architecture and mostly the same backend. The main difference is for the UI, where they each use a different framework, and for system integration (eg. notifications, importing or exporting files, etc.).</p>
@@ -381,7 +381,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
 <p>Back end: This is shared by all applications. It is made of:</p>
 <ul>
 <li>
-<p>Services: Provide high-level functionalities, such as the search engine, plugin system or database driver.</p>
+<p>Services: Provide high-level functionalities, such as the <a href="https://github.com/laurent22/joplin/tree/dev/packages/lib/services/searchengine">search engine</a>, <a href="https://github.com/laurent22/joplin/tree/dev/packages/lib/services/plugins">plugin system</a> or <a href="https://github.com/laurent22/joplin/blob/dev/packages/lib/Synchronizer.ts">synchroniser</a>.</p>
 </li>
 <li>
 <p>Models: The model layer sits between the services and database. They provide a higher level abstraction than SQL and utility functions to easily save data, such as notes, notebooks, etc.</p>
