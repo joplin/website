@@ -184,23 +184,23 @@ https://github.com/laurent22/joplin/blob/dev/readme/news/20210929-144036.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1><a href="/fr/news/20210929-144036/">Joplin 2.4 is available!</a><a name="joplin-2-4-is-available-fr-news-20210929-144036" href="#joplin-2-4-is-available-fr-news-20210929-144036" class="heading-anchor">🔗</a></h1>
+<h1><a href="/news/20210929-144036/">Joplin 2.4 is available!</a><a name="joplin-2-4-is-available-news-20210929-144036" href="#joplin-2-4-is-available-news-20210929-144036" class="heading-anchor">🔗</a></h1>
 <p><em>Published on <strong>29 Sep 2021</strong></em></p>
 <p>Joplin 2.4 is now available on desktop, mobile and CLI. Here's what's new in this release:</p>
 <h3>Sync Wizard Dialog<a name="sync-wizard-dialog" href="#sync-wizard-dialog" class="heading-anchor">🔗</a></h3>
 <p>A new Sync Wizard Dialog has been added to simplify setting up sync on new clients.</p>
 <p>The dialog shows the main sync targets, their differences, and makes it easy to choose one and start synchronising. This is mostly aimed at new users or those perhaps less technical. Those who are self hosting or using complex setups will still easily find what they need from a link on that dialog (or in Config &gt; Synchronisation like before).</p>
 <p>Sync setup on mobile has been slightly improved too - now on a new client, instead of asking you to sync with Dropbox directly (which may not be what you want), it jumps to the Config &gt; Synchronisation section where you can select the sync target</p>
-<p><img src="/fr/images/news/20210929-144036_0.png" alt=""></p>
+<p><img src="/images/news/20210929-144036_0.png" alt=""></p>
 <h3>Disable synchronisation<a name="disable-synchronisation" href="#disable-synchronisation" class="heading-anchor">🔗</a></h3>
 <p>It's a small change but something that's been asked many time - it's now possible to disable synchronisation entirely by selecting &quot;None&quot; as a sync target. Previously that could be done in a hacky way, by selecting a non-configured sync target. Now it's clearer and easier to do.</p>
-<p><img src="/fr/images/news/20210929-144036_1.png" alt=""></p>
+<p><img src="/images/news/20210929-144036_1.png" alt=""></p>
 <h3>Add back support for deprecated plugins<a name="add-back-support-for-deprecated-plugins" href="#add-back-support-for-deprecated-plugins" class="heading-anchor">🔗</a></h3>
 <p>Recently some plugins stopped working because deprecated plugin APIs had been removed. It had been planned for a long time but I suspect the warnings weren't visible enough so plugin developers didn't act on them, and as a result many plugins stopped working.</p>
 <p>This is now fixed in the latest version. A selected number of plugins will have access to these old deprecated APIs, which means they will start working again. This was mainly affecting ambrt's plugins such as &quot;Convert Text To New Note&quot; or the popular &quot;Embed Search&quot; plugin.</p>
 <h3>Add support for recommended plugins<a name="add-support-for-recommended-plugins" href="#add-support-for-recommended-plugins" class="heading-anchor">🔗</a></h3>
 <p>As mentioned in an earlier post, we now support <a href="https://www.patreon.com/posts/introducing-in-55618802">recommended plugins</a>. These recommended plugins appear on top when searching and are identified by a small crown.</p>
-<p><img src="/fr/images/news/20210929-144036_2.png" alt=""></p>
+<p><img src="/images/news/20210929-144036_2.png" alt=""></p>
 <h3>End to End Encryption improvements<a name="end-to-end-encryption-improvements" href="#end-to-end-encryption-improvements" class="heading-anchor">🔗</a></h3>
 <p>Like most recent releases, v2.4 includes a few improvement to the End to End Encryption (E2EE) system. The goal is to make it easier to use, to make it more reliable and to support the future use case of sharing encrypted notebooks or notes.</p>
 <p>One important change is the support for a master password. This single password will be responsible to encrypt various keys, including some that will be automatically generated. Thanks to this, it won't be necessary to ask to enter a new password every time a key needs to be encrypted, since the master password can be used. It will also be easier to manage since you'll only have one password to remember instead of a different one for each notebook you might have shared.</p>
