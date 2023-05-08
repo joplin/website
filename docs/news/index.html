@@ -182,6 +182,147 @@ https://github.com/laurent22/joplin/blob/dev/
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
+<h1><a href="/news/20230508-release-2-10/">What's new in Joplin 2.10</a><a name="what-s-new-in-joplin-2-10-news-20230508-release-2-10" href="#what-s-new-in-joplin-2-10-news-20230508-release-2-10" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>8 May 2023</strong></em></p>
+<p>Great news! Joplin 2.10 is here and we've made some amazing improvements and bug fixes, with a focus on the mobile app.</p>
+<h1>New design for &quot;New note&quot; and &quot;New to-do&quot; buttons<a name="new-design-for-new-note-and-new-to-do-buttons" href="#new-design-for-new-note-and-new-to-do-buttons" class="heading-anchor">🔗</a></h1>
+<p>We're excited to announce that we've made it even easier to create new notes and to-do lists with new designs for the &quot;New note&quot; and &quot;New to-do&quot; buttons.</p>
+<p>If there is enough space, the button labels will be shown in full:</p>
+<p><img src="/images/news/20230508-new-note-1.png" alt=""></p>
+<p>While for those who prefer a more narrow note list, only the button icons will be shown:</p>
+<p><img src="/images/news/20230508-new-note-2.png" alt=""></p>
+<p>It's a small improvement, but we're confident it will make the app even more intuitive for new users.</p>
+<h1>Fixes and improvements<a name="fixes-and-improvements" href="#fixes-and-improvements" class="heading-anchor">🔗</a></h1>
+<p>This version includes 30 bug fixes and 16 general improvements. Let's dive into some of the highlights:</p>
+<ul>
+<li>
+<p>Self Not Found and Pedro have been working tirelessly on improving the pasting of plain text in the application, and we're happy to say that there is now a brand new &quot;Paste as text&quot; option in the Edit menu.</p>
+</li>
+<li>
+<p>For our amazing plugin developers out there, we have added a few new APIs and fixed a bug that was preventing certain plugins from starting. You can now get even more creative with your plugins!</p>
+</li>
+<li>
+<p>Tao Klerks, has been hard at work fixing and improving the custom sort order of the note list. No more notes in the wrong position when you drop them! Plus, custom sort order is now synchronised too.</p>
+</li>
+<li>
+<p>We've also fixed a few bugs with our Web Clipper, including an issue where certain pages wouldn't import their images. A new Web Clipper has also been released, so you can clip to your heart's content!</p>
+</li>
+</ul>
+<p>Last but not least, we have modernised both the desktop and mobile application modules, just <a href="https://joplinapp.org/news/20221115-renovate/">as we previously announced</a>. Although these changes may not be visible to you, they required a lot of work! But the result is that our applications are now more stable and secure, and it will be easier to maintain them in the long run. We're using a tool called <a href="https://www.mend.io/free-developer-tools/renovate/">Renovate</a>, which will automatically propose package updates that we will review. In total, we've updated a whopping 633 packages so far!</p>
+<h1>Android app is available in the Play Store<a name="android-app-is-available-in-the-play-store" href="#android-app-is-available-in-the-play-store" class="heading-anchor">🔗</a></h1>
+<p>Our latest version, 2.10, is now back in the Play Store and ready for download! Although we had to skip 2.9 due to some of Google's requirements, we worked hard to ensure that our app complies with their standards, and we are excited to announce that we are back and better than ever! Our iOS version is also available, so you can continue to enjoy the app regardless of the platform you use.</p>
+<h2>Biometrics support<a name="biometrics-support" href="#biometrics-support" class="heading-anchor">🔗</a></h2>
+<p>To make your experience even more secure, our Android and iOS apps now support biometric unlock! With just a quick scan of your fingerprint or Face ID, you can unlock your app in no time. To enable this beta feature, just head over to the settings and click on &quot;Use biometrics to secure access to the app&quot;.</p>
+<p>We've tested this feature thoroughly during prerelease, and have already fixed all known issues. However we still consider it as a beta feature for now, so if you run into any issues please let us know.</p>
+<h2>Support for multiple profile<a name="support-for-multiple-profile" href="#support-for-multiple-profile" class="heading-anchor">🔗</a></h2>
+<p>We're thrilled to announce that multiple profiles are now supported in our mobile app! To create a new profile, simply go to the Configuration screen and click on &quot;Manage profiles&quot; under the Tools section.</p>
+<p><img src="/images/news/20230508-biometrics-1.png" alt=""></p>
+<p>From there, you can easily add or remove profiles as needed.</p>
+<p><img src="/images/news/20230508-biometrics-2.png" alt=""></p>
+<p>Once multiple profiles are setup, you will see a new option in the sidebar to quickly toggle from one profile to another:</p>
+<p><img src="/images/news/20230508-biometrics-3.png" alt=""></p>
+<p>Once you've set up multiple profiles, you can easily toggle between them using the new option in the sidebar. This feature is perfect for separating your personal and work notes into independent collections.</p>
+<h2>Support for realtime search<a name="support-for-realtime-search" href="#support-for-realtime-search" class="heading-anchor">🔗</a></h2>
+<p>Our mobile app now has an improved search function that performs text searches in real time! No more waiting for the search results to load, they'll appear instantly as you type.</p>
+<h2>Improved filesystem sync performance<a name="improved-filesystem-sync-performance" href="#improved-filesystem-sync-performance" class="heading-anchor">🔗</a></h2>
+<p>Thanks to the hard work of jd1378, the sync no longer freezes during filesystem synchronisation. We know how frustrating that can be, and we're thrilled to have solved this issue. Getting filesystem sync to work on Android is never easy due to the restrictions put in place by Google, especially since they frequently change, but we're committed to delivering the best possible experience for our Android users.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
+<hr>
+<h1><a href="/news/20230508-release-2-10/">What's new in Joplin 2.10</a><a name="what-s-new-in-joplin-2-10-news-20230508-release-2-10-1" href="#what-s-new-in-joplin-2-10-news-20230508-release-2-10-1" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>8 May 2023</strong></em></p>
+<p>Great news! Joplin 2.10 is here and we've made some amazing improvements and bug fixes, with a focus on the mobile app.</p>
+<h1>New design for &quot;New note&quot; and &quot;New to-do&quot; buttons<a name="new-design-for-new-note-and-new-to-do-buttons-1" href="#new-design-for-new-note-and-new-to-do-buttons-1" class="heading-anchor">🔗</a></h1>
+<p>We're excited to announce that we've made it even easier to create new notes and to-do lists with new designs for the &quot;New note&quot; and &quot;New to-do&quot; buttons.</p>
+<p>If there is enough space, the button labels will be shown in full:</p>
+<p><img src="/images/news/20230508-new-note-1.png" alt=""></p>
+<p>While for those who prefer a more narrow note list, only the button icons will be shown:</p>
+<p><img src="/images/news/20230508-new-note-2.png" alt=""></p>
+<p>It's a small improvement, but we're confident it will make the app even more intuitive for new users.</p>
+<h1>Fixes and improvements<a name="fixes-and-improvements-1" href="#fixes-and-improvements-1" class="heading-anchor">🔗</a></h1>
+<p>This version includes 30 bug fixes and 16 general improvements. Let's dive into some of the highlights:</p>
+<ul>
+<li>
+<p>Self Not Found and Pedro have been working tirelessly on improving the pasting of plain text in the application, and we're happy to say that there is now a brand new &quot;Paste as text&quot; option in the Edit menu.</p>
+</li>
+<li>
+<p>For our amazing plugin developers out there, we have added a few new APIs and fixed a bug that was preventing certain plugins from starting. You can now get even more creative with your plugins!</p>
+</li>
+<li>
+<p>Tao Klerks, has been hard at work fixing and improving the custom sort order of the note list. No more notes in the wrong position when you drop them! Plus, custom sort order is now synchronised too.</p>
+</li>
+<li>
+<p>We've also fixed a few bugs with our Web Clipper, including an issue where certain pages wouldn't import their images. A new Web Clipper has also been released, so you can clip to your heart's content!</p>
+</li>
+</ul>
+<p>Last but not least, we have modernised both the desktop and mobile application modules, just <a href="https://joplinapp.org/news/20221115-renovate/">as we previously announced</a>. Although these changes may not be visible to you, they required a lot of work! But the result is that our applications are now more stable and secure, and it will be easier to maintain them in the long run. We're using a tool called <a href="https://www.mend.io/free-developer-tools/renovate/">Renovate</a>, which will automatically propose package updates that we will review. In total, we've updated a whopping 633 packages so far!</p>
+<h1>Android app is available in the Play Store<a name="android-app-is-available-in-the-play-store-1" href="#android-app-is-available-in-the-play-store-1" class="heading-anchor">🔗</a></h1>
+<p>Our latest version, 2.10, is now back in the Play Store and ready for download! Although we had to skip 2.9 due to some of Google's requirements, we worked hard to ensure that our app complies with their standards, and we are excited to announce that we are back and better than ever! Our iOS version is also available, so you can continue to enjoy the app regardless of the platform you use.</p>
+<h2>Biometrics support<a name="biometrics-support-1" href="#biometrics-support-1" class="heading-anchor">🔗</a></h2>
+<p>To make your experience even more secure, our Android and iOS apps now support biometric unlock! With just a quick scan of your fingerprint or Face ID, you can unlock your app in no time. To enable this beta feature, just head over to the settings and click on &quot;Use biometrics to secure access to the app&quot;.</p>
+<p>We've tested this feature thoroughly during prerelease, and have already fixed all known issues. However we still consider it as a beta feature for now, so if you run into any issues please let us know.</p>
+<h2>Support for multiple profile<a name="support-for-multiple-profile-1" href="#support-for-multiple-profile-1" class="heading-anchor">🔗</a></h2>
+<p>We're thrilled to announce that multiple profiles are now supported in our mobile app! To create a new profile, simply go to the Configuration screen and click on &quot;Manage profiles&quot; under the Tools section.</p>
+<p><img src="/images/news/20230508-biometrics-1.png" alt=""></p>
+<p>From there, you can easily add or remove profiles as needed.</p>
+<p><img src="/images/news/20230508-biometrics-2.png" alt=""></p>
+<p>Once multiple profiles are setup, you will see a new option in the sidebar to quickly toggle from one profile to another:</p>
+<p><img src="/images/news/20230508-biometrics-3.png" alt=""></p>
+<p>Once you've set up multiple profiles, you can easily toggle between them using the new option in the sidebar. This feature is perfect for separating your personal and work notes into independent collections.</p>
+<h2>Support for realtime search<a name="support-for-realtime-search-1" href="#support-for-realtime-search-1" class="heading-anchor">🔗</a></h2>
+<p>Our mobile app now has an improved search function that performs text searches in real time! No more waiting for the search results to load, they'll appear instantly as you type.</p>
+<h2>Improved filesystem sync performance<a name="improved-filesystem-sync-performance-1" href="#improved-filesystem-sync-performance-1" class="heading-anchor">🔗</a></h2>
+<p>Thanks to the hard work of jd1378, the sync no longer freezes during filesystem synchronisation. We know how frustrating that can be, and we're thrilled to have solved this issue. Getting filesystem sync to work on Android is never easy due to the restrictions put in place by Google, especially since they frequently change, but we're committed to delivering the best possible experience for our Android users.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
+<hr>
+<h1><a href="/news/20230508-release-2-10/">What's new in Joplin 2.10</a><a name="what-s-new-in-joplin-2-10-news-20230508-release-2-10-2" href="#what-s-new-in-joplin-2-10-news-20230508-release-2-10-2" class="heading-anchor">🔗</a></h1>
+<p><em>Published on <strong>8 May 2023</strong></em></p>
+<p>Great news! Joplin 2.10 is here and we've made some amazing improvements and bug fixes, with a focus on the mobile app.</p>
+<h1>New design for &quot;New note&quot; and &quot;New to-do&quot; buttons<a name="new-design-for-new-note-and-new-to-do-buttons-2" href="#new-design-for-new-note-and-new-to-do-buttons-2" class="heading-anchor">🔗</a></h1>
+<p>We're excited to announce that we've made it even easier to create new notes and to-do lists with new designs for the &quot;New note&quot; and &quot;New to-do&quot; buttons.</p>
+<p>If there is enough space, the button labels will be shown in full:</p>
+<p><img src="/images/news/20230508-new-note-1.png" alt=""></p>
+<p>While for those who prefer a more narrow note list, only the button icons will be shown:</p>
+<p><img src="/images/news/20230508-new-note-2.png" alt=""></p>
+<p>It's a small improvement, but we're confident it will make the app even more intuitive for new users.</p>
+<h1>Fixes and improvements<a name="fixes-and-improvements-2" href="#fixes-and-improvements-2" class="heading-anchor">🔗</a></h1>
+<p>This version includes 30 bug fixes and 16 general improvements. Let's dive into some of the highlights:</p>
+<ul>
+<li>
+<p>Self Not Found and Pedro have been working tirelessly on improving the pasting of plain text in the application, and we're happy to say that there is now a brand new &quot;Paste as text&quot; option in the Edit menu.</p>
+</li>
+<li>
+<p>For our amazing plugin developers out there, we have added a few new APIs and fixed a bug that was preventing certain plugins from starting. You can now get even more creative with your plugins!</p>
+</li>
+<li>
+<p>Tao Klerks, has been hard at work fixing and improving the custom sort order of the note list. No more notes in the wrong position when you drop them! Plus, custom sort order is now synchronised too.</p>
+</li>
+<li>
+<p>We've also fixed a few bugs with our Web Clipper, including an issue where certain pages wouldn't import their images. A new Web Clipper has also been released, so you can clip to your heart's content!</p>
+</li>
+</ul>
+<p>Last but not least, we have modernised both the desktop and mobile application modules, just <a href="https://joplinapp.org/news/20221115-renovate/">as we previously announced</a>. Although these changes may not be visible to you, they required a lot of work! But the result is that our applications are now more stable and secure, and it will be easier to maintain them in the long run. We're using a tool called <a href="https://www.mend.io/free-developer-tools/renovate/">Renovate</a>, which will automatically propose package updates that we will review. In total, we've updated a whopping 633 packages so far!</p>
+<h1>Android app is available in the Play Store<a name="android-app-is-available-in-the-play-store-2" href="#android-app-is-available-in-the-play-store-2" class="heading-anchor">🔗</a></h1>
+<p>Our latest version, 2.10, is now back in the Play Store and ready for download! Although we had to skip 2.9 due to some of Google's requirements, we worked hard to ensure that our app complies with their standards, and we are excited to announce that we are back and better than ever! Our iOS version is also available, so you can continue to enjoy the app regardless of the platform you use.</p>
+<h2>Biometrics support<a name="biometrics-support-2" href="#biometrics-support-2" class="heading-anchor">🔗</a></h2>
+<p>To make your experience even more secure, our Android and iOS apps now support biometric unlock! With just a quick scan of your fingerprint or Face ID, you can unlock your app in no time. To enable this beta feature, just head over to the settings and click on &quot;Use biometrics to secure access to the app&quot;.</p>
+<p>We've tested this feature thoroughly during prerelease, and have already fixed all known issues. However we still consider it as a beta feature for now, so if you run into any issues please let us know.</p>
+<h2>Support for multiple profile<a name="support-for-multiple-profile-2" href="#support-for-multiple-profile-2" class="heading-anchor">🔗</a></h2>
+<p>We're thrilled to announce that multiple profiles are now supported in our mobile app! To create a new profile, simply go to the Configuration screen and click on &quot;Manage profiles&quot; under the Tools section.</p>
+<p><img src="/images/news/20230508-biometrics-1.png" alt=""></p>
+<p>From there, you can easily add or remove profiles as needed.</p>
+<p><img src="/images/news/20230508-biometrics-2.png" alt=""></p>
+<p>Once multiple profiles are setup, you will see a new option in the sidebar to quickly toggle from one profile to another:</p>
+<p><img src="/images/news/20230508-biometrics-3.png" alt=""></p>
+<p>Once you've set up multiple profiles, you can easily toggle between them using the new option in the sidebar. This feature is perfect for separating your personal and work notes into independent collections.</p>
+<h2>Support for realtime search<a name="support-for-realtime-search-2" href="#support-for-realtime-search-2" class="heading-anchor">🔗</a></h2>
+<p>Our mobile app now has an improved search function that performs text searches in real time! No more waiting for the search results to load, they'll appear instantly as you type.</p>
+<h2>Improved filesystem sync performance<a name="improved-filesystem-sync-performance-2" href="#improved-filesystem-sync-performance-2" class="heading-anchor">🔗</a></h2>
+<p>Thanks to the hard work of jd1378, the sync no longer freezes during filesystem synchronisation. We know how frustrating that can be, and we're thrilled to have solved this issue. Getting filesystem sync to work on Android is never easy due to the restrictions put in place by Google, especially since they frequently change, but we're committed to delivering the best possible experience for our Android users.</p>
+<hr>
+<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
+<hr>
 <h1><a href="/news/20230302-jdll-2023/">Joplin will participate in JdLL 2023!</a><a name="joplin-will-participate-in-jdll-2023-news-20230302-jdll-2023" href="#joplin-will-participate-in-jdll-2023-news-20230302-jdll-2023" class="heading-anchor">🔗</a></h1>
 <p><em>Published on <strong>2 Mar 2023</strong></em></p>
 <p>On 1 and 2 April 2023, we will have a stand for Joplin at the <a href="https://www.jdll.org/">Journées du Logiciel Libre</a> in Lyon, France. The JdLL has been taking place in Lyon for 24 years and is a popular open source conference in France. We had a stand in 2020 and 2021 but that was cancelled due to Covid, so this year is a first for Joplin!</p>
@@ -507,49 +648,6 @@ https://github.com/laurent22/joplin/blob/dev/
 <p>Renovate on the other hand upgrades packages one at a time, and run our test units to ensure everything is still working as expected. It also upgrades multiple instances of the same package across the monorepo, which is convenient to keep our code consistent. It also has a number of options to make our life easier, such as the ability to automatically merge a pull request for patch releases since this is usually safe (when a package is, for example upgraded from 1.0.1 to 1.0.3).</p>
 <p>Although Renovate automates the package upgrades it doesn't mean all upgrades are straightforward - our tests won't catch all issues, so the apps might end up being broken or cannot be compiled anymore. So there's manual work involved to get everything working after certain upgrades - for the most part this has been done and the apps appear to be stable so far.</p>
 <p>This will however be an important part of pre-release 2.10 (or should it be 3.0?) - we hope that everything works but we may need your support to try this version and report any glitch you may have found. As always pre-release regressions have the highest priority so we aim to fix them as quickly as possible.</p>
-<hr>
-<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
-<hr>
-<h1><a href="/news/20221115-renovate/">Modernising and securing Joplin, one package at a time</a><a name="modernising-and-securing-joplin-one-package-at-a-time-news-20221115-renovate-2" href="#modernising-and-securing-joplin-one-package-at-a-time-news-20221115-renovate-2" class="heading-anchor">🔗</a></h1>
-<p><em>Published on <strong>15 Nov 2022</strong></em></p>
-<p>If you watch the <a href="https://github.com/laurent22/joplin">Joplin source code repository</a>, you may have noticed a lot of Renovate pull requests lately. This <a href="https://www.mend.io/free-developer-tools/renovate/">Renovate tool</a> is a way to manage dependencies - it automatically finds what needs to be updated, then upgrade it to the latest version, and create a pull request. If all tests pass, we can then merge this pull request. So far we have merged 267 of these pull requests.</p>
-<p>Updating Joplin packages was long due. It is necessary so that we don't fall behind and end up using unsupported or deprecated packages. We also benefit from bug fixes and performance improvements. It is also important in terms of security, since recent package versions usually include various security fixes.</p>
-<p>We used to rely on a tool called &quot;npm audit&quot; to do this, however it no longer works on the Joplin codebase, and it was always risky to use it since it would update multiple packages in one command - so if something went wrong it was difficult to find the culprit.</p>
-<p>Renovate on the other hand upgrades packages one at a time, and run our test units to ensure everything is still working as expected. It also upgrades multiple instances of the same package across the monorepo, which is convenient to keep our code consistent. It also has a number of options to make our life easier, such as the ability to automatically merge a pull request for patch releases since this is usually safe (when a package is, for example upgraded from 1.0.1 to 1.0.3).</p>
-<p>Although Renovate automates the package upgrades it doesn't mean all upgrades are straightforward - our tests won't catch all issues, so the apps might end up being broken or cannot be compiled anymore. So there's manual work involved to get everything working after certain upgrades - for the most part this has been done and the apps appear to be stable so far.</p>
-<p>This will however be an important part of pre-release 2.10 (or should it be 3.0?) - we hope that everything works but we may need your support to try this version and report any glitch you may have found. As always pre-release regressions have the highest priority so we aim to fix them as quickly as possible.</p>
-<hr>
-<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
-<hr>
-<h1><a href="/news/20221012-Joplin-Company/">Joplin Cloud is now part of the Joplin company</a><a name="joplin-cloud-is-now-part-of-the-joplin-company-news-20221012-joplin-company" href="#joplin-cloud-is-now-part-of-the-joplin-company-news-20221012-joplin-company" class="heading-anchor">🔗</a></h1>
-<p><em>Published on <strong>12 Oct 2022</strong></em></p>
-<p>As some of you may know Joplin Cloud so far has been operating under my own single-person limited company in the UK. This was mostly for convenience since it meant I could get things going quickly without having to setup a special structure for it.</p>
-<p>Now that Joplin Cloud is becoming more mature however a proper company, simply called Joplin, has been created. This company will be based in France, and will be used mainly to handle the commercial part of the project, which currently is mostly Joplin Cloud. I'm still heading the company so there won't be any major change to the way the project is managed.</p>
-<h2>What does it mean for Joplin Cloud?<a name="what-does-it-mean-for-joplin-cloud" href="#what-does-it-mean-for-joplin-cloud" class="heading-anchor">🔗</a></h2>
-<p>There will be no significant change - the website ownership simply moves from one company in the UK to one in France. The new company is still owned by myself so I will keep following the same roadmap.</p>
-<h2>What does it mean for the open source apps?<a name="what-does-it-mean-for-the-open-source-apps" href="#what-does-it-mean-for-the-open-source-apps" class="heading-anchor">🔗</a></h2>
-<p>On the short term, the only visible change will be moving the non-open source assets, such as logo or trademark from the UK company to the French one. So expect a few changes in copyright notices here and there.</p>
-<p>In the medium to long term, I would like to hire one or two software developers to help me with the Joplin Cloud development, because we reached a point where managing the whole project is difficult for a single person, so some help is needed. Some of their work might also touch the open source apps since both are quite related - but of course that work will remain open source too.</p>
-<p>As a general rule, there will be a permanent commitment to keep the apps open source and to derive value from Joplin Cloud/Server.</p>
-<p>Longer term I would like to create a non-profit organisation to handle the open source applications and to make decisions about the project, as well as to decide how to allocate any funding we receive (for example from GSoC).</p>
-<h2>Looking forward<a name="looking-forward" href="#looking-forward" class="heading-anchor">🔗</a></h2>
-<p>Those past 6 years of developing Joplin have been an exciting and rewarding experience, thank you to all of you of the friendly and vibrant Joplin community for your contribution toward making Joplin the software it is today, and looking forward to continuing the journey together!</p>
-<hr>
-<p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
-<hr>
-<h1><a href="/news/20221012-Joplin-Company/">Joplin Cloud is now part of the Joplin company</a><a name="joplin-cloud-is-now-part-of-the-joplin-company-news-20221012-joplin-company-1" href="#joplin-cloud-is-now-part-of-the-joplin-company-news-20221012-joplin-company-1" class="heading-anchor">🔗</a></h1>
-<p><em>Published on <strong>12 Oct 2022</strong></em></p>
-<p>As some of you may know Joplin Cloud so far has been operating under my own single-person limited company in the UK. This was mostly for convenience since it meant I could get things going quickly without having to setup a special structure for it.</p>
-<p>Now that Joplin Cloud is becoming more mature however a proper company, simply called Joplin, has been created. This company will be based in France, and will be used mainly to handle the commercial part of the project, which currently is mostly Joplin Cloud. I'm still heading the company so there won't be any major change to the way the project is managed.</p>
-<h2>What does it mean for Joplin Cloud?<a name="what-does-it-mean-for-joplin-cloud-1" href="#what-does-it-mean-for-joplin-cloud-1" class="heading-anchor">🔗</a></h2>
-<p>There will be no significant change - the website ownership simply moves from one company in the UK to one in France. The new company is still owned by myself so I will keep following the same roadmap.</p>
-<h2>What does it mean for the open source apps?<a name="what-does-it-mean-for-the-open-source-apps-1" href="#what-does-it-mean-for-the-open-source-apps-1" class="heading-anchor">🔗</a></h2>
-<p>On the short term, the only visible change will be moving the non-open source assets, such as logo or trademark from the UK company to the French one. So expect a few changes in copyright notices here and there.</p>
-<p>In the medium to long term, I would like to hire one or two software developers to help me with the Joplin Cloud development, because we reached a point where managing the whole project is difficult for a single person, so some help is needed. Some of their work might also touch the open source apps since both are quite related - but of course that work will remain open source too.</p>
-<p>As a general rule, there will be a permanent commitment to keep the apps open source and to derive value from Joplin Cloud/Server.</p>
-<p>Longer term I would like to create a non-profit organisation to handle the open source applications and to make decisions about the project, as well as to decide how to allocate any funding we receive (for example from GSoC).</p>
-<h2>Looking forward<a name="looking-forward-1" href="#looking-forward-1" class="heading-anchor">🔗</a></h2>
-<p>Those past 6 years of developing Joplin have been an exciting and rewarding experience, thank you to all of you of the friendly and vibrant Joplin community for your contribution toward making Joplin the software it is today, and looking forward to continuing the journey together!</p>
 <hr>
 <p><a href="https://discourse.joplinapp.org/c/news/9"><i class="fab fa-discourse"></i> Discuss on the forum</a></p>
 
