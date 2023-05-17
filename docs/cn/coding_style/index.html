@@ -512,6 +512,8 @@ function foo() {
 <h2>Escape variables<a name="escape-variables" href="#escape-variables" class="heading-anchor">🔗</a></h2>
 <p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">XSS</a> is one of the most common vulnerabilities in today's code. These vulnerabilities are often difficult to spot because they are not errors, they often won't fail any test units and the program will work just fine with 99% of input. Yet that remaining 1% can be exploited and used to steal user information, crash the app, etc.</p>
 <p>If you search for <a href="https://github.com/laurent22/joplin/search?q=xss&amp;type=commits">&quot;XSS&quot; in the Joplin git log</a> you'll find several security vulnerabilities that have been fixed over the year, and that happened in various places that are hard to predict. So we need to be careful with this and make sure we correctly escape user content.</p>
+<p>We should do so even if we think we control the input or that it will always have a certain format. That may change in the future, or that could be exploited via another bug.</p>
+<p>Finally, escaping data is often required to prevent markup code from breaking. For example quotes or angled brackets have to be escaped in HTML or else the markup is likely to break.</p>
 <p>How you escape the data depends on where you are going to insert it so there's no single function that's going to cover all cases.</p>
 <h3>To insert into a JS script<a name="to-insert-into-a-js-script" href="#to-insert-into-a-js-script" class="heading-anchor">🔗</a></h3>
 <p>Use <code>JSON.stringify()</code>. For example:</p>
@@ -533,6 +535,15 @@ const html = `&lt;a href=&quot;${htmlentities(attributes)}&quot;&gt;${htmlentiti
 <p>If you want to encode a full URL, use <code>encodeURI</code>:</p>
 <pre><code class="language-ts">encodeURI('https://domain.com/path to a document.pdf');
 // 'https://domain.com/path%20to%20a%20document.pdf'
+</code></pre>
+<h3>To insert into Markdown code<a name="to-insert-into-markdown-code" href="#to-insert-into-markdown-code" class="heading-anchor">🔗</a></h3>
+<p>Use the provided escape functions in <code>lib/markdownUtils</code>:</p>
+<ul>
+<li><code>escapeTableCell()</code> for tables</li>
+<li><code>escapeInlineCode()</code> for inline code</li>
+<li><code>escapeTitleText()</code>and <code>escapeLinkUrl()</code> for links:</li>
+</ul>
+<pre><code class="language-ts">const markdown = `[${markdownUtils.escapeTitleText(linkTitle)}](${markdownUtils.escapeLinkUrl(linkUrl)})`;
 </code></pre>
 <h3>Escape as late as possible<a name="escape-as-late-as-possible" href="#escape-as-late-as-possible" class="heading-anchor">🔗</a></h3>
 <p>Ideally the application should only deal with raw, unencoded data, so it means data should be decoded and encoded at the application boundaries. Doing so means we avoid accidentally double-escaping data, or having to encode/decode within the app, which is error prone.</p>
