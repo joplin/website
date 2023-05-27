@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="ios-v12.10.5 - 2023-03-06T14:43:37Z Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by @julien) Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerk..." />
+			<meta name="description" content="ios-v12.11.2 - 2023-05-27T15:31:26Z New: Add log info for biometrics feature (efdbaeb) New: Add setting to enable&#x2F;disable the markdown toolbar (#7929 by Henry Heino) Improved: Disable Hermes engine..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/cn/changelog_ios/index.html" />
 			<meta property="og:title" content="Joplin iOS app changelog" />
 			<meta property="twitter:title" content="Joplin iOS app changelog" />
-			<meta property="og:description" content="ios-v12.10.5 - 2023-03-06T14:43:37Z Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by @julien) Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerk..." />
-			<meta property="twitter:description" content="ios-v12.10.5 - 2023-03-06T14:43:37Z Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by @julien) Fixed: Custom sort order not synchronized (#7729) (#6956 by Tao Klerk..." />
+			<meta property="og:description" content="ios-v12.11.2 - 2023-05-27T15:31:26Z New: Add log info for biometrics feature (efdbaeb) New: Add setting to enable&#x2F;disable the markdown toolbar (#7929 by Henry Heino) Improved: Disable Hermes engine..." />
+			<meta property="twitter:description" content="ios-v12.11.2 - 2023-05-27T15:31:26Z New: Add log info for biometrics feature (efdbaeb) New: Add setting to enable&#x2F;disable the markdown toolbar (#7929 by Henry Heino) Improved: Disable Hermes engine..." />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -362,6 +362,28 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md
 <p><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin iOS app changelog<a name="joplin-ios-app-changelog" href="#joplin-ios-app-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.11.2">ios-v12.11.2</a> - 2023-05-27T15:31:26Z<a name="ios-v12-11-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-11-2-2023-05-27t15-31-26z" href="#ios-v12-11-2-https-github-com-laurent22-joplin-releases-tag-ios-v12-11-2-2023-05-27t15-31-26z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add log info for biometrics feature (efdbaeb)</li>
+<li>New: Add setting to enable/disable the markdown toolbar (#7929 by Henry Heino)</li>
+<li>Improved: Disable Hermes engine (e9e9986)</li>
+<li>Improved: Mark biometrics feature as beta and ensure no call is made if it is not enabled (e44a934)</li>
+<li>Improved: Editor syntax highlighting was broken (#8023) (#8022 by Henry Heino)</li>
+<li>Improved: Sync as soon as the app starts, and immediately after changing a note (3eb44d2)</li>
+<li>Improved: Tells whether Hermes engine is enabled or not (5ecae17)</li>
+<li>Improved: Translate Welcome notes (#8154)</li>
+<li>Improved: Updated packages @lezer/highlight (v1.1.4), @react-native-community/netinfo (v9.3.9), @react-native-community/push-notification-ios (v1.11.0), aws, fs-extra (v11.1.1), jsdom (v21.1.2), markdown-it-multimd-table (v4.2.2), nanoid (v3.3.6), node-persist (v3.1.3), nodemon (v2.0.22), react-native-document-picker (v8.2.0), react-native-image-picker (v5.3.1), react-native-paper (v5.8.0), react-native-safe-area-context (v4.5.2), react-native-share (v8.2.2), reselect (v4.1.8), sass (v1.62.1), sharp (v0.32.1), sqlite3 (v5.1.6), tar (v6.1.14), turndown (v7.1.2), yargs (v17.7.2)</li>
+<li>Fixed: Encode the non-ASCII characters in OneDrive URI (#7868) (#7851 by Self Not Found)</li>
+<li>Fixed: Fix &quot;Download interrupted&quot; error (b023f58)</li>
+<li>Fixed: Fix OneDrive sync attempting to call method on <code>null</code> variable (#7987) (#7986 by Henry Heino)</li>
+<li>Fixed: Fixed sync crash  (#8056) (#8017 by Arun Kumar)</li>
+<li>Fixed: Fixes issue where the note body is not updated after attaching a file (991c120)</li>
+<li>Fixed: Removed <code>MasterKey</code> from Sync Status report (#8026) (#7940 by Arun Kumar)</li>
+<li>Fixed: Use react-native-drawer-layout instead of react-native-side-menu-updated (#7953) (#7918 by <a href="https://github.com/jcgurango">@jcgurango</a>)</li>
+<li>Security: Disable SVG tag support in editor to prevent XSS (caf6606)</li>
+<li>Security: Prevent XSS by sanitizing certain HTML attributes (9e90d90)</li>
+<li>Security: Prevent bypassing fingerprint lock on certain devices (6b72f86)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/ios-v12.10.5">ios-v12.10.5</a> - 2023-03-06T14:43:37Z<a name="ios-v12-10-5-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-5-2023-03-06t14-43-37z" href="#ios-v12-10-5-https-github-com-laurent22-joplin-releases-tag-ios-v12-10-5-2023-03-06t14-43-37z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Stop synchronization with unsupported WebDAV providers (#7819) (#7661 by <a href="https://github.com/julien">@julien</a>)</li>
