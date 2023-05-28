@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="v2.10.19 - 2023-05-17T12:25:41Z Improved: Improved handling of items with duplicate IDs when synchronising with Joplin Cloud or Server (d4c43a8) Security: Fixed possible XSS injection (CVE-2023-337..." />
+			<meta name="description" content="v2.11.5 (Pre-release) - 2023-05-28T00:41:40Z Improved: Updated packages jsdom (v21.1.2), markdown-it-multimd-table (v4.2.2), react-select (v5.7.3), sass (v1.62.1), sharp (v0.32.1), tar (v6.1.14), y..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/fr/changelog/index.html" />
 			<meta property="og:title" content="Joplin changelog" />
 			<meta property="twitter:title" content="Joplin changelog" />
-			<meta property="og:description" content="v2.10.19 - 2023-05-17T12:25:41Z Improved: Improved handling of items with duplicate IDs when synchronising with Joplin Cloud or Server (d4c43a8) Security: Fixed possible XSS injection (CVE-2023-337..." />
-			<meta property="twitter:description" content="v2.10.19 - 2023-05-17T12:25:41Z Improved: Improved handling of items with duplicate IDs when synchronising with Joplin Cloud or Server (d4c43a8) Security: Fixed possible XSS injection (CVE-2023-337..." />
+			<meta property="og:description" content="v2.11.5 (Pre-release) - 2023-05-28T00:41:40Z Improved: Updated packages jsdom (v21.1.2), markdown-it-multimd-table (v4.2.2), react-select (v5.7.3), sass (v1.62.1), sharp (v0.32.1), tar (v6.1.14), y..." />
+			<meta property="twitter:description" content="v2.11.5 (Pre-release) - 2023-05-28T00:41:40Z Improved: Updated packages jsdom (v21.1.2), markdown-it-multimd-table (v4.2.2), react-select (v5.7.3), sass (v1.62.1), sharp (v0.32.1), tar (v6.1.14), y..." />
 				<meta property="og:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 				<meta property="twitter:image" content="https://joplinapp.org/:/a92ac34387ff467a8c839d201dcd39aa" />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
@@ -364,6 +364,13 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog.md
 <p><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin changelog<a name="joplin-changelog" href="#joplin-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.11.5">v2.11.5</a> (Pre-release) - 2023-05-28T00:41:40Z<a name="v2-11-5-https-github-com-laurent22-joplin-releases-tag-v2-11-5-pre-release-2023-05-28t00-41-40z" href="#v2-11-5-https-github-com-laurent22-joplin-releases-tag-v2-11-5-pre-release-2023-05-28t00-41-40z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>Improved: Updated packages jsdom (v21.1.2), markdown-it-multimd-table (v4.2.2), react-select (v5.7.3), sass (v1.62.1), sharp (v0.32.1), tar (v6.1.14), yargs (v17.7.2)</li>
+<li>Fixed: Fix slow startup time (<a href="https://github.com/laurent22/joplin/issues/8087">#8087</a>)</li>
+<li>Security: Disable SVG tag support in editor to prevent XSS (<a href="https://github.com/laurent22/joplin/commit/caf6606">caf6606</a>) (Vulnerability discovered by <a href="https://ryotak.net/">RyotaK</a>)</li>
+<li>Security: Prevent XSS by sanitizing certain HTML attributes (<a href="https://github.com/laurent22/joplin/commit/9e90d90">9e90d90</a>) (Vulnerability discovered by <a href="https://ryotak.net/">RyotaK</a>)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/v2.10.19">v2.10.19</a> - 2023-05-17T12:25:41Z<a name="v2-10-19-https-github-com-laurent22-joplin-releases-tag-v2-10-19-2023-05-17t12-25-41z" href="#v2-10-19-https-github-com-laurent22-joplin-releases-tag-v2-10-19-2023-05-17t12-25-41z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>Improved: Improved handling of items with duplicate IDs when synchronising with Joplin Cloud or Server (<a href="https://github.com/laurent22/joplin/commit/d4c43a8">d4c43a8</a>)</li>
