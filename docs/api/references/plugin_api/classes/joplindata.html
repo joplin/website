@@ -114,6 +114,8 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplindata.html#delete" class="tsd-kind-icon">delete</a></li>
@@ -122,10 +124,15 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplindata.html#post" class="tsd-kind-icon">post</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplindata.html#put" class="tsd-kind-icon">put</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplindata.html#resourcepath" class="tsd-kind-icon">resource<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplindata.html#userdatadelete" class="tsd-kind-icon">user<wbr>Data<wbr>Delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="joplindata.html#userdataget" class="tsd-kind-icon">user<wbr>Data<wbr>Get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="joplindata.html#userdataset" class="tsd-kind-icon">user<wbr>Data<wbr>Set</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
@@ -297,6 +304,134 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="userdatadelete" class="tsd-anchor"></a>
+					<h3>user<wbr>Data<wbr>Delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">user<wbr>Data<wbr>Delete<span class="tsd-signature-symbol">(</span>itemType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ModelType</span>, itemId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes a note user data. See <a href="joplindata.html#userdataget">JoplinData.userDataGet</a> for more details.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>itemType: <span class="tsd-signature-type">ModelType</span></h5>
+								</li>
+								<li>
+									<h5>itemId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="userdataget" class="tsd-anchor"></a>
+					<h3>user<wbr>Data<wbr>Get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">user<wbr>Data<wbr>Get&lt;T&gt;<span class="tsd-signature-symbol">(</span>itemType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ModelType</span>, itemId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets an item user data. User data are key/value pairs. The <code>key</code> can be any
+										arbitrary string, while the <code>value</code> can be of any type supported by
+									<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description">JSON.stringify</a></p>
+								</div>
+								<p>User data is synchronised across devices, and each value wil be merged based on their timestamp:</p>
+								<ul>
+									<li>If value is modified by client 1, then modified by client 2, it will take the value from client 2</li>
+									<li>If value is modified by client 1, then deleted by client 2, the value will be deleted after merge</li>
+									<li>If value is deleted by client 1, then updated by client 2, the value will be restored and set to the value from client 2 after merge</li>
+								</ul>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>itemType: <span class="tsd-signature-type">ModelType</span></h5>
+								</li>
+								<li>
+									<h5>itemId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="userdataset" class="tsd-anchor"></a>
+					<h3>user<wbr>Data<wbr>Set</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">user<wbr>Data<wbr>Set&lt;T&gt;<span class="tsd-signature-symbol">(</span>itemType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ModelType</span>, itemId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets a note user data. See <a href="joplindata.html#userdataget">JoplinData.userDataGet</a> for more details.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>itemType: <span class="tsd-signature-type">ModelType</span></h5>
+								</li>
+								<li>
+									<h5>itemId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -316,6 +451,9 @@
 					<li class="current tsd-kind-class">
 						<a href="joplindata.html" class="tsd-kind-icon">joplin.data</a>
 						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="joplindata.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplindata.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
@@ -333,6 +471,15 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplindata.html#resourcepath" class="tsd-kind-icon">resource<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplindata.html#userdatadelete" class="tsd-kind-icon">user<wbr>Data<wbr>Delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="joplindata.html#userdataget" class="tsd-kind-icon">user<wbr>Data<wbr>Get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="joplindata.html#userdataset" class="tsd-kind-icon">user<wbr>Data<wbr>Set</a>
 							</li>
 						</ul>
 					</li>
