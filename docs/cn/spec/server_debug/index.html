@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/spec/architecture.md and any manual change
+This file was auto-generated from readme/spec/server_debug.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
+https://github.com/laurent22/joplin/blob/dev/readme/spec/server_debug.md
 
 -->
 
@@ -36,16 +36,16 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="Joplin as a project is organised around three main components: The user applications: For desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applicatio..." />
+			<meta name="description" content="Using a debugger sometimes is much easier than trying to just print things to understand a bug, for the server project we have a configuration that makes it easy for everyone to run in debug mode i..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
-			<meta property="og:url" content="https://joplinapp.org/cn/spec/architecture/index.html" />
-			<meta property="og:title" content="Joplin architecture" />
-			<meta property="twitter:title" content="Joplin architecture" />
-			<meta property="og:description" content="Joplin as a project is organised around three main components: The user applications: For desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applicatio..." />
-			<meta property="twitter:description" content="Joplin as a project is organised around three main components: The user applications: For desktop, mobile and CLI) Joplin Server Web Clipper User applications The desktop, mobile and CLI applicatio..." />
-				<meta property="og:image" content="https://joplinapp.org/images/architecture/Application.png" />
-				<meta property="twitter:image" content="https://joplinapp.org/images/architecture/Application.png" />
+			<meta property="og:url" content="https://joplinapp.org/cn/spec/server_debug/index.html" />
+			<meta property="og:title" content="Debugging Server project with vscode" />
+			<meta property="twitter:title" content="Debugging Server project with vscode" />
+			<meta property="og:description" content="Using a debugger sometimes is much easier than trying to just print things to understand a bug, for the server project we have a configuration that makes it easy for everyone to run in debug mode i..." />
+			<meta property="twitter:description" content="Using a debugger sometimes is much easier than trying to just print things to understand a bug, for the server project we have a configuration that makes it easy for everyone to run in debug mode i..." />
+				<meta property="og:image" content="https://github.com/laurent22/joplin/assets/5051088/cda6e3d6-32f3-4997-bd16-8413a6c962c5" />
+				<meta property="twitter:image" content="https://github.com/laurent22/joplin/assets/5051088/cda6e3d6-32f3-4997-bd16-8413a6c962c5" />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -60,7 +60,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
-		<title>Joplin architecture | Joplin</title>
+		<title>Debugging Server project with vscode | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -262,7 +262,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
 						</div>
 					</div>
 				</div>
-			<div class="help-page-container page-architecture">
+			<div class="help-page-container page-server_debug">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -363,80 +363,34 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md
 							<div class="donate-links">
 <p><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
-<h1>Joplin architecture<a name="joplin-architecture" href="#joplin-architecture" class="heading-anchor">🔗</a></h1>
-<p>Joplin as a project is organised around three main components:</p>
-<ul>
-<li>The user applications: For <a href="/cn/desktop/">desktop</a>, <a href="/cn/mobile/">mobile</a> and <a href="/cn/terminal/">CLI</a>)</li>
-<li><a href="https://github.com/laurent22/joplin/blob/dev/packages/server/README.md">Joplin Server</a></li>
-<li><a href="/cn/clipper/">Web Clipper</a></li>
-</ul>
-<h2>User applications<a name="user-applications" href="#user-applications" class="heading-anchor">🔗</a></h2>
-<p>The desktop, mobile and CLI applications have the same architecture and mostly the same backend. The main difference is for the UI, where they each use a different framework, and for system integration (eg. notifications, importing or exporting files, etc.).</p>
-<p>The overall architecture for each application is as such:</p>
-<ul>
-<li>
-<p>Front end: The user facing part of the app. This is different for each applications (see below for the difference between applications)</p>
-</li>
-<li>
-<p>Back end: This is shared by all applications. It is made of:</p>
-<ul>
-<li>
-<p>Services: Provide high-level functionalities, such as the <a href="https://github.com/laurent22/joplin/tree/dev/packages/lib/services/searchengine">search engine</a>, <a href="https://github.com/laurent22/joplin/tree/dev/packages/lib/services/plugins">plugin system</a> or <a href="https://github.com/laurent22/joplin/blob/dev/packages/lib/Synchronizer.ts">synchroniser</a>.</p>
-</li>
-<li>
-<p>Models: The model layer sits between the services and database. They provide a higher level abstraction than SQL and utility functions to easily save data, such as notes, notebooks, etc.</p>
-</li>
-<li>
-<p>Database: All applications use a local <a href="https://sqlite.org/index.html">SQLite database</a> to store notes, settings, cache, etc. This is only a local database.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Configuration: The application is configured using a <code>settings.json</code> file. Its schema is available online: <a href="https://joplinapp.org/schema/settings.json">https://joplinapp.org/schema/settings.json</a></p>
-</li>
-</ul>
-<img src="/images/architecture/Application.png" style="max-width: 100%;"/>
-<h3>Desktop application<a name="desktop-application" href="#desktop-application" class="heading-anchor">🔗</a></h3>
-<p>The desktop application is developed using <a href="https://www.electronjs.org/">Electron</a>, with a front end done in <a href="https://react.dev/">React</a>. The backend runs on <a href="https://nodejs.org/">Node.js</a>.</p>
-<h3>Mobile application<a name="mobile-application" href="#mobile-application" class="heading-anchor">🔗</a></h3>
-<p>The mobile application is developed using <a href="https://reactnative.dev/">React Native</a>. The backend runs on React Native's own <a href="https://hermesengine.dev/">Hermes JavaScript engine</a>.</p>
-<h3>CLI application<a name="cli-application" href="#cli-application" class="heading-anchor">🔗</a></h3>
-<p>This application is to use Joplin from the terminal. It is developed using <a href="https://github.com/cronvel/terminal-kit">terminal-kit</a>. The backend runs on Node.js.</p>
-<h2>Joplin Server<a name="joplin-server" href="#joplin-server" class="heading-anchor">🔗</a></h2>
-<p>Joplin Server is used to synchronise the application data between multiple devices. Thus, a user can have their notes on their laptop, and on the go, on their phone. Joplin Server also allows user to share notebooks with others, and publish notes to the internet. Because it is designed specifically for Joplin, it also offers improved performance, compared to other synchronisation targets.</p>
-<p>A typical Joplin Server installation will use the following elements:</p>
-<ul>
-<li>
-<p>The <a href="https://github.com/laurent22/joplin/blob/dev/packages/server/README.md">Joplin Server application</a>. This is a Node.js application. It exposes a REST API that is used by the Joplin clients to upload or download notes, notebooks, and other Joplin objects.</p>
-</li>
-<li>
-<p><a href="https://www.postgresql.org/">PostgreSQL</a>: it is used to save the &quot;item&quot; metadata. An &quot;item&quot; can be a note, a notebook, a tag, etc. It is also used to save other informations, such as user accounts, access logs, etc.</p>
-</li>
-<li>
-<p><a href="https://aws.amazon.com/s3/">AWS S3</a>: it is used to save the item content. In other words, the note body, the file attachments, etc.</p>
-</li>
-<li>
-<p><a href="https://www.nginx.com/">Nginx</a>: It is used as a reverse proxy and for TLS termination.</p>
-</li>
-<li>
-<p>A configuration file: A <code>.env</code> file, which contains environement variables used to configure the server.</p>
-</li>
-</ul>
-<p>This is a typical Joplin Server installation, but many of its components can be configured - for example it is possible to use a different database engine, or to use the filesystem instead of AWS S3. Any reverse proxy would also work - using Nginx is not required.</p>
-<img src="/images/architecture/JoplinServer.png" style="max-width: 100%;"/>
-<h2>Web Clipper<a name="web-clipper" href="#web-clipper" class="heading-anchor">🔗</a></h2>
-<p>The Web Clipper is a browser extension for Firefox and Chrome. It is used to capture a web page, a part of a page, or a screenshot from the browser, and save it to Joplin.</p>
-<p>It is developed using the <a href="https://extensionworkshop.com/documentation/develop/about-the-webextensions-api/">WebExtensions API</a> with the popup being done using React.</p>
-<h1>More information<a name="more-information" href="#more-information" class="heading-anchor">🔗</a></h1>
-<ul>
-<li><a href="/cn/spec/plugins/">Plugin Architecture spec</a></li>
-<li><a href="/cn/spec/e2ee/">E2EE: Technical spec</a></li>
-<li><a href="/cn/spec/e2ee/workflow/">E2EE: Workflow</a></li>
-<li><a href="https://github.com/laurent22/joplin/tree/dev/readme/spec">All Joplin technical specifications</a></li>
-</ul>
+<h1>Debugging Server project with vscode<a name="debugging-server-project-with-vscode" href="#debugging-server-project-with-vscode" class="heading-anchor">🔗</a></h1>
+<p>Using a debugger sometimes is much easier than trying to just print things to understand a bug,<br>
+for the server project we have a configuration that makes it easy for everyone to run in debug mode inside vscode.</p>
+<p>In the debug screen you can select &quot;Server&quot; and hit the play button to start the process.</p>
+<p><img src="https://github.com/laurent22/joplin/assets/5051088/cda6e3d6-32f3-4997-bd16-8413a6c962c5" alt="image"></p>
+<p>Before running the server there is a task called <code>transpile-server</code> that runs <code>yarn tsc</code> to make sure that the<br>
+latest changes in the <code>package/server</code> are being executed.</p>
+<p><a href="https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L360-L365">https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L360-L365</a></p>
+<p>In a optimal solution we would be doing this <code>transpile-server</code> task in the <code>tasks.json</code> file<br>
+(inside the <code>tasks.json</code> we can use a <code>type</code> <code>npm</code> for the task that is more ergonomic)</p>
+<p>If there are any new environment variables that need to be included before execution, there is a place where they can be added:</p>
+<p><a href="https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L387-L391">https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L387-L391</a></p>
+<p>Something that we could do to improve the experience is adding a build process to other projects that are used by the server project,<br>
+but this still can be done with other terminals open.</p>
+<h3>Modifying the configuration:<a name="modifying-the-configuration" href="#modifying-the-configuration" class="heading-anchor">🔗</a></h3>
+<p>To modify the configuration, for now, it is all in the <code>joplin.code-workspace</code> file, but if needed we could also break<br>
+the configuration into two files, one for the <code>launch.json</code> and other for the <code>tasks.json</code>.</p>
+<h3>References:<a name="references" href="#references" class="heading-anchor">🔗</a></h3>
+<p><a href="https://code.visualstudio.com/docs/editor/debugging">vscode debugger</a></p>
+<p><a href="https://code.visualstudio.com/docs/editor/multi-root-workspaces#_debugging">Launch option to vscode workspaces</a></p>
+<p><a href="https://code.visualstudio.com/docs/editor/tasks">vscode tasks</a></p>
+<h3>More images:<a name="more-images" href="#more-images" class="heading-anchor">🔗</a></h3>
+<p><img src="https://github.com/laurent22/joplin/assets/5051088/1346d938-c376-4cab-82a7-98deb4283fe8" alt="image"><br>
+<img src="https://github.com/laurent22/joplin/assets/5051088/b3a12b9f-704c-4dc8-b2bd-14ba7a1c4759" alt="image"><br>
+<img src="https://github.com/laurent22/joplin/assets/5051088/c45becc4-44b7-4f95-9d49-421517e29592" alt="image"></p>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/server_debug.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>

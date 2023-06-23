@@ -5,11 +5,11 @@
 
 !!! WARNING !!!
 
-This file was auto-generated from readme/donate.md and any manual change
+This file was auto-generated from readme/spec/server_debug.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/dev/readme/donate.md
+https://github.com/laurent22/joplin/blob/dev/readme/spec/server_debug.md
 
 -->
 
@@ -36,16 +36,16 @@ https://github.com/laurent22/joplin/blob/dev/readme/donate.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="Joplin is an open source project, and your donations support the developer. Developing quality applications mostly takes time, but there are also expenses, such as digital certificates to sign the ..." />
+			<meta name="description" content="Using a debugger sometimes is much easier than trying to just print things to understand a bug, for the server project we have a configuration that makes it easy for everyone to run in debug mode i..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
-			<meta property="og:url" content="https://joplinapp.org/donate/index.html" />
-			<meta property="og:title" content="Support Joplin development" />
-			<meta property="twitter:title" content="Support Joplin development" />
-			<meta property="og:description" content="Joplin is an open source project, and your donations support the developer. Developing quality applications mostly takes time, but there are also expenses, such as digital certificates to sign the ..." />
-			<meta property="twitter:description" content="Joplin is an open source project, and your donations support the developer. Developing quality applications mostly takes time, but there are also expenses, such as digital certificates to sign the ..." />
-				<meta property="og:image" content="https://joplinapp.org/images/badges/Donate-PayPal-green.svg" />
-				<meta property="twitter:image" content="https://joplinapp.org/images/badges/Donate-PayPal-green.svg" />
+			<meta property="og:url" content="https://joplinapp.org/spec/server_debug/index.html" />
+			<meta property="og:title" content="Debugging Server project with vscode" />
+			<meta property="twitter:title" content="Debugging Server project with vscode" />
+			<meta property="og:description" content="Using a debugger sometimes is much easier than trying to just print things to understand a bug, for the server project we have a configuration that makes it easy for everyone to run in debug mode i..." />
+			<meta property="twitter:description" content="Using a debugger sometimes is much easier than trying to just print things to understand a bug, for the server project we have a configuration that makes it easy for everyone to run in debug mode i..." />
+				<meta property="og:image" content="https://github.com/laurent22/joplin/assets/5051088/cda6e3d6-32f3-4997-bd16-8413a6c962c5" />
+				<meta property="twitter:image" content="https://github.com/laurent22/joplin/assets/5051088/cda6e3d6-32f3-4997-bd16-8413a6c962c5" />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -60,7 +60,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/donate.md
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
-		<title>Support Joplin development | Joplin</title>
+		<title>Debugging Server project with vscode | Joplin</title>
 
 		<script
 			src="&#x2F;js/jquery-3.6.0.min.js"
@@ -262,7 +262,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/donate.md
 						</div>
 					</div>
 				</div>
-			<div class="help-page-container page-donate">
+			<div class="help-page-container page-server_debug">
 				<div class="container">
 					<div class="row content-wrapper">
 						<div id="toc"><div><ul>
@@ -360,59 +360,37 @@ https://github.com/laurent22/joplin/blob/dev/readme/donate.md
 							<div class="alert alert-danger alert-env-dev" role="alert">
 								Running in prod mode!
 							</div>
-							<h1>Support Joplin development<a name="support-joplin-development" href="#support-joplin-development" class="heading-anchor">🔗</a></h1>
-<p>Joplin is an open source project, and your donations support <a href="https://github.com/laurent22/">the developer</a>. Developing quality applications mostly takes time, but there are also expenses, such as digital certificates to sign the applications, app store fees, hosting, as well as the hardware to develop and test a cross-platform app.</p>
-<p>Most of all, your donation will make it possible to keep up the current development standards, and will bring new features and improvements to the app.</p>
-<h2>Donations<a name="donations" href="#donations" class="heading-anchor">🔗</a></h2>
-<table class="table">
-<thead>
-<tr>
-<th>Platform</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PayPal</td>
-<td><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="/images/badges/Donate-PayPal-green.svg" alt="Donate on PayPal"></a></td>
-</tr>
-<tr>
-<td>GitHub Sponsor</td>
-<td><a href="https://github.com/sponsors/laurent22/"><img src="/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a></td>
-</tr>
-<tr>
-<td>Patreon</td>
-<td><a href="https://www.patreon.com/joplin"><img src="/images/badges/Patreon-Badge.svg" alt="Become a patron"></a></td>
-</tr>
-<tr>
-<td>Liberapay</td>
-<td><a href="https://liberapay.com/laurent22/donate"><img src="https://liberapay.com/assets/widgets/donate.svg" alt="Donate using Liberapay"></a></td>
-</tr>
-<tr>
-<td>Bank Transfer</td>
-<td><strong>IBAN:</strong> FR76 4061 8803 5200 0400 7415 938<br><strong>BIC/SWIFT:</strong> BOUS FRPP XXX</td>
-</tr>
-</tbody>
-</table>
-<h2>Other way to support the development<a name="other-way-to-support-the-development" href="#other-way-to-support-the-development" class="heading-anchor">🔗</a></h2>
-<p>Finally, there are other ways to support the development of Joplin:</p>
-<ul>
-<li>
-<p>Consider rating the app on <a href="https://play.google.com/store/apps/details?id=net.cozic.joplin&amp;utm_source=GitHub&amp;utm_campaign=README&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">Google Play</a> or <a href="https://itunes.apple.com/us/app/joplin/id1315599797">App Store</a>.</p>
-</li>
-<li>
-<p>Vote for or review the app on <a href="https://alternativeto.net/software/joplin/about/">alternativeTo</a> or <a href="https://www.producthunt.com/posts/joplin">Product Hunt</a>.</p>
-</li>
-<li>
-<p><a href="https://joplinapp.org/prereleases/">Help us test pre-releases</a>.</p>
-</li>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Joplin_(software)">Improve the Wikipedia article</a>.</p>
-</li>
-</ul>
+							<div class="donate-links">
+<p><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+</div>
+<h1>Debugging Server project with vscode<a name="debugging-server-project-with-vscode" href="#debugging-server-project-with-vscode" class="heading-anchor">🔗</a></h1>
+<p>Using a debugger sometimes is much easier than trying to just print things to understand a bug,<br>
+for the server project we have a configuration that makes it easy for everyone to run in debug mode inside vscode.</p>
+<p>In the debug screen you can select &quot;Server&quot; and hit the play button to start the process.</p>
+<p><img src="https://github.com/laurent22/joplin/assets/5051088/cda6e3d6-32f3-4997-bd16-8413a6c962c5" alt="image"></p>
+<p>Before running the server there is a task called <code>transpile-server</code> that runs <code>yarn tsc</code> to make sure that the<br>
+latest changes in the <code>package/server</code> are being executed.</p>
+<p><a href="https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L360-L365">https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L360-L365</a></p>
+<p>In a optimal solution we would be doing this <code>transpile-server</code> task in the <code>tasks.json</code> file<br>
+(inside the <code>tasks.json</code> we can use a <code>type</code> <code>npm</code> for the task that is more ergonomic)</p>
+<p>If there are any new environment variables that need to be included before execution, there is a place where they can be added:</p>
+<p><a href="https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L387-L391">https://github.com/laurent22/joplin/blob/4f37e6073ad549fe72206e2a125c27174b5d96a9/joplin.code-workspace#L387-L391</a></p>
+<p>Something that we could do to improve the experience is adding a build process to other projects that are used by the server project,<br>
+but this still can be done with other terminals open.</p>
+<h3>Modifying the configuration:<a name="modifying-the-configuration" href="#modifying-the-configuration" class="heading-anchor">🔗</a></h3>
+<p>To modify the configuration, for now, it is all in the <code>joplin.code-workspace</code> file, but if needed we could also break<br>
+the configuration into two files, one for the <code>launch.json</code> and other for the <code>tasks.json</code>.</p>
+<h3>References:<a name="references" href="#references" class="heading-anchor">🔗</a></h3>
+<p><a href="https://code.visualstudio.com/docs/editor/debugging">vscode debugger</a></p>
+<p><a href="https://code.visualstudio.com/docs/editor/multi-root-workspaces#_debugging">Launch option to vscode workspaces</a></p>
+<p><a href="https://code.visualstudio.com/docs/editor/tasks">vscode tasks</a></p>
+<h3>More images:<a name="more-images" href="#more-images" class="heading-anchor">🔗</a></h3>
+<p><img src="https://github.com/laurent22/joplin/assets/5051088/1346d938-c376-4cab-82a7-98deb4283fe8" alt="image"><br>
+<img src="https://github.com/laurent22/joplin/assets/5051088/b3a12b9f-704c-4dc8-b2bd-14ba7a1c4759" alt="image"><br>
+<img src="https://github.com/laurent22/joplin/assets/5051088/c45becc4-44b7-4f95-9d49-421517e29592" alt="image"></p>
 
 								<div class="bottom-links">
-										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/donate.md">
+										<a class="bottom-link" href="https://github.com/laurent22/joplin/blob/dev/readme/spec/server_debug.md">
 											<i class="fab fa-github"></i> Improve this doc
 										</a>
 								</div>
