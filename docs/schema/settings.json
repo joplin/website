@@ -1031,6 +1031,12 @@
 			"type": "integer",
 			"default": -1,
 			"$comment": "private"
+		},
+		"voiceTypingBaseUrl": {
+			"type": "string",
+			"default": "",
+			"description": "Voice typing language files (URL). Leave it blank to download the language files from the default website",
+			"$comment": "private"
 		}
 	}
 }
