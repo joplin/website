@@ -50,7 +50,7 @@ https://github.com/laurent22/joplin/blob/dev/
 			onload="this.media='all'; this.onload = null"
 		/>
 		<link rel="stylesheet" href="/css/site.css?h=0bfec01592484f7ac1ca50841cd780af" as="style" />
-		<link rel="stylesheet" href="/css/brand.css?h=bae56958f4d731856b3909dc163f85a9" as="style" />
+		<link rel="stylesheet" href="/css/brand.css?h=dd9792dfe1bd51e33cfc68c779dbe07b" as="style" />
 		<title>Joplin Brand Guidelines | Joplin</title>
 
 		<script
@@ -513,11 +513,6 @@ Dark blue
 HEX - 043873
 </p>
 
-							
-<p class="joplin__para">
-RGB - 4, 56, 115
-</p>
-
 						
 </div>
 
@@ -544,11 +539,6 @@ White
 HEX - FFFFFF
 </p>
 
-							
-<p class="joplin__para">
-RGB - 255, 255,
-</p>
-
 						
 </div>
 
@@ -573,11 +563,6 @@ Dark gray
 							
 <p class="joplin__para">
 HEX - 32363F
-</p>
-
-							
-<p class="joplin__para">
-RGB - 50, 54, 63
 </p>
 
 						
@@ -627,11 +612,6 @@ Light blue
 HEX - 4F9CF9
 </p>
 
-							
-<p class="joplin__para">
-RGB - 79, 156, 249
-</p>
-
 						
 </div>
 
@@ -656,11 +636,6 @@ Yellow
 							
 <p class="joplin__para">
 HEX - FFE492
-</p>
-
-							
-<p class="joplin__para">
-RGB - 255, 228, 146
 </p>
 
 						
@@ -727,11 +702,6 @@ Variant dark
 HEX - 072445
 </p>
 
-							
-<p class="joplin__para">
-RGB - 7, 36, 69
-</p>
-
 						
 </div>
 
@@ -758,11 +728,6 @@ Variant white
 HEX - F8F9FA
 </p>
 
-							
-<p class="joplin__para">
-RGB - 248, 249,
-</p>
-
 						
 </div>
 
@@ -787,11 +752,6 @@ Variant dark gray
 							
 <p class="joplin__para">
 HEX - 212529
-</p>
-
-							
-<p class="joplin__para">
-RGB - 33, 37, 41
 </p>
 
 						
@@ -843,12 +803,7 @@ Variant light blue
 
 							
 <p class="joplin__para">
-HEX - D9E8F8
-</p>
-
-							
-<p class="joplin__para">
-RGB - 217, 232,
+HEX - F7FBFF
 </p>
 
 						
@@ -1179,13 +1134,14 @@ const ctx = document.getElementById("chart1");
 const myChart = new Chart(ctx, {
   type: "pie",
   data: {
-    labels: ["Dark blue 60%", "White 20%", "light blue 10%", "yellow 7%", "dark gray 3%"],
+    labels: ["Dark blue 40%", "Gray 20%", "White 20%", "Light blue 10%", "Yellow 7%", "Dark gray 3%"],
     datasets: [
       {
         label: "# of Votes",
-        data: [60, 20, 10, 7, 3],
+        data: [40, 20, 20, 10, 7, 3],
         backgroundColor: [
           "#043873",
+          "#f7fbff",
           "#ffffff",
           "#4f9cf9",
           "#ffe492",
@@ -1196,6 +1152,11 @@ const myChart = new Chart(ctx, {
   },
   options: {
     layout: {},
+	elements: {
+        arc: {
+            borderColor: '#cccccc',
+        }
+    },
     plugins: {
       title: {
         display: true,
@@ -1212,13 +1173,14 @@ const ctx2 = document.getElementById("chart2");
 const myChart2 = new Chart(ctx2, {
   type: "pie",
   data: {
-    labels: ["White 60%", "Dark 20%", "light blue 10%", "dark gray 7%", "yellow 3%"],
+    labels: ["White 40%", "Gray 20%", "Dark blue 20%", "Light blue 10%", "Dark gray 7%", "Yellow 3%"],
     datasets: [
       {
         label: "# of Votes",
-        data: [60, 20, 10, 7, 3],
+        data: [40, 20, 20, 10, 7, 3],
         backgroundColor: [
           "#ffffff",
+          "#f7fbff",
           "#043873",
           "#4f9cf9",
           "#212529",
@@ -1229,6 +1191,11 @@ const myChart2 = new Chart(ctx2, {
   },
   options: {
     layout: {},
+	elements: {
+        arc: {
+            borderColor: '#cccccc',
+        }
+    },
     plugins: {
       title: {
         display: true,
