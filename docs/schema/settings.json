@@ -1032,6 +1032,11 @@
 			"default": -1,
 			"$comment": "private"
 		},
+		"sync.shareCache": {
+			"type": "string",
+			"default": null,
+			"$comment": "private"
+		},
 		"voiceTypingBaseUrl": {
 			"type": "string",
 			"default": "",

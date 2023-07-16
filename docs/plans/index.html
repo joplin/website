@@ -1047,6 +1047,8 @@ Feature comparison
 
 			console.info('Creating Stripe session for price:', priceId, 'Promotion code:', promotionCode);
 
+			const source = localStorage.getItem('source');
+
 			return fetch("https://joplincloud.com/stripe/createCheckoutSession", {
 				method: "POST",
 				headers: {
@@ -1056,6 +1058,7 @@ Feature comparison
 					priceId,
 					promotionCode,
 					email: checkoutSessionUser ? checkoutSessionUser.email : '',
+					source,
 				})
 			}).then(async function(result) {
 				if (!result.ok) {
