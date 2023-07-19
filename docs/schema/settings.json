@@ -1042,6 +1042,16 @@
 			"default": "",
 			"description": "Voice typing language files (URL). Leave it blank to download the language files from the default website",
 			"$comment": "private"
+		},
+		"emailToNote.inboxEmail": {
+			"type": "string",
+			"default": "",
+			"$comment": "private"
+		},
+		"emailToNote.inboxJopId": {
+			"type": "string",
+			"default": "",
+			"$comment": "private"
 		}
 	}
 }
