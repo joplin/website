@@ -150,6 +150,21 @@
 			"description": "Joplin Cloud password",
 			"$comment": "private"
 		},
+		"sync.10.inboxEmail": {
+			"type": "string",
+			"default": "",
+			"$comment": "private"
+		},
+		"sync.10.inboxId": {
+			"type": "string",
+			"default": "",
+			"$comment": "private"
+		},
+		"sync.10.canUseSharePermissions": {
+			"type": "boolean",
+			"default": false,
+			"$comment": "private"
+		},
 		"sync.5.syncTargets": {
 			"type": "object",
 			"default": {},
@@ -1041,16 +1056,6 @@
 			"type": "string",
 			"default": "",
 			"description": "Voice typing language files (URL). Leave it blank to download the language files from the default website",
-			"$comment": "private"
-		},
-		"emailToNote.inboxEmail": {
-			"type": "string",
-			"default": "",
-			"$comment": "private"
-		},
-		"emailToNote.inboxJopId": {
-			"type": "string",
-			"default": "",
 			"$comment": "private"
 		}
 	}
