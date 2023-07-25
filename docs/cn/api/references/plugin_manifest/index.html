@@ -446,6 +446,12 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manife
 <td>No</td>
 <td><a href="#Screenshot">Screenshots</a> are used for listing on Joplin Plugin website.</td>
 </tr>
+<tr>
+<td><code>icons</code></td>
+<td>Icons</td>
+<td>No</td>
+<td>If <a href="#Icons">Icons</a> is not supplied, a standard extension icon will be used by default. You should supply at least a main icon, ideally 48x48 px in size. This is the icon that will be used in various plugin pages. You may, however, supply icons of any size and Joplin will attempt to find the best icon to display in different components. Only PNG icons are allowed.</td>
+</tr>
 </tbody>
 </table>
 <h2>Categories<a name="categories" href="#categories" class="heading-anchor">🔗</a></h2>
@@ -522,6 +528,33 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manife
 </tr>
 </tbody>
 </table>
+<h2>Icons<a name="icons" href="#icons" class="heading-anchor">🔗</a></h2>
+<table class="table">
+<thead>
+<tr>
+<th>Properties</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>a relative path to a PNG icon.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>a relative path to a PNG icon.</td>
+</tr>
+<tr>
+<td>48</td>
+<td>a relative path to a PNG icon.</td>
+</tr>
+<tr>
+<td>128</td>
+<td>a relative path to a PNG icon.</td>
+</tr>
+</tbody>
+</table>
 <h2>Manifest example<a name="manifest-example" href="#manifest-example" class="heading-anchor">🔗</a></h2>
 <pre><code class="language-json">{
     &quot;manifest_version&quot;: 1,
@@ -534,7 +567,13 @@ https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manife
     &quot;screenshots&quot;: [{
         &quot;src&quot;: &quot;path/to/image.png&quot;,
         &quot;label&quot;: &quot;image description&quot;
-    }]
+    }],
+    &quot;icons&quot;: {
+      &quot;16&quot;: &quot;path/to/icon16.png&quot;,
+      &quot;32&quot;: &quot;path/to/icon32.png&quot;,
+      &quot;48&quot;: &quot;path/to/icon48.png&quot;,
+      &quot;128&quot;: &quot;path/to/icon128.png&quot;
+    }
 }
 </code></pre>
 
