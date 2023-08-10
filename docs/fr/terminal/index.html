@@ -237,6 +237,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/terminal.md
 <li><a href="/fr/principles/">Guiding principles</a></li>
 <li><a href="/fr/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/brand">Brand guidelines</a></li>
+<li><a href="/fr/release_cycle/">Release cycle</a></li>
 <li><a href="/fr/donate/">Donate</a></li>
 </ul>
 </li>
@@ -359,6 +360,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/terminal.md
 <li><a href="/fr/principles/">Guiding principles</a></li>
 <li><a href="/fr/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/brand">Brand guidelines</a></li>
+<li><a href="/fr/release_cycle/">Release cycle</a></li>
 <li><a href="/fr/donate/">Donate</a></li>
 </ul>
 </li>
@@ -494,9 +496,9 @@ https://github.com/laurent22/joplin/blob/dev/readme/terminal.md
 <li>Then repeat the process for each notebook that needs to be imported.</li>
 </ul>
 <h1>Synchronisation<a name="synchronisation" href="#synchronisation" class="heading-anchor">🔗</a></h1>
-<p>One of the goals of Joplin was to avoid being tied to any particular company or service, whether it is Evernote, Google or Microsoft. As such the synchronisation is designed without any hard dependency to any particular service. Most of the synchronisation process is done at an abstract level and access to external services, such as Nextcloud or Dropbox, is done via lightweight drivers. It is easy to support new services by creating simple drivers that provide a filesystem-like interface, i.e. the ability to read, write, delete and list items. It is also simple to switch from one service to another or to even sync to multiple services at once. Each note, notebook, tags, as well as the relation between items is transmitted as plain text files during synchronisation, which means the data can also be moved to a different application, can be easily backed up, inspected, etc.</p>
-<p>Currently, synchronisation is possible with Nextcloud, WebDAV, Dropbox, OneDrive or the local filesystem. To enable synchronisation please follow the instructions below. After that, the application will synchronise in the background whenever it is running, or you can click on &quot;Synchronise&quot; to start a synchronisation manually.  Joplin will background sync automatically after any content change is made on the local application.<br>
-If the <strong>terminal client</strong> has been installed, it is possible to also synchronise outside of the user interface by typing <code>joplin sync</code> from the terminal. This can be used to setup a cron script to synchronise at a regular interval. For example, this would do it every 30 minutes:</p>
+<p>One of the goals of Joplin is to avoid being tied to any particular company or service, whether it is Evernote, Google or Microsoft. As such the synchronisation is designed without any hard dependency to any particular service. Most of the synchronisation process is done at an abstract level and access to external services, such as Nextcloud or Dropbox, is done via lightweight drivers. It is easy to support new services by creating simple drivers that provide a filesystem-like interface, i.e. the ability to read, write, delete and list items. It is also simple to switch from one service to another.</p>
+<p>Currently, synchronisation is possible with Joplin Cloud, Nextcloud, S3, WebDAV, Dropbox, OneDrive or the local filesystem. To enable synchronisation please follow the instructions below. After that, the application will synchronise in the background whenever it is running, or you can click on &quot;Synchronise&quot; to start a synchronisation manually. Joplin will background sync automatically after any content change is made on the local application.</p>
+<p>If the <strong>terminal client</strong> has been installed, it is possible to also synchronise outside of the user interface by typing <code>joplin sync</code> from the terminal. This can be used to setup a cron script to synchronise at a regular interval. For example, this would do it every 30 minutes:</p>
 <p>*/30 * * * * /path/to/joplin sync</p>
 <h2>Nextcloud synchronisation<a name="nextcloud-synchronisation" href="#nextcloud-synchronisation" class="heading-anchor">🔗</a></h2>
 <p>You will need to set the <code>sync.target</code> config variable and all the <code>sync.5.path</code>, <code>sync.5.username</code> and <code>sync.5.password</code> config variables to, respectively the Nextcloud WebDAV URL, your username and your password. This can be done from the command line mode using:</p>

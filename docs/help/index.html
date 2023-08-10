@@ -235,6 +235,7 @@ https://github.com/laurent22/joplin/blob/dev/README.md
 <li><a href="/principles/">Guiding principles</a></li>
 <li><a href="/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/brand">Brand guidelines</a></li>
+<li><a href="/release_cycle/">Release cycle</a></li>
 <li><a href="/donate/">Donate</a></li>
 </ul>
 </li>
@@ -357,6 +358,7 @@ https://github.com/laurent22/joplin/blob/dev/README.md
 <li><a href="/principles/">Guiding principles</a></li>
 <li><a href="/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/brand">Brand guidelines</a></li>
+<li><a href="/release_cycle/">Release cycle</a></li>
 <li><a href="/donate/">Donate</a></li>
 </ul>
 </li>
@@ -475,30 +477,24 @@ https://github.com/laurent22/joplin/blob/dev/README.md
 <tr>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/14873877?s=96&v=4"/></br><a href="https://github.com/dchecks">dchecks</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/56287?s=96&v=4"/></br><a href="https://github.com/fats">fats</a></td>
-<td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/49439044?s=96&v=4"/></br><a href="https://github.com/fourstepper">fourstepper</a></td>
+<td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/8030470?s=96&v=4"/></br><a href="https://github.com/Galliver7">Galliver7</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/64712218?s=96&v=4"/></br><a href="https://github.com/Hegghammer">Hegghammer</a></td>
 </tr>
 <tr>
-<td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/3266447?s=96&v=4"/></br><a href="https://github.com/iamwillbar">iamwillbar</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/1310474?s=96&v=4"/></br><a href="https://github.com/jknowles">jknowles</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/11947658?s=96&v=4"/></br><a href="https://github.com/KentBrockman">KentBrockman</a></td>
-<td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/5588131?s=96&v=4"/></br><a href="https://github.com/kianenigma">kianenigma</a></td>
-</tr>
-<tr>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/24908652?s=96&v=4"/></br><a href="https://github.com/konishi-t">konishi-t</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/42319182?s=96&v=4"/></br><a href="https://github.com/marcdw1289">marcdw1289</a></td>
+</tr>
+<tr>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/126279083?s=96&v=4"/></br><a href="https://github.com/matmoly">matmoly</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/1788010?s=96&v=4"/></br><a href="https://github.com/maxtruxa">maxtruxa</a></td>
-</tr>
-<tr>
-<td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/29300939?s=96&v=4"/></br><a href="https://github.com/mcejp">mcejp</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/31054972?s=96&v=4"/></br><a href="https://github.com/saarantras">saarantras</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/327998?s=96&v=4"/></br><a href="https://github.com/sif">sif</a></td>
-<td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/765564?s=96&v=4"/></br><a href="https://github.com/taskcruncher">taskcruncher</a></td>
 </tr>
 <tr>
+<td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/765564?s=96&v=4"/></br><a href="https://github.com/taskcruncher">taskcruncher</a></td>
 <td style="text-align:center"><img width="50" src="https://avatars2.githubusercontent.com/u/333944?s=96&v=4"/></br><a href="https://github.com/tateisu">tateisu</a></td>
-<td style="text-align:center"></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
@@ -567,8 +563,8 @@ https://github.com/laurent22/joplin/blob/dev/README.md
 <p>Joplin can export to the JEX format (Joplin Export file), which is a tar file that can contain multiple notes, notebooks, etc. This is a lossless format in that all the notes, but also metadata such as geo-location, updated time, tags, etc. are preserved. This format is convenient for backup purposes and can be re-imported into Joplin. A &quot;raw&quot; format is also available. This is the same as the JEX format except that the data is saved to a directory and each item represented by a single file.<br>
 Joplin is also capable of exporting to a number of other formats including HTML and PDF which can be done for single notes, notebooks or everything.</p>
 <h1>Synchronisation<a name="synchronisation" href="#synchronisation" class="heading-anchor">🔗</a></h1>
-<p>One of the goals of Joplin is to avoid being tied to any particular company or service, whether it is Evernote, Google or Microsoft. As such the synchronisation is designed without any hard dependency to any particular service. Most of the synchronisation process is done at an abstract level and access to external services, such as Nextcloud or Dropbox, is done via lightweight drivers. It is easy to support new services by creating simple drivers that provide a filesystem-like interface, i.e. the ability to read, write, delete and list items. It is also simple to switch from one service to another or to even sync to multiple services at once. Each note, notebook, tags, as well as the relation between items is transmitted as plain text files during synchronisation, which means the data can also be moved to a different application, can be easily backed up, inspected, etc.</p>
-<p>Currently, synchronisation is possible with Nextcloud, WebDAV, Dropbox, OneDrive or the local filesystem. To enable synchronisation please follow the instructions below. After that, the application will synchronise in the background whenever it is running, or you can click on &quot;Synchronise&quot; to start a synchronisation manually. Joplin will background sync automatically after any content change is made on the local application.</p>
+<p>One of the goals of Joplin is to avoid being tied to any particular company or service, whether it is Evernote, Google or Microsoft. As such the synchronisation is designed without any hard dependency to any particular service. Most of the synchronisation process is done at an abstract level and access to external services, such as Nextcloud or Dropbox, is done via lightweight drivers. It is easy to support new services by creating simple drivers that provide a filesystem-like interface, i.e. the ability to read, write, delete and list items. It is also simple to switch from one service to another.</p>
+<p>Currently, synchronisation is possible with Joplin Cloud, Nextcloud, S3, WebDAV, Dropbox, OneDrive or the local filesystem. To enable synchronisation please follow the instructions below. After that, the application will synchronise in the background whenever it is running, or you can click on &quot;Synchronise&quot; to start a synchronisation manually. Joplin will background sync automatically after any content change is made on the local application.</p>
 <p>If the <strong>terminal client</strong> has been installed, it is possible to also synchronise outside of the user interface by typing <code>joplin sync</code> from the terminal. This can be used to setup a cron script to synchronise at a regular interval. For example, this would do it every 30 minutes:</p>
 <p><code> */30 * * * * /path/to/joplin sync</code></p>
 <h2>Nextcloud synchronisation<a name="nextcloud-synchronisation" href="#nextcloud-synchronisation" class="heading-anchor">🔗</a></h2>
@@ -916,7 +912,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Arabic</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ar.po">ar</a></td>
 <td><a href="mailto:Whaell@protonmail.com">Whaell O</a></td>
-<td>79%</td>
+<td>77%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/es/basque_country.png" width="16px"/></td>
@@ -930,48 +926,48 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Bosnian (Bosna i Hercegovina)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/bs_BA.po">bs_BA</a></td>
 <td><a href="mailto:dervis.t@pm.me">Derviš T.</a></td>
-<td>57%</td>
+<td>56%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/bg.png" width="16px"/></td>
 <td>Bulgarian (България)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/bg_BG.po">bg_BG</a></td>
 <td></td>
-<td>45%</td>
+<td>44%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/es/catalonia.png" width="16px"/></td>
 <td>Catalan</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ca.po">ca</a></td>
 <td><a href="mailto:xavi.ivars@gmail.com">Xavi Ivars</a></td>
-<td>88%</td>
+<td>86%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/hr.png" width="16px"/></td>
 <td>Croatian (Hrvatska)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/hr_HR.po">hr_HR</a></td>
 <td><a href="mailto:mail@milotype.de">Milo Ivir</a></td>
-<td>99%</td>
+<td>98%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/cz.png" width="16px"/></td>
 <td>Czech (Česká republika)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/cs_CZ.po">cs_CZ</a></td>
 <td>Fejby</td>
-<td>98%</td>
+<td>96%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/dk.png" width="16px"/></td>
 <td>Dansk (Danmark)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/da_DK.po">da_DK</a></td>
 <td>ERYpTION</td>
-<td>98%</td>
+<td>96%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/de.png" width="16px"/></td>
 <td>Deutsch (Deutschland)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/de_DE.po">de_DE</a></td>
-<td><a href="mailto:pueblos_spatulas@aleeas.com">MrKanister</a></td>
+<td><a href="mailto:viger_gtrc@simplelogin.com">Mr-Kanister</a></td>
 <td>98%</td>
 </tr>
 <tr>
@@ -979,7 +975,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Eesti Keel (Eesti)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/et_EE.po">et_EE</a></td>
 <td></td>
-<td>44%</td>
+<td>43%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/gb.png" width="16px"/></td>
@@ -1000,7 +996,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Español (España)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/es_ES.po">es_ES</a></td>
 <td><a href="mailto:teko.gr@gmail.com">Francisco Villaverde</a></td>
-<td>97%</td>
+<td>95%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/esperanto.png" width="16px"/></td>
@@ -1014,7 +1010,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Finnish (Suomi)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/fi_FI.po">fi_FI</a></td>
 <td>mrkaato0</td>
-<td>98%</td>
+<td>96%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/fr.png" width="16px"/></td>
@@ -1028,161 +1024,161 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>Galician (España)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/gl_ES.po">gl_ES</a></td>
 <td><a href="mailto:marcoslansgarza@gmail.com">Marcos Lans</a></td>
-<td>29%</td>
+<td>28%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/id.png" width="16px"/></td>
 <td>Indonesian (Indonesia)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/id_ID.po">id_ID</a></td>
 <td><a href="mailto:waditos@gmail.com">Wisnu Adi Santoso</a></td>
-<td>88%</td>
+<td>86%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/it.png" width="16px"/></td>
 <td>Italiano (Italia)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/it_IT.po">it_IT</a></td>
 <td><a href="mailto:mannivuwiki@gmail.com">Manuel Tassi</a></td>
-<td>80%</td>
+<td>78%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/hu.png" width="16px"/></td>
 <td>Magyar (Magyarország)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/hu_HU.po">hu_HU</a></td>
 <td><a href="mailto:balmag@gmail.com">Magyari Balázs</a></td>
-<td>77%</td>
+<td>75%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/be.png" width="16px"/></td>
 <td>Nederlands (België, Belgique, Belgien)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/nl_BE.po">nl_BE</a></td>
 <td></td>
-<td>78%</td>
+<td>76%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/nl.png" width="16px"/></td>
 <td>Nederlands (Nederland)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/nl_NL.po">nl_NL</a></td>
 <td><a href="mailto:mholkamp@users.noreply.github.com">MHolkamp</a></td>
-<td>87%</td>
+<td>86%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/no.png" width="16px"/></td>
 <td>Norwegian (Norge, Noreg)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/nb_NO.po">nb_NO</a></td>
 <td><a href="mailto:code@mxe.no">Mats Estensen</a></td>
-<td>87%</td>
+<td>85%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/ir.png" width="16px"/></td>
 <td>Persian</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/fa.po">fa</a></td>
 <td><a href="mailto:kourox@protonmail.com">Kourosh Firoozbakht</a></td>
-<td>54%</td>
+<td>53%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/pl.png" width="16px"/></td>
 <td>Polski (Polska)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/pl_PL.po">pl_PL</a></td>
 <td><a href="mailto:X3NO@disroot.org">X3NO</a></td>
-<td>89%</td>
+<td>88%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/br.png" width="16px"/></td>
 <td>Português (Brasil)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/pt_BR.po">pt_BR</a></td>
 <td><a href="mailto:djlsplays@gmail.com">Douglas Leão</a></td>
-<td>87%</td>
+<td>85%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/pt.png" width="16px"/></td>
 <td>Português (Portugal)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/pt_PT.po">pt_PT</a></td>
 <td><a href="mailto:dcaveiro@yahoo.com">Diogo Caveiro</a></td>
-<td>72%</td>
+<td>70%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/ro.png" width="16px"/></td>
 <td>Română</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ro.po">ro</a></td>
 <td><a href="mailto:cristi.duluta@gmail.com">Cristi Duluta</a></td>
-<td>50%</td>
+<td>49%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/si.png" width="16px"/></td>
 <td>Slovenian (Slovenija)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/sl_SI.po">sl_SI</a></td>
 <td><a href="mailto:martin.korelic@protonmail.com">Martin Korelič</a></td>
-<td>79%</td>
+<td>78%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/se.png" width="16px"/></td>
 <td>Svenska</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/sv.po">sv</a></td>
 <td><a href="mailto:jonatan@autistici.org">Jonatan Nyberg</a></td>
-<td>99%</td>
+<td>97%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/th.png" width="16px"/></td>
 <td>Thai (ประเทศไทย)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/th_TH.po">th_TH</a></td>
 <td></td>
-<td>36%</td>
+<td>35%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/vn.png" width="16px"/></td>
 <td>Tiếng Việt</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/vi.po">vi</a></td>
 <td></td>
-<td>77%</td>
+<td>75%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/tr.png" width="16px"/></td>
 <td>Türkçe (Türkiye)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/tr_TR.po">tr_TR</a></td>
 <td><a href="mailto:arda@kilicdagi.com">Arda Kılıçdağı</a></td>
-<td>99%</td>
+<td>97%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/ua.png" width="16px"/></td>
 <td>Ukrainian (Україна)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/uk_UA.po">uk_UA</a></td>
 <td><a href="mailto:vandreykiv@gmail.com">Vyacheslav Andreykiv</a></td>
-<td>71%</td>
+<td>98%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/gr.png" width="16px"/></td>
 <td>Ελληνικά (Ελλάδα)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/el_GR.po">el_GR</a></td>
 <td><a href="mailto:xaris@tuta.io">Harris Arvanitis</a></td>
-<td>87%</td>
+<td>97%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/ru.png" width="16px"/></td>
 <td>Русский (Россия)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ru_RU.po">ru_RU</a></td>
 <td><a href="mailto:dmitry@atsip.ru">Dmitriy K</a></td>
-<td>99%</td>
+<td>97%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/rs.png" width="16px"/></td>
 <td>српски језик (Србија)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/sr_RS.po">sr_RS</a></td>
 <td></td>
-<td>64%</td>
+<td>63%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/cn.png" width="16px"/></td>
 <td>中文 (简体)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/zh_CN.po">zh_CN</a></td>
-<td><a href="mailto:wh201906@yandex.com">wh201906</a></td>
-<td>96%</td>
+<td><a href="mailto:ztymaxwell@gmail.com">qx100</a></td>
+<td>98%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/tw.png" width="16px"/></td>
 <td>中文 (繁體)</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/zh_TW.po">zh_TW</a></td>
 <td><a href="mailto:kevin.hsu.hws@gmail.com">Kevin Hsu</a></td>
-<td>88%</td>
+<td>86%</td>
 </tr>
 <tr>
 <td><img src="https://joplinapp.org/images/flags/country-4x3/jp.png" width="16px"/></td>
@@ -1196,7 +1192,7 @@ Eg. <code>:search -- &quot;-tag:tag1&quot;</code>.</p>
 <td>한국어</td>
 <td><a href="https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ko.po">ko</a></td>
 <td><a href="mailto:potatogim@potatogim.net">Ji-Hyeon Gim</a></td>
-<td>88%</td>
+<td>86%</td>
 </tr>
 </tbody>
 </table>

@@ -552,6 +552,16 @@
 				"body"
 			]
 		},
+		"imageResizing": {
+			"type": "string",
+			"default": "alwaysAsk",
+			"description": "Resize large images:. Shrink large images before adding them to notes to save storage space.",
+			"enum": [
+				"alwaysAsk",
+				"alwaysResize",
+				"neverResize"
+			]
+		},
 		"plugins.states": {
 			"type": "object",
 			"default": "",

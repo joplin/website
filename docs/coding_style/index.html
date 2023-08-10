@@ -235,6 +235,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/coding_style.md
 <li><a href="/principles/">Guiding principles</a></li>
 <li><a href="/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/brand">Brand guidelines</a></li>
+<li><a href="/release_cycle/">Release cycle</a></li>
 <li><a href="/donate/">Donate</a></li>
 </ul>
 </li>
@@ -357,6 +358,7 @@ https://github.com/laurent22/joplin/blob/dev/readme/coding_style.md
 <li><a href="/principles/">Guiding principles</a></li>
 <li><a href="/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/brand">Brand guidelines</a></li>
+<li><a href="/release_cycle/">Release cycle</a></li>
 <li><a href="/donate/">Donate</a></li>
 </ul>
 </li>
@@ -409,6 +411,22 @@ https://github.com/laurent22/joplin/blob/dev/readme/coding_style.md
 const config: Config = {
 	// ...
 }	
+</code></pre>
+<h3>Don't set the type when it can be inferred<a name="don-t-set-the-type-when-it-can-be-inferred" href="#don-t-set-the-type-when-it-can-be-inferred" class="heading-anchor">🔗</a></h3>
+<p>TypeScript can automatically detect the type so setting it explicitely in many cases is not needed, and makes the code unecessary verbose. We already have enabled the eslint rule <code>no-inferrable-types</code>, however it only applies to simple types such as string, number, etc. but not to function calls.</p>
+<p><strong>BAD:</strong></p>
+<pre><code class="language-ts">const getSomething():string =&gt; {
+	return 'something';
+}
+
+const timestamp:number = Date.now();
+</code></pre>
+<p><strong>Good:</strong></p>
+<pre><code class="language-ts">const getSomething() =&gt; {
+	return 'something';
+}
+
+const timestamp = Date.now();
 </code></pre>
 <h2>Filenames<a name="filenames" href="#filenames" class="heading-anchor">🔗</a></h2>
 <ul>
