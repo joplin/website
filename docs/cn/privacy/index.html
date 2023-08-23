@@ -374,7 +374,6 @@ https://github.com/laurent22/joplin/blob/dev/readme/privacy.md
 </div>
 <h1>Joplin Privacy Policy<a name="joplin-privacy-policy" href="#joplin-privacy-policy" class="heading-anchor">🔗</a></h1>
 <p>The Joplin applications, including the Android, iOS, Windows, macOS and Linux applications, do not send any data to any service without your authorisation. Any data that Joplin saves, such as notes or images, are saved to your own device and you are free to delete this data at any time.</p>
-<p>If you choose to synchronise with a third-party, such as OneDrive or Dropbox, the notes will be sent to that account, in which case the third-party privacy policy applies.</p>
 <p>In order to provide certain features, Joplin may need to connect to third-party services. You can disable most of these features in the application settings:</p>
 <table class="table">
 <thead>
@@ -388,13 +387,13 @@ https://github.com/laurent22/joplin/blob/dev/readme/privacy.md
 <tbody>
 <tr>
 <td>Auto-update</td>
-<td>Joplin periodically connects to GitHub to check for new releases.</td>
+<td>Joplin periodically connects to <code>objects.joplinusercontent.com</code> to check for new releases.</td>
 <td>Enabled</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>Geo-location</td>
-<td>Joplin saves geo-location information in note properties when you create a note.</td>
+<td>Joplin saves geo-location information in note properties when you create a note. For that it will connect to either <code>ipwho.is</code> or <code>geoplugin.net</code></td>
 <td>Enabled</td>
 <td>Yes</td>
 </tr>
