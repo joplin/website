@@ -567,6 +567,11 @@
 				"neverResize"
 			]
 		},
+		"notes.listRendererId": {
+			"type": "string",
+			"default": "compact",
+			"$comment": "private"
+		},
 		"plugins.states": {
 			"type": "object",
 			"default": "",
