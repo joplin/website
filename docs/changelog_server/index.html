@@ -36,14 +36,14 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_server.md
 		<link rel="icon" href="&#x2F;images/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#000000" />
-			<meta name="description" content="server-v2.12.1 - 2023-07-13T10:23:24Z New: Add yarn patches to Docker image (e91e38c) Improved: Updated packages @rmp135&#x2F;sql-ts (v1.17.0), clean-html (v2), dayjs (v1.11.8), glob (v10.2.7), jquery (..." />
+			<meta name="description" content="server-v2.13.1 - 2023-09-20T15:15:32Z New: Add Joplin Server and Joplin Cloud favicons (1b00445) New: Add function to get db default value (6962ba1) New: Add support for separate admin instance (d7..." />
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@joplinapp" />
 			<meta property="og:url" content="https://joplinapp.org/changelog_server/index.html" />
 			<meta property="og:title" content="Joplin Server Changelog" />
 			<meta property="twitter:title" content="Joplin Server Changelog" />
-			<meta property="og:description" content="server-v2.12.1 - 2023-07-13T10:23:24Z New: Add yarn patches to Docker image (e91e38c) Improved: Updated packages @rmp135&#x2F;sql-ts (v1.17.0), clean-html (v2), dayjs (v1.11.8), glob (v10.2.7), jquery (..." />
-			<meta property="twitter:description" content="server-v2.12.1 - 2023-07-13T10:23:24Z New: Add yarn patches to Docker image (e91e38c) Improved: Updated packages @rmp135&#x2F;sql-ts (v1.17.0), clean-html (v2), dayjs (v1.11.8), glob (v10.2.7), jquery (..." />
+			<meta property="og:description" content="server-v2.13.1 - 2023-09-20T15:15:32Z New: Add Joplin Server and Joplin Cloud favicons (1b00445) New: Add function to get db default value (6962ba1) New: Add support for separate admin instance (d7..." />
+			<meta property="twitter:description" content="server-v2.13.1 - 2023-09-20T15:15:32Z New: Add Joplin Server and Joplin Cloud favicons (1b00445) New: Add function to get db default value (6962ba1) New: Add support for separate admin instance (d7..." />
 		<link rel="alternate" type="application/rss+xml" title="Joplin RSS feed" href="https://joplinapp.org/rss.xml" />		<link
 			rel="stylesheet"
 			href="&#x2F;css/bootstrap5.0.2.min.css"
@@ -373,6 +373,27 @@ https://github.com/laurent22/joplin/blob/dev/readme/changelog_server.md
 <p><a href="https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&amp;no_recurring=0&amp;item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&amp;currency_code=EUR"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
 </div>
 <h1>Joplin Server Changelog<a name="joplin-server-changelog" href="#joplin-server-changelog" class="heading-anchor">🔗</a></h1>
+<h2><a href="https://github.com/laurent22/joplin/releases/tag/server-v2.13.1">server-v2.13.1</a> - 2023-09-20T15:15:32Z<a name="server-v2-13-1-https-github-com-laurent22-joplin-releases-tag-server-v2-13-1-2023-09-20t15-15-32z" href="#server-v2-13-1-https-github-com-laurent22-joplin-releases-tag-server-v2-13-1-2023-09-20t15-15-32z" class="heading-anchor">🔗</a></h2>
+<ul>
+<li>New: Add Joplin Server and Joplin Cloud favicons (1b00445)</li>
+<li>New: Add function to get db default value (6962ba1)</li>
+<li>New: Add support for separate admin instance (d78ab16)</li>
+<li>Improved: Add a link to resend email verification email (#8650) (#7808 by <a href="https://github.com/hubert">@hubert</a>)</li>
+<li>Improved: Allow any account to share with any other account (13c4eba)</li>
+<li>Improved: By default, sort user deletion in descending order (68ffdc5)</li>
+<li>Improved: Disallow loading env file that contains duplicate keys (9d16dd2)</li>
+<li>Improved: Do not allow the server to start if a migration needs to be applied (1acbb5d)</li>
+<li>Improved: Ensure that server does not crash when trying to start a task that is already running (5ed3d94)</li>
+<li>Improved: Remove event-based services (c718706)</li>
+<li>Improved: Removed obsolete node-env-file dependency (c0501fc)</li>
+<li>Improved: Set db default value in exported schema (6cdb1a7)</li>
+<li>Improved: Support setting an instance name (36e9e0a)</li>
+<li>Improved: Throwing an error if the password being saved already seems to be hashed (#8637 by <a href="https://github.com/pedr">@pedr</a>)</li>
+<li>Improved: Updated packages @rmp135/sql-ts (v1.18.0), buildTools, dayjs (v1.11.9), gettext-parser (v7.0.1), glob (v10.3.4), jquery (v3.7.1), jsdom (v22.1.0), knex (v2.5.1), markdown-it-multimd-table (v4.2.3), nodemailer (v6.9.4), pg (v8.11.3), rate-limiter-flexible (v2.4.2), react, sass (v1.65.1), sharp (v0.32.5), word-wrap (v1.2.5)</li>
+<li>Improved: Upgraded Formidable parsing library (a04654a)</li>
+<li>Fixed: Searching for user should be case insensitive (#8682) (#8307 by <a href="https://github.com/hubert">@hubert</a>)</li>
+<li>Fixed: Sorting users by &quot;total size&quot; leads to a crash (#8680) (#8308 by <a href="https://github.com/hubert">@hubert</a>)</li>
+</ul>
 <h2><a href="https://github.com/laurent22/joplin/releases/tag/server-v2.12.1">server-v2.12.1</a> - 2023-07-13T10:23:24Z<a name="server-v2-12-1-https-github-com-laurent22-joplin-releases-tag-server-v2-12-1-2023-07-13t10-23-24z" href="#server-v2-12-1-https-github-com-laurent22-joplin-releases-tag-server-v2-12-1-2023-07-13t10-23-24z" class="heading-anchor">🔗</a></h2>
 <ul>
 <li>New: Add yarn patches to Docker image (e91e38c)</li>
