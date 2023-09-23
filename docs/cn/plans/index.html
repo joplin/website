@@ -49,7 +49,7 @@ https://github.com/laurent22/joplin/blob/dev/
 			media="all"
 			onload="this.media='all'; this.onload = null"
 		/>
-		<link rel="stylesheet" href="/css/site.css?h=4088f5ad58d081586548c9cb79966504" as="style" />
+		<link rel="stylesheet" href="/css/site.css?h=38a2a4346cf8d72ac4ab217eb1ce5c20" as="style" />
 		
 		<title>Joplin Cloud Plans | Joplin</title>
 
@@ -187,6 +187,13 @@ https://github.com/laurent22/joplin/blob/dev/
 <h1 translate class="text-center">
 乔普林云<span class="frame-bg frame-bg-yellow">计划</span>
 </h1>
+
+
+				
+<button id="myButton">
+My button
+</button>
+
 
 				
 <p translate class="text-center sub-title">
@@ -332,14 +339,14 @@ https://github.com/laurent22/joplin/blob/dev/
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				每个笔记或附件10MB
+				最大笔记或附件大小
 				</p>
 
 							
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				1GB存储空间
+				储存空间
 				</p>
 
 							
@@ -403,7 +410,7 @@ https://github.com/laurent22/joplin/blob/dev/
 				<p class="unchecked-text">
 				<i class="fas fa-times feature feature-off">
 				</i>
-				共享访问控制
+				Share permissions
 				</p>
 
 							
@@ -550,14 +557,14 @@ https://github.com/laurent22/joplin/blob/dev/
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				每个笔记或附件200MB
+				最大笔记或附件大小
 				</p>
 
 							
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				10GB存储空间
+				储存空间
 				</p>
 
 							
@@ -621,7 +628,7 @@ https://github.com/laurent22/joplin/blob/dev/
 				<p class="unchecked-text">
 				<i class="fas fa-times feature feature-off">
 				</i>
-				共享访问控制
+				Share permissions
 				</p>
 
 							
@@ -768,14 +775,14 @@ https://github.com/laurent22/joplin/blob/dev/
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				每个笔记或附件200MB
+				最大笔记或附件大小
 				</p>
 
 							
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				10GB存储空间
+				储存空间
 				</p>
 
 							
@@ -838,7 +845,7 @@ https://github.com/laurent22/joplin/blob/dev/
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				共享访问控制
+				Share permissions
 				</p>
 
 							
@@ -956,7 +963,7 @@ Feature comparison
 <td>10 GB</td>
 </tr>
 <tr>
-<td>把笔记发布到互联网</td>
+<td>把笔记发布到互联网<a data-id=publishNote class="feature-title" name="feature-publishNote" href="#feature-publishNote">i</a><div class="feature-description feature-description-publishNote">You can publish a note from the Joplin app. You will get a link that you can share with other users, who can then view the note in their browser.</div></td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -974,19 +981,19 @@ Feature comparison
 <td>✔️</td>
 </tr>
 <tr>
-<td>Collaborate on a notebook with others</td>
+<td>Collaborate on a notebook with others<a data-id=collaborate class="feature-title" name="feature-collaborate" href="#feature-collaborate">i</a><div class="feature-description feature-description-collaborate">This allows another user to share a notebook with you, and you can then both collaborate on it. It does not however allow you to share a notebook with someone else, unless you have the feature &quot;Share a notebook with others&quot;.</div></td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
 </tr>
 <tr>
-<td>Share a notebook with others</td>
+<td>Share a notebook with others<a data-id=share class="feature-title" name="feature-share" href="#feature-share">i</a><div class="feature-description feature-description-share">You can share a notebook with other Joplin Cloud users, who can then view the notes and edit them.</div></td>
 <td>-</td>
 <td>✔️</td>
 <td>✔️</td>
 </tr>
 <tr>
-<td>Email to Note</td>
+<td>Email to Note<a data-id=emailToNote class="feature-title" name="feature-emailToNote" href="#feature-emailToNote">i</a><div class="feature-description feature-description-emailToNote">You can save your emails in Joplin Cloud by forwarding your emails to a special email address. The subject of the email will become the note title, and the email body will become the note content.</div></td>
 <td>-</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -1004,7 +1011,7 @@ Feature comparison
 <td>✔️</td>
 </tr>
 <tr>
-<td>共享访问控制</td>
+<td>Share permissions<a data-id=sharePermissions class="feature-title" name="feature-sharePermissions" href="#feature-sharePermissions">i</a><div class="feature-description feature-description-sharePermissions">With this feature you can define whether a notebook you share with someone can be edited or is read-only. It can be useful for example to share documentation that you do not want to be modified.</div></td>
 <td>-</td>
 <td>-</td>
 <td>✔️</td>
@@ -1148,6 +1155,14 @@ Feature comparison
 			} else {
 				applyPeriod('yearly');
 			}
+
+			$('.feature-description').hide();
+
+			$('.feature-title').click((event) => {
+				event.preventDefault();
+				const featureId = event.currentTarget.getAttribute('data-id');
+				$('.feature-description-' + featureId).show();
+			});
 		});
 	
 </script>
@@ -1191,11 +1206,7 @@ Feature comparison
 				</div>
 			</footer>		</div>
 
-		<script
-			src="&#x2F;js/bootstrap5.0.2.bundle.min.js"
-			rel="preload"
-			as="script"
-		></script>
+		<script src="&#x2F;js/bootstrap5.0.2.bundle.min.js" rel="preload" as="script"></script>
 		<script src="/js/script.js?h=b1cc510889690b9703c87eafe6c3e8e0"></script>
 
 		<script>
