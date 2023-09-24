@@ -188,13 +188,6 @@ https://github.com/laurent22/joplin/blob/dev/
 乔普林云<span class="frame-bg frame-bg-yellow">计划</span>
 </h1>
 
-
-				
-<button id="myButton">
-My button
-</button>
-
-
 				
 <p translate class="text-center sub-title">
 <a href="https://joplincloud.com">Joplin Cloud</a> 允许您在不同的设备上同步您的笔记。它还可以让您发布笔记，并与您的朋友、家人或同事在笔记本上进行协作。
@@ -339,14 +332,14 @@ My button
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				最大笔记或附件大小
+				每个笔记或附件10MB
 				</p>
 
 							
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				储存空间
+				1GB存储空间
 				</p>
 
 							
@@ -557,14 +550,14 @@ My button
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				最大笔记或附件大小
+				每个笔记或附件200MB
 				</p>
 
 							
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				储存空间
+				10GB存储空间
 				</p>
 
 							
@@ -775,14 +768,14 @@ My button
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				最大笔记或附件大小
+				每个笔记或附件200MB
 				</p>
 
 							
 				<p>
 				<i class="fas fa-check feature feature-on">
 				</i>
-				储存空间
+				10GB存储空间
 				</p>
 
 							
@@ -1161,7 +1154,7 @@ Feature comparison
 			$('.feature-title').click((event) => {
 				event.preventDefault();
 				const featureId = event.currentTarget.getAttribute('data-id');
-				$('.feature-description-' + featureId).show();
+				$('.feature-description-' + featureId).toggle(200);
 			});
 		});
 	
