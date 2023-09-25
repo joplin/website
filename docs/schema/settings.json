@@ -272,6 +272,11 @@
 			"default": "",
 			"$comment": "private"
 		},
+		"notesParent": {
+			"type": "string",
+			"default": "",
+			"$comment": "private"
+		},
 		"richTextBannerDismissed": {
 			"type": "boolean",
 			"default": false,
