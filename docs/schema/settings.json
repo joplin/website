@@ -880,6 +880,17 @@
 			"default": false,
 			"description": "Enable spell checking in Markdown editor? (WARNING BETA feature). Spell checker in the Markdown editor was previously unstable (cursor location was not stable, sometimes edits would not be saved or reflected in the viewer, etc.) however it appears to be more reliable now. If you notice any issue, please report it on GitHub or the Joplin Forum (Help -> Joplin Forum)"
 		},
+		"imageeditor.jsdrawToolbar": {
+			"type": "string",
+			"default": "",
+			"$comment": "private"
+		},
+		"imageeditor.imageTemplate": {
+			"type": "string",
+			"default": "{ }",
+			"description": "Template for the image editor",
+			"$comment": "private"
+		},
 		"editor.beta": {
 			"type": "boolean",
 			"default": false,
