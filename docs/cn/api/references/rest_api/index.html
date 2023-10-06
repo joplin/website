@@ -1084,9 +1084,92 @@ async function fetchAllNotes() {
 <p>Deletes the tag with ID :id</p>
 <h2>DELETE /tags/:id/notes/:note_id<a name="delete-tags-id-notes-note-id" href="#delete-tags-id-notes-note-id" class="heading-anchor">🔗</a></h2>
 <p>Remove the tag from the note.</p>
+<h1>Revisions<a name="revisions" href="#revisions" class="heading-anchor">🔗</a></h1>
+<h2>Properties<a name="properties-4" href="#properties-4" class="heading-anchor">🔗</a></h2>
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>item_type</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>item_id</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>item_updated_time</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>title_diff</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>body_diff</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata_diff</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>encryption_cipher_text</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>encryption_applied</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>updated_time</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>created_time</td>
+<td>int</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>GET /revisions<a name="get-revisions" href="#get-revisions" class="heading-anchor">🔗</a></h2>
+<p>Gets all revisions</p>
+<h2>GET /revisions/:id<a name="get-revisions-id" href="#get-revisions-id" class="heading-anchor">🔗</a></h2>
+<p>Gets revision with ID :id</p>
+<h2>POST /revisions<a name="post-revisions" href="#post-revisions" class="heading-anchor">🔗</a></h2>
+<p>Creates a new revision</p>
+<h2>PUT /revisions/:id<a name="put-revisions-id" href="#put-revisions-id" class="heading-anchor">🔗</a></h2>
+<p>Sets the properties of the revision with ID :id</p>
+<h2>DELETE /revisions/:id<a name="delete-revisions-id" href="#delete-revisions-id" class="heading-anchor">🔗</a></h2>
+<p>Deletes the revision with ID :id</p>
 <h1>Events<a name="events" href="#events" class="heading-anchor">🔗</a></h1>
 <p>This end point can be used to retrieve the latest note changes. Currently only note changes are tracked.</p>
-<h2>Properties<a name="properties-4" href="#properties-4" class="heading-anchor">🔗</a></h2>
+<h2>Properties<a name="properties-5" href="#properties-5" class="heading-anchor">🔗</a></h2>
 <table class="table">
 <thead>
 <tr>
@@ -1136,7 +1219,7 @@ async function fetchAllNotes() {
 <h2>GET /events<a name="get-events" href="#get-events" class="heading-anchor">🔗</a></h2>
 <p>Returns a paginated list of recent events. A <code>cursor</code> property should be provided, which tells from what point in time the events should be returned. The API will return a <code>cursor</code> property, to tell from where to resume retrieving events, as well as an <code>has_more</code> (tells if more changes can be retrieved) and <code>items</code> property, which will contain the list of events. Events are kept for up to 90 days.</p>
 <p>If no <code>cursor</code> property is provided, the API will respond with the latest change ID. That can be used to retrieve future events later on.</p>
-<p>The results are paginated so will need to may multiple calls to retrieve all the events. Use the <code>has_more</code> property to know if more can be retrieved.</p>
+<p>The results are paginated so you may need multiple calls to retrieve all the events. Use the <code>has_more</code> property to know if more can be retrieved.</p>
 <h2>GET /events/:id<a name="get-events-id" href="#get-events-id" class="heading-anchor">🔗</a></h2>
 <p>Returns the event with the given ID.</p>
 

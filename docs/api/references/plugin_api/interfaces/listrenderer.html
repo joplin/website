@@ -105,6 +105,14 @@
 					<div class="tsd-signature tsd-kind-icon">dependencies<span class="tsd-signature-symbol">:</span> <a href="../globals.html#listrendererdepependency" class="tsd-signature-type">ListRendererDepependency</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List the dependencies that your plugin needs to render the note list
+								items. Only these will be passed to your <code>onRenderNote</code> handler. Ensure
+								that you do not add more than what you need since there is a performance
+							penalty for each property.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="flow" class="tsd-anchor"></a>
@@ -112,6 +120,13 @@
 					<div class="tsd-signature tsd-kind-icon">flow<span class="tsd-signature-symbol">:</span> <a href="../enums/itemflow.html" class="tsd-signature-type">ItemFlow</a></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Can be top to bottom or left to right. Left to right gives you more
+								option to set the size of the items since you set both its width and
+							height.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="id" class="tsd-anchor"></a>
@@ -119,6 +134,11 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>It must be unique to your plugin.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="itemcss" class="tsd-anchor"></a>
@@ -126,6 +146,20 @@
 					<div class="tsd-signature tsd-kind-icon">item<wbr>Css<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The CSS is relative to the list item container. What will appear in the
+								page is essentially <code>.note-list-item { YOUR_CSS; }</code>. It means you can use
+								child combinator with guarantee it will only apply to your own items. In
+							this example, the styling will apply to <code>.note-list-item &gt; .content</code>:</p>
+						</div>
+						<pre><code class="language-css">&gt; <span class="hljs-selector-class">.content</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+}</code></pre>
+						<p>In order to get syntax highlighting working here, it&#39;s recommended
+							installing an editor extension such as <a href="https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html">es6-string-html VSCode
+						extension</a></p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="itemsize" class="tsd-anchor"></a>
@@ -133,6 +167,14 @@
 					<div class="tsd-signature tsd-kind-icon">item<wbr>Size<span class="tsd-signature-symbol">:</span> <a href="size.html" class="tsd-signature-type">Size</a></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The size of each item must be specified in advance for performance
+								reasons, and cannot be changed afterwards. If the item flow is top to
+								bottom, you only need to specificy the item height (the width will be
+							ignored).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="itemtemplate" class="tsd-anchor"></a>
@@ -140,6 +182,19 @@
 					<div class="tsd-signature tsd-kind-icon">item<wbr>Template<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This is the HTML template that will be used to render the note list item.
+								This is a <a href="https://github.com/janl/mustache.js">Mustache template</a> and it
+								will receive the variable you return from <code>onRenderNote</code> as tags. For
+								example, if you return a property named <code>formattedDate</code> from
+								<code>onRenderNote</code>, you can insert it in the template using <code>Created date:
+{{formattedDate}}</code>.</p>
+						</div>
+						<p>In order to get syntax highlighting working here, it&#39;s recommended
+							installing an editor extension such as <a href="https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html">es6-string-html VSCode
+						extension</a></p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="label" class="tsd-anchor"></a>
@@ -147,6 +202,12 @@
 					<div class="tsd-signature tsd-kind-icon">label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This user-facing text is used for example in the View menu, so that your
+							renderer can be selected.</p>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -173,6 +234,25 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Change<span class="tsd-signature-symbol">:</span> <a href="../globals.html#onchangehandler" class="tsd-signature-type">OnChangeHandler</a></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This handler allows adding some interacivity to the note renderer -
+								whenever an input element within the item is changed (for example, when a
+								checkbox is clicked, or a text input is changed), this <code>onChange</code> handler
+							is going to be called.</p>
+						</div>
+						<p>You can inspect <code>event.elementId</code> to know which element had some changes,
+							and <code>event.value</code> to know the new value. <code>event.noteId</code> also tells you
+						what note is affected, so that you can potentially apply changes to it.</p>
+						<p>You specify the element ID, by setting a <code>data-id</code> attribute on the
+						input.</p>
+						<p>For example, if you have such a template:</p>
+						<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{note.title}}&quot;</span> <span class="hljs-attr">data-id</span>=<span class="hljs-string">&quot;noteTitleInput&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+						<p>The event handler will receive an event with <code>elementId</code> set to
+						<code>noteTitleInput</code>.</p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="onrendernote" class="tsd-anchor"></a>
@@ -180,6 +260,38 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Render<wbr>Note<span class="tsd-signature-symbol">:</span> <a href="../globals.html#onrendernotehandler" class="tsd-signature-type">OnRenderNoteHandler</a></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This is where most of the real-time processing will happen. When a note
+								is rendered for the first time and every time it changes, this handler
+								receives the properties specified in the <code>dependencies</code> property. You can
+								then process them, load any additional data you need, and once done you
+								need to return the properties that are needed in the <code>itemTemplate</code> HTML.
+							Again, to use the formatted date example, you could have such a renderer:</p>
+						</div>
+						<pre><code class="language-typescript">dependencies: [
+    <span class="hljs-string">&#x27;note.title&#x27;</span>,
+    <span class="hljs-string">&#x27;note.created_time&#x27;</span>,
+],
+
+<span class="hljs-attr">itemTemplate</span>: <span class="hljs-comment">// html</span>
+    <span class="hljs-string">`
+    &lt;div&gt;
+        Title: {{note.title}}&lt;br/&gt;
+        Date: {{formattedDate}}
+    &lt;/div&gt;
+`</span>,
+
+<span class="hljs-attr">onRenderNote</span>: <span class="hljs-keyword">async</span> (props: <span class="hljs-built_in">any</span>) =&gt; {
+    <span class="hljs-keyword">const</span> formattedDate = dayjs(props.note.created_time).format();
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-comment">// Also return the props, so that note.title is available from the</span>
+        <span class="hljs-comment">// template</span>
+        ...props,
+        formattedDate,
+    }
+},</code></pre>
+					</div>
 				</section>
 			</section>
 		</div>

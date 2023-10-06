@@ -307,6 +307,24 @@
 					<div class="tsd-signature tsd-kind-icon">List<wbr>Renderer<wbr>Depependency<span class="tsd-signature-symbol">:</span> <a href="globals.html#listrendererdatabasedependency" class="tsd-signature-type">ListRendererDatabaseDependency</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.size.width"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.size.height"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.selected"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.titleHtml"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.isWatched"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.tags"</span></div>
 					<aside class="tsd-sources">
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Most of these are the built-in note properties, such as <code>note.title</code>,
+							<code>note.todo_completed</code>, etc.</p>
+						</div>
+						<p>Additionally, the <code>item.*</code> properties are specific to the rendered item. The
+							most important being <code>item.selected</code>, which you can use to display the
+						selected note in a different way.</p>
+						<p>Finally some special properties are provided to make it easier to render
+							notes. In particular, if possible prefer <code>note.titleHtml</code> to <code>note.title</code>
+							since some important processing has already been done on the string, such as
+							handling the search highlighter and escaping. Since it&#39;s HTML and already
+							escaped you would insert it using <code>{{{titleHtml}}}</code> (triple-mustache syntax,
+						which disables escaping).</p>
+						<p><code>notes.tag</code> gives you the list of tags associated with the note.</p>
+						<p><code>note.isWatched</code> tells you if the note is currently opened in an external
+						editor. In which case you would generally display some indicator.</p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="onchangehandler" class="tsd-anchor"></a>
