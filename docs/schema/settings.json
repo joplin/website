@@ -559,7 +559,7 @@
 		"imageResizing": {
 			"type": "string",
 			"default": "alwaysAsk",
-			"description": "Resize large images:. Shrink large images before adding them to notes to save storage space.",
+			"description": "Resize large images:. Shrink large images before adding them to notes.",
 			"enum": [
 				"alwaysAsk",
 				"alwaysResize",
@@ -688,8 +688,8 @@
 		},
 		"showTrayIcon": {
 			"type": "boolean",
-			"default": true,
-			"description": "Show tray icon. This will allow Joplin to run in the background. It is recommended to enable this setting so that your notes are constantly being synchronised, thus reducing the number of conflicts."
+			"default": false,
+			"description": "Show tray icon. Note: Does not work in all desktop environments."
 		},
 		"startMinimized": {
 			"type": "boolean",
@@ -783,7 +783,8 @@
 		"autoUpdateEnabled": {
 			"type": "boolean",
 			"default": true,
-			"description": "Automatically check for updates"
+			"description": "Automatically check for updates",
+			"$comment": "private"
 		},
 		"autoUpdate.includePreReleases": {
 			"type": "boolean",
