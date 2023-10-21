@@ -398,7 +398,15 @@ https://github.com/laurent22/joplin/blob/dev/readme/spec/sync.md
 <li>
 <p><code>packages/lib/*Api.ts</code>: The <code>file-api-driver</code> will call some low-level API to perform its operations. For example <code>file-api-driver-local</code> will use the <code>fs</code> package to read/write files, <code>file-api-driver-amazon-s3</code> will use the AWS API to work with S3. In some cases however such a low-level API is not available - in that case, we usually create an <code>*Api.ts</code> file, which is used by the file API driver to perform its operations. For example, there is a <code>JoplinServerApi.ts</code>, which is used to connect to Joplin Server.</p>
 </li>
+<li>
+<p>In general, each object in the database is represented by a <code>BaseModel</code> class. Then each object than can be synced is represented by a <code>BaseItem</code> class that inherits from <code>BaseModel</code>. This class is where many sync-related utilities can be found such as <code>itemsThatNeedSync()</code> or methods that encrypt items so that they can be uploaded when E2EE is enabled.</p>
+</li>
+<li>
+<p>The state of each item is saved to the <code>sync_items</code> table. There is saved in particular the <code>sync_time</code> property which tells when the item was last synced. It is then used to decide what needs to be synced or not. Additional sync-related properties include <code>sync_disabled</code>, which is used in the rare case an item cannot be synced at all - for example if blocked by Dropbox for being &quot;restricted content&quot; (copyrighted), or is over the limit on Joplin Cloud. Each entry in <code>sync_items</code> is scoped to a sync target (<code>sync_target</code> property), so theoretically it's possible to sync the same items to multiple sync targets.</p>
+</li>
 </ul>
+<h2>Testing<a name="testing" href="#testing" class="heading-anchor">🔗</a></h2>
+<p>By default, the test units synchronise with an in-memory sync target, which is fast and is usually enough to verify most behaviours. The test units however can be configured to sync with a specific sync target, such as the file system, Nextcloud, Joplin Server, etc. To do so, modify <code>packages/lib/testing/test-utils.ts</code> and change <code>setSyncTargetName()</code> to the relevant sync target. You may also need to add or modify the relevant files in <code>~/joplin-credentials/*</code>. See the <code>initFileApi()</code> method in <code>test-utils.ts</code> for more details.</p>
 <h2>See also<a name="see-also" href="#see-also" class="heading-anchor">🔗</a></h2>
 <ul>
 <li><a href="/spec/sync_lock/">Synchronisation lock</a></li>
