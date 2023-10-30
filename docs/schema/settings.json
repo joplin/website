@@ -43,12 +43,12 @@
 		"sync.2.path": {
 			"type": "string",
 			"default": "",
-			"description": "Directory to synchronise with (absolute path). Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/faq/"
+			"description": "Directory to synchronise with (absolute path). Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/help/faq"
 		},
 		"sync.5.path": {
 			"type": "string",
 			"default": "",
-			"description": "Nextcloud WebDAV URL. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/faq/"
+			"description": "Nextcloud WebDAV URL. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/help/faq"
 		},
 		"sync.5.username": {
 			"type": "string",
@@ -64,7 +64,7 @@
 		"sync.6.path": {
 			"type": "string",
 			"default": "",
-			"description": "WebDAV URL. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/faq/"
+			"description": "WebDAV URL. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/help/faq"
 		},
 		"sync.6.username": {
 			"type": "string",
@@ -80,7 +80,7 @@
 		"sync.8.path": {
 			"type": "string",
 			"default": "",
-			"description": "S3 bucket. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/faq/"
+			"description": "S3 bucket. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/help/faq"
 		},
 		"sync.8.url": {
 			"type": "string",
@@ -111,7 +111,7 @@
 		"sync.9.path": {
 			"type": "string",
 			"default": "",
-			"description": "Joplin Server URL. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/faq/"
+			"description": "Joplin Server URL. Attention: If you change this location, make sure you copy all your content to it before syncing, otherwise all files will be removed! See the FAQ for more details: https://joplinapp.org/help/faq"
 		},
 		"sync.9.userContentPath": {
 			"type": "string",
@@ -789,7 +789,7 @@
 		"autoUpdate.includePreReleases": {
 			"type": "boolean",
 			"default": false,
-			"description": "Get pre-releases when checking for updates. See the pre-release page for more details: https://joplinapp.org/prereleases"
+			"description": "Get pre-releases when checking for updates. See the pre-release page for more details: https://joplinapp.org/help/about/prereleases"
 		},
 		"clipperServer.autoStart": {
 			"type": "boolean",
