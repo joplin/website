@@ -42,5 +42,6 @@ jobs:
             DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
             DISCOURSE_USERNAME: ${{ secrets.DISCOURSE_USERNAME }}
             JOPLIN_GITHUB_OAUTH_TOKEN: ${{ secrets.JOPLIN_GITHUB_OAUTH_TOKEN }}
+            CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
         run: |
           ./joplin/packages/tools/release-website.sh
