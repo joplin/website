@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://joplinapp.org/news"/>
     <subtitle>Joplin Blog</subtitle>
-    <icon>https://joplinapp.org/img/favicon.ico</icon>
+    <icon>https://joplinapp.org/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Working in the shadows with white-hat hackers]]></title>
         <id>https://joplinapp.org/news/20231023-white-hat-hackers</id>
