@@ -112,6 +112,8 @@
 								<li class="tsd-kind-interface"><a href="interfaces/changeevent.html" class="tsd-kind-icon">Change<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/command.html" class="tsd-kind-icon">Command</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/contentscriptcontext.html" class="tsd-kind-icon">Content<wbr>Script<wbr>Context</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/contentscriptmodule.html" class="tsd-kind-icon">Content<wbr>Script<wbr>Module</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/contentscriptmoduleloadedevent.html" class="tsd-kind-icon">Content<wbr>Script<wbr>Module<wbr>Loaded<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/createfrombufferoptions.html" class="tsd-kind-icon">Create<wbr>From<wbr>Buffer<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/createmenuitemoptions.html" class="tsd-kind-icon">Create<wbr>Menu<wbr>Item<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/dialogresult.html" class="tsd-kind-icon">Dialog<wbr>Result</a></li>
@@ -127,6 +129,7 @@
 								<li class="tsd-kind-interface"><a href="interfaces/importmodule.html" class="tsd-kind-icon">Import<wbr>Module</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/itemchangeevent.html" class="tsd-kind-icon">Item<wbr>Change<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/listrenderer.html" class="tsd-kind-icon">List<wbr>Renderer</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/markdownitcontentscriptmodule.html" class="tsd-kind-icon">Markdown<wbr>ItContent<wbr>Script<wbr>Module</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/menuitem.html" class="tsd-kind-icon">Menu<wbr>Item</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/onchangeevent.html" class="tsd-kind-icon">On<wbr>Change<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/rectangle.html" class="tsd-kind-icon">Rectangle</a></li>
@@ -171,6 +174,8 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#iscontextmenuitemlocation" class="tsd-kind-icon">is<wbr>Context<wbr>Menu<wbr>Item<wbr>Location</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#keyprefix" class="tsd-kind-icon">key<wbr>Prefix</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#namespacedkey" class="tsd-kind-icon">namespaced<wbr>Key</a></li>
 							</ul>
 						</section>
 					</div>
@@ -561,6 +566,57 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="keyprefix" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> key<wbr>Prefix</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">key<wbr>Prefix<span class="tsd-signature-symbol">(</span>pluginId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pluginId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="namespacedkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> namespaced<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">namespaced<wbr>Key<span class="tsd-signature-symbol">(</span>pluginId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pluginId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -678,6 +734,12 @@
 						<a href="interfaces/contentscriptcontext.html" class="tsd-kind-icon">ContentScriptContext</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/contentscriptmodule.html" class="tsd-kind-icon">ContentScriptModule</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/contentscriptmoduleloadedevent.html" class="tsd-kind-icon">ContentScriptModuleLoadedEvent</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/createfrombufferoptions.html" class="tsd-kind-icon">CreateFromBufferOptions</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -721,6 +783,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/listrenderer.html" class="tsd-kind-icon">ListRenderer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/markdownitcontentscriptmodule.html" class="tsd-kind-icon">MarkdownItContentScriptModule</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/menuitem.html" class="tsd-kind-icon">MenuItem</a>
@@ -802,6 +867,12 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#iscontextmenuitemlocation" class="tsd-kind-icon">isContextMenuItemLocation</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#keyprefix" class="tsd-kind-icon">keyPrefix</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#namespacedkey" class="tsd-kind-icon">namespacedKey</a>
 					</li>
 				</ul>
 			</nav>

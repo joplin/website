@@ -174,7 +174,7 @@
 						<pre><code class="language-javascript"><span class="hljs-built_in">module</span>.exports = {
     <span class="hljs-attr">default</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
         <span class="hljs-keyword">return</span> {
-            <span class="hljs-attr">plugin</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">markdownIt, options</span>) </span>{
+            <span class="hljs-attr">plugin</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">markdownIt, pluginOptions</span>) </span>{
                 <span class="hljs-comment">// ...</span>
             },
             <span class="hljs-attr">assets</span>: {
@@ -196,10 +196,7 @@
 							</li>
 							<li><p>The <strong>required</strong> <code>plugin</code> key is the actual Markdown-It plugin - check
 									the <a href="https://github.com/markdown-it/markdown-it">official doc</a> for more
-									information. The <code>options</code> parameter is of type
-									<a href="https://github.com/laurent22/joplin/blob/dev/packages/renderer/MdToHtml.ts">RuleOptions</a>,
-									which contains a number of options, mostly useful for Joplin&#39;s internal
-								code.</p>
+								information.</p>
 							</li>
 							<li><p>Using the <strong>optional</strong> <code>assets</code> key you may specify assets such as JS
 									or CSS that should be loaded in the rendered HTML document. Check for
@@ -208,6 +205,11 @@
 								to see how the data should be structured.</p>
 							</li>
 						</ul>
+						<a href="#getting-the-settings-from-the-renderer" id="getting-the-settings-from-the-renderer" style="color: inherit; text-decoration: none;">
+							<h2>Getting the settings from the renderer</h2>
+						</a>
+						<p>You can access your plugin settings from the renderer by calling
+						<code>pluginOptions.settingValue(&quot;your-setting-key&#39;)</code>.</p>
 						<a href="#posting-messages-from-the-content-script-to-your-plugin" id="posting-messages-from-the-content-script-to-your-plugin" style="color: inherit; text-decoration: none;">
 							<h2>Posting messages from the content script to your plugin</h2>
 						</a>
