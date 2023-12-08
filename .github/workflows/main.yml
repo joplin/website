@@ -4,8 +4,46 @@ on:
     - cron: "0 */6 * * *"
   workflow_dispatch:
 jobs:
+  # We run the plugin website CI in a separate job that doesn't have
+  # SSH key access for extra security because it handles untrusted markdown.
+  PluginWebsite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Joplin plugin website repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'joplin/website-plugin-discovery'
+          ref: master
+          path: 'website-plugin-discovery'
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build
+        shell: bash
+        run: |
+          cd website-plugin-discovery
+          yarn install
+          yarn build-production /plugins
+          cd site
+
+          # Create a .tar.gz for uploading
+          tar -czvf ../../plugin-website.tar.gz .
+
+      # Send to the main website workflow.
+      # See https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts#passing-data-between-jobs-in-a-workflow
+      - name: Upload built plugins
+        uses: actions/upload-artifact@v3
+        with:
+          name: plugin-website
+          path: plugin-website.tar.gz
+          retention-days: 1
+
   Main:
     runs-on: ubuntu-latest
+    needs: PluginWebsite
     steps:
 
       - name: Checkout main Joplin repository
@@ -23,6 +61,11 @@ jobs:
           ref: master
           ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
           path: 'joplin-website'
+
+      - name: Download built plugin website
+        uses: actions/download-artifact@v3
+        with:
+          name: plugin-website
 
       - name: Install dependencies
         run: |
