@@ -23,6 +23,14 @@ jobs:
           ref: master
           ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
           path: 'joplin-website'
+    
+      - name: Checkout Joplin plugin website repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'joplin/website-plugin-discovery'
+          ref: main
+          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
+          path: 'website-plugin-discovery'
 
       - name: Install dependencies
         run: |
