@@ -30,9 +30,9 @@ jobs:
           sudo apt-get install -y libsecret-1-dev
 
       - name: Install Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
       - name: Release website
         env:
