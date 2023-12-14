@@ -361,6 +361,11 @@
 				"HH.mm"
 			]
 		},
+		"ocr.enabled": {
+			"type": "boolean",
+			"default": false,
+			"description": "Enable optical character recognition (OCR). When enabled, the application will scan your attachments and extract the text from it. This will allow you to search for text in these attachments."
+		},
 		"theme": {
 			"type": "integer",
 			"default": 1,
@@ -956,6 +961,11 @@
 		"searchEngine.initialIndexingDone": {
 			"type": "boolean",
 			"default": false,
+			"$comment": "private"
+		},
+		"searchEngine.lastProcessedResource": {
+			"type": "string",
+			"default": "",
 			"$comment": "private"
 		},
 		"revisionService.enabled": {
