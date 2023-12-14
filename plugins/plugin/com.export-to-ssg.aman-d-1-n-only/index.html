@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Export To SSG</title>
+
+	<meta property="og:title" content="Joplin Plugin: Export To SSG"/>
+	<meta property="og:description" content="Export a collection of notes to static site generator project."/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Export To SSG</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Export To SSG</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22aman-d-1-n-only%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					aman-d-1-n-only
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=com.export-to-ssg.aman-d-1-n-only"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Export a collection of notes to static site generator project.</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;aman-d-1-n-only&#x2F;joplin-exports-to-ssg.git style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;aman-d-1-n-only&#x2F;joplin-exports-to-ssg#readme style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=com.export-to-ssg.aman-d-1-n-only"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22aman-d-1-n-only%22%20max-results%3D20" class="maintainer-link">
+									aman-d-1-n-only
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.3</td></tr>
+					<tr><th>Minimum app version:</th><td>1.7</td></tr>
+					<tr><th>Downloads: This version:</th><td>1044</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2021-06-01T08:30:33Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Joplin Exports-To-SSG Plugin</h1>
+<p>This is a joplin plugin that exports collection of notes from <a href="https://joplinapp.org/">Joplin</a> as markdown file along with their static files[ images , pdfs etc] to static site generator(ssg) project.</p>
+<p>Currently it supports export to three static site generator -</p>
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+<li><a href="https://www.gatsbyjs.com/">Gatsby</a></li>
+<li><a href="https://jekyllrb.com/">Jekyll</a></li>
+</ul>
+<h2>How it can be useful for you ?</h2>
+<p>Let say you want to create your portfolio website -</p>
+<ol>
+<li>
+<p>Create note related to your site content in joplin or you can import notes exported from evernotes in joplin.</p>
+</li>
+<li>
+<p>Then export your notes using this plugin.</p>
+</li>
+<li>
+<p>Using any premade theme that your static site generator provides and your site is running up in minutes.</p>
+</li>
+</ol>
+<p>Joplin[ Create content as notes ] -----Export-----&gt; SSG Project -------&gt; Website</p>
+<blockquote>
+<p><strong>Conclusion</strong> : It creates a great worklflow for building static webiste whoose main purpose is to display some infromation.</p>
+</blockquote>
+<h2>Installation -</h2>
+<ul>
+<li>Go to <code>Tools &gt; Options &gt; Plugins</code> .</li>
+<li>Search <code>Exports-To-SSG</code>.</li>
+<li>Click <code>Install</code> plugin.</li>
+<li>Restart Joplin app to enable it.</li>
+</ul>
+<h2>How to use it ?</h2>
+<ul>
+<li>Right click on notebook whoose notes you want to export.
+<em>Please keep in mind that notes which are at Level-1 Depth from selected notebook will be exported</em>.</li>
+</ul>
+<blockquote>
+<p>Level-1 Depth : To understand this scroll down to the <code>Some basic terminologies</code> section.</p>
+</blockquote>
+<ul>
+<li>Then a little menu will appear on your screen.Choose <code>Export to SSG</code> from there.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/aman-d-1-n-only/joplin-exports-to-ssg/HEAD//images/example-1.png" alt="Example-1" /></p>
+<ul>
+<li>
+<p>After that a dialog will be going to appear pn your screen.Set the configuration and then export them.</p>
+<p><img src="https://raw.githubusercontent.com/aman-d-1-n-only/joplin-exports-to-ssg/HEAD//images/example-2.jpg" alt="Example-2" /></p>
+</li>
+</ul>
+<blockquote>
+<p>Warning ! : Don't press <code>Enter Key</code> while setting your export configuration because it will going to submit your form automatically. So don't try to type your front matter just directly paste your pre-typed front matter here in frontmatter option.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choose your SSG</td>
+<td>It will decide how your notes will be exported</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Project Path</td>
+<td>Provide the absolute path to the place where you want your notes to be exported</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Front Matter</td>
+<td>Paste your front matter you want to attach with each note</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<h3>What will be the structure of your exported content ?</h3>
+<p>Let us assume that your project is in a folder name root.</p>
+<ul>
+<li>
+<p>For Hugo</p>
+<ul>
+<li>
+<p>All notes will be in a folder inisde your <code>root/content/NoteBook.title-NoteBook.id</code>.And note wil be named as their respective name in joplin. So notes are categorized according to their notebooks.</p>
+</li>
+<li>
+<p>All the static file of these notes will under <code>root/static/resources</code> with their respective names as per in notes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For Gatsby</p>
+<ul>
+<li>
+<p>All notes will be in a folder inisde your <code>root/src/markdown</code>.And note wil be named <code>note.title-note.id</code></p>
+</li>
+<li>
+<p>All the static file of these notes will under <code>root/static</code> with their respective names as per in notes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For Jekyll</p>
+<ul>
+<li>
+<p>All notes will be in a folder inisde your <code>root/_posts</code>.And note will be named as <code>YYYY-MM-DD-note.title-note.id</code></p>
+</li>
+<li>
+<p>All the static file of these notes will under <code>root/resources</code>with their respective names as per in notes.</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Note : After exporting new path of static file are updated in notes as per instruction given by the ssg to deal with static file.After that you can change it accordingly.</p>
+</blockquote>
+<h2>Some basic terminologies -</h2>
+<ol>
+<li><strong>SSG</strong> - Static Site Generator</li>
+<li><strong>Level-1 Depth</strong> - You will click on notebook and this plugin exports all the notes at level-1 depth under this notebook not the subnotebooks and their notes.</li>
+</ol>
+<p>Let us take one example of a notebook with 3 notes and 1 sub-notebook.Furthermore sub-notebook have 2 notes and 1 sub-sub-notebook.And this sub-sub-notebook also having 2 notes.</p>
+<pre class="hljs"><code>Notebook
+|_ _ _Sub-Notebook
+|       |_ _ _sub-note-1
+|       |_ _ _sub-note-2
+|       |_ _ _Sub-Sub-Notebook
+|               |_ _ _sub-sub-note-1
+|               |_ _ _sub-sub-note-2
+|_ _ _note-1
+|_ _ _note-2
+|_ _ _note-3
+</code></pre>
+<p>If you use this exports on</p>
+<ul>
+<li>Notebook : note-1 , note-2 and note-3 will be exported.</li>
+<li>Sub-Notebook : sub-note-1 and sub-note-2 will be exported.</li>
+<li>Sub-Sub-Notebook : sub-sub-note-1 and sub-note-2 will be exported.</li>
+</ul>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
