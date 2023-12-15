@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Bible Quote</title>
+
+	<meta property="og:title" content="Joplin Plugin: Bible Quote"/>
+	<meta property="og:description" content="Quote the bible direct in text editor"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-integrations.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Bible Quote</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-integrations.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Bible Quote</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Dante G. Barboza%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Dante G. Barboza
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-integrations">
+						<i class="fas fa-tag"></i> integrations
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=com.DanteCoder.JoplinBibleQuote"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Quote the bible direct in text editor</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;DanteCoder&#x2F;JoplinBibleQuote style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;DanteCoder&#x2F;JoplinBibleQuote#readme style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=com.DanteCoder.JoplinBibleQuote"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22dantecoder%22%20max-results%3D20" class="maintainer-link">
+									dantecoder
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>2.1.0</td></tr>
+					<tr><th>Minimum app version:</th><td>2.2</td></tr>
+					<tr><th>Downloads: This version:</th><td>21</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-12-04T23:39:33Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Bible Citation Plugin for Joplin</h1>
+<p>This plugin parses Bible citations and renders the verses from an osis Bible file:</p>
+<p><img src="https://user-images.githubusercontent.com/90792603/155829587-578802fd-7eef-437f-8477-b808ddc74383.png" alt="image" /></p>
+<p>You can display multiple citations in the same block:</p>
+<p><img src="https://user-images.githubusercontent.com/90792603/155829632-7cd4501e-515f-4bcd-920e-f1e3bb203695.png" alt="image" /></p>
+<p>You can reference multiple verses, chapters or books within the same citation, separating verses with commas, chapters with semicolons and books with spaces. For example, the following citations are valid:</p>
+<pre><code>```bible
+ (John 3:16,18,19-21; 4:1 Mark 1:1)
+ (Genesis 1-2;4:1-3)
+```
+</code></pre>
+<p>The plugin features the option to display multiple versions:</p>
+<p><img src="https://user-images.githubusercontent.com/90792603/155829756-10a53b73-92f3-4185-87ce-1c5ce05789df.png" alt="image" /></p>
+<p>To display all the available commands type the word "help" in a block:</p>
+<pre><code>```bible
+ help
+```
+</code></pre>
+<h2>Installation</h2>
+<ol>
+<li>In Joplin, open the configuration screen, then under "Plugins" search for "Bible Quote" and install it.</li>
+<li>Download a bible from <a href="https://github.com/DanteCoder/JoplinBibleQuote/tree/main/bibles/OSIS">/bibles/OSIS</a> within this repository to your computer, or use an already existing OSIS xml bible (you can convert almost any bible format to OSIS xml using the software linked below). However, if you download the .xml file from the web, you may need to right click and save the link in order to download it. Otherwise, you will only get text.</li>
+<li>Copy the path of the OSIS xml bible and paste it on the plugin setting "Path to the default OSIS Bible file".</li>
+<li>Optionally set a path to a folder containing more osis bibles in the setting "Path to a folder containing OSIS bibles".</li>
+<li>Select your desired language for the plugin and save.</li>
+<li>Enjoy.</li>
+</ol>
+<p>For the settings to take effect on already existing citations you need to let the markdown render to refresh. This can be done modifying the note or changing to another note and returning to the previous note.</p>
+<h2>Notes</h2>
+<ul>
+<li>To convert almost any bible format to OSIS xml you can use the <a href="https://trumpet-call.org/simplebiblereader/">Simple Bible Reader</a> software.</li>
+<li>If you have a bug or any issue, feel free to make an issue or to modify the plugin.</li>
+<li>If you want to contribute please base your pull requests to the "dev" branch, and prefer to make small, trackable commits.</li>
+</ul>
+
+<p>This plugin is based on the <a href="https://github.com/openbibleinfo/Bible-Passage-Reference-Parser">Bible Passage Reference Parser</a> library to parse the citations.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
