@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - embedded tags</title>
+
+	<meta property="og:title" content="Joplin Plugin: embedded tags"/>
+	<meta property="og:description" content="embeded tags"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-tags.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">embedded tags</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-tags.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">embedded tags</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Dave Edwards%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Dave Edwards
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-tags">
+						<i class="fas fa-tag"></i> tags
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=joplin.plugin.embeddedtags"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">embeded tags</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=joplin.plugin.embeddedtags"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22joplindave%22%20max-results%3D20" class="maintainer-link">
+									joplindave
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.0</td></tr>
+					<tr><th>Minimum app version:</th><td>2.2.2</td></tr>
+					<tr><th>Downloads: This version:</th><td>849</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2021-08-30T08:32:26Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Joplin Embedded Tags Plugin</h1>
+<p>A plugin for <a href="https://joplinapp.org/">Joplin</a> that allows 'Embedded' or local tags to be inserted in your notes in specific locations. Embedded tags can be separate from the system tags that are linked to notes, although you may choose to replicate or add to the system tags.</p>
+<p>Sometimes tags are put on a note because of one particular word, sentence or paragraph in the note. Returning to the note, it's not always obvious what section of the note caused you to put the tag on to start with.</p>
+<p>You may also use embedded tags to find and highlight specific sections of a note for faster viewing or retrieval. If for example, you store scientific papers in Joplin and you wished to find and highlight a particular citation, then you can apply an embedded tag to this section of your note.</p>
+<p><strong>Requires Joplin 1.8.1+ and only works in markdown editor</strong></p>
+<h2>Install</h2>
+<p>Go to tools-&gt;Options-&gt;Plugins and install the file joplin.plugin.embeddedtags.jpl found in the publish directory of the GitHub repository.</p>
+<p>See required CSS below.</p>
+<h2>Usage</h2>
+<p>To insert an embedded tag, open the Code Mirror (MD) editor and highlight the text that you want to be wrapped in an embedded tag. Right click and select 'Select embedded tag' on the menu that appears. You will have a number options available.</p>
+<p>You can (dependant upon your settings) -</p>
+<ul>
+<li>Select an existing tag already attached to your note (most common use)</li>
+<li>Select a global tag that is not already attached to your note (but may be attached to other notes)</li>
+<li>Create a new embedded tag</li>
+<li>If you've selected a global tag, or created a new tag, you can attach the embedded tag to the note</li>
+<li>Select a highlight colour</li>
+<li>Choose to immediately apply the embedded tag to the section.</li>
+</ul>
+<p>You may view and manipulate your embedded tags by clicking on the 'Show/hide embedded tags' button on the toolbar, which will open the Embedded Tags pane.</p>
+<p>From here you can -</p>
+<ul>
+<li>view or hide individual embedded tags</li>
+<li>highlight a tag using a solid and permanent colour, or a fading highlight</li>
+<li>selecting a tag will scroll the viewer to the location of the tag</li>
+<li>view all embedded tags of a particular colour</li>
+<li>hide all embedded tags of a particular colour</li>
+<li>view all embedded tags</li>
+<li>hide all embedded tags</li>
+</ul>
+<h2>Required CSS</h2>
+<p>For Embedded tags to work correctly, you need to add the following CSS to your application. Goto Tools-&gt;Options-&gt;Appearance-&gt;Show Advanced Settings and click the 'Edit' button under 'Custom stylesheet for rendered Markdown'. Cut and paste in the following CSS.</p>
+<pre class="hljs"><code>/*---------------------------------------
+Embedded tags plugin CSS
+---------------------------------------*/
+
+/*** YELLOW ***/
+@keyframes yellowfade {
+from {
+	background: #f5ffa2;
+}
+to {
+	background: transparent;
+}
+}
+.yellowfade {
+animation: yellowfade 20s;
+}
+.yellowxxxx {
+background: #f5ffa2;
+}
+
+/*** GREEN ***/
+@keyframes greenfade {
+from {
+	background: #aaffa2;
+}
+to {
+	background: transparent;
+}
+}
+.greenfadex {
+animation: greenfade 20s;
+}
+.greenxxxxx {
+background: #aaffa2;
+}
+
+/*** BLUE ***/
+@keyframes bluefade {
+from {
+	background: #9fd1ff;
+}
+to {
+	background: transparent;
+}
+}
+.bluefadexx {
+animation: bluefade 20s;
+}
+.bluexxxxxx {
+background: #9fd1ff;
+}
+
+/*** RED ***/
+@keyframes redfade {
+from {
+	background: #ff8b8b;
+}
+to {
+	background: transparent;
+}
+}
+.redfadexxx {
+animation: redfade 20s;
+}
+.redxxxxxxx {
+background: #ff8b8b;
+}
+
+/*---------------------------------------
+Embedded tags plugin CSS - END
+---------------------------------------*/
+</code></pre>
+<h2>Upgrading from version 0.1.0 to 1.0.0</h2>
+<p>This upgrade contains a new function where the selection of a tag makes the viewer scroll to that location. Tags applied under previous versions will not scroll. You have two options -</p>
+<ul>
+<li>Remove existing tags and then reapply them.</li>
+<li>Add the following to the SPAN id="12345678" data-hash="12345678"</li>
+</ul>
+<p>If you follow the second option, make sure that you add the new attributes AFTER the initial class within the SPAN e.g.</p>
+<p><code>&lt;span class="greenxxxxx" id="12345678" data-hash="12345678" data-tag="second" data-colour="green"&gt;My tagged text&lt;/span&gt;</code></p>
+<p>The numbers "12345678" above are just an example. Each tag should have it's own random string for "id" and "data-hash" within any particular note.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Freehand Drawing</title>
+
+	<meta property="og:title" content="Joplin Plugin: Freehand Drawing"/>
+	<meta property="og:description" content="Create and edit drawings with js-draw."/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-editor.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Freehand Drawing</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-editor.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Freehand Drawing</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Henry Heino%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Henry Heino
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-editor">
+						<i class="fas fa-tag"></i> editor
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=io.github.personalizedrefrigerator.js-draw"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-draw&#x2F;HEAD&#x2F;screenshots&#x2F;editor-lightdark-fullscreen.png" alt="Unlabeled screenshot"/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-draw&#x2F;HEAD&#x2F;screenshots&#x2F;editorview-light-2.png" alt="Unlabeled screenshot"/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-draw&#x2F;HEAD&#x2F;screenshots&#x2F;editorview-light-1.png" alt="Unlabeled screenshot"/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-draw&#x2F;HEAD&#x2F;screenshots&#x2F;editorview-dark.png" alt="Unlabeled screenshot"/>
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Create and edit drawings with js-draw.</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;personalizedrefrigerator&#x2F;joplin-draw style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;personalizedrefrigerator&#x2F;joplin-draw style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=io.github.personalizedrefrigerator.js-draw"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22personalizedrefrigerator%22%20max-results%3D20" class="maintainer-link">
+									personalizedrefrigerator
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>2.7.1</td></tr>
+					<tr><th>Minimum app version:</th><td>2.10</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1><code>joplin-plugin-freehand-drawing</code></h1>
+<p><a href="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing">On GitHub</a> | <a href="https://discourse.joplinapp.org/t/plugin-js-draw-integration/27114">On the Joplin Forum</a> | <a href="https://personalizedrefrigerator.github.io/js-draw/example/index.html">Online Demo</a> | <a href="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing#installing">Installing</a></p>
+<p>A Joplin plugin for creating and editing freehand drawings using <a href="https://github.com/personalizedrefrigerator/js-draw">js-draw</a>.</p>
+<img width="600" src="https://raw.githubusercontent.com/personalizedrefrigerator/joplin-draw/HEAD/screenshots/editor-lightdark-fullscreen.png" />
+<h2>Installing</h2>
+<p>Search for "freehand drawing" under the plugins tab in Joplin's settings:
+<img src="https://user-images.githubusercontent.com/46334387/188908688-1500567d-f9a4-49b5-9dc1-8b5a00210c97.png" alt="screenshot of the search bar and results in the plugins tab. Freehand Drawing // create and edit drawings with js-draw is the only visible result." /></p>
+<p>After installation, an "insert drawing" button should appear in the toolbar:
+<img src="https://user-images.githubusercontent.com/46334387/188909272-603d2556-d5ab-4b8a-86fa-d90b5bafd379.png" alt="A pen icon labeled &quot;insert drawing&quot; is shown in the markdown toolbar, just to the right of the &quot;insert date&quot; button." /></p>
+<p>Existing drawings can be edited by hovering over the drawing in the markdown preview pane, then clicking "edit".
+<img src="https://user-images.githubusercontent.com/46334387/188909876-1b7c41d5-8fd9-4a15-86d9-a91504ddf5c1.png" alt="screenshot of a drawing in the preview pane and an edit button, beneath the cursor. The edit button is at the bottom-right of the drawing." /></p>
+<h1>FAQ</h1>
+<h2>How do I edit drawings from the rich text editor?</h2>
+<p><strong>Editing an existing drawing</strong>: Double-click on the drawing.</p>
+<p><strong>Adding a new drawing</strong>: Click either the <img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/f3a60f00-f1e3-4a8c-9ab7-b0e7c7fea336" alt="pen" /> toolbar button or "Insert Drawing" from the <code>Edit</code> menu.</p>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>To insert drawings in the rich text editor, this plugin works around <a href="https://github.com/laurent22/joplin/issues/7547">this Joplin bug</a> by <strong>briefly switching to the markdown editor</strong> and back to the rich text editor. This clears the rich text editor's undo history. This should only <strong>apply to new drawings.</strong></p>
+</blockquote>
+<h2>I only use the markdown editor (no viewer). How do I edit drawings?</h2>
+<p>First, select the full resource URL for an image created with this plugin</p>
+<p><img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/2c71ccc0-d055-45f7-9db7-e0f33f353b81" alt="screenshot: Resource URL (includes :/) is selected" /></p>
+<p>Next, click the "Insert Image" button in the toolbar.</p>
+<h2>How do I assign a keyboard shortcut to the "Insert Image" button?</h2>
+<ol>
+<li>Open Joplin's settings</li>
+<li>Click on "Keyboard Shortcuts"</li>
+<li>Search for "Insert Drawing"</li>
+<li>Click "<em>Disabled</em>"
+<img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/44be3c8a-ac9a-4427-a91d-bcb5a21d7281" alt="screenshot: Arrow pointing to &quot;disabled&quot; in the second column of the keyboard shortcuts table" /></li>
+<li>Entering a new key combination (e.g. <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>D</kbd>).</li>
+</ol>
+<h2>How do I disable drawing with touch?</h2>
+<p>Pen/mouse-only drawing can be enabled under the "Pan" tool's menu by <strong>enabling "Touchscreen panning"</strong>:</p>
+<p><img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/682a40ab-0c0f-4dc8-ba49-463dcb06256a" alt="screenshot: Arrow points to pan tool, another arrow points to the &quot;Touchscreen panning&quot; toggle button" /></p>
+<h2>Joplin closed while editing a drawing. How do I recover the unsaved changes?</h2>
+<p><code>joplin-plugin-freehand-drawing</code> autosaves every two minutes. The last autosave can be recovered by</p>
+<ol>
+<li>Switching to the markdown editor</li>
+<li>pressing <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd> (<kbd>Cmd</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>),</li>
+<li>typing <code>:restore autosave</code>, then</li>
+<li>clicking "Restore from autosaved drawing"</li>
+</ol>
+<p><img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/dadaed12-95b5-4c3f-a5cc-f322ad41476d" alt="screenshot: Command palette shows :restore autosave as search query, second result &quot;Restore from autosaved drawing&quot; is highlighted." /></p>
+<p>This should add a copy of the autosaved drawing to the current note.</p>
+<h2>How do I customize the image editor's keyboard shortcuts?</h2>
+<p>The procedure to do this is currently very complicated, as there is no GUI for this. (Making this simpler is planned!).</p>
+<details><summary>Customizing keyboard shortcuts</summary>
+<p>First, open Joplin's profile directory ("Help" &gt; "Open profile directory").</p>
+<p>Next, open <code>settings.json</code> in a text editor.</p>
+<p>Near the end, there should be a line similar to this:</p>
+<pre class="hljs"><code>    <span class="hljs-attr">"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span> <span class="hljs-punctuation">}</span>
+</code></pre>
+<p>Shortcuts can be added between the <code>{</code> and the <code>}</code>. For example,</p>
+<pre class="hljs"><code>	<span class="hljs-attr">"plugin-io.github.personalizedrefrigerator.js-draw.keyboard-shortcuts"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+		<span class="hljs-attr">"jsdraw.toolbar.ExitActionWidget.exit"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+			<span class="hljs-string">"ctrlOrMeta-w"</span><span class="hljs-punctuation">,</span>
+			<span class="hljs-string">"alt-q"</span>
+		<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+		<span class="hljs-attr">"jsdraw.toolbar.SaveActionWidget.save"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+			<span class="hljs-string">"ctrlOrMeta-s"</span><span class="hljs-punctuation">,</span>
+			<span class="hljs-string">"ctrlOrMeta-shift-s"</span>
+		<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+		<span class="hljs-attr">"jsdraw.toolbar.PenTool.select-pen-1"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+			<span class="hljs-string">"CtrlOrMeta-1"</span><span class="hljs-punctuation">,</span>
+			<span class="hljs-string">"alt-1"</span>
+		<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+		<span class="hljs-attr">"jsdraw.toolbar.SelectionTool.resizeImageToSelection"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+			<span class="hljs-string">"ctrlOrMeta-r"</span><span class="hljs-punctuation">,</span>
+			<span class="hljs-string">"m"</span>
+		<span class="hljs-punctuation">]</span>
+	<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>The above adds additional shortcuts for exiting, selecting pen style 1, and resizing the visible region to the selection.</p>
+<p>Joplin must be restarted for the changes to be applied.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Additional keyboard shortcut IDs can be found <a href="https://github.com/personalizedrefrigerator/js-draw/blob/main/packages/js-draw/src/tools/keybindings.ts">in js-draw's source code</a>.</p>
+</blockquote>
+</details>
+<h2>How do I report a bug related to the image editor?</h2>
+<p>This plugin uses <a href="https://github.com/personalizedrefrigerator/js-draw">js-draw</a> to edit/create freehand drawings. Bugs related to <code>js-draw</code> can be reported using its <a href="https://github.com/personalizedrefrigerator/js-draw/issues">issue tracker</a>.</p>
+<p>If you're unsure whether a bug is related to <code>js-draw</code> or this plugin, consider first <a href="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/issues/new/choose">reporting the bug on this plugin's GitHub repository</a>. If it's more relevant to <code>js-draw</code> than this plugin, it will be moved by a maintainer.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
