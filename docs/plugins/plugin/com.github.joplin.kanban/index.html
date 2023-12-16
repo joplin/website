@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Kanban</title>
+
+	<meta property="og:title" content="Joplin Plugin: Kanban"/>
+	<meta property="og:description" content="Flexible kanban board plugin for all your tasks"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-personal-knowledge-management.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Kanban</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-personal-knowledge-management.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Kanban</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Balint Magyar%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Balint Magyar
+				</a>
+			</div>
+
+			<div>
+					<a href="&#x2F;plugins/#recommended-section">
+						<span class="plugin-recommended badge"><i class="fas fa-crown"></i> Recommended</span>
+					</a>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-personal knowledge management">
+						<i class="fas fa-tag"></i> personal knowledge management
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=com.github.joplin.kanban"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Flexible kanban board plugin for all your tasks</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;joplin&#x2F;plugin-kanban style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;joplin&#x2F;plugin-kanban&#x2F;wiki style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=com.github.joplin.kanban"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22laurent22%22%20max-results%3D20" class="maintainer-link">
+									laurent22
+								</a>
+								<a href="./?search=maintainer%3D%22tessus%22%20max-results%3D20" class="maintainer-link">
+									tessus
+								</a>
+								<a href="./?search=maintainer%3D%22mablin7%22%20max-results%3D20" class="maintainer-link">
+									mablin7
+								</a>
+								<a href="./?search=maintainer%3D%22calebjohn%22%20max-results%3D20" class="maintainer-link">
+									calebjohn
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.7</td></tr>
+					<tr><th>Minimum app version:</th><td>1.7</td></tr>
+					<tr><th>Downloads: This version:</th><td>10111</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2022-02-26T14:35:29Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Joplin Kanban Plugin</h1>
+<p>This a plugin for the note taking app <a href="https://joplinapp.org/">Joplin</a>, which adds a flexible kanban board view for your notes, to help you organize your tasks.</p>
+<p><img src="https://raw.githubusercontent.com/joplin/plugin-kanban/HEAD/images/kanban-screenshot.png" alt="screenshot" /></p>
+<h2>Installation</h2>
+<p>In Joplin, go to Tools &gt; Options, then on the left select Plugins, search for "kanban" and click install. You can read more about Joplin plugins <a href="https://joplinapp.org/plugins/">here</a>.</p>
+<h2>Usage</h2>
+<p>To get started, you'll need a notebook which will contain all tasks that you want to see on the board. The plugin will only show tasks in a single notebook and it's sub-notebooks.</p>
+<p>A kanban board is defined by a special type of note, which contains all of its configuration. Create a new note, and paste in the following:</p>
+<pre><code>```kanban
+columns:
+  - name: Backlog
+    backlog: true
+  - name: Work in progress
+    tag: wip
+  - name: Finished
+    tag: done
+```
+</code></pre>
+<p>It is important that the confiuration is surrounded by a code block (<code>```kanban ... ```</code>), otherwise it won't be detected.</p>
+<p>After pasting the configuration, you might have to switch to a different note, then back, but then you should immediately see a kanban view pop up on the right. It should contain all notes in the notebook, sorted into columns. You can drag the notes around and see that their tags are updated.</p>
+<p>If you switch to a different note that's on the board, the kanban should stay visible. But if you switch to another notebook, or restart Joplin, you'll need to first open the note which contains the configuration again.</p>
+<h2>Configuration</h2>
+<p>There are two ways to configure a kanban board: the YAML based text config (<a href="https://learnxinyminutes.com/docs/yaml/">a quick intro on YAML</a>), that you see above, or the config dialog. The options available are the same with both methods.</p>
+<h3>Columns</h3>
+<p>You can have any number of columns on your kanban board. A column is defined by its name (which must be unique) and a list of rules. These rules determine what notes show up in the given column. If <em>any one</em> of the rules matches, the note is sorted into the column. Here's the list of supported rules:</p>
+<ul>
+<li><code>tag: ...</code> Matches if the note has the given tag. If the tag doesn't exist, it is created automatically. You can also use <code>tags</code> to define a list tags.</li>
+<li><code>notebookPath: ...</code> Matches if the note is in the notebook, defined by the path. You can read more about notebook paths below, in the filters section.</li>
+<li><code>completed: true</code> Matches if the note is a todo and is marked as done. You can also use <code>completed: false</code> to match uncompleted todos.</li>
+<li><code>backlog: true</code> Matches if the note doesn't fit into any other column. You can use this to collect all your unmarked notes.</li>
+</ul>
+<p>You can edit these rules via the config dialog, by double clicking the column name.</p>
+<h3>Filters</h3>
+<p>Filters are rules which define what notes should be visible on your board. For example, with the following config only notes with a <code>task</code> tag will show up on the kanban view:</p>
+<pre class="hljs"><code><span class="hljs-string">```kanban</span>
+<span class="hljs-attr">filters:</span>
+  <span class="hljs-attr">tag:</span> <span class="hljs-string">task</span>
+<span class="hljs-attr">columns:</span>
+<span class="hljs-string">...</span>
+</code></pre>
+<p>Filters can contain the same rules as columns, except for the <code>rootNotebookPath</code> property. This defines the notebook from which notes are displayed on the board. By default, it is the parent notebook of the config note, but you can set it to anything. It's a <code>/</code> separated path so with a notebook structure like</p>
+<pre class="hljs"><code>Parent/
+├─ Nested Parent/
+│  ├─ Kanban board/
+</code></pre>
+<p>To give the path to <code>Kanban board</code> you should write <code>"Parent/Nested Parent/Kanban board"</code></p>
+<p>To edit the filters via the config dialog, click the gear icon next to the board name.</p>
+<h3>Display</h3>
+<p>The kanban plugin automatically creates a static table view of your board on the configuration card. This is useful when you want to view your kanban board on a mobile device (which don't support plugins). You can change this to display as a list.</p>
+<pre class="hljs"><code><span class="hljs-string">```kanban</span>
+<span class="hljs-attr">filters:</span>
+  <span class="hljs-attr">tag:</span> <span class="hljs-string">task</span>
+<span class="hljs-attr">columns:</span>
+<span class="hljs-string">...</span>
+<span class="hljs-attr">display:</span>
+  <span class="hljs-attr">markdown:</span> <span class="hljs-string">list</span>
+</code></pre>
+<p>Visual examples and more info: <a href="https://github.com/joplin/plugin-kanban/pull/19">https://github.com/joplin/plugin-kanban/pull/19</a></p>
+<h2>Further information</h2>
+<p>If you want to know more about the workings of the plugin or its development check out the <a href="https://discourse.joplinapp.org/t/kanban-board-project/17469">original proposal</a> and the <a href="https://discourse.joplinapp.org/t/kanban-board-project/17469">progress reports</a></p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
