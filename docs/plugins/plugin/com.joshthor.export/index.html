@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Save Note as MD</title>
+
+	<meta property="og:title" content="Joplin Plugin: Save Note as MD"/>
+	<meta property="og:description" content="Simple plugin to export your current note as an MD file to the directory of your choice"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Save Note as MD</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Save Note as MD</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Josh Chavez%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Josh Chavez
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=com.joshthor.export"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Simple plugin to export your current note as an MD file to the directory of your choice</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=joshchavez.dev style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=joshchavez.dev style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=com.joshthor.export"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22joshthor%22%20max-results%3D20" class="maintainer-link">
+									joshthor
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.2</td></tr>
+					<tr><th>Minimum app version:</th><td>2.8</td></tr>
+					<tr><th>Downloads: This version:</th><td>565</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-02-04T06:36:54Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Joplin Plugin - Save Note as MD</h1>
+<p>This is a simple plugin that allows for quick and easy export of the current note as a .md file in the folder of your choosing.
+The goal of this plugin is to allow for an easy way to share specific notes with friends or colleagues without having to export and navigate your entire Joplin database.
+This plugin adds a small file export button to the toolbar in the editing window.
+After your export path is set, simply click that to save your file. Optional confirmation window can be enabled in the settings to provide visual confirmation that your file is saved, if you prefer.</p>
+<h2>Installation</h2>
+<ol>
+<li>Download the latest release</li>
+<li>Unzip the file</li>
+<li>In Joplin go to Settings &gt; Plugins &gt; Install plugin from file</li>
+<li>Upload the com.joshthor.export.jpl file</li>
+<li>Restart Joplin</li>
+</ol>
+<h2>Usage</h2>
+<ol>
+<li>Go to Settings &gt; File Export Settings</li>
+<li>Set the folder where you want the .md files to be saved</li>
+<li>Navigate to the note you want to export</li>
+<li>Click the "Export as MD" button in the toolbar</li>
+<li>The note will be saved as a .md file in the folder you specified</li>
+</ol>
+<h2>Updates</h2>
+<h3>1.0.2</h3>
+<ul>
+<li>Added a "Swap spaces for dashes" option to the settings. Off by default. Enabling will replace spaces in the file name with dashes. This is useful if you want to use the file name in a URL or do a lot of terminal work.</li>
+<li>Swapped slashes for dashes in the file name to prevent unnecessary folder creation.</li>
+</ul>
+<h3>1.0.1</h3>
+<ul>
+<li>Added a "Show confirmation dialog" option to the settings. Off by default. Enabling makes a popup on save to give the user feedback. Can be disabled cause its annoying.</li>
+<li>Added a popup when the save icon is clicked if the path is not set to prevent user confusion.</li>
+</ul>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+

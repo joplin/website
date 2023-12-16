@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Better Code Blocks</title>
+
+	<meta property="og:title" content="Joplin Plugin: Better Code Blocks"/>
+	<meta property="og:description" content="Enhances code blocks with inline rendering, autocompletion, and more!"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-developer-tools-2.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Better Code Blocks</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-developer-tools-2.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Better Code Blocks</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Chris Kant%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Chris Kant
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-developer tools">
+						<i class="fas fa-tag"></i> developer tools
+					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-editor">
+						<i class="fas fa-tag"></i> editor
+					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=com.ckant.joplin-plugin-better-code-blocks"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Enhances code blocks with inline rendering, autocompletion, and more!</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;ckant&#x2F;joplin-plugin-better-code-blocks style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;ckant&#x2F;joplin-plugin-better-code-blocks style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=com.ckant.joplin-plugin-better-code-blocks"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22ckant%22%20max-results%3D20" class="maintainer-link">
+									ckant
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.1.0</td></tr>
+					<tr><th>Minimum app version:</th><td>2.11</td></tr>
+					<tr><th>Downloads: This version:</th><td>1195</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-09-11T06:38:24Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1 align="center">
+  <img alt="logo" src="https://raw.githubusercontent.com/ckant/joplin-plugin-better-code-blocks/main/media/logo.svg" width="100" />
+  <br />
+  Better Code Blocks
+  <br />
+</h1>
+<h4 align="center"><a href="https://joplinapp.org">Joplin plugin</a> that enhances code blocks with inline rendering, autocompletion, and more</h4>
+<p align="center">
+  <a href="https://discourse.joplinapp.org/t/plugin-better-code-blocks/32613">
+    <img alt="Joplin Plugin" src="https://img.shields.io/npm/v/joplin-plugin-better-code-blocks?logo=joplin&amp;label=plugin&amp;color=1071D3&amp;style=flat-square" />
+  </a>
+  <a href="https://github.com/ckant/joplin-plugin-better-code-blocks/blob/main/LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-549E6A?style=flat-square" />
+  </a>
+  <a href="https://app.codecov.io/github/ckant/joplin-plugin-better-code-blocks">
+    <img alt="Coverage" src="https://img.shields.io/codecov/c/github/ckant/joplin-plugin-better-code-blocks?logo=codecov&amp;style=flat-square" />
+  </a>
+</p>
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#screenshots">Screenshots</a> •
+  <a href="#download">Download</a> •
+  <a href="#settings">Settings</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
+<div align="center"><img src="https://raw.githubusercontent.com/ckant/joplin-plugin-better-code-blocks/main/media/preview.gif" alt="preview" width="87%" /></div>
+<h2>Features</h2>
+<ul>
+<li>Renders code blocks inline with <code>Minimal</code> or <code>Standard</code> styles</li>
+<li>Adds <code>copy</code> button for inline code blocks</li>
+<li>Autocompletes code blocks on <kbd>Enter</kbd></li>
+<li>Changes <kbd>Select All</kbd> to select the current code block</li>
+</ul>
+<h2>Screenshots</h2>
+<p><img src="https://raw.githubusercontent.com/ckant/joplin-plugin-better-code-blocks/main/media/minimal%20layout.png" alt="minimal layout" />
+<img src="https://raw.githubusercontent.com/ckant/joplin-plugin-better-code-blocks/main/media/standard%20layout.png" alt="standard layout" />
+<img src="https://raw.githubusercontent.com/ckant/joplin-plugin-better-code-blocks/main/media/settings.png" alt="settings" /></p>
+<h2>Download</h2>
+<p>Search for <code>Better Code Blocks</code> in the Joplin settings under the <code>Plugins</code> section.</p>
+<h2>Settings</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autocompletion</td>
+<td><code>Enabled</code>, <code>Disabled</code></td>
+<td>Enables/disables automatic completion of code blocks when <kbd>Enter</kbd> is pressed</td>
+</tr>
+<tr>
+<td>Rendering</td>
+<td><code>Enabled</code>, <code>Disabled</code></td>
+<td>Enables/disables rendering of code blocks</td>
+</tr>
+<tr>
+<td>Behavior of <kbd>Select All</kbd> inside code block</td>
+<td><code>Enabled</code>, <code>Disabled</code></td>
+<td>Changes the behavior of <kbd>Select All</kbd> while the cursor is inside code blocks</td>
+</tr>
+<tr>
+<td>Render layout</td>
+<td><code>Minimal</code>, <code>Standard</code></td>
+<td>Changes the layout of rendered code blocks</td>
+</tr>
+<tr>
+<td>Corner style</td>
+<td><code>Square</code>, <code>Round</code></td>
+<td>Changes the border style of rendered code blocks</td>
+</tr>
+<tr>
+<td>Excluded languages</td>
+<td><code>(comma-separated list)</code></td>
+<td>Disables rendering of code blocks for specific languages</td>
+</tr>
+<tr>
+<td>Copy button behavior</td>
+<td><code>Copy code</code>, <code>Copy code and fences</code></td>
+<td>Controls what's copied when the <kbd>Copy Code</kbd> button is clicked</td>
+</tr>
+</tbody>
+</table>
+<h2>Credits</h2>
+<ul>
+<li><a href="https://joplinapp.org">Joplin</a></li>
+<li><a href="http://codemirror.net/">CodeMirror</a></li>
+</ul>
+<h2>License</h2>
+<p>Copyright © 2023 <a href="https://github.com/ckant">Chris Kant</a>.<br />
+This project is <a href="https://github.com/ckant/joplin-plugin-better-code-blocks/blob/main/LICENSE">MIT</a> licensed.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
