@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Download Instructions</title>
+
+	<script src="&#x2F;plugins/bundle-downloadInstructionsPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main>
+	<div class="container">
+		<nav aria-label="breadcrumb" class="breadcrumb-container">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+				</li>
+				<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+				<li class="breadcrumb-item"><a id="current-plugin-nav-link"></a></li>
+				<li class="breadcrumb-item active" aria-current="page">Download</li>
+			</ol>
+		</nav>
+
+		<div class="row">
+			<!-- Main Section -->
+			<div class="col-lg-8 col-12 py-2">
+				<div class="card px-4 py-4 shadow">
+					<div class="card-body">
+						<h5>Download Instructions for <span id='plugin-title'></span></h5>
+						<ol>
+							<li>Open Joplin</li>
+							<li>
+								Navigate to settings (&ldquo;Tools > Options&rdquo;
+								on Windows/Linux, &ldquo;Joplin > Settings&rdquo; on a Mac)
+							</li>
+							<li>Click on &ldquo;plugins&rdquo; in the sidebar.</li>
+							<li>Search for &ldquo;<span id='plugin-title'>...</span>&rdquo;.</li>
+							<li>Click <code>install</code>.</li>
+						</ol>
+
+						<p>
+							If you know what you're doing, you can alternatively
+							<a id='plugin-download-link'>
+								download this plugin's <code>.jpl</code> file
+							</a>. This method of installation, however, will <b>not</b>
+							auto-update the plugin.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+		
+</body>
+
+</html>
+
