@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Templates</title>
+
+	<meta property="og:title" content="Joplin Plugin: Templates"/>
+	<meta property="og:description" content="This plugin allows you to create and use templates in Joplin."/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-editor.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Templates</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-editor.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Templates</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Nishant Mittal%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Nishant Mittal
+				</a>
+			</div>
+
+			<div>
+					<a href="&#x2F;plugins/#recommended-section">
+						<span class="plugin-recommended badge"><i class="fas fa-crown"></i> Recommended</span>
+					</a>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-editor">
+						<i class="fas fa-tag"></i> editor
+					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=joplin.plugin.templates"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">This plugin allows you to create and use templates in Joplin.</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;joplin&#x2F;plugin-templates style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;joplin&#x2F;plugin-templates style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=joplin.plugin.templates"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22laurent22%22%20max-results%3D20" class="maintainer-link">
+									laurent22
+								</a>
+								<a href="./?search=maintainer%3D%22tessus%22%20max-results%3D20" class="maintainer-link">
+									tessus
+								</a>
+								<a href="./?search=maintainer%3D%22nishantwrp%22%20max-results%3D20" class="maintainer-link">
+									nishantwrp
+								</a>
+								<a href="./?search=maintainer%3D%22calebjohn%22%20max-results%3D20" class="maintainer-link">
+									calebjohn
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>2.4.0</td></tr>
+					<tr><th>Minimum app version:</th><td>2.2.5</td></tr>
+					<tr><th>Downloads: This version:</th><td>4850</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-05-27T22:37:15Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1 align="center">
+    Templates Plugin
+    <br />
+    <center>
+        <img src="https://github.com/joplin/plugin-templates/actions/workflows/ci.yml/badge.svg" />
+        <a href="https://npmjs.com/package/joplin-plugin-templates"><img src="https://badge.fury.io/js/joplin-plugin-templates.svg" alt="npm version" /></a>
+        <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&amp;label=downloads&amp;query=%24.totalDownloads&amp;url=https%3A%2F%2Fjoplin-plugin-downloads.vercel.app%2Fapi%3Fplugin%3Djoplin.plugin.templates" />
+    </center>
+</h1>
+<p>This plugin allows you to create templates in Joplin and use them to create new notes and to-dos.</p>
+<h2>Table of contents</h2>
+<ul>
+<li><a href="#installing-plugin">Installing Plugin</a></li>
+<li><a href="#importing-legacy-templates">Importing Legacy Templates</a></li>
+<li><a href="#using-the-template-plugin">Using the Template Plugin</a>
+<ul>
+<li><a href="#adding-a-new-template">Adding a new template</a></li>
+<li><a href="#using-templates">Using templates</a></li>
+</ul>
+</li>
+<li><a href="#features">Features</a>
+<ul>
+<li><a href="#template-variables">Template variables</a>
+<ul>
+<li><a href="#built-in-variables">Built in variables</a></li>
+<li><a href="#custom-variables">Custom variables</a>
+<ul>
+<li><a href="#advanced-usage">Advanced Usage</a></li>
+</ul>
+</li>
+<li><a href="#special-variables">Special variables</a></li>
+</ul>
+</li>
+<li><a href="#default-templates">Default Templates</a></li>
+<li><a href="#using-notebooks-to-store-templates">Using notebooks to store templates</a></li>
+</ul>
+</li>
+<li><a href="#changelog">Changelog</a></li>
+<li><a href="#supporting">Supporting</a></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<h2>Installing Plugin</h2>
+<ul>
+<li>Open Joplin</li>
+<li>Go to Tools &gt; Options &gt; Plugins</li>
+<li>Search for <code>Templates</code></li>
+<li>Click Install plugin</li>
+<li>Restart Joplin to enable the plugin</li>
+</ul>
+<h2>Importing Legacy Templates</h2>
+<ul>
+<li>
+<p>If you were already using the legacy version of templates, your templates will be automatically imported once you install the plugin. They will appear in an <code>Imported Templates - dd/mm/yyyy</code> notebook. See the <code>README</code> note in that notebook for more details.</p>
+</li>
+<li>
+<p>Your existing templates will still be present in the templates directory but will be renamed from <code>.md</code> to <code>.md.old</code>. You can safely delete these old templates once you verify that they've been imported correctly in Joplin.</p>
+</li>
+</ul>
+<h2>Using the Template Plugin</h2>
+<h3>Adding a new template</h3>
+<p>Create templates by creating a new note or to-do in any notebook that:</p>
+<ul>
+<li>Includes your template content</li>
+<li>Is tagged with <code>template</code></li>
+</ul>
+<h3>Using templates</h3>
+<p>You can access the templates options in <code>Tools</code> &gt; <code>Templates</code>.</p>
+<h1>Features</h1>
+<h2>Template variables</h2>
+<h3>Built in variables</h3>
+<p>Built in variables are inserted automatically, without interaction from you. For example, in the following template, the date will be automatically added:</p>
+<pre class="hljs"><code>Date: {{date}}
+Hours:
+Details:
+</code></pre>
+<p>The currently supported built in template variables are:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{{date}}</code></td>
+<td>Today's date</td>
+<td>2019-01-01</td>
+</tr>
+<tr>
+<td><code>{{time}}</code></td>
+<td>Current time</td>
+<td>13:00</td>
+</tr>
+<tr>
+<td><code>{{datetime}}</code></td>
+<td>Current date and time</td>
+<td>01/01/19 1:00 PM</td>
+</tr>
+<tr>
+<td><code>{{#custom_datetime}}</code></td>
+<td>Current date and/or time formatted based on a supplied string (using <a href="https://momentjs.com/">moment.js</a> formatting)</td>
+<td><code>{{#custom_datetime}}M d{{/custom_datetime}}</code></td>
+</tr>
+<tr>
+<td><code>{{bowm}}</code></td>
+<td>Date of the beginning of the week (when week starts on Monday)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>{{bows}}</code></td>
+<td>Date of the beginning of the week (when week starts on Sunday)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE</strong>: All dates are formatted based on your Joplin settings in <code>General &gt; Date Format</code></p>
+</blockquote>
+<h3>Custom variables</h3>
+<p>You can also define custom variables in your template that prompt you to enter a value when you use the template. For example in the following example the name and color variables will prompt you each time you use the template:</p>
+<pre class="hljs"><code>---
+name: text
+color: dropdown(Red, Yellow, Green)
+
+---
+
+Hi there, {{ name }}. Your favorite color is {{ color }}. This note/to-do was created on {{ datetime }}.
+</code></pre>
+<p>The currently supported custom variable types are:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td>name: text</td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td>count: number</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>show_summary: boolean</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>meeting_date: date</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td>meeting_time: time</td>
+</tr>
+<tr>
+<td><code>dropdown</code></td>
+<td>color: dropdown(Red, Yellow)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Points to note</strong></p>
+<ul>
+<li>You can't use special characters ("@", ",", "#", "+", "(", etc.) or spaces in variable names. However, you can use "_" in variable names.</li>
+<li>If you declare a custom variable with same name as the built-in variables, the custom variable value will be used.</li>
+<li>Internally, <a href="https://handlebarsjs.com/">Handlebars.Js</a> is used to compile the templates. You can write templates to be compatible with <code>Handlebars</code>.</li>
+</ul>
+<h4>Advanced Usage</h4>
+<p>You can also define a <code>label</code> for each custom variable. Label is something that appears instead of the variable name in the variables input dialog. You can use the following syntax to do so.</p>
+<pre class="hljs"><code>---
+name: text
+project:
+  label: Select a project
+  type: dropdown(project 1, project 2, project 3)
+show<span class="hljs-emphasis">_summary:
+  label: Add summary in note?
+  type: boolean
+
+---
+
+Hi {{ name }},
+This is a report for {{ project }}.
+
+{{#if show_</span>summary}}
+<span class="hljs-section">## Summary</span>
+<span class="hljs-quote">&gt; Enter the summary here.</span>
+{{/if}}
+
+
+</code></pre>
+<p><strong>Points to note</strong></p>
+<ul>
+<li>The indentation should be <code>2 spaces</code> exactly. Don't use tabs for indentation otherwise it can result in errors.</li>
+</ul>
+<h3>Special variables</h3>
+<p>These are the variables that have a specific purpose other than being used in templates. Some of the important features of these special variables are</p>
+<ul>
+<li>Both built-in and custom variables can be used while defining these variables.</li>
+<li>The values of these variables can be used in the template body just like built-in and custom variables.</li>
+</ul>
+<p>Currently there are two special variables.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>template_title</code></td>
+<td>Title of the note/to-do created using this template.</td>
+<td>template_title: Standup - {{ date }}</td>
+</tr>
+<tr>
+<td><code>template_tags</code></td>
+<td>Comma separated tags to be applied to the note/to-do created  using this template.</td>
+<td>template_tags: spec, {{ project }}</td>
+</tr>
+<tr>
+<td><code>template_notebook</code></td>
+<td>The ID of the target notebook for this template. Whenever a new note/to-do will be created by this template, it will be created in this target notebook.</td>
+<td>template_notebook: 82d2384b025f44588e4d3851a1237028</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Points to note</strong></p>
+<ul>
+<li>If <code>template_title</code> is not provided, the title of the template will be used as a fallback value.</li>
+<li>If a tag specified in <code>template_tags</code> doesn't exist already, it will be created.</li>
+<li>You can't use these variable names i.e. <code>template_title</code> and <code>template_tags</code> for custom variables. In general, please avoid defining custom variables with <code>template_</code> prefix.</li>
+<li>To get the ID of a notebook, you can right click on that notebook and click on <code>Copy notebook ID</code>.</li>
+<li>While you are inserting the template in an existing note/to-do, <code>template_tags</code> variable is used to apply those tags to the note the template is inserted in. However, you can disable using <code>template_tags</code> while inserting templates from the plugin settings.</li>
+</ul>
+<p><strong>Example of a template using special variables</strong></p>
+<pre class="hljs"><code>---
+project: dropdown(project 1, project 2)
+template<span class="hljs-emphasis">_title: Weekly Meet - {{ project }} - {{ date }}
+template_</span>tags: meeting notes, {{ project }}
+
+---
+
+<span class="hljs-section">## {{ template<span class="hljs-emphasis">_title }}
+
+This note contains the meeting minutes of the weekly meet held on {{ datetime }} for {{ project }}.
+</span></span></code></pre>
+<h2>Default Templates</h2>
+<p>You can define the templates you use the most as default templates. Currently you can have two default templates. One for <code>notes</code> and one for <code>to-dos</code>. You can also assign keyboard shortcuts to these defaults, so that you can quickly create a new note/to-do with the respective default template.</p>
+<h2>Using notebooks to store templates</h2>
+<p>The plugin also supports using notebooks to store templates instead of tags. You can start using notebooks to store your templates by going to the plugin settings and selecting <code>Notebook</code> instead of <code>Tag</code>.</p>
+<p>Now, any note or todo placed in a notebook titled "Templates" will be considered a template.</p>
+<h2>Changelog</h2>
+<p>See <a href="https://github.com/joplin/plugin-templates/blob/master/CHANGELOG.md">CHANGELOG.md</a>.</p>
+<h2>Supporting</h2>
+<p>You can support the development of this plugin through <a href="https://paypal.me/nishantwrp">PayPal</a>. Also, do consider supporting the development of the main Joplin app through the official <a href="https://joplinapp.org/donate/">donate page</a>.</p>
+<h2>Contributing</h2>
+<p>Contributions to this plugin are most welcome. Feel free to open a pull request or an issue. Make sure to use <a href="https://www.conventionalcommits.org/en/v1.0.0/">conventional commit messages</a> if you're creating a pull request.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
