@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Note encryption</title>
+
+	<meta property="og:title" content="Joplin Plugin: Note encryption"/>
+	<meta property="og:description" content="A joplin plugin, encrypt selected notes on the joplin desktop client. This plugin will modify the notes according to your instructions, please read the precautions before use."/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Note encryption</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Note encryption</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22ztbxxt%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					ztbxxt
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=joplin-plugin-note-encryption"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">A joplin plugin, encrypt selected notes on the joplin desktop client. This plugin will modify the notes according to your instructions, please read the precautions before use.</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;ZhangTe&#x2F;joplin-plugin-encrypt-notes style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;ZhangTe&#x2F;joplin-plugin-encrypt-notes style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=joplin-plugin-note-encryption"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22ztbxxt%22%20max-results%3D20" class="maintainer-link">
+									ztbxxt
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.1.1</td></tr>
+					<tr><th>Minimum app version:</th><td>1.6</td></tr>
+					<tr><th>Downloads: This version:</th><td>538</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-04-30T09:39:14Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<p><a href="https://raw.githubusercontent.com/ZhangTe/joplin-plugin-encrypt-notes/HEAD/README.md">English</a>|<a href="https://raw.githubusercontent.com/ZhangTe/joplin-plugin-encrypt-notes/HEAD/README_zh.md">中文</a></p>
+<p>This is a fork branch from <a href="https://github.com/CapZhang/joplin-plugin-encrypt-notes">https://github.com/CapZhang/joplin-plugin-encrypt-notes</a></p>
+<h1>Joplin Encryption Plugin</h1>
+<p>This is a <a href="https://joplinapp.org/">joplin</a> notebook plugin.
+Compatible with Joplin 2.9.17</p>
+<h2>Usage</h2>
+<ul>
+<li>
+<p>click the top-right lock icon to encrypt.</p>
+</li>
+<li>
+<p>Every time when you re-enter the encrypted note, the unlock dialog pop-up.(can be toggle off in setting)</p>
+</li>
+<li>
+<p>The plugin prohibits modification of encrypted files, but it can be modified without installation of the plugin, including mobile APP;The modified encrypted file cannot be decrypted properly. If you want to edit the encrypted note, <em>enable</em> modification in advance setting.</p>
+</li>
+<li>
+<p>Use a specified prefix string to determine if it is an encrypted document, so Do not write the same string at the beginning of your normal document, for the same reason that if you change this string in an encrypted file, then the disabling function will be disabled.</p>
+</li>
+</ul>
+<p>Key strings change with updating.</p>
+<table>
+<thead>
+<tr>
+<th>version</th>
+<th>prefix string</th>
+<th>encode version string</th>
+<th>data spliter</th>
+<th>initialization vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td><code>[[crypted]]</code></td>
+<td></td>
+<td><code>&lt;br/&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>1.0.1</td>
+<td><code>;;ENCRYPTNOTE?</code></td>
+<td><code>UTF8?AES?CBC128?PKCS7?V102;</code></td>
+<td><code>;DATA;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>1.0.5</td>
+<td><code>;;ENCRYPTNOTE?</code></td>
+<td><code>UTF8?AES?CBC128?PKCS7?V105;</code></td>
+<td><code>;DATA;</code></td>
+<td><code>;IV;</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Notice</h2>
+<ul>
+<li>
+<p>It has been tested under Windows 7/10, Linux Mint, Manjaro. It should work properly with joplin <em>desktop</em> version under Windows, MacOS and Linux; IOS(?) and Android platform versions don't support plugins yet;</p>
+</li>
+<li>
+<p>The plugin uses CryptoJS to encrypt text and does not encrypt attachments. Data security depends on the <a href="https://cryptojs.gitbook.io/docs/">CryptoJS</a> library;</p>
+</li>
+<li>
+<p>NO password retrieval function, not anywhere to save the password, password lost without any means to recover;</p>
+</li>
+<li>
+<p>The note-history may leak sensitive information. It can be avoid by disabling <em>note history</em>;</p>
+<p><em>Suggestion: Use a different profile to take private note, and toggle the history-note off in this profile. Profile settings on menu bar <code>file -&gt; Switch profile -&gt;</code>.</em></p>
+<p><em>Another way: Toggle the histroy-note off before decrypt a note, and toggle history-note on after encrypt.(Toggling history-note off won't delete note history in database.)</em></p>
+<blockquote>
+<p>More about note-history</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.patreon.com/posts/note-history-now-27083082">Note history now in Joplin</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://joplinapp.org/note_history/">Note-history user document</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://joplinapp.org/spec/history/">Note-history specification</a></p>
+</blockquote>
+</li>
+<li>
+<p>This is a disposable encryption-decryption, every time you decrypt a note, you have to manually re-encrypt it;</p>
+</li>
+<li>
+<p>The Plugin is <strong>NOT COMPATIBLE</strong> with <a href="https://joplinapp.org/rich_text_editor/">rich text editor</a>, don't use it to encrypt notes in this edit mode.(Editor mode switch button on top-right second line.)</p>
+</li>
+</ul>
+<h2>Installation</h2>
+<p>Copy the <code>publish/File_encryption.jpl</code> file to your computer and import the plugin with Joplin</p>
+
+<h2>Encryption detail</h2>
+<ul>
+<li>algorithm:AES;</li>
+<li>encryption encode:BASE64;</li>
+<li>encryption mode:CBC;</li>
+<li>key:<br />
+length:128-bit;<br />
+character:16 UTF8 8-bit character (digit, latin-letter, ascii symbol);<br />
+suppose the key is <code>12345abc+</code>, it will be filled with <code>0</code> like <code>12345abc+0000000</code>;</li>
+<li>initialization vector(iv): (128-bit) randomly generated, at the end of the note(update 1.0.5)<br />
+iv encode: BASE64;</li>
+<li>padding:Pkcs7;</li>
+</ul>
+<h1>How to Build</h1>
+<blockquote>
+<p><a href="https://raw.githubusercontent.com/ZhangTe/joplin-plugin-encrypt-notes/HEAD/GENERATOR_DOC.md">Generator Doc</a></p>
+</blockquote>
+<p>This is a template to create a new Joplin plugin.</p>
+<p>The main two files you will want to look at are:</p>
+<ul>
+<li><code>/src/index.ts</code>, which contains the entry point for the plugin source code.</li>
+<li><code>/src/manifest.json</code>, which is the plugin manifest. It contains information such as the plugin a name, version, etc.</li>
+</ul>
+<h2>Building the plugin</h2>
+<p>The plugin is built using Webpack, which creates the compiled code in <code>/dist</code>. A JPL archive will also be created at the root, which can use to distribute the plugin.</p>
+<p>To build the plugin, simply run <code>npm run dist</code>.</p>
+<p>The project is setup to use TypeScript, although you can change the configuration to use plain JavaScript.</p>
+<h2>Updating the plugin framework</h2>
+<p>To update the plugin framework, run <code>npm run update</code>.</p>
+<p>In general this command tries to do the right thing - in particular it's going to merge the changes in package.json and .gitignore instead of overwriting. It will also leave "/src" as well as README.md untouched.</p>
+<p>The file that may cause problem is "webpack.config.js" because it's going to be overwritten. For that reason, if you want to change it, consider creating a separate JavaScript file and include it in webpack.config.js. That way, when you update, you only have to restore the line that include your file.</p>
+<h1>Updates</h1>
+<p>1.1.1 fix the bug, in rich text editor the title can not be edit properly.</p>
+<h1>Feedback</h1>
+<h2>Bug report and advice</h2>
+<p>Leave a issue here or send email to ztbxxt@hotmail.com, if you encounter problems or want to give advice.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
