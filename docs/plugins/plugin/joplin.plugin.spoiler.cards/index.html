@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Spoilers</title>
+
+	<meta property="og:title" content="Joplin Plugin: Spoilers"/>
+	<meta property="og:description" content="Create inline spoilers and spoiler blocks with title and extendable body."/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow">
+	<div class="container">
+		<a class="navbar-brand" href="/plugins">
+			<img src="/plugins/joplin-plugins-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins/#popular">Popular</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#recommended-section">Recommended</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/plugins/#nav-all">All Plugins</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Spoilers</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Spoilers</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Martin Korelič%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Martin Korelič
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=joplin.plugin.spoiler.cards"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Create inline spoilers and spoiler blocks with title and extendable body.</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;martinkorelic&#x2F;joplin-plugin-spoilers style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;martinkorelic&#x2F;joplin-plugin-spoilers style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=joplin.plugin.spoiler.cards"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22martinkorelic%22%20max-results%3D20" class="maintainer-link">
+									martinkorelic
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.6</td></tr>
+					<tr><th>Minimum app version:</th><td>1.7</td></tr>
+					<tr><th>Downloads: This version:</th><td>1608</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2022-11-15T21:41:39Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Joplin Plugin - Spoilers</h1>
+<p>This Joplin plugin allows you to create inline spoilers and spoiler blocks with title and extendable body.</p>
+<p><strong>Note</strong>: Requires Joplin 1.7.11+</p>
+<p><strong>Version</strong>: 1.0.6</p>
+<p><strong>Spoilers (inline)</strong></p>
+<p><img src="https://raw.githubusercontent.com/martinkorelic/joplin-plugin-spoilers/HEAD/docs/inline-spoiler-preview.gif" /></p>
+<p><strong>Spoiler blocks</strong></p>
+<p><img src="https://raw.githubusercontent.com/martinkorelic/joplin-plugin-spoilers/HEAD/docs/spoiler-block-preview.gif" /></p>
+<h2>Installation</h2>
+<ul>
+<li>Open Joplin and navigate to <code>Preferences &gt; Plugins</code></li>
+<li>Search for <code>Spoilers</code> and click install</li>
+<li>Restart Joplin</li>
+</ul>
+<h3>Uninstall</h3>
+<ul>
+<li>Open Joplin and navigate to <code>Tools &gt; Options &gt; Plugins</code></li>
+<li>Search for <code>Spoilers</code> plugin</li>
+<li>Press <code>Delete</code> to remove the plugin or <code>Disable</code> to disable it</li>
+<li>Restart Joplin</li>
+</ul>
+<h2>Usage</h2>
+<h3>Spoiler (inline)</h3>
+<p>In order to create a spoiler (inline), you can:</p>
+<ul>
+<li>press on the <code>Spoiler</code> button or</li>
+<li>use the shortcut <code>Ctrl + Alt + O</code></li>
+<li>select text and use any of the previous options</li>
+<li>or manually write in the following format:</li>
+</ul>
+<pre class="hljs"><code>%%spoiler%%
+</code></pre>
+<h3>Spoiler block</h3>
+<p>In order to create a spoiler block, you can:</p>
+<ul>
+<li>press on the <code>Spoiler block</code> button or</li>
+<li>use the shortcut <code>Ctrl + Alt + P</code></li>
+<li>select text and use any of the previous options</li>
+<li>or manually write in the following format:</li>
+</ul>
+<pre class="hljs"><code>:[
+Spoiler title here...
+
+Spoiler body text here...
+
+]:
+</code></pre>
+<p>Please note, that the empty line above and below spoiler body text is <strong>needed</strong>.
+Spoiler title and body supports markdown formatting as well.</p>
+<p><strong>Example</strong>:</p>
+<pre class="hljs"><code>:[
+3 ways to check if an Object has a property in JS
+
+Using:
+1. `hasOwnProperty()` method
+2. `in` operator
+3. Comparing with `undefined`
+* * *
+1) `hasOwnProperty()`
+~~~js
+const hero = {
+  name: 'Batman'
+};
+
+hero.toString; // =&gt; function() {...}
+
+hero.hasOwnProperty('toString'); // =&gt; false
+~~~
+* * *
+
+]:
+</code></pre>
+<h2>Custom styles</h2>
+<p>If you would like to style the spoiler blocks to your preference, use the following in your <code>userstyle.css</code> file:</p>
+<pre class="hljs"><code><span class="hljs-comment">/* Styling of the spoiler block title */</span>
+<span class="hljs-selector-class">.summary-title</span> {
+  
+}
+
+<span class="hljs-comment">/* Styling of the spoiler block body */</span>
+<span class="hljs-selector-class">.summary-content</span> {
+  
+}
+</code></pre>
+<h3>Exporting styles</h3>
+<p>By default when exporting with spoiler blocks, the blocks get extended, show the body and hides the arrows. Inline spoilers stay hidden.</p>
+<p>Alternately, if you would like to style the spoiler blocks to your liking when exporting, use the following in you <code>userstyle.css</code> file:</p>
+<pre class="hljs"><code><span class="hljs-keyword">@media</span> print {
+
+  <span class="hljs-comment">/* Hides the side arrow */</span>
+  <span class="hljs-selector-class">.summary-title</span><span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+  }
+
+  <span class="hljs-comment">/* Container for spoiler blocks */</span>
+  <span class="hljs-selector-class">.spoiler-block</span> {}
+
+  <span class="hljs-comment">/* Container for spoiler title */</span>
+  <span class="hljs-selector-id">#spoiler-block-title</span> {}
+  
+  <span class="hljs-comment">/* Container for spoiler body */</span>
+  <span class="hljs-selector-id">#spoiler-block-body</span> {
+      <span class="hljs-comment">/* Shows the body contents */</span>
+      <span class="hljs-attribute">display</span>: block;
+      <span class="hljs-attribute">animation</span>: none;
+  }
+
+}
+</code></pre>
+<h2>Notes</h2>
+<ul>
+<li><strong>There might be bugs</strong>, <a href="https://github.com/martinkorelic/joplin-plugin-spoilers/issues">report them here</a> and I'll try to fix them when I'll find time.</li>
+</ul>
+<blockquote>
+<p>Created on 12th April 2021</p>
+</blockquote>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
