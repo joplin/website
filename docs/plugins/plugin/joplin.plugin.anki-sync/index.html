@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Joplin Anki Sync</title>
+
+	<meta property="og:title" content="Joplin Plugin: Joplin Anki Sync"/>
+	<meta property="og:description" content="Bidirectional sync between Joplin and Anki"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://joplinapp.org/">
+			<img src="/plugins/joplin-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins">Plugins</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/news/">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/help/">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://discourse.joplinapp.org/">Forum</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Joplin Anki Sync</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Joplin Anki Sync</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Lijun Chen%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Lijun Chen
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=joplin.plugin.anki-sync"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Bidirectional sync between Joplin and Anki</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;chenlijun99&#x2F;autoanki style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;chenlijun99&#x2F;autoanki&#x2F;packages&#x2F;joplin-plugin style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=joplin.plugin.anki-sync"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.0</td></tr>
+					<tr><th>Minimum app version:</th><td>1.7</td></tr>
+					<tr><th>Downloads: This version:</th><td>852</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2021-06-01T08:30:52Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Autoanki</h1>
+<p><img src="https://github.com/chenlijun99/autoanki/workflows/CI%20pipeline/badge.svg?branch=main" alt="Github Actions CI" />
+<a href="https://codecov.io/gh/chenlijun99/autoanki"><img src="https://codecov.io/gh/chenlijun99/autoanki/branch/main/graph/badge.svg?token=T6YMIDGJYO" alt="codecov" /></a>
+<a href="https://lerna.js.org/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="lerna" /></a>
+<a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly" /></a>
+<a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg" alt="styled with prettier" /></a></p>
+<p>Status of the project: it barely works for me, there are probably too many rough edges and too little documentation to make it usable by other users. In the near future I don't think I'll have further time to dedicate to this project. Also, when I'll have time to work on this project again, large refactors are planned.</p>
+<p>Set of tools that streamline the learning experience with Anki.</p>
+<h2>Features</h2>
+<ul>
+<li>Ability to write Anki notes in multiple "source file" formats.
+<ul>
+<li>Writing Anki notes in source files rather than creating them with the Anki GUI interface has the following advantages:
+<ul>
+<li>For plain text source formats, we can use our favorite text editor.</li>
+<li>Especially for plain text source formats, it is easy to make collaborative Anki notes, similar to (and probably easier than) <a href="https://github.com/Stvad/CrowdAnki">CrowdAnki</a>.
+<ul>
+<li>One additional potential benefit comes when dealing with collaborative Anki notes of copyrighted materials. E.g. imagine the case of a class working together to make cards of a textbook. Instead of distributing the Anki notes as a shared deck, which entails distributing portion of the copyrighted materials, it could be possible to distribute the note sources, which contain links to the copyrighted materials. Everyone who owns the copyrighted materials can generate the Anki notes using their own copy.</li>
+</ul>
+</li>
+<li>We structure our information via note taking. We isolate pieces of information and then learn them via spaced-repetition using Anki. By extracting Anki notes from source files (which could be our structured notes), we have best of both worlds: structure + spaced-repetition.</li>
+</ul>
+</li>
+<li>List of supported source file formats:
+<ul>
+<li>YAML</li>
+<li>Markdown</li>
+<li>PDF</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Best-effort automatic bidirectional sync of Anki notes between source files and an Anki profile, using <a href="https://github.com/FooSoft/anki-connect">Anki-connect</a>. See <a href="https://raw.githubusercontent.com/chenlijun99/autoanki/HEAD/packages/autoanki-sync">@autoanki/sync</a>.</li>
+<li>Anki collection and deck (apkg) generation, to easily share your work with other people who don't use Autoanki.</li>
+<li>A out-of-the-box CLI that exposes most of the functionalities of Autoanki for terminal users.</li>
+<li>Extensibility:
+<ul>
+<li>Easy to add support for new source file formats, with the plugin-based architecture.</li>
+<li>Easy to build upon, using APIs provided by a set of simple, yet configurable core components.</li>
+</ul>
+</li>
+</ul>
+<h2>Limitations</h2>
+<ul>
+<li>Autoanki deals with Anki notes, not with Anki cards. This means that informations that are bound to Anki cards, such as the card's current deck, are not handled by Autoanki.
+<ul>
+<li>Some source file formats allow you to specify the deck of a note, but that's only used during note creation.</li>
+</ul>
+</li>
+</ul>
+<h2>Usage and supported environments</h2>
+<ul>
+<li>Anki &gt;=2.1.54</li>
+</ul>
+<h3>Autoanki applications</h3>
+<ul>
+<li><a href="https://raw.githubusercontent.com/chenlijun99/autoanki/HEAD/packages/autoanki-cli">@autoanki/cli</a> for terminal users.</li>
+</ul>
+<h3>Autoanki libraries</h3>
+<ul>
+<li>Most of Autoanki packages were designed to work both in the browser and in Node.js.</li>
+<li>We support TypeScript &gt;=4.8.</li>
+<li>We officially support all the maintained Node.js versions, which at the time of writing means &gt;=Node.js 14.</li>
+<li>Packages are transpiled to ES2020 and provided as ES6 module.
+<ul>
+<li>So that they can run out-of-the-box on the supported Node.js.</li>
+<li>So that for browser applications the application developers are free to use whatever bundler + transpiler they want, to further process Autoanki packages down to the target they need to support.
+<ul>
+<li>Polyfills: <a href="https://github.com/w3ctag/polyfills/issues/6">It complicated...</a>, but following this line of thought we believe it should also be the application developers to assess what they want to support and then introduce the necessary polyfills.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Contributing</h2>
+<p>See <a href="https://raw.githubusercontent.com/chenlijun99/autoanki/HEAD/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+<h2>Credits</h2>
+<ul>
+<li><a href="https://github.com/babel/babel">Babel</a>: this project's architecture and monorepo organization is heavily inspired by Babel.</li>
+<li><a href="https://foosoft.net/projects/anki-connect/">Anki-connect</a></li>
+<li><a href="https://github.com/Pseudonium/Obsidian_to_Anki">https://github.com/Pseudonium/Obsidian_to_Anki</a></li>
+<li><a href="https://github.com/ashlinchak/mdanki">https://github.com/ashlinchak/mdanki</a></li>
+</ul>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
