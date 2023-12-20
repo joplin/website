@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Markdown table calculations</title>
+
+	<meta property="og:title" content="Joplin Plugin: Markdown table calculations"/>
+	<meta property="og:description" content="Plugin for automatic calculations of markdown table formulas."/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://joplinapp.org/">
+			<img src="/plugins/joplin-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins">Plugins</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/news/">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/help/">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://discourse.joplinapp.org/">Forum</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Markdown table calculations</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-productivity.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Markdown table calculations</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Oskar Świda%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Oskar Świda
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=osw.joplin.markdowncalc"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Plugin for automatic calculations of markdown table formulas.</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;oswida&#x2F;joplin-markdown-calc style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;oswida&#x2F;joplin-markdown-calc style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=osw.joplin.markdowncalc"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22oswida%22%20max-results%3D20" class="maintainer-link">
+									oswida
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.5</td></tr>
+					<tr><th>Minimum app version:</th><td>1.6.6</td></tr>
+					<tr><th>Downloads: This version:</th><td>3342</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2021-11-16T20:04:05Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Joplin Markdown table calculations plugin</h1>
+<h3>NOTE: unfortunately, I'm not able to maintain this project anymore. There are couple of things which should be done (like moving it to newer formula library or better integration with the current Joplin API) but I won't be able to do it in any reasonable future.</h3>
+<p><a href="https://github.com/laurent22/joplin">Joplin editor</a> plugin for making calculations in markdown tables. Inspired by an Emacs Org mode feature which allows to make TBLFM comments under the table and perform calculations.</p>
+<blockquote>
+<p>IMPORTANT: This plugin is not a spreadsheet emulator and I'm not able to mimic whole spreadsheet functionality. If you need specific behaviours, please use your favourite spreadsheet package instead.</p>
+</blockquote>
+<h2>References/thanks</h2>
+<p>Big thanks to authors of two projects which are the calculation engine core:</p>
+<ul>
+<li><a href="https://github.com/markdown-it/markdown-it">Markdown-it</a> with the wonderful Markdown parser, I've used it to locate and extract table data in a Markdown document.</li>
+<li><a href="https://github.com/handsontable/formula-parser">Hot formula parser</a> - incredible useful library for evauating mathematical formulas.</li>
+</ul>
+<h2>Features</h2>
+<ul>
+<li>Define table formulas in Markdown files</li>
+<li>Recalculate all formulas in a file using custom command</li>
+</ul>
+<h2>Usage: formula list</h2>
+<p>To define a set of table formulas, you can add a special HTML comment below a given Markdown table (TBLFM is a tribute to an Emacs Org mode :) . Only <strong>the first comment directly under the table</strong> will be taken into account.
+You can use <strong>TBLFM</strong> or <strong>TABLE_FORMULAS</strong> strings to indicate formula list.</p>
+<pre class="hljs"><code>| Column A | Column B | Column C |
+| :------- | :------- | :------- |
+| 123      | 456      | 789      |
+| 0        | 0        | 0        |
+&lt;!--TBLFM C2=A1+A2; C1=56<span class="hljs-emphasis">*78/4 --&gt;
+</span></code></pre>
+<p>The comment can span multiple lines and contain multiple formulas separated by a semicolon. Formulas are calculated in the following order:  first row then all its columns fron the left to the right, second row ... etc. Table cells are described using spreadsheet notation, columns designated with letters like A,B,C .. Z (and even more AA, AB etc.) and rows with integers 1,2,3 ... You can also use range notation like <code>A1:E23</code>. Moreover, <code>hot-formula-parser</code> contains also a big set of predefined functions which can be used in formulas.
+For list of the formula functions and their use, please look at: <a href="https://formulajs.info/functions/">https://formulajs.info/functions/</a>  (however, I didn't check all of them).</p>
+<h2>Usage: inline cell formulas</h2>
+<p>There is also a possibility to define formulas directly inside the cell. To do so, you need to insert a special comment inside the cell content with <strong>FM</strong> or <strong>FORMULA</strong> indicator.</p>
+<pre class="hljs"><code>| Column A | Column B | Column C         |
+| :------- | :------- | :--------------- |
+| 123      | 456      | 789              |
+| 0        | 0        | &lt;!--FM A1+C1 --&gt; |
+</code></pre>
+<p><strong>WARNING! If you use both cases in the same table, inline cell formulas are overwritten by the formulas put into the list below the table!</strong></p>
+<h2>Plugin command</h2>
+<p>The plugin registers <code>markdownCalculate</code> command and adds it to the editor toolbar (the <code>fa-square-root-alt</code> icon).</p>
+<h2>Important Notes</h2>
+<ol>
+<li>WYSIWYG editor removes HTML comments, so you will loose formula definitions.</li>
+<li>Table values are updated using internal <code>editor.setText</code> command, so you will be unable to undo changes.</li>
+<li>Cell values are converted to float numbers. If conversion fail, the cell value will be returned as a string. However, you need to remember that strings like <code>7/18/2011 7:45:00 AM</code> will be properly parsed as float <code>7</code>. To use them as strings, they have to be written in double quote <code>"7/18/2011 7:45:00 AM"</code>.</li>
+</ol>
+<h2>Building the plugin</h2>
+<p>To build the plugin, simply run <code>npm run dist</code>.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Semantically Similar Notes</title>
+
+	<meta property="og:title" content="Joplin Plugin: Semantically Similar Notes"/>
+	<meta property="og:description" content="Show user which notes are semantically similar to the one they are looking at"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-search.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://joplinapp.org/">
+			<img src="/plugins/joplin-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins">Plugins</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/news/">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/help/">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://discourse.joplinapp.org/">Forum</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Semantically Similar Notes</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-search.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">Semantically Similar Notes</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22marc green%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					marc green
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-search">
+						<i class="fas fa-tag"></i> search
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=com.github.marcgreen.joplin-plugin-semantically-similar-notes"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Show user which notes are semantically similar to the one they are looking at</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;marcgreen&#x2F;semantic-joplin&#x2F;tree&#x2F;master&#x2F;similar-notes style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;marcgreen&#x2F;semantic-joplin&#x2F;tree&#x2F;master&#x2F;similar-notes style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=com.github.marcgreen.joplin-plugin-semantically-similar-notes"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22marcgreen%22%20max-results%3D20" class="maintainer-link">
+									marcgreen
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>0.2.1</td></tr>
+					<tr><th>Minimum app version:</th><td>2.2</td></tr>
+					<tr><th>Downloads: This version:</th><td>612</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2021-12-28T10:04:40Z</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>Semantically Similar Notes</h1>
+<h2>Summary</h2>
+<p>The intent of this plugin is to help the joplin user find notes they have that might be relevant to the one they are editing. We plan to filter out linked notes from results, as an explicit linking implies the user is already aware of the relevance. This filtering is not yet implemented, however.</p>
+<p>Disclaimer: This plugin was written during a 2-week hackathon, without prior javascript or tensorflow experience, and the code quality reflects this. PRs are welcome, but I do plan to refactor things with the knowledge I now have after getting it to the current state.</p>
+<h2>Potential Use Cases</h2>
+<h3>Suggesting relevant notes from your corpus to link to</h3>
+<p>TODO insert content from joplin forum post</p>
+<h3>Find duplicate and near-duplicate notes</h3>
+<p>If there's a lot of words in common between the notes, they'll likely be very semantically similar to each other.</p>
+<h3>Crude Semantic Search</h3>
+<p>By creating a new note with your search query, you can retrigger similarity calculations to perform your semantic search.</p>
+<p>Anecdotally, I've only /meaningfully/ used this a total of one time so far to ignore word endings and find notes based on words that had the same "stem". Which makes sense, since words with the same stem are likely going to be semantically similar to each other.</p>
+<p>Example: "analogy" and "analogies" won't find each other in keyword search, but they can find each other in semantic search.</p>
+<h3>On First Use</h3>
+<p>TODO: document cpu/gpu and batch size options and how they can help in this step</p>
+<p>On first startup, this plugin will calculate embeddings for all of your notes. <strong>This can take some minutes</strong> (less than 2min for my 800 notes totalling 5mb not including attachments on my desktop computer). It saves these embeddings to disk and loads from there on subsequent startups. Of course, if you work on notes outside of where this plugin runs, then upon sync, it will need to calculate embeddings for those notes too. It's future work to make this happen upon user request vs automatically at startup.</p>
+<p><strong>If you have notes larger than a few hundred KBs, this might take a long time.</strong> Notes larger than 1MB might even make the model hang, I'm not entirely sure yet. The largest notes in my corpus are a few hundred KB. I think calculating the embeddings is exponential on note size, or at least superlinear.</p>
+<p>Please let me know your system specs (cpu+ram, gpu+vram) and how big your largest notes are (excl. attachments) if it takes longer than 10min to do a single batch during the initial embeddings.</p>
+<h2>Semanticness</h2>
+<p>We use tensorflow.js's <a href="https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder">Universal Sentence Encoder Lite</a> to encode each note into a 512 dimension vector, called an embedding. It's called a 'sentence encoder', but it seems to work for longer strings of text, too (eg, see doc2vec and top2vec). We use the dot product of two embeddings to determine similarity.</p>
+<p>It might be the case that better results could be achieved with a different model (eg mobileBERT, or BERT), or perhaps an entirely different approach, like one that does a simple keyword search instead (assuming a way to determine the right keywords to use, perhaps via topic extraction).</p>
+<h3>Quality of Results</h3>
+<p>Sometimes the results of the semantic similarity computation are confusing or questionable. Consider that the model is comparing what it thinks the meaning of the words you're using in the selected note against all other notes. So there are three variables at play: the words used in the selected note, the words used in the note being compared against, and the model's understanding of our language. A potential nuance of this is that since each embedding is a fixed size, longer inputs presumably mean each token in the input is given less weight. I'm not sure the extent this affects similarity scores.</p>
+<p>Testing the model against my own corpus of notes, I am satisified enough with its performance. But I would certainly be interested in experimenting with different models (and different approaches), like the ones mentioned in Future Work below.</p>
+<h2>Speed</h2>
+<p>Because we're using a dense neural network, computation of the embeddings is relatively slow. However, even after the embeddings are computed, just computing the 512x512 dot product to determine similarity takes a noticeable amount of time. This isn't surprising, as a few times during development I chose to forego obvious optimizations in order to finish this first version of the plugin within the time constraints I was given. I have ideas on how to optimize these computations, but for now, it seems to take a couple seconds to show results every time you switch notes. Still, fast enough to be useful, in my opinion.</p>
+<h2>Debugging</h2>
+<p>Logs can be found at <code>%APPDATA%\Roaming\@joplin\app-desktop\logs</code> and also I think <code>~\.config\joplin-desktop\log.txt</code></p>
+<h2>Caveats/Limitations</h2>
+<ul>
+<li>english only, and USE lite has 'only' an 8000 word vocabulary</li>
+<li>requires internet connection to download the USE model every startup. would like to save it locally after first download</li>
+<li>no support for attachments yet</li>
+</ul>
+<h2>Known Issues</h2>
+<ul>
+<li>bad UX to start initial embedding computation on startup and not user trigger since it can hog resources</li>
+<li>button, command+keyboard shortcut, and menu item(?) to show/hide the panel</li>
+<li>
+<ul>
+<li>if this is really common, would be cool to abstract that into a lib or smt</li>
+</ul>
+</li>
+<li>when switching between notes quickly, it's not clear list is outdated for a few secs
+<ul>
+<li>need to abort the computation onSelectionChange</li>
+</ul>
+</li>
+<li>visually distinguish linked notes from unlinked notes in results (since they are obv already known/accounted for by user)</li>
+<li>setting to exclude specified notebooks from being included (borrow more code from Note Graph UI plugin)</li>
+<li>optimize similarity calculations, and when they happen, for more responsive UI</li>
+<li>save USE model locally, so it needn't be downloaded every time the plugin loads</li>
+<li>fix potential edge case of note embedding unsyncing from note content</li>
+<li>could recompute onSync, compromising between onSelect and onChange</li>
+<li>change list UI to look identical to default joplin note list</li>
+</ul>
+<h2>Future Work</h2>
+<ul>
+<li>viz note similarities in 2d or 3d - tfjs supports this to some extent</li>
+<li>optionally include note's tags in the embeddings (test how this changes results per note in practice)</li>
+<li>
+<ul>
+<li>see gensim impl here: <a href="https://medium.com/wisio/a-gentle-introduction-to-doc2vec-db3e8c0cce5e">https://medium.com/wisio/a-gentle-introduction-to-doc2vec-db3e8c0cce5e</a></li>
+</ul>
+</li>
+<li>see what kind of results I get if I compute similarity to each note + all of the notes it is connected to via links and backlinks. (wonder how much input size to USE really affects result...)
+<ul>
+<li>could do 1:n comparison as well as m:n (comparing graphs of notes to each other). maybe better terminology: 0:1 and 1:1 (representing size of graph in degress of separation)</li>
+</ul>
+</li>
+<li>compare results of USE lite with mobileBERT</li>
+<li>compare results of USE lite with topic extraction + keyword search</li>
+<li>summarize each note via some other LM, and show summary blurb in results list, to help user know what's in each similar note
+<ul>
+<li>maybe instead allow on-hover previews of the note? or on-hover/button summarizations/outline</li>
+</ul>
+</li>
+<li>wonder what results would be if we calculated similarity of multiple selected notes
+(using onSelectedNoteIds event). could average the selected note embeddings</li>
+</ul>
+<h2>Questions</h2>
+<ul>
+<li>not sure if I should be doing preprocessing on the data before creating the embedding?
+<ul>
+<li>some documentation says I should (sentencepiece), but the official examples of USE in tfjs don't. maybe tf vs tfjs thing?</li>
+<li>top2vec does preprocessing before it calls USE to create the embedding...</li>
+<li>on l2 normalization: <a href="https://stackoverflow.com/questions/32276391/feature-normalization-advantage-of-l2-normalization">https://stackoverflow.com/questions/32276391/feature-normalization-advantage-of-l2-normalization</a></li>
+</ul>
+</li>
+<li>USE embeddings are deterministic, right? don't need to recalc embeddings like top2vec suggests? (maybe that's only for top2vec algo, not USE within top2vec?)</li>
+</ul>
+<h2>Licenses</h2>
+<p>This plugin's source code is MIT licensed. Tensorflow,js is Apache 2.0 (their license is included in the .jpl)</p>
+
+<h1>Joplin Plugin</h1>
+<p>This is a template to create a new Joplin plugin.</p>
+<p>The main two files you will want to look at are:</p>
+<ul>
+<li><code>/src/index.ts</code>, which contains the entry point for the plugin source code.</li>
+<li><code>/src/manifest.json</code>, which is the plugin manifest. It contains information such as the plugin a name, version, etc.</li>
+</ul>
+<h2>Building the plugin</h2>
+<p>The plugin is built using Webpack, which creates the compiled code in <code>/dist</code>. A JPL archive will also be created at the root, which can use to distribute the plugin.</p>
+<p>To build the plugin, simply run <code>npm run dist</code>.</p>
+<p>The project is setup to use TypeScript, although you can change the configuration to use plain JavaScript.</p>
+<h2>Updating the plugin framework</h2>
+<p>To update the plugin framework, run <code>npm run update</code>.</p>
+<p>In general this command tries to do the right thing - in particular it's going to merge the changes in package.json and .gitignore instead of overwriting. It will also leave "/src" as well as README.md untouched.</p>
+<p>The file that may cause problem is "webpack.config.js" because it's going to be overwritten. For that reason, if you want to change it, consider creating a separate JavaScript file and include it in webpack.config.js. That way, when you update, you only have to restore the line that include your file.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
