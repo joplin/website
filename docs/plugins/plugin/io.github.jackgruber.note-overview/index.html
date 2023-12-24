@@ -177,16 +177,17 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.6.0</td></tr>
+					<tr><th>Version:</th><td>1.7.0</td></tr>
 					<tr><th>Minimum app version:</th><td>1.8.1</td></tr>
-					<tr><th>Downloads: This version:</th><td>2785</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2022-12-26T15:09:01Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="section" id="readme" data--is-rendered-markdown>
 
 			
+
 
 
 <h1>Joplin note overview</h1>
@@ -215,13 +216,16 @@
 </li>
 <li><a href="#fields">fields</a></li>
 <li><a href="#sort">sort</a></li>
+<li><a href="#limit">limit</a></li>
 <li><a href="#alias">alias</a></li>
+<li><a href="#datetime">datetime</a></li>
 <li><a href="#image">image</a></li>
 <li><a href="#excerpt">excerpt</a></li>
 <li><a href="#details">details</a></li>
 <li><a href="#count">count</a></li>
 <li><a href="#listview">listview</a></li>
 <li><a href="#link">link</a></li>
+<li><a href="#status">status</a></li>
 </ul>
 </li>
 <li><a href="#examples">Examples</a>
@@ -240,6 +244,8 @@
 <li><a href="#change-to-listview-no-linbreak">Change to listview no linbreak</a></li>
 <li><a href="#combine-notes-dynamically">Combine notes dynamically</a></li>
 <li><a href="#show-all-uncompleted-checkboxes-todos">Show all uncompleted checkboxes ToDos</a></li>
+<li><a href="#disable-automatic-note-overview-update-for-one-note-overview">Disable automatic note overview update for one note overview</a></li>
+<li><a href="#show-the-last-5-edited-notes">Show the last 5 edited notes</a></li>
 </ul>
 </li>
 <li><a href="#plugin-options">Plugin options</a></li>
@@ -377,11 +383,38 @@ All fields of the note are available, a complete list of all field can be found 
 <p>By which field the output should be sorted. It can be only sorted by one field and it's not possible to sort by a virtual field!</p>
 <pre class="hljs"><code><span class="hljs-attr">sort:</span> <span class="hljs-string">todo_due</span> <span class="hljs-string">ASC</span>
 </code></pre>
+<h3>limit</h3>
+<p>Displayes only the first x hits of the search. Without the limit option all results are displayed.</p>
+<pre class="hljs"><code><span class="hljs-attr">limit:</span> <span class="hljs-number">5</span>
+</code></pre>
 <h3>alias</h3>
 <p>This allows renaming the fields in the output.</p>
 <p>Syntax: <code>&lt;field&gt; AS &lt;new field name&gt;</code>, multiple fields comma seperated.</p>
 <pre class="hljs"><code><span class="hljs-attr">alias:</span> <span class="hljs-string">todo_due</span> <span class="hljs-string">AS</span> <span class="hljs-string">Due</span> <span class="hljs-string">Date,</span> <span class="hljs-string">notebook</span> <span class="hljs-string">AS</span> <span class="hljs-string">Folder</span>
 </code></pre>
+<h3>datetime</h3>
+<p>Customize datetime format for a single overview.</p>
+<pre class="hljs"><code><span class="hljs-attr">datetime:</span>
+  <span class="hljs-attr">date:</span> <span class="hljs-string">"YYYY-MM-DD"</span>
+  <span class="hljs-attr">time:</span> <span class="hljs-string">"HH:mm"</span>
+</code></pre>
+<ul>
+<li><code>date</code>: Set date format. Default is Joplin global settings on <code>Tools</code> &gt; <code>Options</code> &gt; <code>General</code> &gt; <code>Date format</code></li>
+<li><code>time</code>: Set time format. Default is Joplin global settings on <code>Tools</code> &gt; <code>Options</code> &gt; <code>General</code> &gt; <code>Time format</code></li>
+</ul>
+<p>Complete list of format can be found <a href="https://momentjs.com/docs/#/displaying/format/">here</a>.</p>
+<p>You can also set datetime to <a href="https://momentjs.com/docs/#/durations/humanize/">humanize</a> format, to display a length of time. You can do that by adding <code>humanize</code> settings.</p>
+<pre class="hljs"><code><span class="hljs-attr">datetime:</span>
+  <span class="hljs-attr">date:</span> <span class="hljs-string">"YYYY-MM-DD"</span>
+  <span class="hljs-attr">time:</span> <span class="hljs-string">"HH:mm"</span>
+  <span class="hljs-attr">humanize:</span>
+    <span class="hljs-attr">enabled:</span> [<span class="hljs-literal">true</span> <span class="hljs-string">|</span> <span class="hljs-literal">false</span>]
+    <span class="hljs-attr">withSuffix:</span> [<span class="hljs-literal">true</span> <span class="hljs-string">|</span> <span class="hljs-literal">false</span>]
+</code></pre>
+<ul>
+<li><code>enabled</code> : set <code>true</code> to enable humanize format. Default is <code>false</code>.</li>
+<li><code>withSuffix</code> : set <code>false</code>, to remove oriented duration (ex: <code>a month</code>). Default is <code>true</code>, it will add oriented duration (ex: <code>in a month</code>, <code>a month ago</code>).</li>
+</ul>
 <h3>image</h3>
 <p>This allows you to control the image displayed in the <code>image</code> field.</p>
 <ul>
@@ -450,6 +483,15 @@ For the field <code>text</code> all fields can be used, all used Joplin fields m
 <pre class="hljs"><code><span class="hljs-attr">link:</span>
   <span class="hljs-attr">caption:</span> <span class="hljs-string">"Jump to"</span>
   <span class="hljs-attr">html:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<h3>status</h3>
+<p>Customize note status field for a single overview.</p>
+<pre class="hljs"><code><span class="hljs-attr">status:</span>
+  <span class="hljs-attr">note:</span> <span class="hljs-string">""</span>
+  <span class="hljs-attr">todo:</span>
+    <span class="hljs-attr">open:</span> <span class="hljs-string">☐</span>
+    <span class="hljs-attr">done:</span> <span class="hljs-string">🗹</span>
+    <span class="hljs-attr">overdue:</span> <span class="hljs-string">⚠</span>
 </code></pre>
 <h2>Examples</h2>
 <h3>ToDo Overview</h3>
@@ -578,89 +620,24 @@ For the field <code>text</code> all fields can be used, all used Joplin fields m
 <span class="hljs-string">--&gt;</span>
 </code></pre>
 <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-note-overview/HEAD/img/example_option_excerpt_regex_checkbox.png" />
+<h3>Disable automatic note overview update for one note overview</h3>
+<p>When you set the <code>update</code> option to <code>manual</code>, then note overview is only updated when you select the note and trigger a update.</p>
+<pre class="hljs"><code><span class="hljs-string">&lt;!--</span> <span class="hljs-string">note-overview-plugin</span>
+<span class="hljs-attr">search:</span> <span class="hljs-string">tag:todo</span>
+<span class="hljs-attr">fields:</span> <span class="hljs-string">title,</span> <span class="hljs-string">excerpt</span>
+<span class="hljs-attr">update:</span> <span class="hljs-string">manual</span>
+<span class="hljs-string">--&gt;</span>
+</code></pre>
+<h3>Show the last 5 edited notes</h3>
+<pre class="hljs"><code><span class="hljs-string">&lt;!--</span> <span class="hljs-string">note-overview-plugin</span>
+<span class="hljs-attr">search:</span> <span class="hljs-string">/*</span>
+<span class="hljs-attr">fields:</span> <span class="hljs-string">title,</span> <span class="hljs-string">updated_time</span>
+<span class="hljs-attr">sort:</span> <span class="hljs-string">updated_time</span> <span class="hljs-string">DESC</span>
+<span class="hljs-attr">limit:</span> <span class="hljs-number">5</span>
+<span class="hljs-string">--&gt;</span>
+</code></pre>
 <h2>Plugin options</h2>
 <p>Settings for the plugin, accessible at <code>Tools &gt; Options &gt; Note overview</code>.</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Show note count</code></td>
-<td>Show the number of notes found.</td>
-<td><code>off</code></td>
-</tr>
-<tr>
-<td><code>Note count text</code></td>
-<td>Text for the display of the found notes, <code>{{count}}</code> is replace with the number of matched notes.</td>
-<td><code>Note count: {{count}}</code></td>
-</tr>
-<tr>
-<td><code>Update interval in minutes</code></td>
-<td>How often the overview notes should be updated.</td>
-<td><code>5</code></td>
-</tr>
-<tr>
-<td><code>Update on Joplin sync</code></td>
-<td>Update the Noteoverview after a Joplin syncronisation. Independent of the update interval.</td>
-<td><code>No</code></td>
-</tr>
-<tr>
-<td><code>Field status: open todo</code></td>
-<td>Text for the <code>status</code> field, when the todo is not completed.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>Field status: todo completed</code></td>
-<td>Text for the <code>status</code> field, when the todo is completed.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>Field status: todo over due</code></td>
-<td>Text for the <code>status</code> field, when the due date of the todo is exceeded.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>Color: todo [open]</code></td>
-<td>HTML color for the <code>due_date</code>, when the todo is not completed.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>Color: todo [warning]</code></td>
-<td>HTML color for the <code>due_date</code>, when the todo is not completed and within <code>todo [warning] hours</code>.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>todo [warning] hours</code></td>
-<td>How many hours before due_date the warning color should be applied. 0 = Disabled.</td>
-<td><code>0</code></td>
-</tr>
-<tr>
-<td><code>Color: todo [open_overdue]</code></td>
-<td>HTML color for the <code>due_date</code>, when the todo is over the due date.</td>
-<td><code>red</code></td>
-</tr>
-<tr>
-<td><code>Color: todo [done]</code></td>
-<td>HTML color for the <code>due_date</code> and <code>todo_completed</code>, when the todo is completed. Seperate the color for due_date and todo_completed by a <code>,</code>.</td>
-<td><code>limegreen,limegreen</code></td>
-</tr>
-<tr>
-<td><code>Color: todo [done_overdue]</code></td>
-<td>HTML color for the <code>due_date</code> and <code>todo_completed</code>, when the todo was completed after the due date. Seperate the color for due_date and todo_completed by a <code>,</code>.</td>
-<td><code>orange,orange</code></td>
-</tr>
-<tr>
-<td><code>Color: todo [done_nodue]</code></td>
-<td>HTML color for the <code>todo_completed</code>, when the todo was completed but no due date was set.</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <h2>Keyboard Shortcuts</h2>
 <p>Under <code>Options &gt; Keyboard Shortcuts</code> you can assign a keyboard shortcut for the following commands:</p>
 <ul>
