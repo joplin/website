@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - JoplinAW</title>
+
+	<meta property="og:title" content="Joplin Plugin: JoplinAW"/>
+	<meta property="og:description" content="Import your daily ActivityWatch logs in a readable format"/>
+	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-integrations.svg"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://joplinapp.org/">
+			<img src="/plugins/joplin-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins">Plugins</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/news/">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/help/">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://discourse.joplinapp.org/">Forum</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">JoplinAW</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="plugin-icon-container">
+			<img
+				class="plugin-icon default-icon auto-invert"
+				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-integrations.svg"
+				alt="Plugin icon"
+			/>
+		</div>
+		<div class="plugin-page-header">
+			<h1 class="card-title">JoplinAW</h1>
+			<div class="card-title pb-2">
+				by
+				<a
+					href="./?search=author%3D%22Kyle Roth%22%20max-results%3D20"
+					style="display: inline;"
+				>
+					Kyle Roth
+				</a>
+			</div>
+
+			<div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-integrations">
+						<i class="fas fa-tag"></i> integrations
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=com.kylrth.JoplinAW"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Import your daily ActivityWatch logs in a readable format</p>
+		</div>
+		<div class="section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;kylrth&#x2F;joplin-aw style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=com.kylrth.JoplinAW"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22kylrth%22%20max-results%3D20" class="maintainer-link">
+									kylrth
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.0</td></tr>
+					<tr><th>Minimum app version:</th><td>2.12</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="section" id="readme" data--is-rendered-markdown>
+
+			<h1>JoplinAW</h1>
+<p>This is a plugin for importing your ActivityWatch logs into a Joplin note in a readable format.</p>
+<p>The inspiration for creating this plugin was seeing someone's <a href="https://www.reddit.com/r/PhD/comments/10jjvg0/how_i_spent_every_minute_of_my_phd/">meticulous log of how they spent all their time</a> during their PhD.</p>
+<p>You can install this plugin in Joplin by going to <code>Tools -&gt; Options</code>, clicking Plugins, and searching for JoplinAW.</p>
+<h2>usage</h2>
+<p>Once the plugin is added to Joplin, you can find the <code>getAWLogs</code> command in the command palette (<code>Ctrl + Shift + P</code>), or find the menu option <code>Tools -&gt; Insert ActivityWatch logs</code>. The command writes the information where your cursor is.</p>
+<p>The command accepts an optional argument to choose the day to get information for, either by specifying a day offset ("-1" for yesterday, etc.) or a date ("2023-12-25").</p>
+<p>Running the <code>getAWLogs</code> command pastes a summary of app usage for every 15 minute period in which the user was active during the specified day. Here's an example of what that might look like:</p>
+<pre class="hljs"><code>- **09:51**
+    - 7:12: Signal: Signal
+    - 5:04: Joplin: Joplin
+    - 1:36: VSCodium: build.yml - joplin-aw
+    - 0:39: Firefox: actions/upload-artifact
+    - 0:05: Signal: Signal (1)
+    - 0:01: Signal: Signal (2)
+    - 0:00: Wrapper-2.0: Whisker Menu
+- **10:06**
+    - 13:45: Signal: Signal
+    - 2:50: Joplin: Joplin
+    - 2:06: Firefox: ChatGPT
+    - 0:42: VSCodium: build.yml - joplin-aw
+    - 0:23: Firefox: actions/upload-artifact
+    - 0:02: Firefox
+    - 0:01: Signal: Signal (1)
+    - 0:00: Signal: Signal (2)
+    - 0:00: Wrapper-2.0: Whisker Menu
+- **10:21**
+    - 7:35: Firefox: ChatGPT
+    - 1:57: Signal: Signal
+    - 0:16: Signal: Signal (2)
+    - 0:12: Signal: Signal (1)
+    - 0:01: Firefox: actions/upload-artifact
+    - 0:00: Firefox
+- **10:36**
+    - 4:57: Firefox: kylrth/joplin-aw: Import your daily ActivityWatch logs to Joplin
+    - 3:42: Firefox: Getting started with plugin development | Joplin
+    - 1:32: VSCodium: index.js - joplin-aw
+    - 1:16: Firefox: release plugin builds for tags · kylrth/joplin-aw@565935b
+    - 1:15: VSCodium: build.yml (Working Tree) (build.yml) - joplin-aw
+    - 1:15: Joplin: Joplin - Options
+    - 0:24: Joplin: Joplin
+    - 0:20: VSCodium: release.yml - joplin-aw
+    - 0:10: VSCodium: build.yml - joplin-aw
+    - 0:06: Firefox: ChatGPT
+    - 0:03: Firefox: build outside Docker · kylrth/joplin-aw@b9a4f5b
+    - 0:01: Signal: Signal
+    - 0:01: VSCodium: manifest.json - joplin-aw
+    - 0:00: Wrapper-2.0: Whisker Menu
+    - 0:00: Firefox: actions/upload-artifact
+    - 0:00: Firefox: nitter/.github/workflows/build-docker.yml at master · zedeus/nitter
+</code></pre>
+<p>Currently the 15-minute period is not modifiable, but I might change that later. Feel free to provide feedback by opening an issue here!</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="privacy-policy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
