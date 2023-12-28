@@ -18,7 +18,7 @@
 	<title>Joplin Plugins - Note list (Preview)</title>
 
 	<meta property="og:title" content="Joplin Plugin: Note list (Preview)"/>
-	<meta property="og:description" content="Displays a note priview in the note list"/>
+	<meta property="og:description" content="Displays a note preview in the note list"/>
 	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-themes.svg"/>
 
 	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
@@ -142,7 +142,7 @@
 		</div>
 		<div class="section">
 			<h3>Description</h3>
-			<p class="card-text pb-4">Displays a note priview in the note list</p>
+			<p class="card-text pb-4">Displays a note preview in the note list</p>
 		</div>
 		<div class="section">
 			<h3>Additional Information</h3>
@@ -174,7 +174,7 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.0.2</td></tr>
+					<tr><th>Version:</th><td>0.2.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.13</td></tr>
 					<tr><th>Downloads: This version:</th><td>0</td></tr>
 					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
@@ -201,6 +201,12 @@
 </li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#plugin-options">Plugin options</a></li>
+<li><a href="#examples-with-settings">Examples with settings</a>
+<ul>
+<li><a href="#date-and-tags">Date and Tags</a></li>
+<li><a href="#thumbnail-right">Thumbnail right</a></li>
+</ul>
+</li>
 <li><a href="#changelog">Changelog</a></li>
 </ul>
 
@@ -224,7 +230,49 @@
 <p>The new note list view can be activated under <code>View &gt; Note list style &gt; Preview</code>.
 <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/enable.png" /></p>
 <h2>Plugin options</h2>
-<p>Settings for the plugin, accessible at <code>Tools &gt; Options &gt; Note overview</code>.</p>
+<p>Settings for the plugin, accessible at <code>Tools &gt; Options &gt; Note overview</code>.
+Joplin must be restarted after changing settings!</p>
+<h2>Examples with settings</h2>
+<h3>Date and Tags</h3>
+<img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/example_tag.png" />
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Note excerpt</td>
+<td>115</td>
+</tr>
+<tr>
+<td>Last line</td>
+<td>{{tags}}</td>
+</tr>
+</tbody>
+</table>
+<h3>Thumbnail right</h3>
+<img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/example_thumbnail_right.png" />
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thumbnail</td>
+<td>Right</td>
+</tr>
+<tr>
+<td>Note excerpt</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
 <h2>Changelog</h2>
 <p>See <a href="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/CHANGELOG.md">Changelog</a></p>
 
