@@ -174,10 +174,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.3</td></tr>
-					<tr><th>Minimum app version:</th><td>2.12</td></tr>
-					<tr><th>Downloads: This version:</th><td>46</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-11-29T08:08:59Z</td></tr>
+					<tr><th>Version:</th><td>1.1.0</td></tr>
+					<tr><th>Minimum app version:</th><td>2.13</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -187,16 +187,11 @@
 <p>This is a Joplin plugin.</p>
 <h2>Two Plugins in One Package</h2>
 <p>There are two plugins in this package.</p>
-<p>The first one is the Calibre Import plugin. It is able to import a Calibre Library database into
-Joplin.</p>
-<p>The second one is the Attributes Content plugin. It intercepts the Markdown-it token stream and detects embedded Attribute
-definitions. Those are used to equip the next HTML element with attributes. This second plugin is used by the first one to implement
-a Html to Markdown translation.</p>
+<p>The first one is the Calibre Import plugin. It is able to import a <em>Calibre</em> Library database into <em>Joplin</em>.</p>
+<p>The second one is the Attributes Content plugin. It intercepts the Markdown-it token stream and detects embedded Attribute definitions. Those are used to equip the next HTML element with attributes. This second plugin is used by the first one to implement a Html to Markdown translation.</p>
 <h2>The Calibre Import</h2>
-<p>After the installation you can import Calibre Library metadata into Joplin. The imported data include the title, the authors, the
-cover (if one exists), links to the existent book formats, the comments section and an additional content section (custom field).
-The data are imported into the selected Joplin sub folder, taking into account the book genres, a hierarchical arranged custom
-field.</p>
+<p>After the installation you can import Calibre Library metadata into Joplin. The imported data include the title, the authors, the cover (if one exists), links to the existent book formats, the comments section and an additional content section (custom field).</p>
+<p>The data are imported into the selected Joplin sub folder, taking into account the book genres, a hierarchical arranged custom field.</p>
 <p>All working can be controlled by a set of settings in the <em>Calibre Import</em> settings page, the most of which can be used as is for
 first trials.</p>
 <h3>The General Processing Order</h3>
@@ -228,9 +223,7 @@ first trials.</p>
 <p><img src="https://raw.githubusercontent.com/Mick2nd/Calibre-Import/HEAD/assets/media/Rendered%20MD,%20Spoilers%20Expanded.png" alt="A generated note" /></p>
 <h2>The Embedded <em>Attributes</em> Plug-in</h2>
 <h3>For What it was Meant</h3>
-<p>Primarily this content plug-in is to be used by the <em>Calibre Import</em>. The import translates <em>Html</em> into <em>MD</em>
-for consistency reasons. The Html can contain lists with attributes. That's why sometimes attributes are
-required to give a compatible view.</p>
+<p>Primarily this content plug-in is to be used by the <em>Calibre Import</em>. The import translates <em>Html</em> into <em>MD</em> for consistency reasons. The Html can contain lists with attributes. That's why sometimes attributes are required to give a compatible view.</p>
 <h3>For What it can be Used</h3>
 <p>You can equip the following MD constructs with attributes:</p>
 <p><a></a></p>
@@ -271,7 +264,14 @@ To equip a link with styles, you can, for instance, use the following construct:
 <li>Equip the generated Html with class names or ids and use those in style definitions</li>
 <li>Continue ordered lists with the start attribute</li>
 <li>Make the bullets of lists disappear (<em>list-style-type: none</em>)</li>
-<li>Generally all attributes for the Html tag in question are possible</li>
+<li>Generally all attributes for the Html tag in question are possible, for instance:
+<ul>
+<li>id</li>
+<li>class (classes are added to pre-existing classes)</li>
+<li>style (e.g. inline style)</li>
+<li>other supported attributes</li>
+</ul>
+</li>
 </ol>
 <h3>Samples</h3>
 <p>The following MD suppresses bullets in the succeeding list, then a list with start number 10 follows:</p>
@@ -286,6 +286,14 @@ To equip a link with styles, you can, for instance, use the following construct:
 <p>This gives us the following view:</p>
 <p><img src="https://raw.githubusercontent.com/Mick2nd/Calibre-Import/HEAD/assets/media/Lists%20with%20Attributes.png" alt="Generated view of lists" /></p>
 <h2>Release Notes</h2>
+<h3>1.1.0</h3>
+<p>The scope of the <em>attributes</em> content plug-in was extended by (<a href="#scope">see above</a>):</p>
+<ul>
+<li>table cells (header and body)
+The attributes in a cell must have the following shape:
+<code>///attributes:&lt;attributes definitions&gt;::&lt;cell content&gt;</code></li>
+</ul>
+<p>Additionally <em>Calibre</em> custom columns are supported. Up to 10 custom columns can be configured in the <em>Settings</em>. They are taken from an existing Calibre library. Without such an existing Calibre library (to be configured) the extra functionality is not available.</p>
 <h3>1.0.3</h3>
 <p>The scope of the <em>attributes</em> content plug-in was extended by (<a href="#scope">see above</a>):</p>
 <ul>
