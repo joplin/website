@@ -180,56 +180,80 @@
 		</div>
 		<div class="section" id="readme" data--is-rendered-markdown>
 
-			<h1>Attaché</h1>
+			
+<ul>
+<li><a href="#Attach%C3%A9overview">Attaché Overview</a></li>
+<li><a href="#Installation">Installation</a>
+<ul>
+<li><a href="#Automatic">Automatic</a></li>
+<li><a href="#Manual">Manual</a></li>
+</ul>
+</li>
+<li><a href="#Usage">Usage</a>
+<ul>
+<li><a href="#Manualuse">Manual use</a>
+<ul>
+<li><a href="#StepOne-deletingresourcesandsyncing">Step One - deleting resources and sync'ing</a></li>
+<li><a href="#StepTwo-creatingresources">Step Two - creating resources</a></li>
+</ul>
+</li>
+<li><a href="#Automateduse">Automated use</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h1><a></a>Attaché Overview</h1>
 <p>A Joplin plugin. Your attachment updater. Mass replacement of Joplin attachments (resources) such as resized image files, current music playlists, and any other attachments you need to one-off or regularly update within Joplin.</p>
-<h1>Installation</h1>
-<h2>Automatic</h2>
+<h1><a></a>Installation</h1>
+<h2><a></a>Automatic</h2>
 <ul>
 <li>Go to <code>Preferences &gt; Plugins</code> (Mac) OR <code>Tools &gt; Options &gt; Plugins</code></li>
 <li>Search for <code>Attaché</code></li>
 <li>Click Install plugin</li>
 <li>Restart Joplin to enable the plugin</li>
 </ul>
-<h2>Manual</h2>
+<h2><a></a>Manual</h2>
 <ul>
 <li>Download the latest released JPL package (<code>io.github.manuerwin.attache.jpl</code>) from <a href="https://github.com/manuerwin/joplin-plugin-attache/releases/latest">here</a></li>
-<li>Close Joplin</li>
-<li>Copy the downloaded JPL package into your profile <code>plugins</code> folder</li>
-<li>Start Joplin</li>
+<li>Go to <code>Preferences &gt; Plugins</code> (Mac) OR <code>Tools &gt; Options &gt; Plugins</code></li>
+<li>Click cog icon next to "Manage your plugins" &gt; Install from file &gt; choose the recently downloaded file</li>
+<li>Restart Joplin to enable the plugin</li>
 </ul>
-<h1>Usage</h1>
-<p>First backup your data!</p>
-<p>Then configure the Plugin under <code>Preferences &gt; Plugins &gt; Attaché</code> (Mac) OR <code>Tools &gt; Options &gt; Attaché</code> (PC?)</p>
-<p>Please be aware there is no UI (other than the dev console) as Attaché runs in the background.</p>
-<p>Note: due to Joplin's synchronisation conflict safeguards, this is a two-step automated process.</p>
-<h2>Manual use</h2>
-<p>After setting the configuration settings and restarting, the file and processing sub-directories are automatically created for you.</p>
-<p>There has been a report of problems processing a very large number of replacement files (8000+), please backup your Joplin data by using the easy export option, perform a small test to make sure all works ok for you.
-Also suggest not touching Joplin notes/resources while the replacement is happening.</p>
-<h3>Step One - deleting resources and sync'ing</h3>
+<h1><a></a>Usage</h1>
+<p><em><strong>Backup your data!</strong></em></p>
+<p>Then configure the Plugin via <code>Preferences &gt; Plugins &gt; Attaché</code> (Mac) OR <code>Tools &gt; Options &gt; Attaché</code> (PC?).</p>
+<p><em><strong>NOTE</strong></em> Make sure a value is set for the Path configuration value that defines the location of the files that will replace your existing resources.
+<img src="https://raw.githubusercontent.com/manuerwin/joplin-plugin-attache/HEAD//img/Attache%CC%81_plugin_config_options.png" alt="Attaché_plugin_config_options" /></p>
+<p>Please be aware there is no UI as Attaché runs in the background.</p>
+<p><em><strong>NOTE</strong></em> due to Joplin's synchronisation conflict safeguards, file/resource replace is a two-step process that is automated for you by the plugin.</p>
+<h2><a></a>Manual use</h2>
+<p>After backing up your data, defining the configuration settings and restarting Joplin, the file and processing sub-directories are automatically created for you.</p>
+<p><em><strong>CAUTION</strong></em> There has been a report of problems processing a very large number of replacement files (8000+), please backup your Joplin data (for example; by using the easy export option), then perform a small test to make sure all works ok for you. Suggest not touching Joplin notes/resources while the replacement is happening. Also take note of how source files can be named below.</p>
+<h3><a></a>Step One - deleting resources and sync'ing</h3>
 <p>Move your source files into the files path that you entered/choose in settings. Your source files can be named in two ways:</p>
 <ol>
 <li>the same filename as shown in your notes (for example, music.m3u)</li>
 <li>the id of the resource (for example, b8bf831c8d804f6d8e5ab13ae12de595.jpg)</li>
 </ol>
-<p><strong>IMPORTANT</strong>: If you are choosing to replace resources via filename (for example, music.m3u), you must be certain:</p>
+<p><em><strong>IMPORTANT</strong></em> If you are choosing to replace resources via filename (for example, music.m3u), you must be <em><strong>CERTAIN</strong></em>:</p>
 <ol>
 <li>there is <strong>only one resource with that filename across all your notes</strong>. If there are more, none will be replaced. AND</li>
 <li>The <strong>filename in your note must be unchanged</strong> from when you originally attached it. This is because of the way Joplin stores references to resources(attachments) under the covers.</li>
 </ol>
-<p>Choose the <code>Tools &gt; Attaché - Replace/update attachments</code> command (Mac) OR '???' command (PC).
-This will delete each matching resource within Joplin, and move each source file to the <code>Step 1 - Resource Deleted Sync Needed</code> sub-directory.</p>
-<p>Important: this step has NOT updated your Notes, you will see the resource reference within any note still exists, however the preview of the note/resource will show a placeholder icon because the underlying resource (aka attachment) no longer exists.</p>
-<p>Synchronisation is automatically started for you, you'll see remote resources being deleted.</p>
-<p>Note: a .REPLACE file is created in this sub-directory for each of the resources you are replacing, please don't touch these as Attaché uses them for step two.</p>
-<h3>Step Two - creating resources</h3>
+<p>Choose the <code>Tools &gt; Attaché - Replace/update attachments</code> command (Mac) OR the equivalent navigation command (PC).</p>
+<p>The plugin takes over from now on, it will delete each matching resource within Joplin, and move each source file to the <code>Step 1 - Resource Deleted Sync Needed</code> sub-directory.</p>
+<p><em><strong>IMPORTANT</strong></em> this step has <strong>NOT</strong> updated your Notes, you will see the resource reference within any note still exists, however the preview of the note/resource will show a placeholder icon because the underlying resource (aka attachment) no longer exists.</p>
+<p>Synchronisation is automatically started for you (if you have it configured), you'll see remote resources being deleted.
+<em><strong>IMPORTANT</strong></em> let synchronisation complete, else you risk conflicts.</p>
+<p><em><strong>IMPORTANT</strong></em> a .REPLACE file is created in the <code>Step 1 - Resource Deleted Sync Needed</code> sub-directory for each of the resources you are replacing, please don't touch these as Attaché uses them for step two.</p>
+<h3><a></a>Step Two - creating resources</h3>
 <p>After the above synchronisation has finished, the plugin will create each resource within Joplin, and move your source file to the <code>Step 2 - Resource Replaced</code> sub-directory.</p>
-<p>Again, your Notes have NOT been updated in any way. The placeholder icon in preview will now show your replacement resource, as your replacement file has just been created with the same reference id that's in your note.</p>
-<p>Also note: your source replacement files are NEVER deleted, they are simply moved to different locations so you know the status of each file/resource.</p>
-<h2>Automated use</h2>
+<p>Again, your Notes have <strong>NOT</strong> been updated in any way. The placeholder icon in preview will now show your replacement resource (once you navigate and then back to a note), as your replacement file has just been created with the same reference id that is in your note.</p>
+<p>Also note: your source replacement files are <strong>NEVER</strong> deleted, they are simply moved to different locations so you know the status of each file/resource.</p>
+<h2><a></a>Automated use</h2>
 <p>By enabling the <code>Run on start and after sync</code> option, Attaché will be run on Joplin start and following synchronisation for you.</p>
-<p>Move your source files into the files path, matching the settings entry.</p>
-<p>Either restart Joplin or force synchronisation.</p>
+<p>At any time, move your source files into the Path file location, and either restart Joplin or force synchronisation and the plugin will perform the same steps detailed above.</p>
 <h1>Configuration Options</h1>
 <table>
 <thead>
@@ -237,21 +261,25 @@ This will delete each matching resource within Joplin, and move each source file
 <th>Option</th>
 <th>Description</th>
 <th>Default</th>
+<th>Required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Files Path</code></td>
-<td>Where to obtain the replacement files that will replace existing resources. See Step One above for the two formats replacement filenames can have. All others will be ignored.</td>
+<td>Where to obtain the replacement files that will replace existing resources. See Step One above for the two formats that replacement filenames can have. All others will be ignored.</td>
 <td></td>
+<td>YES</td>
 </tr>
 <tr>
 <td><code>Run on start and after sync</code></td>
 <td>If checked (i.e. true), Attaché will run immediately after Joplin starts and after each synchronisation.</td>
 <td>unchecked (i.e. will NOT run on start or after sync by default)</td>
+<td>Optional</td>
 </tr>
 </tbody>
 </table>
+<p><img src="https://raw.githubusercontent.com/manuerwin/joplin-plugin-attache/HEAD//img/Attache%CC%81_plugin_config_options.png" alt="Attaché_plugin_config_options" /></p>
 <h1>Changelog</h1>
 <p>See <a href="https://raw.githubusercontent.com/manuerwin/joplin-plugin-attache/HEAD/CHANGELOG.md">CHANGELOG.md</a></p>
 <h1>Developers: Links</h1>
