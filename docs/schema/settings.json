@@ -796,6 +796,12 @@
 			"default": false,
 			"description": "Get pre-releases when checking for updates. See the pre-release page for more details: https://joplinapp.org/help/about/prereleases"
 		},
+		"autoUploadCrashDumps": {
+			"type": "boolean",
+			"default": "",
+			"description": "Automatically upload crash reports. If you experience a crash, please enable this option to automatically send a crash report.",
+			"$comment": "private"
+		},
 		"clipperServer.autoStart": {
 			"type": "boolean",
 			"default": false,
