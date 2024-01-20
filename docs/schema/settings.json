@@ -798,7 +798,7 @@
 		},
 		"autoUploadCrashDumps": {
 			"type": "boolean",
-			"default": "",
+			"default": false,
 			"description": "Automatically upload crash reports. If you experience a crash, please enable this option to automatically send a crash report.",
 			"$comment": "private"
 		},
