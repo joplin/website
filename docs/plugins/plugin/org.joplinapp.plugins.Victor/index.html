@@ -19,7 +19,7 @@
 
 	<meta property="og:title" content="Joplin Plugin: Victor"/>
 	<meta property="og:description" content="Victor can be used to clear all your data - notes, notebooks, attachments, tags, etc. Convenient to start over."/>
-	<meta property="og:image" content="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-integrations.svg"/>
+	<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;joplin&#x2F;plugin-victor&#x2F;HEAD&#x2F;images&#x2F;icon-128.png"/>
 
 	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
 </head>
@@ -73,8 +73,8 @@
 	<div class="container plugin-overview">
 		<div class="plugin-icon-container">
 			<img
-				class="plugin-icon default-icon auto-invert"
-				src="&#x2F;plugins&#x2F;default-plugin-icons&#x2F;category-integrations.svg"
+				class="plugin-icon "
+				src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;joplin&#x2F;plugin-victor&#x2F;HEAD&#x2F;images&#x2F;icon-128.png"
 				alt="Plugin icon"
 			/>
 		</div>
@@ -91,8 +91,11 @@
 			</div>
 
 			<div class="categories">
-					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-integrations">
-						<i class="fas fa-tag"></i> integrations
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-developer tools">
+						<i class="fas fa-tag"></i> developer tools
+					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
 					</a>
 			</div>
 		</div>
@@ -109,6 +112,8 @@
 		<div class="secondary-section">
 			<div class="content" id="screenshots-container">
 				<div id="raw-screenshots">
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;joplin&#x2F;plugin-victor&#x2F;HEAD&#x2F;images&#x2F;screenshot-1.png" alt="Unlabeled screenshot"/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;joplin&#x2F;plugin-victor&#x2F;HEAD&#x2F;images&#x2F;screenshot-2.png" alt="Unlabeled screenshot"/>
 				</div>	
 
 				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
@@ -168,16 +173,17 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.1</td></tr>
+					<tr><th>Version:</th><td>1.0.3</td></tr>
 					<tr><th>Minimum app version:</th><td>2.2</td></tr>
-					<tr><th>Downloads: This version:</th><td>213</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-10-06T14:38:04Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
 			<h1>Victor Plugin for Joplin</h1>
+<img src="https://raw.githubusercontent.com/joplin/plugin-victor/HEAD/images/icon-128.png" />
 <p><a href="https://www.youtube.com/watch?v=QE6eiPD2z-Y">Victor</a> helps you delete all your Joplin data and start over. It can sometimes be useful for example when you want to clear a sync target you do not have full access to. In that case you would invoke Victor, delete all your data, then synchronise with the service (which in turn will delete the remote data).</p>
 <p>Of course the plugin should be used very carefully because once deleted the data cannot be recovered. In fact, after having used it, it is better to disable or even uninstall it to prevent any accidental use.</p>
 <p>You may also want to backup your data first (File &gt; Export All &gt; JEX) in case you realise later on that you had some important data in there.</p>
