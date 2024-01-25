@@ -98,8 +98,11 @@
 					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-themes">
 						<i class="fas fa-tag"></i> themes
 					</a>
-					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
-						<i class="fas fa-tag"></i> productivity
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-viewer">
+						<i class="fas fa-tag"></i> viewer
+					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-appearance">
+						<i class="fas fa-tag"></i> appearance
 					</a>
 			</div>
 		</div>
@@ -119,6 +122,8 @@
 						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;JackGruber&#x2F;joplin-plugin-notelistpreview&#x2F;HEAD&#x2F;img&#x2F;main.png" alt="Screenshot: Showing the Note liste preview with thumbnail"/>
 						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;JackGruber&#x2F;joplin-plugin-notelistpreview&#x2F;HEAD&#x2F;img&#x2F;showcase1.png" alt="Screenshot: Showing the Note liste preview"/>
 						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;JackGruber&#x2F;joplin-plugin-notelistpreview&#x2F;HEAD&#x2F;img&#x2F;showcase2.png" alt="Screenshot: Showing the Note liste preview with thumbnail and tags"/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;JackGruber&#x2F;joplin-plugin-notelistpreview&#x2F;HEAD&#x2F;img&#x2F;showcase3.png" alt="Screenshot: Showing the Note liste preview with thumbnail and tags (Dark theme)"/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;JackGruber&#x2F;joplin-plugin-notelistpreview&#x2F;HEAD&#x2F;img&#x2F;showcase4.png" alt="Screenshot: Showing the Note liste preview with square thumbnail and full size"/>
 				</div>	
 
 				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
@@ -157,7 +162,7 @@
 						<td>
 							<ul class="list-group list-group-flush text-break">
 									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;JackGruber&#x2F;joplin-plugin-notelistpreview style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
-									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;JackGruber&#x2F;joplin-plugin-notelistpreview&#x2F;README.md style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;JackGruber&#x2F;joplin-plugin-hotfolder&#x2F;blob&#x2F;master&#x2F;README.md style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
 								<li>
 									<a
 										id="view-plugin-source-link"
@@ -178,10 +183,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.3.2</td></tr>
+					<tr><th>Version:</th><td>0.4.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.13</td></tr>
-					<tr><th>Downloads: This version:</th><td>140</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-01-10T18:07:46Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -205,10 +210,17 @@
 </li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#plugin-options">Plugin options</a></li>
+<li><a href="#layouts">Layouts</a>
+<ul>
+<li><a href="#layout-1">Layout 1</a></li>
+<li><a href="#layout-2">Layout 2</a></li>
+</ul>
+</li>
 <li><a href="#examples-with-settings">Examples with settings</a>
 <ul>
 <li><a href="#date-and-tags">Date and Tags</a></li>
 <li><a href="#thumbnail-right">Thumbnail right</a></li>
+<li><a href="#square-thumbnail">Square Thumbnail</a></li>
 </ul>
 </li>
 <li><a href="#changelog">Changelog</a></li>
@@ -236,6 +248,53 @@
 <h2>Plugin options</h2>
 <p>Settings for the plugin, accessible at <code>Tools &gt; Options &gt; Note overview</code>.
 Joplin must be restarted after changing settings!</p>
+<h2>Layouts</h2>
+<h3>Layout 1</h3>
+<table>
+<thead>
+<tr>
+<th>Thumbnail</th>
+<th>Preview</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Right</td>
+<td><img width="300px" src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/layout1_img_r.svg" /></td>
+</tr>
+<tr>
+<td>Left</td>
+<td><img width="300px" src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/layout1_img_l.svg" /></td>
+</tr>
+<tr>
+<td>No</td>
+<td><img width="300px" src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/layout1.svg" /></td>
+</tr>
+</tbody>
+</table>
+<h3>Layout 2</h3>
+<table>
+<thead>
+<tr>
+<th>Thumbnail</th>
+<th>Preview</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Right</td>
+<td><img width="300px" src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/layout2_img_r.svg" /></td>
+</tr>
+<tr>
+<td>Left</td>
+<td><img width="300px" src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/layout2_img_l.svg" /></td>
+</tr>
+<tr>
+<td>No</td>
+<td><img width="300px" src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/layout2.svg" /></td>
+</tr>
+</tbody>
+</table>
 <h2>Examples with settings</h2>
 <h3>Date and Tags</h3>
 <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/example_tag.png" />
@@ -274,6 +333,34 @@ Joplin must be restarted after changing settings!</p>
 <tr>
 <td>Note excerpt</td>
 <td>100</td>
+</tr>
+</tbody>
+</table>
+<h3>Square Thumbnail</h3>
+<img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-notelistpreview/HEAD/img/example_layout2_square_right.png" />
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layout</td>
+<td>Layout 2</td>
+</tr>
+<tr>
+<td>Thumbnail</td>
+<td>Right</td>
+</tr>
+<tr>
+<td>Item height</td>
+<td>95</td>
+</tr>
+<tr>
+<td>Thumbnail size</td>
+<td>85</td>
 </tr>
 </tbody>
 </table>
