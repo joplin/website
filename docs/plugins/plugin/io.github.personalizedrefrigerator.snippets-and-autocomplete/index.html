@@ -98,6 +98,9 @@
 					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-editor">
 						<i class="fas fa-tag"></i> editor
 					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
 			</div>
 		</div>
 		<div class="download-link-container">
@@ -113,6 +116,8 @@
 		<div class="secondary-section">
 			<div class="content" id="screenshots-container">
 				<div id="raw-screenshots">
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-codemirror-6-snippets&#x2F;HEAD&#x2F;screenshots&#x2F;screenshot-light.png" alt="An autocompletion menu is shown, showing an &#39;inline math&#39; autocompletion and information about it."/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-codemirror-6-snippets&#x2F;HEAD&#x2F;screenshots&#x2F;screenshot-dark.png" alt="An autocompletion menu is shown, containing an HTML tag autocompletion. The snippet code for the autocompletion is also shown: &#39;&lt;${1:tag}&gt;${2:content}&lt;&#x2F;${1:tag}&gt;${}&#39;"/>
 				</div>	
 
 				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
@@ -172,10 +177,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.0.3</td></tr>
+					<tr><th>Version:</th><td>0.0.4</td></tr>
 					<tr><th>Minimum app version:</th><td>2.14</td></tr>
-					<tr><th>Downloads: This version:</th><td>4</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-01-22T05:08:03Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -241,6 +246,17 @@ This is a comment.
 $#{math-here}$ #{}
 ```</span>
 
+<span class="hljs-section"># html-tag</span>
+
+Creates an HTML tag with no attributes.
+
+<span class="hljs-code">```html
+&lt;${1:tag}&gt;${2:content}&lt;/${1:tag}&gt;${}
+```</span>
+
+Above, the <span class="hljs-code">`1:tag`</span> means that <span class="hljs-emphasis">_that_</span> part of the snippet template should be filled in first (and
+both <span class="hljs-code">`1:tag`</span>s at the same time).
+
 <span class="hljs-section"># example-2</span>
 
 Use more than three backticks to include triple backticks in the snippet
@@ -263,6 +279,7 @@ a code block
 <pre class="hljs"><code>Keybinding overrides go at the beginning of the note.
 
 keybindings:
+
 <span class="hljs-code">```json
 {
 	"acceptCompletion": ["Tab"],
@@ -290,6 +307,7 @@ Example snippet
 <p>Above, the keybindings configuration omits <code>"Enter"</code> from the list of keybindings associated with <code>acceptCompletion</code>.</p>
 <p>To disable a command, map it to the empty array:</p>
 <pre class="hljs"><code>keybindings:
+
 <span class="hljs-code">```json
 {
 	"closeCompletion": []
