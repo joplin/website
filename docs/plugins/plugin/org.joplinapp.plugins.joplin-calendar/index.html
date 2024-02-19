@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.0-rc2</td></tr>
+					<tr><th>Version:</th><td>1.1.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.8</td></tr>
-					<tr><th>Downloads: This version:</th><td>1151</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-11-23T07:38:18Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>8</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-02-19T02:38:19Z</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -205,9 +205,16 @@ The create date and updated date for a note can be manually change by clicking o
 </blockquote>
 <h2>🗒️ Notes List</h2>
 <ul>
-<li>The notes list shows notes created and updated on the specified date.
+<li>The notes list shows notes created on the specified date.</li>
+<li>The notes list can show notes updated on the specified date.
 <ul>
-<li>Showing updated notes can be disabled in the settings.</li>
+<li>This must be enabled in the settings.</li>
+</ul>
+</li>
+<li>The notes list can show notes related to the specified date. These are notes that have the date in the title of the note.
+<ul>
+<li>This must be enabled in the settings.</li>
+<li>The Joplin date format is used when searching for related notes.</li>
 </ul>
 </li>
 <li>Navigate to the notes by clicking on the titles in the notes list.</li>
@@ -245,6 +252,11 @@ The create date and updated date for a note can be manually change by clicking o
 <h3>After clicking on the Note List</h3>
 <ul>
 <li>Use up and down arrow keys to select notes.</li>
+</ul>
+<h2>🛑 Limitations</h2>
+<ul>
+<li>Related notes is still an experimental feature - it will negatively impact performance with larger note books.</li>
+<li>When searching for the nearest note with Related Notes ON, only related notes within the closest 120 days will be checked.</li>
 </ul>
 <h1>⚙️ Development</h1>
 <h2>Building the plugin</h2>
