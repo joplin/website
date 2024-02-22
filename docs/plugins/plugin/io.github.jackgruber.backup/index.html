@@ -15,9 +15,9 @@
 	<!-- Scripts used by all pages -->
 	<script src="&#x2F;plugins/bundle-main.js"></script>
 	<script src="&#x2F;plugins/bundle-components.js"></script>
-	<title>Joplin Plugins - Simple Backup</title>
+	<title>Joplin Plugins - Backup</title>
 
-	<meta property="og:title" content="Joplin Plugin: Simple Backup"/>
+	<meta property="og:title" content="Joplin Plugin: Backup"/>
 	<meta property="og:description" content="Plugin to create manual and automatic backups."/>
 	<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;JackGruber&#x2F;joplin-plugin-backup&#x2F;HEAD&#x2F;img&#x2F;icon_256.png"/>
 
@@ -67,7 +67,7 @@
 				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
 			</li>
 			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
-			<li class="breadcrumb-item active" aria-current="page">Simple Backup</li>
+			<li class="breadcrumb-item active" aria-current="page">Backup</li>
 		</ol>
 	</nav>
 	<div class="plugin-overview">
@@ -81,7 +81,7 @@
 					alt="Plugin icon"
 				/>
 				<div>
-					<h1 class="card-title">Simple Backup</h1>
+					<h1 class="card-title">Backup</h1>
 					<div class="card-title pb-2">
 						by
 						<a
@@ -180,16 +180,16 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.3.6</td></tr>
+					<tr><th>Version:</th><td>1.4.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.1.3</td></tr>
-					<tr><th>Downloads: This version:</th><td>1845</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-01-11T20:07:50Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
-			<h1>Joplin Backup Plugin <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-backup/HEAD/img/icon_32.png" /></h1>
+			<h1>Joplin Plugin: Backup <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-backup/HEAD/img/icon_32.png" /></h1>
 <p>A plugin to extend Joplin with a manual and automatic backup function.</p>
 
 
@@ -200,8 +200,8 @@
 <ul>
 <li><a href="#installation">Installation</a>
 <ul>
-<li><a href="#automatic">Automatic</a></li>
-<li><a href="#manual">Manual</a></li>
+<li><a href="#replace-joplin-built-in-plugin-via-gui">Replace Joplin built-in plugin via GUI</a></li>
+<li><a href="#replace-joplin-built-in-plugin-via-file-system">Replace Joplin built-in plugin via file system</a></li>
 </ul>
 </li>
 <li><a href="#usage">Usage</a></li>
@@ -212,6 +212,7 @@
 <ul>
 <li><a href="#settings">Settings</a></li>
 <li><a href="#notes">Notes</a></li>
+<li><a href="#restore-a-singel-note">Restore a singel note</a></li>
 </ul>
 </li>
 <li><a href="#faq">FAQ</a>
@@ -220,6 +221,8 @@
 <li><a href="#combine-multiple-jex-files-to-one">Combine multiple JEX Files to one</a></li>
 <li><a href="#open-a-jex-backup-file">Open a JEX Backup file</a></li>
 <li><a href="#are-note-history-revisions-backed-up">Are Note History Revisions backed up?</a></li>
+<li><a href="#are-all-joplin-profiles-backed-up">Are all Joplin profiles backed up?</a></li>
+<li><a href="#the-joplin-build-in-version-of-the-plugin-cannot-be-updated">The Joplin build-in version of the plugin cannot be updated</a></li>
 </ul>
 </li>
 <li><a href="#changelog">Changelog</a></li>
@@ -228,112 +231,30 @@
 
 
 <h2>Installation</h2>
-<h3>Automatic</h3>
+<p>The plugin is installed as built-in plugin in Joplin version <code>2.14.6</code> and newer.
+The built-in plugin cannot be updated via GUI, to update to a other version replace the built-in version.</p>
+<h3>Replace Joplin built-in plugin via GUI</h3>
 <ul>
-<li>Go to <code>Tools &gt; Options &gt; Plugins</code></li>
-<li>Search for <code>Simple Backup</code></li>
-<li>Click Install plugin</li>
-<li>Restart Joplin to enable the plugin</li>
+<li>Download the latest released JPL package (<code>io.github.jackgruber.backup.jpl</code>) from <a href="https://github.com/JackGruber/joplin-plugin-backup/releases/latest">here</a></li>
+<li>Go to <code>Tools &gt; Options &gt; Plugins</code> in Joplin</li>
+<li>Click on the gear wheel and select <code>Install from file</code></li>
+<li>Select the downloaded JPL file</li>
+<li>Restart Joplin</li>
 </ul>
-<h3>Manual</h3>
+<h3>Replace Joplin built-in plugin via file system</h3>
 <ul>
 <li>Download the latest released JPL package (<code>io.github.jackgruber.backup.jpl</code>) from <a href="https://github.com/JackGruber/joplin-plugin-backup/releases/latest">here</a></li>
 <li>Close Joplin</li>
-<li>Copy the downloaded JPL package in your profile <code>plugins</code> folder</li>
+<li>Got to your Joplin profile folder and place the JPL file in the <code>plugins</code> folder</li>
 <li>Start Joplin</li>
 </ul>
 <h2>Usage</h2>
-<p>First configure the Plugin under <code>Tools &gt; Options &gt; Backup</code>!</p>
+<p>First configure the Plugin under <code>Tools &gt; Options &gt; Backup</code>!
+The plugin must be configured separately for each Joplin profile.</p>
 <p>Backups can be created manually with the command <code>Tools &gt; Create backup</code> or are created automatically based on the configured interval.
 The backup started manually by <code>Create backup</code> respects all the settings except for the <code>Backups interval in hours</code>.</p>
 <h2>Options</h2>
 <p>Go to <code>Tools &gt; Options &gt; Backup</code></p>
-<table class="table table-hover undefined">
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Backup path</code></td>
-<td>Where to save the backups to. <br />This path is exclusive for the Joplin backups, there should be no other data in it when you disable the <code>Create Subfolder</code> settings!</td>
-<td></td>
-</tr>
-<tr>
-<td><code>Keep x backups</code></td>
-<td>How many backups should be kept</td>
-<td><code>1</code></td>
-</tr>
-<tr>
-<td><code>Backups interval in hours</code></td>
-<td>Create a backup every X hours</td>
-<td><code>24</code></td>
-</tr>
-<tr>
-<td><code>Only on change</code></td>
-<td>Creates a backup at the specified backup interval only if there was a change to a <code>note</code>, <code>tag</code>, <code>resource</code> or <code>notebook</code></td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>Password protected backups</code></td>
-<td>Protect the backups via encrypted Zip archive.</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>Logfile</code></td>
-<td>Loglevel for backup.log</td>
-<td><code>error</code></td>
-</tr>
-<tr>
-<td><code>Create zip archive</code></td>
-<td>Save backup data in a Zip archive</td>
-<td><code>No</code></td>
-</tr>
-<tr>
-<td><code>Zip compression Level</code></td>
-<td>Compression level for zip archive archive</td>
-<td><code>Copy (no compression)</code></td>
-</tr>
-<tr>
-<td><code>Temporary export path</code></td>
-<td>The data is first exported into this path before it is copied to the backup <code>Backup path</code>.</td>
-<td>``</td>
-</tr>
-<tr>
-<td><code>Backup set name</code></td>
-<td>Name of the backup set if multiple backups are to be keep. <a href="https://momentjs.com/docs/#/displaying/format/">Available moment tokens</a>, which can be used with <code>{&lt;TOKEN&gt;}</code></td>
-<td><code>{YYYYMMDDHHmm}</code></td>
-</tr>
-<tr>
-<td><code>Single JEX</code></td>
-<td>Create only one JEX file for all, this option is recommended to prevent the loss of internal note links or folder structure during a restore!</td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>Export format</code></td>
-<td>Selection of the export format of the notes.</td>
-<td><code>jex</code></td>
-</tr>
-<tr>
-<td><code>Command on Backup finish</code></td>
-<td>Execute command when backup is finished.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>Create Subfolder</code></td>
-<td>Create a sub folder <code>JoplinBackup</code> in the configured <code>Backup path</code>. Deactivate only if there is no other data in the <code>Backup path</code>!</td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>Backup plugins</code></td>
-<td>Backup the plugin folder from the Joplin profile with all installed plugin jpl files.</td>
-<td><code>true</code></td>
-</tr>
-</tbody>
-</table>
 <h2>Keyboard Shortcuts</h2>
 <p>Under <code>Options &gt; Keyboard Shortcuts</code> you can assign a keyboard shortcut for the following commands:</p>
 <ul>
@@ -361,6 +282,17 @@ The exact path can be found in Joplin under <code>Tools &gt; Options &gt; Genera
 </blockquote>
 <p>The notes are imported additionally, no check for duplicates is performed.
 If the notebook in which the note was located already exists in your Joplin, then a "(1)" will be appended to the folder name.</p>
+<h3>Restore a singel note</h3>
+<ol>
+<li>Create a new profile in Joplin via <code>File &gt; Switch profile &gt; Create new Profile</code></li>
+<li>Joplin switches automatically to the newly created profile</li>
+<li>Import the Backup via <code>File &gt; Import &gt; JEX - Joplin Export File</code></li>
+<li>Search for the desired note</li>
+<li>In the note overview, click on the note on the right and select <code>Export &gt; JEX - Joplin Export File</code></li>
+<li>Save the file on your computer</li>
+<li>Switch back to your orginal Joplin profil via <code>File &gt; Switch profile &gt; Default</code></li>
+<li>Import the exported note via <code>File &gt; Import &gt; JEX - Joplin Export File</code> and select the file from step 6</li>
+</ol>
 <h2>FAQ</h2>
 <h3>Internal Joplin links betwen notes are lost</h3>
 <p>If several JEX files are imported and the notes have links to each other, these links will be lost.
@@ -378,6 +310,11 @@ Therefore it is recommended to create a Single JEX Backup!</p>
 The file names in the archive correspond to the Joplin internal IDs.</p>
 <h3>Are Note History (Revisions) backed up?</h3>
 <p>The note history and file versions (revisions) are not included in the backup.</p>
+<h3>Are all Joplin profiles backed up?</h3>
+<p>No, the backup must be configured for each profile.
+Profiles that are not active are not backed up, even if a backup has been configured.</p>
+<h3>The Joplin build-in version of the plugin cannot be updated</h3>
+<p>Yes, the build-in version only gets updates with Joplin updates, but can be replaced as described in the <a href="#installation">Installation</a> step.</p>
 <h2>Changelog</h2>
 <p>See <a href="https://raw.githubusercontent.com/JackGruber/joplin-plugin-backup/HEAD/CHANGELOG.md">CHANGELOG.md</a></p>
 <h2>Links</h2>
