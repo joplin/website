@@ -93,6 +93,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="codemirrorcontrol.html#addextension" class="tsd-kind-icon">add<wbr>Extension</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="codemirrorcontrol.html#execcommand" class="tsd-kind-icon">exec<wbr>Command</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="codemirrorcontrol.html#registercommand" class="tsd-kind-icon">register<wbr>Command</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="codemirrorcontrol.html#supportscommand" class="tsd-kind-icon">supports<wbr>Command</a></li>
 							</ul>
 						</section>
@@ -235,7 +236,7 @@
 					<a name="execcommand" class="tsd-anchor"></a>
 					<h3>exec<wbr>Command</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">exec<wbr>Command<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">exec<wbr>Command<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -246,9 +247,39 @@
 								<li>
 									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
 							</ul>
 							<!-- JOPLINCHANGE
     <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="registercommand" class="tsd-anchor"></a>
+					<h3>register<wbr>Command</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Command<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><a href="../globals.html#editorcommandcallback" class="tsd-signature-type">EditorCommandCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>callback: <a href="../globals.html#editorcommandcallback" class="tsd-signature-type">EditorCommandCallback</a></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 
 
 -->
@@ -312,6 +343,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="codemirrorcontrol.html#execcommand" class="tsd-kind-icon">exec<wbr>Command</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="codemirrorcontrol.html#registercommand" class="tsd-kind-icon">register<wbr>Command</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="codemirrorcontrol.html#supportscommand" class="tsd-kind-icon">supports<wbr>Command</a>
