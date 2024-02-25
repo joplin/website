@@ -18,7 +18,7 @@
 	<title>Joplin Plugins - Inline Tag Navigator</title>
 
 	<meta property="og:title" content="Joplin Plugin: Inline Tag Navigator"/>
-	<meta property="og:description" content="Convert inline tags to native joplin tags, or navigate between tags using a dedicated panel."/>
+	<meta property="og:description" content="A system to organize, search, browse and convert inline tags via dedicated panels."/>
 	<meta property="og:image" content=""/>
 
 	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
@@ -140,7 +140,7 @@
 		</div>
 		<div class="container section">
 			<h3>Description</h3>
-			<p class="card-text pb-4">Convert inline tags to native joplin tags, or navigate between tags using a dedicated panel.</p>
+			<p class="card-text pb-4">A system to organize, search, browse and convert inline tags via dedicated panels.</p>
 		</div>
 		<div class="container section">
 			<h3>Additional Information</h3>
@@ -172,28 +172,54 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.1.3</td></tr>
+					<tr><th>Version:</th><td>0.2.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.10</td></tr>
-					<tr><th>Downloads: This version:</th><td>23</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-02-14T14:07:34Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
 			<h1>Inline Tag Navigator</h1>
-<p>This plugin adds inline tag support (such as #inline-tag) to <a href="https://joplinapp.org">Joplin</a> in two ways:</p>
+<p>This plugin adds inline tag support (such as #inline-tag) to <a href="https://joplinapp.org">Joplin</a> in three ways:</p>
 <ul>
-<li>It adds a panel for navigating between inline tags that appear in the current note</li>
-<li>It can convert your existing inline tags to native Joplin tags, so that they are accessible using tag search
+<li>It adds a panel for searching tagged paragraphs across your notes. (<a href="https://www.youtube.com/watch?v=im0zjQFoXb0">YouTube</a>)</li>
+<li>It adds a panel for navigating between inline tags that appear in the current note.</li>
+<li>It can convert your existing inline tags to native Joplin tags, so that they are accessible using tag search.</li>
+</ul>
+<p>After installing the plugin, check the commands listed under <code>Tag Navigator</code> in the <code>Tools</code> menu, as well as the corresponding settings section.</p>
+<h2>Demos</h2>
 <ul>
-<li>To convert a single note, use <code>Tools--&gt;Tag Navigator--&gt;Convert note's inline tags to Joplin tags</code></li>
-<li>To convert all notes, use <code>Tools--&gt;Tag Navigator--&gt;Convert all notes' inline tags to Joplin tags</code></li>
-<li>To periodically convert all notes, define the update period in <code>Settings--&gt;Tag Navigator--&gt;Periodic update (minutes)</code></li>
+<li>Watch the tag search demo on YouTube:</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=im0zjQFoXb0"><img src="https://img.youtube.com/vi/im0zjQFoXb0/hqdefault.jpg" alt="Watch the video" /></a></p>
+<ul>
+<li>Watch the navigation panel demo:</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/tag-navigator.gif" alt="tag-navigator demo" /></p>
+<h2>Tips</h2>
+<ul>
+<li>Tag search can be used to search, filter and toggle checkboxes (inline TODOs) directly from the panel.</li>
+<li>The definition of a "tag" can be adjusted with user-defined regular expression.
+<ul>
+<li>For example, every word in the text may be defined as a tag using a regex such as <code>[A-Za-z0-9]+[\w]*</code>.</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/tag-navigator.gif" alt="tag-navigator demo" /></p>
+<h2>Motivation</h2>
+<ul>
+<li>Notes are arguably the atomic blocks of information in <a href="https://joplinapp.org">Joplin</a>. They can be linked to, tagged, and come up in search results. Joplin is optimized for this, and these features are pretty efficient.</li>
+<li>However, among 100s-1000s of long-form notes (that are hardly "atomic"), it remains challenging to find a small piece of information, idea, or memory.</li>
+<li>Tags can be especially helpful in distinguishing between the content of a text (what it's about) and its form or function (what type of text it is or what purpose it serves). The first is more easily captured by traditional or <a href="https://github.com/alondmnt/joplin-plugin-jarvis">semantic search</a>. The latter can be conveniently captured by tags, such as #concept, #plan, #memory, #realization, #idea, #review, #bug, #feature, and others.</li>
+<li>I'd like to experiment here with information retrieval from single paragraphs, or outline items, as atomic blocks of information, using inline tags.</li>
+</ul>
+<h2>Objectives</h2>
+<ol>
+<li>Be able to tag and efficiently search single paragraphs among all notes, using tags and free text.</li>
+<li>Browse the entire content of these paragraphs without having to open each note.</li>
+<li>Make this accessible and user-friendly.</li>
+</ol>
 <h2>Companion plugins</h2>
 <ul>
 <li>The excellent <a href="https://github.com/roman-r-m/joplin-inline-tags-plugin">Inline Tags</a> plugin can help you add tags on the fly</li>
