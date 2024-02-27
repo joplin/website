@@ -200,10 +200,14 @@
 <p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/tag-navigator.gif" alt="tag-navigator demo" /></p>
 <h2>Tips</h2>
 <ul>
-<li>Tag search can be used to search, filter and toggle checkboxes (inline TODOs) directly from the panel.</li>
 <li>The definition of a "tag" can be adjusted with user-defined regular expressions.
 <ul>
-<li>For example, every word in the text may be defined as a tag using a regex such as <code>[A-Za-z0-9]+[\w]*</code>.</li>
+<li>For example, every word in the text may be defined as a tag using a custom regex such as <code>[A-Za-z0-9]+[\w]*</code>.</li>
+</ul>
+</li>
+<li>Tag search can be used to search, filter and toggle checkboxes (inline TODOs) directly from the panel.
+<ul>
+<li>To support <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates one can use a custom regex such as <code>(?&lt;=^|\s)[#@+\/]([^\s#@+]*\w)</code>.</li>
 </ul>
 </li>
 </ul>
