@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.2.1</td></tr>
+					<tr><th>Version:</th><td>0.2.2</td></tr>
 					<tr><th>Minimum app version:</th><td>2.10</td></tr>
-					<tr><th>Downloads: This version:</th><td>0</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
+					<tr><th>Downloads: This version:</th><td>3</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-02-27T13:37:39Z</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -184,7 +184,11 @@
 			<h1>Inline Tag Navigator</h1>
 <p>This plugin adds inline tag support (such as #inline-tag) to <a href="https://joplinapp.org">Joplin</a> in three ways:</p>
 <ul>
-<li>It adds a panel for searching tagged paragraphs across your notes. (<a href="https://www.youtube.com/watch?v=im0zjQFoXb0">YouTube</a>)</li>
+<li>It adds a panel for searching tagged paragraphs across your notes (<a href="https://www.youtube.com/watch?v=im0zjQFoXb0">video</a>).
+<ul>
+<li>Save favourite search queries in notes and sync them across devices.</li>
+</ul>
+</li>
 <li>It adds a panel for navigating between inline tags that appear in the current note.</li>
 <li>It can convert your existing inline tags to native Joplin tags, so that they are accessible using Joplin's built-in tag search.</li>
 </ul>
@@ -207,13 +211,13 @@
 </li>
 <li>Tag search can be used to search, filter and toggle checkboxes (inline TODOs) directly from the panel.
 <ul>
-<li>To support <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates one can use a custom regex such as <code>(?&lt;=^|\s)[#@+\/]([^\s#@+]*\w)</code>.</li>
+<li>To support <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates one can use a custom regex such as <code>(?&lt;=^|\s)([#@+]|\/\/)([^\s#@+]*\w)</code>.</li>
 </ul>
 </li>
 </ul>
 <h2>Motivation</h2>
 <ul>
-<li>Notes are arguably the atomic blocks of information in <a href="https://joplinapp.org">Joplin</a>. They can be linked to, tagged, and come up in search results. Joplin is optimized for this, and these features are pretty efficient.</li>
+<li>Notes are arguably the atomic blocks of information in <a href="https://joplinapp.org">Joplin</a>. They can be linked to, tagged, and come up in search results. Joplin is optimised for this, and these features are pretty efficient.</li>
 <li>However, among 100s-1000s of long-form notes (that are hardly "atomic"), it remains challenging to find a small piece of information, idea, or memory.</li>
 <li>Tags can be especially helpful in distinguishing between the content of a text (what it's about) and its form or function (what type of text it is or what purpose it serves). The first is more easily captured by traditional or <a href="https://github.com/alondmnt/joplin-plugin-jarvis">semantic search</a>. The latter can be conveniently captured by tags, such as #concept, #plan, #memory, #realization, #idea, #review, #bug, #feature, and others.</li>
 <li>I'd like to experiment here with information retrieval from single paragraphs, or outline items, as atomic blocks of information, using inline tags.</li>
@@ -229,6 +233,7 @@
 <li>The excellent <a href="https://github.com/roman-r-m/joplin-inline-tags-plugin">Inline Tags</a> plugin can help you add tags on the fly</li>
 <li>I created a fork for the <a href="https://github.com/alondmnt/joplin-rich-markdown">Rich Markdown</a> plugin and updated the "Stylish" style to highlight inline tags in notes (<a href="https://github.com/alondmnt/joplin-rich-markdown/releases/download/cm-rm-tag/plugin.calebjohn.rich-markdown.jpl">download</a>)</li>
 </ul>
+<p><a href="https://zenodo.org/doi/10.5281/zenodo.10701718"><img src="https://zenodo.org/badge/753598497.svg" alt="DOI" /></a></p>
 
 		</div>
 	</div>
