@@ -464,6 +464,24 @@
 			"default": true,
 			"description": "Auto-pair braces, parenthesis, quotations, etc."
 		},
+		"notes.columns": {
+			"type": "array",
+			"default": [
+				{
+					"name": "note.is_todo",
+					"width": 30
+				},
+				{
+					"name": "note.user_updated_time",
+					"width": 100
+				},
+				{
+					"name": "note.title",
+					"width": 0
+				}
+			],
+			"$comment": "private"
+		},
 		"notes.sortOrder.reverse": {
 			"type": "boolean",
 			"default": true,
@@ -1108,6 +1126,18 @@
 			"default": "",
 			"description": "Voice typing language files (URL). Leave it blank to download the language files from the default website",
 			"$comment": "private"
+		},
+		"trash.autoDeletionEnabled": {
+			"type": "boolean",
+			"default": true,
+			"description": "Automatically delete notes in the trash after a number of days"
+		},
+		"trash.ttlDays": {
+			"type": "integer",
+			"default": 90,
+			"description": "Keep notes in the trash for",
+			"minimum": 1,
+			"maximum": 300
 		}
 	}
 }
