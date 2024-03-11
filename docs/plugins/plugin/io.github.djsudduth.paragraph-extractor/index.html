@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.0</td></tr>
+					<tr><th>Version:</th><td>1.1.1</td></tr>
 					<tr><th>Minimum app version:</th><td>1.8.1</td></tr>
-					<tr><th>Downloads: This version:</th><td>17</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-02-11T21:38:15Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-03-09T21:08:40Z</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -209,12 +209,12 @@
 <h2>Options</h2>
 <p>Go to <code>Tools &gt; Options &gt; Paragraph Extractor</code></p>
 <ul>
-<li><code>Preserve Source Note Titles</code>: Titles of source notes will be embedded in new note. Default <code>true</code>.</li>
+<li><code>Preserve source note titles with backlinks</code>: Titles of source notes will be embedded in new note with links back to the original source notes. Default <code>true</code>.</li>
 <li><code>Extract content at the bulleted list item level</code>: Bullets will be extracted at the top bullet level (including sub-bullets) vs all bullets within a paragraph. Default <code>false</code></li>
 <li><code>Ignore the keyword case</code>: Any case for the keyword or hashtag keyword will be used for extraction. Default <code>false</code></li>
 <li><code>Include the header of the section extracted</code>: Any H1-H6 header will be included with the extracted paragraph or bullet (this is ignored for keywords embedded within the header which are always extracted). Default <code>false</code></li>
-<li><code>Tag Prefix character</code>: Either the common hashtag # character (preferred) or $, %. Default <code>none</code></li>
-<li><code>Paragraph Tag or Keyword</code>: The entered keyword to search in notes to extract the paragraph. If the prefix hashtag field is set, then the tag is added to the keyword for finding paragraph blocks.</li>
+<li><code>Default or Last Used Tag Prefix character</code>: Either the common hashtag # character (preferred) or $, %. Default <code>#</code></li>
+<li><code>Default of Last Used Paragraph Tag or Keyword</code>: The entered keyword to search in notes to extract the paragraph. If the prefix hashtag field is set, then the tag is added to the keyword for finding paragraph blocks.</li>
 <li><code>Remove extracted paragraph keyword and add end tag</code>: Any tagged/hashtagged keyword will be removed from the paragraph and an endtag will be addedin the new extraction note. Removal assumes the prefix character is entered. End tag is added always. Default <code>false</code></li>
 <li><code>Title of the combined note</code>: New title of the combined note. Default <code>Extracted paragraphs</code>.</li>
 <li><code>Custom note title</code>: New note title with possible variables <code>{{FIRSTTITLE}}</code>, <code>{{LASTTITLE}}</code>, <code>{{ALLTITLE}}</code> and <code>{{DATE}}</code>.</li>
@@ -228,6 +228,8 @@
 <p>See <a href="https://raw.githubusercontent.com/djsudduth/joplin-plugin-paragraph-extractor/HEAD/BUILD.md">BUILD</a></p>
 <h2>Changelog</h2>
 <p>See <a href="https://raw.githubusercontent.com/djsudduth/joplin-plugin-paragraph-extractor/HEAD/CHANGELOG.md">Changelog</a></p>
+<h2>Thanks</h2>
+<p>Special thanks to <a href="https://github.com/JackGruber">Jack Gruber</a> for the inspiration and excellent code to help bootstrap this plugin!</p>
 
 		</div>
 	</div>

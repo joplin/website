@@ -180,10 +180,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.4.0</td></tr>
+					<tr><th>Version:</th><td>1.4.1</td></tr>
 					<tr><th>Minimum app version:</th><td>2.1.3</td></tr>
-					<tr><th>Downloads: This version:</th><td>549</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-02-22T16:07:37Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -223,10 +223,10 @@
 <li><a href="#are-note-history-revisions-backed-up">Are Note History Revisions backed up?</a></li>
 <li><a href="#are-all-joplin-profiles-backed-up">Are all Joplin profiles backed up?</a></li>
 <li><a href="#the-joplin-build-in-version-of-the-plugin-cannot-be-updated">The Joplin build-in version of the plugin cannot be updated</a></li>
+<li><a href="#can-i-use-a-backup-to-speed-up-first-joplin-sync">Can I use a Backup to speed up first Joplin sync?</a></li>
 </ul>
 </li>
 <li><a href="#changelog">Changelog</a></li>
-<li><a href="#links">Links</a></li>
 </ul>
 
 
@@ -315,15 +315,12 @@ The file names in the archive correspond to the Joplin internal IDs.</p>
 Profiles that are not active are not backed up, even if a backup has been configured.</p>
 <h3>The Joplin build-in version of the plugin cannot be updated</h3>
 <p>Yes, the build-in version only gets updates with Joplin updates, but can be replaced as described in the <a href="#installation">Installation</a> step.</p>
+<h3>Can I use a Backup to speed up first Joplin sync?</h3>
+<p>No, because new IDs are assigned in Joplin during the import.
+If this device is then synchronized with a synchronization target in which other clients already synchronize with the same notes, all notes are then available multiple times on the devices.
+Therefore, the same note is then available with different IDs in Joplin.</p>
 <h2>Changelog</h2>
 <p>See <a href="https://raw.githubusercontent.com/JackGruber/joplin-plugin-backup/HEAD/CHANGELOG.md">CHANGELOG.md</a></p>
-<h2>Links</h2>
-<ul>
-<li><a href="https://joplinapp.org/api/get_started/plugins/">Joplin - Getting started with plugin development</a></li>
-<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Joplin - Plugin API reference</a></li>
-<li><a href="https://joplinapp.org/api/references/rest_api/">Joplin - Data API reference</a></li>
-<li><a href="https://github.com/laurent22/joplin/tree/dev/packages/app-cli/tests/support/plugins">Joplin - Plugin examples</a></li>
-</ul>
 
 		</div>
 	</div>

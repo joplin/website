@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_joplin_doc_builder=self.webpackChunk_joplin_doc_builder||[]).push([[1728],{8214:function(e){e.exports=JSON.parse('{"permalink":"/news/page/8","page":8,"postsPerPage":10,"totalPages":9,"totalCount":90,"previousPage":"/news/page/7","nextPage":"/news/page/9","blogDescription":"Blog","blogTitle":"News"}')}}]);

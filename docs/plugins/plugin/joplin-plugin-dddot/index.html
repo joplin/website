@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.3.1</td></tr>
+					<tr><th>Version:</th><td>0.4.1</td></tr>
 					<tr><th>Minimum app version:</th><td>2.6</td></tr>
-					<tr><th>Downloads: This version:</th><td>78</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-02-25T04:08:00Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>16</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-03-09T15:08:23Z</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -188,7 +188,8 @@
 <li>Recent Notes - Show recently opened notes</li>
 <li>Shortcuts - A bookmark of faviour notes</li>
 <li>Scratchpad - Write something quickly without bothering to find the right note to insert</li>
-<li>Backlinks - Show the backlinks of the currently selected note</li>
+<li>Backlinks - Show the backlinks of the selected note</li>
+<li>Outline - Show the table of content of the selected note</li>
 <li>Daily Note - Create / Open a note for today.</li>
 <li>Random Note - Open a random note</li>
 </ol>
@@ -198,7 +199,6 @@
 <li>Support to enable/disable an individual tool</li>
 <li>Support changing the tool order by drag and drop</li>
 <li>Support dark theme</li>
-<li>Sort selected text</li>
 </ul>
 <h1>User Guide</h1>
 <h2>General Usage</h2>
@@ -214,11 +214,19 @@
 <li>Add a shortcut to a note - Drag a note from the note list over the Shortcuts area.</li>
 <li>Add a shortcut to a notebook - Drag a folder from the Notebooks list over the Shortcuts area.</li>
 <li>Remove shortcut - Right-click on a shortcut. It will prompt a dialog for confirmation</li>
+<li>Import/Export shortcut list</li>
 </ul>
 <p>Add a shortcut to search</p>
 <p>Install the <a href="https://discourse.joplinapp.org/t/embed-any-search-with-content/14328">Embed search</a> plugin
 Create a note with embed search
 Drag the note from the note list over the Shortcuts tool</p>
+<h2>Outline</h2>
+<p><img src="https://github.com/benlau/joplin-plugin-dddot/assets/82716/a90087a5-1e95-4b75-a690-38ef472302f5" alt="image" /></p>
+<ul>
+<li>Show the table of content of the selected note</li>
+<li>Click on the item will go to the section</li>
+<li>Press the "Copy" button to copy the link of the section</li>
+</ul>
 <h2>Daily Note</h2>
 <p>This tool puts a button at the top of the DDDot panel that will create a note for today. If it exists then it will just open it. The title will be set to today in your preferred format.</p>
 <p>By default, it is not using 0:00 as the start time of a day. It is set to 07:00. You may change the option via the preference interface. Moreover, You may assign a shortcut key to the <code>dddot.cmd.openDailyNote</code> command to trigger the function. (Default: Cmd+O / Ctrl+O)</p>

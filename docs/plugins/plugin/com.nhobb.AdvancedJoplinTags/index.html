@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.2.0</td></tr>
+					<tr><th>Version:</th><td>1.4.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.8</td></tr>
-					<tr><th>Downloads: This version:</th><td>732</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-06-03T02:07:28Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>1</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-03-10T08:11:00Z</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -220,8 +220,15 @@ but I want to ensure that any future notes also get <code>#mathematics</code> ad
 <h2>Deduplicate tags</h2>
 <p>One problem with my notebook was that behind the scenes there were actually two tags named <code>#number-theory</code>.
 I've added a command to delete the duplicate tags. This is likely highly risky. Please make a backup before running this.</p>
+<h2>Rename tags</h2>
+<p>This rule lets you make sure you're consistent with your tags. For example if it finds the tag <code>#maths</code> it automatically renames to <code>#mathematics</code>. An example rule file for this would look like:</p>
+<pre class="hljs"><code>{
+  "mathematics": ["math", "maths"],
+  "compsci": ["computer science"]
+}
+</code></pre>
+<p>Note that the tags <code>#mathematics</code> and <code>#compsci</code> must exist already or this won't work.</p>
 <h2>Future</h2>
-<p>I'm planning on adding automatic tag renames here too. For example making sure that if I add a tag named <code>#maths</code> it automatically renames to <code>#mathematics</code>.</p>
 
 		</div>
 	</div>
