@@ -807,6 +807,12 @@
 			"default": {},
 			"$comment": "private"
 		},
+		"ui.lastSelectedPluginPanel": {
+			"type": "string",
+			"default": "",
+			"description": "The last selected plugin panel ID in pop-up mode (mobile).",
+			"$comment": "private"
+		},
 		"autoUpdateEnabled": {
 			"type": "boolean",
 			"default": true,
