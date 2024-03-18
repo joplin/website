@@ -298,6 +298,7 @@
 			"enum": [
 				"ar",
 				"eu",
+				"nb_NO",
 				"bs_BA",
 				"bg_BG",
 				"ca",
@@ -318,7 +319,6 @@
 				"hu_HU",
 				"nl_BE",
 				"nl_NL",
-				"nb_NO",
 				"fa",
 				"pl_PL",
 				"pt_BR",
