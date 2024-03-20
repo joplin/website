@@ -603,6 +603,12 @@
 			"default": "",
 			"$comment": "private"
 		},
+		"plugins.enableWebviewDebugging": {
+			"type": "boolean",
+			"default": false,
+			"description": "Plugin WebView debugging. Allows debugging mobile plugins. See https://https://joplinapp.org/help/api/references/mobile_plugin_debugging/ for details.",
+			"$comment": "private"
+		},
 		"plugins.devPluginPaths": {
 			"type": "string",
 			"default": "",
