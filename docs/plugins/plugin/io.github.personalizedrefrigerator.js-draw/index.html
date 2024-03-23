@@ -176,10 +176,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>2.8.0</td></tr>
+					<tr><th>Version:</th><td>2.9.1</td></tr>
 					<tr><th>Minimum app version:</th><td>2.10</td></tr>
-					<tr><th>Downloads: This version:</th><td>306</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-03-11T06:38:13Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -200,10 +200,6 @@
 <h2>How do I edit drawings from the rich text editor?</h2>
 <p><strong>Editing an existing drawing</strong>: Double-click on the drawing.</p>
 <p><strong>Adding a new drawing</strong>: Click either the <img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/f3a60f00-f1e3-4a8c-9ab7-b0e7c7fea336" alt="pen" /> toolbar button or "Insert Drawing" from the <code>Edit</code> menu.</p>
-<blockquote>
-<p><strong>Warning</strong></p>
-<p>To insert drawings in the rich text editor, this plugin works around <a href="https://github.com/laurent22/joplin/issues/7547">this Joplin bug</a> by <strong>briefly switching to the markdown editor</strong> and back to the rich text editor. This clears the rich text editor's undo history. This should only <strong>apply to new drawings.</strong></p>
-</blockquote>
 <h2>I only use the markdown editor (no viewer). How do I edit drawings?</h2>
 <p>First, select the full resource URL for an image created with this plugin</p>
 <p><img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/2c71ccc0-d055-45f7-9db7-e0f33f353b81" alt="screenshot: Resource URL (includes :/) is selected" /></p>
@@ -220,6 +216,21 @@
 <h2>How do I disable drawing with touch?</h2>
 <p>Pen/mouse-only drawing can be enabled under the "Pan" tool's menu by <strong>enabling "Touchscreen panning"</strong>:</p>
 <p><img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/682a40ab-0c0f-4dc8-ba49-463dcb06256a" alt="screenshot: Arrow points to pan tool, another arrow points to the &quot;Touchscreen panning&quot; toggle button" /></p>
+<h2>How do I open a drawing in a new window?</h2>
+<p>This feature is still in beta and is currently difficult to access. <a href="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/issues/new/choose">Issue reports</a> are welcome!</p>
+<ol>
+<li>Open the markdown editor.</li>
+<li>Select the drawing's ID:
+<img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/e72507f9-e556-4e09-8275-07d07e36ceea" alt="screenshot: Drawing ID selected" /></li>
+<li>Open the Command Pallete
+<ul>
+<li>On Windows and Linux, the keyboard shortcut for this is <kbd>ctrl</kbd>-<kbd>shift</kbd>-<kbd>p</kbd>.</li>
+<li>On MacOS, the keyboard shortcut is <kbd>cmd</kbd>-<kbd>shift</kbd>-<kbd>p</kbd>.</li>
+</ul>
+</li>
+<li>Type "insertDrawing" and select the "insert drawing in a new window" option.
+<img src="https://github.com/personalizedrefrigerator/joplin-plugin-freehand-drawing/assets/46334387/789d6126-3fd7-422c-8272-733b83081ba8" alt="screenshot: Second option in the command palette selected" /></li>
+</ol>
 <h2>Joplin closed while editing a drawing. How do I recover the unsaved changes?</h2>
 <p><code>joplin-plugin-freehand-drawing</code> autosaves every two minutes. The last autosave can be recovered by</p>
 <ol>
@@ -261,7 +272,7 @@
 <p>The above adds additional shortcuts for exiting, selecting pen style 1, and resizing the visible region to the selection.</p>
 <p>Joplin must be restarted for the changes to be applied.</p>
 <blockquote>
-<p><strong>Note</strong></p>
+<p>[!NOTE]</p>
 <p>Additional keyboard shortcut IDs can be found <a href="https://github.com/personalizedrefrigerator/js-draw/blob/main/packages/js-draw/src/tools/keybindings.ts">in js-draw's source code</a>.</p>
 </blockquote>
 </details>
