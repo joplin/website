@@ -100,9 +100,13 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#createfrompath" class="tsd-kind-icon">create<wbr>From<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#createfrompdfpath" class="tsd-kind-icon">create<wbr>From<wbr>Pdf<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#createfrompdfresource" class="tsd-kind-icon">create<wbr>From<wbr>Pdf<wbr>Resource</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#createfromresource" class="tsd-kind-icon">create<wbr>From<wbr>Resource</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#crop" class="tsd-kind-icon">crop</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#free" class="tsd-kind-icon">free</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#getpdfinfofrompath" class="tsd-kind-icon">get<wbr>Pdf<wbr>Info<wbr>From<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#getpdfinfofromresource" class="tsd-kind-icon">get<wbr>Pdf<wbr>Info<wbr>From<wbr>Resource</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#getsize" class="tsd-kind-icon">get<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#resize" class="tsd-kind-icon">resize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinimaging.html#tojpgfile" class="tsd-kind-icon">to<wbr>Jpg<wbr>File</a></li>
@@ -136,6 +140,60 @@
 							</ul>
 							<!-- JOPLINCHANGE
     <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createfrompdfpath" class="tsd-anchor"></a>
+					<h3>create<wbr>From<wbr>Pdf<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>From<wbr>Pdf<wbr>Path<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/createfrompdfoptions.html" class="tsd-signature-type">CreateFromPdfOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/createfrompdfoptions.html" class="tsd-signature-type">CreateFromPdfOptions</a></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createfrompdfresource" class="tsd-anchor"></a>
+					<h3>create<wbr>From<wbr>Pdf<wbr>Resource</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>From<wbr>Pdf<wbr>Resource<span class="tsd-signature-symbol">(</span>resourceId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/createfrompdfoptions.html" class="tsd-signature-type">CreateFromPdfOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>resourceId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/createfrompdfoptions.html" class="tsd-signature-type">CreateFromPdfOptions</a></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 
 
 -->
@@ -197,7 +255,7 @@
 					<a name="free" class="tsd-anchor"></a>
 					<h3>free</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">free<span class="tsd-signature-symbol">(</span>handle<span class="tsd-signature-symbol">: </span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">free<span class="tsd-signature-symbol">(</span>handles<span class="tsd-signature-symbol">: </span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -212,11 +270,59 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>handle: <a href="../globals.html#handle" class="tsd-signature-type">Handle</a></h5>
+									<h5>handles: <a href="../globals.html#handle" class="tsd-signature-type">Handle</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><a href="../globals.html#handle" class="tsd-signature-type">Handle</a></h5>
 								</li>
 							</ul>
 							<!-- JOPLINCHANGE
     <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpdfinfofrompath" class="tsd-anchor"></a>
+					<h3>get<wbr>Pdf<wbr>Info<wbr>From<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Pdf<wbr>Info<wbr>From<wbr>Path<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pdfinfo.html" class="tsd-signature-type">PdfInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pdfinfo.html" class="tsd-signature-type">PdfInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpdfinfofromresource" class="tsd-anchor"></a>
+					<h3>get<wbr>Pdf<wbr>Info<wbr>From<wbr>Resource</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Pdf<wbr>Info<wbr>From<wbr>Resource<span class="tsd-signature-symbol">(</span>resourceId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pdfinfo.html" class="tsd-signature-type">PdfInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>resourceId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pdfinfo.html" class="tsd-signature-type">PdfInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
 
 
 -->
@@ -431,6 +537,12 @@
 								<a href="joplinimaging.html#createfrompath" class="tsd-kind-icon">create<wbr>From<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinimaging.html#createfrompdfpath" class="tsd-kind-icon">create<wbr>From<wbr>Pdf<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinimaging.html#createfrompdfresource" class="tsd-kind-icon">create<wbr>From<wbr>Pdf<wbr>Resource</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplinimaging.html#createfromresource" class="tsd-kind-icon">create<wbr>From<wbr>Resource</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -438,6 +550,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplinimaging.html#free" class="tsd-kind-icon">free</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinimaging.html#getpdfinfofrompath" class="tsd-kind-icon">get<wbr>Pdf<wbr>Info<wbr>From<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinimaging.html#getpdfinfofromresource" class="tsd-kind-icon">get<wbr>Pdf<wbr>Info<wbr>From<wbr>Resource</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplinimaging.html#getsize" class="tsd-kind-icon">get<wbr>Size</a>
