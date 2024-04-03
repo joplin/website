@@ -941,6 +941,12 @@
 			"default": false,
 			"description": "Opt-in to the editor beta. This beta adds improved accessibility and plugin API compatibility with the mobile editor. If you find bugs, please report them in the Discourse forum."
 		},
+		"linking.extraAllowedExtensions": {
+			"type": "array",
+			"default": [],
+			"description": "Additional file types that can be opened without confirmation.",
+			"$comment": "private"
+		},
 		"net.customCertificates": {
 			"type": "string",
 			"default": "",
