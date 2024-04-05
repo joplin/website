@@ -460,7 +460,9 @@
 				"user_updated_time",
 				"user_created_time",
 				"title",
-				"order"
+				"order",
+				"todo_due",
+				"todo_completed"
 			]
 		},
 		"editor.autoMatchingBraces": {
