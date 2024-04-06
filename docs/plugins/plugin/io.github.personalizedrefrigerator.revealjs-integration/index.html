@@ -174,17 +174,17 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.8.2</td></tr>
+					<tr><th>Version:</th><td>0.9.1</td></tr>
 					<tr><th>Minimum app version:</th><td>2.8</td></tr>
-					<tr><th>Downloads: This version:</th><td>23</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-03-26T18:40:06Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
 			<h1><code>joplin-plugin-revealjs-slides</code></h1>
-<p><a href="https://github.com/personalizedrefrigerator/joplin-plugin-revealjs-slides">On GitHub</a></p>
+<p><a href="https://github.com/personalizedrefrigerator/joplin-plugin-revealjs-slides">On GitHub</a> | <a href="https://joplinapp.org/plugins/plugin/io.github.personalizedrefrigerator.revealjs-integration/">On the plugin website</a></p>
 <p>A Joplin plugin for presenting notes. Internally, this uses the <a href="https://revealjs.com/">reveal.js</a> library.</p>
 <img width="600" src="https://raw.githubusercontent.com/personalizedrefrigerator/joplin-plugin-revealjs-slides/HEAD/images/screenshot-light.png" alt="Screenshot: A Joplin plugin window showing a slideshow. The current slide states that KaTeX, highlight.js, and Mermaid are supported." />
 <h2>Example presentation</h2>
@@ -266,8 +266,11 @@ A setting exists to show speaker notes (when available).
 </span>
 ---
 
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span></span>
+
 <span class="hljs-section"># Keyboard shortcuts</span>
 
+<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
 <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span></span>
 
 Press <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>f<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span> to enter fullscreen and <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>esc<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span> to exit fullscreen.
@@ -303,6 +306,12 @@ Example:
 // of code blocks.
 <span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span>
 
+---
+
+<span class="hljs-section"># More</span>
+
+For additional features, see the [<span class="hljs-string">reveal.js documentation</span>](<span class="hljs-link">https://revealjs.com/backgrounds/</span>).
+
 </code></pre>
 </details>
 <h2>Installing</h2>
@@ -315,6 +324,39 @@ Example:
 <li>Press <kbd>q</kbd> or navigate to the last slide to show the <code>Exit</code> button.</li>
 <li>Press <kbd>?</kbd> to see a list of additional shortcuts.</li>
 </ul>
+<h2>Custom theme</h2>
+<p>It's possible to customize the theme for a slideshow with <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> by adding a <code>&lt;style&gt;</code> block to the top of a note. To do this:</p>
+<ol>
+<li>
+<p>Make sure that the <strong>markdown editor</strong> is active. In markdown mode, the toggle button near the top of the screen should look like this (the "markdown" side should be highlighted): <img alt="screenshot: Toggle editor button labeled near the top right of the screen" src="https://github.com/personalizedrefrigerator/joplin-plugin-revealjs-slides/assets/46334387/c6ba5374-92df-40eb-b4d6-89264f107f80" width="200" /></p>
+</li>
+<li>
+<p>At the top of the note, add the following:</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+    <span class="hljs-selector-pseudo">:root</span> &gt; <span class="hljs-selector-tag">body</span> {
+ 	   <span class="hljs-attr">--r-main-color</span>: white;
+ 	   <span class="hljs-attr">--r-heading-color</span>: white;
+ 	   <span class="hljs-attr">--r-background-color</span>: darkgray;
+ 	   <span class="hljs-attr">--r-link-color</span>: lightblue;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</li>
+<li>
+<p>Adjust the colors in the <code>&lt;style&gt;</code> block to customize the theme.</p>
+</li>
+<li>
+<p>Start the presentation.</p>
+</li>
+</ol>
+<p><strong>Note</strong>: Other editable theme variables are <a href="https://revealjs.com/themes/#custom-properties">listed here</a>.</p>
+<h2>Exporting</h2>
+<h3>HTML: For a web browser</h3>
+<p>To export a presentation to an HTML directory, right-click on a note, select export, then select "PRESENTATION.HTML - Export presentation as HTML":
+<img src="https://github.com/personalizedrefrigerator/joplin-plugin-revealjs-slides/assets/46334387/cf6d8c8d-1eba-41f0-8d87-6533a1c9a955" alt="screenshot" width="459" /></p>
+<p>A file dialog will then appear. Use this dialog to select an output directory.</p>
+<p>The slides plugin will create a <code>presentation</code> subfolder within that directory, then a subfolder for the current note's notebook, then a <code>.presentation.html</code> file for the current note. Opening that file in a web browser allows viewing the presentation outside of Joplin. Note that this file uses resources in other parts of the <code>presentation/</code> directory, so publishing or sharing just the <code>.presentation.html</code> file is not sufficient.</p>
+<p><strong>Note</strong>: Exported presentations use a light theme by default. See the <a href="#custom-theme">Custom theme</a> section above for how to customize the presentation and export theme.</p>
 <h2>Notes</h2>
 <ul>
 <li><strong>Avoid running a presentation with untrusted markdown input.</strong>
