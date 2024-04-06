@@ -134,7 +134,10 @@
 								<li class="tsd-kind-interface"><a href="interfaces/markdowneditorcontentscriptmodule.html" class="tsd-kind-icon">Markdown<wbr>Editor<wbr>Content<wbr>Script<wbr>Module</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/markdownitcontentscriptmodule.html" class="tsd-kind-icon">Markdown<wbr>ItContent<wbr>Script<wbr>Module</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/menuitem.html" class="tsd-kind-icon">Menu<wbr>Item</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/notealarmtriggerevent.html" class="tsd-kind-icon">Note<wbr>Alarm<wbr>Trigger<wbr>Event</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/notecontentchangeevent.html" class="tsd-kind-icon">Note<wbr>Content<wbr>Change<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/notelistcolumn.html" class="tsd-kind-icon">Note<wbr>List<wbr>Column</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/noteselectionchangeevent.html" class="tsd-kind-icon">Note<wbr>Selection<wbr>Change<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/onchangeevent.html" class="tsd-kind-icon">On<wbr>Change<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/onclickevent.html" class="tsd-kind-icon">On<wbr>Click<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/pdfinfo.html" class="tsd-kind-icon">Pdf<wbr>Info</a></li>
@@ -145,6 +148,7 @@
 								<li class="tsd-kind-interface"><a href="interfaces/settingitem.html" class="tsd-kind-icon">Setting<wbr>Item</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/settingsection.html" class="tsd-kind-icon">Setting<wbr>Section</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/size.html" class="tsd-kind-icon">Size</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/synccompleteevent.html" class="tsd-kind-icon">Sync<wbr>Complete<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/syncstartevent.html" class="tsd-kind-icon">Sync<wbr>Start<wbr>Event</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/versioninfo.html" class="tsd-kind-icon">Version<wbr>Info</a></li>
 							</ul>
@@ -172,6 +176,7 @@
 								<li class="tsd-kind-type-alias"><a href="globals.html#resourcechangehandler" class="tsd-kind-icon">Resource<wbr>Change<wbr>Handler</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#syncstarthandler" class="tsd-kind-icon">Sync<wbr>Start<wbr>Handler</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#viewhandle" class="tsd-kind-icon">View<wbr>Handle</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#workspaceeventhandler" class="tsd-kind-icon">Workspace<wbr>Event<wbr>Handler</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -322,34 +327,9 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="itemchangehandler" class="tsd-anchor"></a>
 					<h3>Item<wbr>Change<wbr>Handler</h3>
-					<div class="tsd-signature tsd-kind-icon">Item<wbr>Change<wbr>Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="interfaces/itemchangeevent.html" class="tsd-signature-type">ItemChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<div class="tsd-signature tsd-kind-icon">Item<wbr>Change<wbr>Handler<span class="tsd-signature-symbol">:</span> <a href="globals.html#workspaceeventhandler" class="tsd-signature-type">WorkspaceEventHandler</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/itemchangeevent.html" class="tsd-signature-type">ItemChangeEvent</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="interfaces/itemchangeevent.html" class="tsd-signature-type">ItemChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>event: <a href="interfaces/itemchangeevent.html" class="tsd-signature-type">ItemChangeEvent</a></h5>
-											</li>
-										</ul>
-										<!-- JOPLINCHANGE
-    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-
-
--->
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="listrendererdatabasedependency" class="tsd-anchor"></a>
@@ -546,66 +526,16 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="resourcechangehandler" class="tsd-anchor"></a>
 					<h3>Resource<wbr>Change<wbr>Handler</h3>
-					<div class="tsd-signature tsd-kind-icon">Resource<wbr>Change<wbr>Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="interfaces/resourcechangeevent.html" class="tsd-signature-type">ResourceChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<div class="tsd-signature tsd-kind-icon">Resource<wbr>Change<wbr>Handler<span class="tsd-signature-symbol">:</span> <a href="globals.html#workspaceeventhandler" class="tsd-signature-type">WorkspaceEventHandler</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/resourcechangeevent.html" class="tsd-signature-type">ResourceChangeEvent</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="interfaces/resourcechangeevent.html" class="tsd-signature-type">ResourceChangeEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>event: <a href="interfaces/resourcechangeevent.html" class="tsd-signature-type">ResourceChangeEvent</a></h5>
-											</li>
-										</ul>
-										<!-- JOPLINCHANGE
-    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-
-
--->
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="syncstarthandler" class="tsd-anchor"></a>
 					<h3>Sync<wbr>Start<wbr>Handler</h3>
-					<div class="tsd-signature tsd-kind-icon">Sync<wbr>Start<wbr>Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="interfaces/syncstartevent.html" class="tsd-signature-type">SyncStartEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<div class="tsd-signature tsd-kind-icon">Sync<wbr>Start<wbr>Handler<span class="tsd-signature-symbol">:</span> <a href="globals.html#workspaceeventhandler" class="tsd-signature-type">WorkspaceEventHandler</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/syncstartevent.html" class="tsd-signature-type">SyncStartEvent</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="interfaces/syncstartevent.html" class="tsd-signature-type">SyncStartEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>event: <a href="interfaces/syncstartevent.html" class="tsd-signature-type">SyncStartEvent</a></h5>
-											</li>
-										</ul>
-										<!-- JOPLINCHANGE
-    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-
-
--->
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="viewhandle" class="tsd-anchor"></a>
@@ -613,6 +543,44 @@
 					<div class="tsd-signature tsd-kind-icon">View<wbr>Handle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="workspaceeventhandler" class="tsd-anchor"></a>
+					<h3>Workspace<wbr>Event<wbr>Handler</h3>
+					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Event<wbr>Handler&lt;EventType&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>EventType</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>event: <span class="tsd-signature-type">EventType</span></h5>
+											</li>
+										</ul>
+										<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+
+
+-->
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -897,7 +865,16 @@
 						<a href="interfaces/menuitem.html" class="tsd-kind-icon">MenuItem</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/notealarmtriggerevent.html" class="tsd-kind-icon">NoteAlarmTriggerEvent</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/notecontentchangeevent.html" class="tsd-kind-icon">NoteContentChangeEvent</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/notelistcolumn.html" class="tsd-kind-icon">NoteListColumn</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/noteselectionchangeevent.html" class="tsd-kind-icon">NoteSelectionChangeEvent</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/onchangeevent.html" class="tsd-kind-icon">OnChangeEvent</a>
@@ -928,6 +905,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/size.html" class="tsd-kind-icon">Size</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/synccompleteevent.html" class="tsd-kind-icon">SyncCompleteEvent</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/syncstartevent.html" class="tsd-kind-icon">SyncStartEvent</a>
@@ -994,6 +974,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#viewhandle" class="tsd-kind-icon">ViewHandle</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#workspaceeventhandler" class="tsd-kind-icon">WorkspaceEventHandler</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#defaultlistcolumns" class="tsd-kind-icon">defaultListColumns</a>
