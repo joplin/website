@@ -264,6 +264,28 @@
 </tr>
 </tbody>
 </table>
+<h2>Companion plugins</h2>
+<ul>
+<li>The excellent <a href="https://github.com/roman-r-m/joplin-inline-tags-plugin">Inline Tags</a> plugin can help you add tags on the fly.</li>
+<li>You can highlight tags in the Markdown editor using <a href="https://github.com/CalebJohn/joplin-rich-markdown">Rich Markdown</a> (version ≥ 0.14).
+<ul>
+<li>In <code>Joplin settings --&gt; Rich Markdown --&gt; Advanced Settings --&gt; Custom classes JSON</code> enter:</li>
+</ul>
+<pre class="hljs"><code>[{"name": "rm-tag", "regex": "(?&lt;=^|\\s)#([^\\s#]*\\w)"}]
+</code></pre>
+<ul>
+<li>In <code>Joplin settings --&gt; Appearance --&gt; Custom stylesheet for Joplin-wide app styles</code> add the following to the style sheet:</li>
+</ul>
+<pre class="hljs"><code>div.CodeMirror .cm-rm-tag {
+    background-color: #7698b3;
+    color: white !important;
+    padding: 0em 0.2em;
+    border-radius: 0.5em;
+    display: inline;
+}
+</code></pre>
+</li>
+</ul>
 <h2>Motivation</h2>
 <ul>
 <li>Notes are arguably the atomic blocks of information in <a href="https://joplinapp.org">Joplin</a>. They can be linked to, tagged, and come up in search results. Joplin is optimised for this, and these features are pretty efficient.</li>
@@ -277,11 +299,6 @@
 <li>Browse the entire content of these paragraphs without having to open each note.</li>
 <li>Make this accessible and user-friendly.</li>
 </ol>
-<h2>Companion plugins</h2>
-<ul>
-<li>The excellent <a href="https://github.com/roman-r-m/joplin-inline-tags-plugin">Inline Tags</a> plugin can help you add tags on the fly</li>
-<li>I created a fork for the <a href="https://github.com/alondmnt/joplin-rich-markdown">Rich Markdown</a> plugin and updated the "Stylish" style to highlight inline tags in notes (<a href="https://github.com/alondmnt/joplin-rich-markdown/releases/download/cm-rm-tag/plugin.calebjohn.rich-markdown.jpl">download</a>)</li>
-</ul>
 <p><a href="https://zenodo.org/doi/10.5281/zenodo.10701718"><img src="https://zenodo.org/badge/753598497.svg" alt="DOI" /></a></p>
 
 		</div>
