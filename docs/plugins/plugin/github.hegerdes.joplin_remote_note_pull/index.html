@@ -190,11 +190,11 @@
 <p>This way you can always work with the latest version of online cheat sheets/websites and docs in your favourite notebook without manually update it by yourself.</p>
 <h2>Install</h2>
 <p><strong>Official:</strong>
-Joplin has a community store with an integrated browser for plugin. This plugin is now also released there. Just search for <code>remote-note-pull</code>.</p>
+Joplin has a <a href="https://joplinapp.org/plugins/plugin/github.hegerdes.joplin_remote_note_pull/">community plugin store</a> with an integrated browser for plugin. This plugin is now also released there. Just search for <code>remote-note-pull</code>.</p>
 <p><strong>Manual:</strong>
 You can get the latest version like this:</p>
 <ul>
-<li>Download the latest release from <a href="https://github.com/hegerdes/joplin-plugin-remote-note-pull/releases">GitHub Releases</a> or <a href="https://www.npmjs.com/package/joplin-plugin-remote-note-pull">npmjs</a></li>
+<li>Download the latest release from <a href="https://github.com/hegerdes/joplin-plugin-remote-note-pull/releases">GitHub Releases</a> or <a href="https://www.npmjs.com/package/joplin-plugin-remote-note-pull">NpmJs</a></li>
 <li>Extract the archive</li>
 <li>Open Joplin and open the Settings via the Tools/Options menu</li>
 <li>Go to Plugins</li>
@@ -206,19 +206,21 @@ You can get the latest version like this:</p>
 <strong>NOTE:</strong> Every manual change in the note will be overwritten!</p>
 <p><img src="https://raw.githubusercontent.com/hegerdes/joplin-plugin-remote-note-pull/HEAD/docs/images/new_note_dialog.png" alt="New Note Option Dialog" /></p>
 <p>You can change the default interval via the Joplin settings. A new option group will be added on plugin install. It allows you to enable the sync feature, sets the sync interval and the default target notebook.
-With the <em>DownArrow</em> Icon in the top left you can also trigger a manual update in any currently selected sync-note.</p>
+With the <em>DownArrow</em> Icon in the top right you can also trigger a manual update on any currently selected sync-note.</p>
 <p><img src="https://raw.githubusercontent.com/hegerdes/joplin-plugin-remote-note-pull/HEAD/docs/images/settings.png" alt="Settings Dialog" /></p>
-<h2>Develop</h2>
-<p>Make sure you have nodeJS &gt;= 14 installed</p>
+<h2>Contribute</h2>
+<p>If you have any feature requests or found a bug feel free to open a <a href="https://github.com/hegerdes/joplin-plugin-remote-note-pull/issues/new/choose">GitHub Issue</a> or even provide a pull-request.</p>
+<h2>Development</h2>
+<p>Make sure you have nodeJS &gt;= 16 installed</p>
 <p>Clone the repo and open it in your favourite editor. The most important files are:</p>
 <ul>
 <li><code>/src/index.ts</code>, which contains the entry point for the plugin source code.</li>
 <li><code>/src/manifest.json</code>, which is the plugin manifest. It contains information such as the plugin a name, version, etc.</li>
 </ul>
 <p>See here for information about publishing <a href="https://discourse.joplinapp.org/t/plugins-multiple-questions-sharing-publishing-etc/30551">Joplin Forum</a>
-For mor€information see <a href="https://github.com/laurent22/joplin/tree/dev/packages/generator-joplin#publishing-the-plugin">here</a></p>
+For more information see <a href="https://github.com/laurent22/joplin/tree/dev/packages/generator-joplin#publishing-the-plugin">here</a></p>
 <h2>Building the plugin</h2>
-<p>The plugin is built using Webpack, which creates the compiled code in <code>/dist</code>. A JPL archive will also be created at the root, which can use to distribute the plugin.</p>
+<p>The plugin is built using Webpack, which creates a compiled bundle in <code>/dist</code>. A JPL archive will also be created at the root, which can use to distribute the plugin.</p>
 <p>To build the plugin, simply run <code>npm run dist</code>.</p>
 <p>The project is setup to use TypeScript, although you can change the configuration to use plain JavaScript.</p>
 <p>You can also use <code>npm run dev</code> to build the plugin and open Joplin in dev mode.</p>
