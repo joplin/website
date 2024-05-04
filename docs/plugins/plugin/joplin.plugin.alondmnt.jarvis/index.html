@@ -18,7 +18,7 @@
 	<title>Joplin Plugins - Jarvis</title>
 
 	<meta property="og:title" content="Joplin Plugin: Jarvis"/>
-	<meta property="og:description" content="Joplin assistant running a very intelligent system (OpenAI&#x2F;GPT, Hugging Face, PaLM, USE), including: related notes (semantic search), chat with LLMs and your notes, prompt templates, auto-tags and more."/>
+	<meta property="og:description" content="Joplin AI assistant running a very intelligent system (OpenAI&#x2F;GPT, Hugging Face, Gemini, USE), including: related notes (semantic search), chat with LLMs and your notes, prompt templates, auto-tags and more."/>
 	<meta property="og:image" content=""/>
 
 	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
@@ -149,7 +149,7 @@
 		</div>
 		<div class="container section">
 			<h3>Description</h3>
-			<p class="card-text pb-4">Joplin assistant running a very intelligent system (OpenAI&#x2F;GPT, Hugging Face, PaLM, USE), including: related notes (semantic search), chat with LLMs and your notes, prompt templates, auto-tags and more.</p>
+			<p class="card-text pb-4">Joplin AI assistant running a very intelligent system (OpenAI&#x2F;GPT, Hugging Face, Gemini, USE), including: related notes (semantic search), chat with LLMs and your notes, prompt templates, auto-tags and more.</p>
 		</div>
 		<div class="container section">
 			<h3>Additional Information</h3>
@@ -181,10 +181,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.7.0</td></tr>
+					<tr><th>Version:</th><td>0.8.2</td></tr>
 					<tr><th>Minimum app version:</th><td>2.8</td></tr>
-					<tr><th>Downloads: This version:</th><td>2669</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-08-31T19:37:40Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -192,7 +192,7 @@
 
 			<h1>Jarvis</h1>
 <p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-jarvis/HEAD/img/jarvis-logo-circle.png" width="70" /> <a href="https://zenodo.org/badge/latestdoi/568521268"><img src="https://zenodo.org/badge/568521268.svg" alt="DOI" /></a> <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&amp;label=downloads&amp;query=%24.totalDownloads&amp;url=https%3A%2F%2Fjoplin-plugin-downloads.vercel.app%2Fapi%3Fplugin%3Djoplin.plugin.alondmnt.jarvis" alt="downloads" /></p>
-<p>Jarvis (Joplin Assistant Running a Very Intelligent System) is an AI note-taking assistant for <a href="https://joplinapp.org">Joplin</a>, powered by online and <a href="https://raw.githubusercontent.com/alondmnt/joplin-plugin-jarvis/HEAD/GUIDE.md#setup-a-custom-model">offline</a> LLMs (such as OpenAI's ChatGPT or GPT-4, Hugging Face, Google PaLM, Universal Sentence Encoder). You can chat with it (including prompt templates), use your personal notes as additional context in the chat, automatically annotate notes, perform semantic search, or compile an <a href="https://medium.com/@alondmnt/ai-powered-literature-review-6918ee180304">automatic review of the scientific literature</a>.</p>
+<p>Jarvis (Joplin Assistant Running a Very Intelligent System) is an AI note-taking assistant for <a href="https://joplinapp.org">Joplin</a>, powered by online and <a href="https://raw.githubusercontent.com/alondmnt/joplin-plugin-jarvis/HEAD/GUIDE.md#setup-a-custom-model">offline</a> LLMs (such as OpenAI's ChatGPT or GPT-4, Hugging Face, Gemini, Universal Sentence Encoder). You can chat with it (including prompt templates), use your personal notes as additional context in the chat, automatically annotate notes, perform semantic search, or compile an <a href="https://medium.com/@alondmnt/ai-powered-literature-review-6918ee180304">automatic review of the scientific literature</a>.</p>
 <p>Community discussion: <a href="https://discourse.joplinapp.org/t/28316">https://discourse.joplinapp.org/t/28316</a></p>
 <img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-jarvis/HEAD/img/jarvis-research.gif" width="450" />
 <h2>Usage</h2>
@@ -224,7 +224,7 @@
 </li>
 <li><strong>Autocomplete anything:</strong>
 <ul>
-<li><code>Auto-complete with Jarvis</code> will try to extend any content.</li>
+<li><code>Auto-complete with Jarvis</code> will try to extend any text at the current cursor position in the editor.</li>
 </ul>
 </li>
 <li><strong>Text generation:</strong>
@@ -241,19 +241,120 @@
 <h2>Installation</h2>
 <ol>
 <li>Install Jarvis from Joplin's plugin marketplace, or download it from <a href="https://github.com/alondmnt/joplin-plugin-jarvis/releases">github</a>.</li>
-<li>Select a model for chatting with Jarvis, and a model for indexing your notes. Depending on your choice of models to connect Jarvis with, you may need to setup an API key in the plugin settings for <a href="https://platform.openai.com/account/api-keys">OpenAI</a>, <a href="https://makersuite.google.com/app/apikey">Google PaLM</a>, <a href="https://huggingface.co/settings/tokens">Hugging Face</a>, or other supported services.</li>
+<li>Select a model for chatting with Jarvis, and a model for indexing your notes. Depending on your choice of models to connect Jarvis with, you may need to setup an API key in the plugin settings for <a href="https://platform.openai.com/account/api-keys">OpenAI</a>, <a href="https://makersuite.google.com/app/apikey">Google AI</a>, <a href="https://huggingface.co/settings/tokens">Hugging Face</a>, or other supported services.</li>
 <li>To improve chat coherence, it may be helpful to increase <code>Memory tokens</code> in the settings, especially when chatting with your notes.</li>
 <li>For literature reviews, you can optionally add free API keys for <a href="https://dev.elsevier.com/">Scopus/Elsevier</a> as an additional powerful search engine and paper repository, and <a href="https://dev.springernature.com/">Springer</a> as another paper repository. It is recommended to try both Scopus and Semantic Scholar as each has its pros and cons.</li>
 </ol>
 <h2>Disclaimer</h2>
 <ul>
-<li>This plugin sends your queries to your selected models (and only to these ones, whether they are online or offline models). Research queries are also sent to the selected literature search engine (Semantic Scholar / Scopus).</li>
-<li>This plugin may use your OpenAI, Google PaLM or Hugging Face API key in order to do so (and use it for this sole purpose).</li>
+<li>This plugin sends your queries to your selected models (and only to these ones, whether they are online or offline models). See the table below for details.
+<ul>
+<li>Research queries are also sent to the selected literature search engine (Semantic Scholar / Scopus).</li>
+</ul>
+</li>
+<li>This plugin may use your OpenAI, Google AI or Hugging Face API key in order to do so (and use it for this sole purpose).</li>
 <li>You may incur charges (if you are a paying user) from these services by using this plugin.</li>
 <li>Therefore, it is recommended to check your usage statistics periodically.</li>
 <li>It is also recommended to rotate your API keys occasionally.</li>
 <li>The developer is not affiliated with any of the services above.</li>
 </ul>
+<p>The following table shows what is sent to the selected chat / notes models when running each command.</p>
+<table class="table table-hover undefined">
+<thead>
+<tr>
+<th>Command</th>
+<th>User prompt</th>
+<th>Current note</th>
+<th>Other note excerpts</th>
+<th>All notes</th>
+<th>Web articles</th>
+<th>Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ask Jarvis</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>chat</td>
+</tr>
+<tr>
+<td>Chat</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td>chat</td>
+</tr>
+<tr>
+<td>Chat w/ notes</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>chat, notes</td>
+</tr>
+<tr>
+<td>Research</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td>chat</td>
+</tr>
+<tr>
+<td>Edit</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>chat</td>
+</tr>
+<tr>
+<td>Autocomplete</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td>chat</td>
+</tr>
+<tr>
+<td>Annotate note</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+<td>chat, notes</td>
+</tr>
+<tr>
+<td>Find related notes</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td>notes</td>
+</tr>
+<tr>
+<td>Update note DB</td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td>notes</td>
+</tr>
+</tbody>
+</table>
 
 		</div>
 	</div>
