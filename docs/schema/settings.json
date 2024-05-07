@@ -468,7 +468,7 @@
 		"editor.autoMatchingBraces": {
 			"type": "boolean",
 			"default": true,
-			"description": "Auto-pair braces, parenthesis, quotations, etc."
+			"description": "Auto-pair braces, parentheses, quotations, etc."
 		},
 		"notes.columns": {
 			"type": "array",
@@ -731,6 +731,11 @@
 			"type": "boolean",
 			"default": false,
 			"description": "Show tray icon. Note: Does not work in all desktop environments."
+		},
+		"showMenuBar": {
+			"type": "boolean",
+			"default": true,
+			"$comment": "private"
 		},
 		"startMinimized": {
 			"type": "boolean",
