@@ -153,8 +153,8 @@
 						<th>Links:</th>
 						<td>
 							<ul class="list-group list-group-flush text-break">
-									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-codemirror-6-snippets style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
-									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-codemirror-6-snippets style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-debug-info style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-debug-info style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
 								<li>
 									<a
 										id="view-plugin-source-link"
@@ -175,7 +175,7 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.0.2</td></tr>
+					<tr><th>Version:</th><td>0.0.3</td></tr>
 					<tr><th>Minimum app version:</th><td>2.14</td></tr>
 					<tr><th>Downloads: This version:</th><td>0</td></tr>
 					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
@@ -184,134 +184,51 @@
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
-			<h1>CodeMirror 6 snippets</h1>
-<p>This plugin does two things:</p>
-<ol>
-<li>Exposes CodeMirror 6's built-in support for snippets.</li>
-<li>Enables CodeMirror 6's built-in autocomplete support.</li>
-</ol>
-<h2>Version requirements</h2>
+			<h1>Joplin debug tool</h1>
+<p>This plugin adds a panel that shows information about the selected notes(s). At present, this information isn't very user-friendly — it's presented roughly as fetched from Joplin's data API.</p>
+<p><img src="https://github.com/personalizedrefrigerator/joplin-plugin-debug-info/assets/46334387/98ef3280-b8d2-44a4-b8d3-99b061252fab" alt="screenshot: Shows a panel with note properties including deleted_time, updated_time, and actions including delete" /></p>
+<h1>Features</h1>
+<h2>Note info panel</h2>
+<p>This plugin adds a "note info" panel to Joplin's UI. The panel can be hidden by going to View &gt; Show/Hide note info.</p>
+<p>The fields shown in the plugin are a subset of the fields <a href="https://github.com/laurent22/joplin/blob/dev/packages/lib/services/database/types.ts">stored for different items in Joplin's database</a>.</p>
+<h2>Regular expression search</h2>
+<p>At the bottom of the info panel is a "search" dropdown:</p>
+<p><img src="https://github.com/personalizedrefrigerator/joplin-plugin-debug-info/assets/46334387/a55dc295-5884-48e6-8f25-de05170ff6a3" alt="screenshot: Arrow points to the bottom of the input panel" /></p>
+<p>By default, the search tool contained in the dropdown uses a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a> to search through notes' <code>title</code> and <code>body</code> fields. The fields and type of item can be customized using the options in the "Advanced" dropdown.</p>
+<p>A search scans Joplin's database and results are in the order returned by Joplin's <a href="https://joplinapp.org/help/api/references/rest_api/">data API</a>.</p>
+<h3>Example searches</h3>
 <ul>
-<li>Requires Joplin 2.14.6 or greater.</li>
-<li>The beta CodeMirror 6 editor must be enabled.
+<li>
+<p><strong>All notes with an empty body</strong>:</p>
 <ul>
-<li>This editor can be enabled in the "general" tab of Joplin's settings screen.</li>
+<li>
+<img alt="" width="400" src="https://github.com/personalizedrefrigerator/joplin-plugin-debug-info/assets/46334387/7dcb3d66-8d57-4609-ae4f-3d028a5532b2" />
+</li>
+<li>Search field content: <code>^$</code></li>
+<li>Advanced settings: <code>Notes</code> and fields: <code>body</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>All SVG resources</strong>:</p>
+<ul>
+<li>
+<img alt="screenshot" width="400" src="https://github.com/personalizedrefrigerator/joplin-plugin-debug-info/assets/46334387/b0d67218-2caa-47fe-9d58-31bc28503237" />
+</li>
+<li>Search field content: <code>image/svg</code></li>
+<li>Advanced settings: <code>Resources</code> and fields: <code>mime</code> (for <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">MIME type</a>).</li>
+</ul>
+</li>
+<li>
+<p><strong>All notes with nonbreaking spaces</strong>:</p>
+<ul>
+<li>
+<img alt="screenshot" width="400" src="https://github.com/personalizedrefrigerator/joplin-plugin-debug-info/assets/46334387/45b18601-5df1-49a5-b58b-80c1218bde1d" />
+</li>
+<li>Search field content: <code>\u00A0</code></li>
+<li>Advanced settings: <code>Notes</code> and fields: <code>body</code>.</li>
 </ul>
 </li>
 </ul>
-<h2>Custom snippets</h2>
-<p>This plugin supports custom snippets using <a href="https://codemirror.net/docs/ref/#autocomplete.snippet">CodeMirror's snippet syntax</a>.</p>
-<p>To specify custom snippets:</p>
-<ol>
-<li>Create a new note</li>
-<li>Copy a link to that note (right-click &gt; copy markdown link)
-<ul>
-<li><img src="https://github.com/personalizedrefrigerator/joplin-plugin-codemirror-6-snippets/assets/46334387/0f1fddef-9094-4549-a982-39a08077b1c8" alt="Screenshot: Copy markdown link in right click menu" /></li>
-</ul>
-</li>
-<li>Paste the link to that note into the settings page for this plugin
-<ul>
-<li><img src="https://github.com/personalizedrefrigerator/joplin-plugin-codemirror-6-snippets/assets/46334387/bf2815d9-b50e-411f-934d-b8f3cc68735f" alt="Screenshot: The settings page for the plugin has a single input, labeled &quot;Link to note with custom snippets&quot;" /></li>
-</ul>
-</li>
-</ol>
-<h3>Example snippet note</h3>
-<p>Below, headings are the text a user would type to activate the completion.</p>
-<p>A completion can be activated by pressing <kbd>Tab</kbd> or <kbd>Enter</kbd>.</p>
-<pre class="hljs"><code><span class="hljs-section"># original-text</span>
-
-<span class="hljs-code">```
-This is what "original-text" will be replaced with.
-```</span>
-
-This is a comment.
-
-<span class="hljs-section"># 2x2-table</span>
-
-<span class="hljs-code">```
-
-| ${Column 1} | ${Column 2} |
-|-------------|-------------|
-| ${a       } | ${b       } |
-
-```</span>
-
-<span class="hljs-section"># im</span>
-
-"im" stands for "inline math". Notice that below, a language ("tex" in this case) can be specified for the snippet block. Doing so doesn't affect the snippet.
-
-<span class="hljs-code">```tex
-$#{math-here}$ #{}
-```</span>
-
-<span class="hljs-section"># html-tag</span>
-
-Creates an HTML tag with no attributes.
-
-<span class="hljs-code">```html
-&lt;${1:tag}&gt;${2:content}&lt;/${1:tag}&gt;${}
-```</span>
-
-Above, the <span class="hljs-code">`1:tag`</span> means that <span class="hljs-emphasis">_that_</span> part of the snippet template should be filled in first (and
-both <span class="hljs-code">`1:tag`</span>s at the same time).
-
-<span class="hljs-section"># example-2</span>
-
-Use more than three backticks to include triple backticks in the snippet
-
-<span class="hljs-code">````
-# Example custom snippet
-
-This snippet is registered as an autocompletion for the text "example-2". Because its snippet uses four backticks,
-it can inculde triple-backtick code blocks:
-
-```
-a code block
-```
-````</span>
-</code></pre>
-<p>After editing a snippet note, snippets can be reloaded by clicking <code>Edit</code>, then <code>Reload snippets</code>.</p>
-<h2>Customizing keyboard shortcuts</h2>
-<p>It's possible to override the default CodeMirror 6 snippet shortcuts by adding a <code>keybindings:</code> line, then a code block, to the beginning of the snippets note.</p>
-<p>For example,</p>
-<pre class="hljs"><code>Keybinding overrides go at the beginning of the note.
-
-keybindings:
-
-<span class="hljs-code">```json
-{
-	"acceptCompletion": ["Tab"],
-	"startCompletion": ["Ctrl-Space"],
-	"nextSuggestion": ["ArrowDown"],
-	"previousSuggestion": ["ArrowUp"],
-	"nextSuggestionPage": ["PageDown"],
-	"previousSuggestionPage": ["PageUp"],
-	"closeCompletion": ["Escape"],
-
-	"nextSnippetField": ["Tab"],
-	"prevSnippetField": ["Shift-Tab"],
-	"clearSnippet": ["Escape"]
-}
-```</span>
-
-<span class="hljs-section"># Snippet</span>
-
-Snippets go here.
-
-<span class="hljs-code">```
-Example snippet
-```</span>
-</code></pre>
-<p>Above, the keybindings configuration omits <code>"Enter"</code> from the list of keybindings associated with <code>acceptCompletion</code>.</p>
-<p>To disable a command, map it to the empty array:</p>
-<pre class="hljs"><code>keybindings:
-
-<span class="hljs-code">```json
-{
-	"closeCompletion": []
-}
-```</span>
-</code></pre>
 
 		</div>
 	</div>
