@@ -181,10 +181,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.6.3</td></tr>
+					<tr><th>Version:</th><td>0.7.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.10</td></tr>
-					<tr><th>Downloads: This version:</th><td>49</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-04-26T09:38:34Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -208,7 +208,7 @@
 <li>Save favourite search queries in notes and sync them across devices (<a href="https://www.youtube.com/watch?v=xIBZl2Ala9A">video</a>).</li>
 <li>Tag-by-notes: Search for links or [[wikilinks]] to notes (including backlinks to the current note).</li>
 <li>Add, replace and remove inline tags via the panel context menu (right-click on a tag).</li>
-<li>Toggle checkboxes / TODOs from the panel.</li>
+<li>Toggle checkboxes / TODOs from the panel, including <a href="https://xit.jotaen.net">[x]it! style</a> checkboxes.</li>
 </ul>
 </li>
 <li>It can generate a note with all tagged paragaraphs that match a saved query (dynamically updated).
@@ -296,10 +296,13 @@
     background-color: #7698b3;
     color: white !important;
     padding: 0em 0.2em;
-    border-radius: 0.5em;
+    border-radius: 5px;
     display: inline;
 }
 </code></pre>
+<ul>
+<li>On the mobile app, since it is impossible to edit the stylesheet, one could instead define the name of the tag class to be <code>"name": "searchMatch"</code>. This will use the same highlighting style as Joplin search results.</li>
+</ul>
 </li>
 </ul>
 <h2>Motivation</h2>
