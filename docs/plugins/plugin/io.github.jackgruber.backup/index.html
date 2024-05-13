@@ -213,6 +213,7 @@
 <li><a href="#settings">Settings</a></li>
 <li><a href="#notes">Notes</a></li>
 <li><a href="#restore-a-singel-note">Restore a singel note</a></li>
+<li><a href="#full-joplin-restore">Full Joplin restore</a></li>
 </ul>
 </li>
 <li><a href="#faq">FAQ</a>
@@ -293,6 +294,8 @@ If the notebook in which the note was located already exists in your Joplin, the
 <li>Switch back to your orginal Joplin profil via <code>File &gt; Switch profile &gt; Default</code></li>
 <li>Import the exported note via <code>File &gt; Import &gt; JEX - Joplin Export File</code> and select the file from step 6</li>
 </ol>
+<h3>Full Joplin restore</h3>
+<p>See the guide for a <a href="https://raw.githubusercontent.com/JackGruber/joplin-plugin-backup/HEAD/FULLRESTORE.md">Full Joplin restore</a></p>
 <h2>FAQ</h2>
 <h3>Internal Joplin links betwen notes are lost</h3>
 <p>If several JEX files are imported and the notes have links to each other, these links will be lost.
@@ -309,14 +312,14 @@ Therefore it is recommended to create a Single JEX Backup!</p>
 <p>A Joplin JEX Backup file is a tar archive which can be opened with any zip program that supports TAR archive.
 The file names in the archive correspond to the Joplin internal IDs.</p>
 <h3>Are Note History (Revisions) backed up?</h3>
-<p>The note history and file versions (revisions) are not included in the backup.</p>
+<p>A JEX backup file <strong>does not</strong> contain any note history (revisions). It contains the notebooks, notes and attachments as they were at the time the backup was made.</p>
 <h3>Are all Joplin profiles backed up?</h3>
 <p>No, the backup must be configured for each profile.
 Profiles that are not active are not backed up, even if a backup has been configured.</p>
 <h3>The Joplin build-in version of the plugin cannot be updated</h3>
 <p>Yes, the build-in version only gets updates with Joplin updates, but can be replaced as described in the <a href="#installation">Installation</a> step.</p>
 <h3>Can I use a Backup to speed up first Joplin sync?</h3>
-<p>No, because new IDs are assigned in Joplin during the import.
+<p>No, because all items in the backup will get newunique IDs are assigned in Joplin during the import (however links between notes will be maintained).
 If this device is then synchronized with a synchronization target in which other clients already synchronize with the same notes, all notes are then available multiple times on the devices.
 Therefore, the same note is then available with different IDs in Joplin.</p>
 <h2>Changelog</h2>
