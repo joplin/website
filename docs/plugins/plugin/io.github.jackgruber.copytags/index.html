@@ -183,16 +183,41 @@
 					</tr>
 					<tr><th>Version:</th><td>1.0.3</td></tr>
 					<tr><th>Minimum app version:</th><td>1.6.2</td></tr>
-					<tr><th>Downloads: This version:</th><td>1554</td></tr>
+					<tr><th>Downloads: This version:</th><td>1564</td></tr>
 					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-01-12T18:37:49Z</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
-			<h1>Joplin Tagging Plugin <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/img/icon_32.png" /></h1>
+			<h1>Joplin Plugin: Tagging <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/img/icon_32.png" /></h1>
 <p>Plugin to extend the Joplin tagging menu with a copy all tags and a tagging dialog with more control.</p>
 <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/img/main_tagging.gif" />
+
+
+<ul>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#automatic">Automatic</a></li>
+<li><a href="#manual">Manual</a>
+<ul>
+<li><a href="#manual-via-gui">Manual via GUI</a></li>
+<li><a href="#manual-via-file-system">Manual via file system</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#commands">Commands</a>
+<ul>
+<li><a href="#copy-all-tags">Copy all tags</a></li>
+<li><a href="#tagging-dialog">Tagging dialog</a></li>
+</ul>
+</li>
+<li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+
+
 <h2>Installation</h2>
 <h3>Automatic</h3>
 <ul>
@@ -202,10 +227,19 @@
 <li>Restart Joplin to enable the plugin</li>
 </ul>
 <h3>Manual</h3>
+<h4>Manual via GUI</h4>
+<ul>
+<li>Download the latest released JPL package (<code>io.github.jackgruber.copytags.jpl</code>) from <a href="https://github.com/JackGruber/joplin-plugin-copytags/releases/latest">here</a></li>
+<li>Go to <code>Tools &gt; Options &gt; Plugins</code> in Joplin</li>
+<li>Click on the gear wheel and select <code>Install from file</code></li>
+<li>Select the downloaded JPL file</li>
+<li>Restart Joplin</li>
+</ul>
+<h4>Manual via file system</h4>
 <ul>
 <li>Download the latest released JPL package (<code>io.github.jackgruber.copytags.jpl</code>) from <a href="https://github.com/JackGruber/joplin-plugin-copytags/releases/latest">here</a></li>
 <li>Close Joplin</li>
-<li>Copy the downloaded JPL package in your profile <code>plugins</code> folder</li>
+<li>Got to your Joplin profile folder and place the JPL file in the <code>plugins</code> folder</li>
 <li>Start Joplin</li>
 </ul>
 <h2>Commands</h2>
@@ -230,8 +264,8 @@
 </li>
 <li>
 <p>Create new tags</p>
- <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/img/tagging_dialog.jpg" />
- <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/img/tagging_dialog_search.jpg" />
+ <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/img/tagging_dialog.png" />
+ <img src="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/img/tagging_dialog_search.png" />
 </li>
 </ul>
 <h2>Keyboard Shortcuts</h2>
@@ -240,19 +274,8 @@
 <li><code>Copy all tags</code></li>
 <li><code>Tagging dialog</code></li>
 </ul>
-<h2>Build</h2>
-<p>To build your one version of the plugin, install node.js and run the following command <code>npm run dist</code></p>
-<h2>Updating the plugin framework</h2>
-<p>To update the plugin framework, run <code>npm run update</code></p>
 <h2>Changelog</h2>
 <p>See <a href="https://raw.githubusercontent.com/JackGruber/joplin-plugin-tagging/HEAD/CHANGELOG.md">CHANGELOG.md</a></p>
-<h2>Links</h2>
-<ul>
-<li><a href="https://joplinapp.org/api/get_started/plugins/">Joplin - Getting started with plugin development</a></li>
-<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Joplin - Plugin API reference</a></li>
-<li><a href="https://joplinapp.org/api/references/rest_api/">Joplin - Data API reference</a></li>
-<li><a href="https://github.com/laurent22/joplin/tree/dev/packages/app-cli/tests/support/plugins">Joplin - Plugin examples</a></li>
-</ul>
 
 		</div>
 	</div>
