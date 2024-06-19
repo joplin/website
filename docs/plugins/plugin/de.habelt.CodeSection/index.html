@@ -181,7 +181,7 @@
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
-			<h1>Code Section Joplin Plugin</h1>
+			<h1>Code Section Joplin Plug-in</h1>
 <p>This plug-in displays a piece of source code. It reads this source code from a source file which is appended to the note. The code is selected by supporting a code definition inside a code definition block.</p>
 <p>The code definition looks as follows:</p>
 <pre class="hljs"><code>```codesection
@@ -201,7 +201,7 @@ the source itself are mandatory.</p>
 <p>The inserted code will be displayed using the default renderer for that language including syntax
 highlighting.</p>
 <p>This could look like this:</p>
-<p><img src="https://raw.githubusercontent.com/Mick2nd/Code-Section/HEAD/doc/Python%20Source%20Code.png" alt="Python Source Code" /></p>
+<p><a href="https://github.com/Mick2nd/Code-Section/blob/master/doc/Python%20Source%20Code.png"><img src="https://raw.githubusercontent.com/Mick2nd/Code-Section/HEAD/doc/Python%20Source%20Code.png" alt="Python Source Code" /></a></p>
 <h2>Procedure</h2>
 <ol>
 <li>Append a code source to the note</li>
@@ -214,12 +214,18 @@ highlighting.</p>
 <ol>
 <li>The resource folder is not recognized after the start of Joplin. Workaround: Invoke the settings and then leave them</li>
 <li>Only local sources in the resource folder can be displayed, no web content</li>
-<li>The plugin uses synchroneous file access to read the source, no asynchroneous access</li>
+<li>The plug-in uses synchronous file access to read the source, no asynchronous access</li>
 </ol>
 <h2>Release Notes</h2>
-<h3>1.0.4</h3>
+<h3>1.0.7</h3>
 <ul>
-<li>Fixed the bug where resource folder was not recognized. Workaround is no longer needed (see Problems 1.).</li>
+<li>Update of the Joplin API</li>
+<li>Bug-fix: plug-in did not work without extension of the code file or with more than one dot in the file name</li>
+</ul>
+<h3>1.0.6</h3>
+<ul>
+<li>Changed architecture of the plug-in</li>
+<li>Code Sections are printed now with export to pdf</li>
 </ul>
 <h3>1.0.5</h3>
 <ul>
@@ -233,10 +239,9 @@ percent relating to the window height</li>
 </ul>
 </li>
 </ul>
-<h3>1.0.6</h3>
+<h3>1.0.4</h3>
 <ul>
-<li>Changed architecture of the plugin</li>
-<li>Code Sections are printed now with export to pdf</li>
+<li>Fixed the bug where resource folder was not recognized. Workaround is no longer needed (see Problems 1.).</li>
 </ul>
 
 		</div>
