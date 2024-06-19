@@ -242,7 +242,7 @@
 <li>Inline TODOs:
 <ul>
 <li>Filter results by pending tasks (<code>"- [ ]"</code>) or ones done (<code>"- [x]"</code>).</li>
-<li>Add support for <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates using a custom tag regex such as <code>(?&lt;=^|\s)([#@+]|\/\/)([^\s#@+]*\w)</code>.</li>
+<li>Add support for <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates using a custom tag regex such as <code>(?&lt;=^|\s)([#@+]|\/\/)([^\s#@+'\"]*\w)</code>.</li>
 </ul>
 </li>
 <li>Supported additional checkbox styles</li>
@@ -292,7 +292,7 @@
 <ul>
 <li>In <code>Joplin settings --&gt; Rich Markdown --&gt; Advanced Settings --&gt; Custom classes JSON</code> enter:</li>
 </ul>
-<pre class="hljs"><code>[{"name": "rm-tag", "regex": "(?&lt;=^|\\s)#([^\\s#]*\\w)"}]
+<pre class="hljs"><code>[{"name": "rm-tag", "regex": "(?&lt;=^|\\s)#([^\\s#'\"]*\\w)"}]
 </code></pre>
 <ul>
 <li>In <code>Joplin settings --&gt; Appearance --&gt; Custom stylesheet for Joplin-wide app styles</code> add the following to the style sheet:</li>
