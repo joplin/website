@@ -172,26 +172,27 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.1.3</td></tr>
+					<tr><th>Version:</th><td>1.1.4</td></tr>
 					<tr><th>Minimum app version:</th><td>1.8.1</td></tr>
-					<tr><th>Downloads: This version:</th><td>26</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-05-11T22:10:02Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
 			<h1>Joplin Extract Paragraphs</h1>
-<p>Plugin to extract and combine paragraph blocks from any selected notes to a single new note based on a keyword, hashtag or custom tag contained within the paragraph. This is similar to block functionality in other note taking systems.</p>
+<p>Plugin to extract and combine paragraph blocks from any selected notes to a single new note based on a keyword, hashtag or custom tag contained within the paragraph. This is similar to block functionality in other note taking systems like Logseq.</p>
 <p>Typical useage is to identify paragraphs with added hashtags (e.g., #mytag). Then, any paragraph with that tag in multiple notes can be copied and added to a single new note. However, keywords do not have to be hashtags and can just be a simple search word to identify and extract the paragraph.</p>
+<p>Example screenshots can be found here: <a href="https://discourse.joplinapp.org/t/plugin-extract-paragraphs/35831">https://discourse.joplinapp.org/t/plugin-extract-paragraphs/35831</a></p>
 <p>Bullet and sub-bullet lists are treated as single paragraphs in Joplin. Settings will allow for extracting single bullets (along with their sub-bullets) that contain the keyword rather than all the bullets in the paragraph.</p>
-<p>The full note can be extracted if the hashtagged keyword is by iteself in the last paragraph. This is useful if you do not wish to add the same hashtag to every paragraph if the entire note is useful.</p>
+<p><strong>The full note can be extracted</strong> if the hashtagged keyword is by iteself in the last paragraph. This is useful if you do not wish to add the same hashtag to every paragraph if the entire note is useful.</p>
 <p>Any Joplin tags in the source notes will be combined as Joplin tags in the extracted note. Selected notes are not changed at all.</p>
 <h2>Installation</h2>
 <h3>Automatic</h3>
 <ul>
 <li>Go to <code>Tools &gt; Options &gt; Plugins</code></li>
-<li>Search for <code>extract-paragraphs</code></li>
+<li>Search for <code>Paragraph Extractor</code></li>
 <li>Click Install plugin</li>
 <li>Restart Joplin to enable the plugin</li>
 </ul>
@@ -215,8 +216,8 @@
 <li><code>Ignore the keyword case</code>: Any case for the keyword or hashtag keyword will be used for extraction. Default <code>false</code></li>
 <li><code>Include the header of the section extracted</code>: Any H1-H6 header will be included with the extracted paragraph or bullet (this is ignored for keywords embedded within the header which are always extracted). Default <code>false</code></li>
 <li><code>Default or Last Used Tag Prefix character</code>: Either the common hashtag # character (preferred) or $, %. Default <code>#</code></li>
-<li><code>Default of Last Used Paragraph Tag or Keyword</code>: The entered keyword to search in notes to extract the paragraph. If the prefix hashtag field is set, then the tag is added to the keyword for finding paragraph blocks.</li>
-<li><code>Remove extracted paragraph keyword and add end tag</code>: Any tagged/hashtagged keyword will be removed from the paragraph and an endtag will be addedin the new extraction note. Removal assumes the prefix character is entered. End tag is added always. Default <code>false</code></li>
+<li><code>Default or Last Used Paragraph Tag or Keyword</code>: The entered keyword to search in notes to extract the paragraph. If the prefix hashtag field is set, then the tag is added to the keyword for finding paragraph blocks.</li>
+<li><code>Remove extracted paragraph keyword and add end tag</code>: Any tagged/hashtagged keyword will be removed from the paragraph and an endtag will be added in the new extraction note. Removal assumes the keyword has a hashtag prefix character - otherwise the setting is ignored. The end tag is always appended when this is selected. Default <code>false</code></li>
 <li><code>Title of the combined note</code>: New title of the combined note. Default <code>Extracted paragraphs</code>.</li>
 <li><code>Custom note title</code>: New note title with possible variables <code>{{FIRSTTITLE}}</code>, <code>{{LASTTITLE}}</code>, <code>{{ALLTITLE}}</code> and <code>{{DATE}}</code>.</li>
 </ul>
