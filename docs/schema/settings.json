@@ -607,7 +607,7 @@
 		},
 		"plugins.states": {
 			"type": "object",
-			"default": "",
+			"default": {},
 			"$comment": "private"
 		},
 		"plugins.enableWebviewDebugging": {
