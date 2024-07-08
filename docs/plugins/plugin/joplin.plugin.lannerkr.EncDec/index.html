@@ -171,30 +171,48 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.7</td></tr>
+					<tr><th>Version:</th><td>1.1.1</td></tr>
 					<tr><th>Minimum app version:</th><td>2.13</td></tr>
-					<tr><th>Downloads: This version:</th><td>7</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-07-05T05:08:24Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
 			<h1>Joplin Plugin EnC/DeC Mode</h1>
-<p>Still in testing stage ...</p>
+<ul>
+<li>encode and decode sensitive string with user password.</li>
+<li>it's not secure encryption, it's just XOR encoding/decoding to hide sesitive strings to be displayed</li>
+<li></li>
+</ul>
+<p>// XORCipher - Super simple encryption using XOR and Base64 (<a href="https://gist.github.com/sukima/XORCipher.js">https://gist.github.com/sukima/XORCipher.js</a>)
+//
+// Depends on <a href="http://underscorejs.org/">Underscore</a>.
+//
+// As a warning, this is <strong>not</strong> a secure encryption algorythm. It uses a very
+// simplistic keystore and will be easy to crack.
+//
+// The Base64 algorythm is a modification of the one used in phpjs.org
+// * <a href="http://phpjs.org/functions/base64_encode/">http://phpjs.org/functions/base64_encode/</a>
+// * <a href="http://phpjs.org/functions/base64_decode/">http://phpjs.org/functions/base64_decode/</a></p>
 <ol>
-<li>Encryption :</li>
+<li>Encoding :</li>
 </ol>
-<p>select strings want to be encrypted, then click EnC/Dec button
-popup will ask you a password
-encter password and click 'OK', then your selected strings will be encrypted and displayed as 'ENC:xxxxxxxxxx'</p>
+<ul>
+<li>Select strings want to be encoded, then click EnC/Dec button.</li>
+<li>Popup will ask you a password.</li>
+<li>Enter password and click 'OK', then your selected strings will be encoded and displayed as 'ENC:xxxxxxxxxx'.</li>
+</ul>
 <ol>
-<li>Decryption :</li>
+<li>Decoding :</li>
 </ol>
-<p>select encrypted strings ( selecting must include 'ENC:' ), then click EnC/Dec button
-popup will ask you a password
--&gt; encter password and click 'OK', then decrypted strings will be displayed in popup
--&gt; encter password and click 'Permanent', then selected strings will be decrypted</p>
+<ul>
+<li>Select encoded strings ( selecting must include 'ENC:' ), then click EnC/Dec button.</li>
+<li>Popup will ask you a password.</li>
+<li>-&gt; Enter password and click 'OK', then decoded strings will be displayed in popup.</li>
+<li>-&gt; Enter password and click 'Permanent', then selected strings will be decoded.</li>
+</ul>
 
 		</div>
 	</div>
