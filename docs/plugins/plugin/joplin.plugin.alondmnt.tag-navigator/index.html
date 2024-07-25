@@ -240,13 +240,18 @@
 <li>If any of the actions on note results does not work (toggling checkboxes, editing tags), this is usually resolved by a database update (Ctrl+Shift+D).</li>
 <li>The definition of a "tag" can be adjusted with user-defined regular expressions.
 <ul>
-<li>For example, every word in the text may be defined as a tag using a custom regex such as <code>[A-Za-z0-9]+[\w]*</code>.</li>
+<li>Example: Every word in the text may be defined as a tag using a custom regex such as <code>[A-Za-z0-9]+[\w]*</code>.</li>
 </ul>
 </li>
 <li>Inline TODOs:
 <ul>
 <li>Filter results by pending tasks (<code>"- [ ]"</code>) or ones done (<code>"- [x]"</code>).</li>
 <li>Add support for <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates using a custom tag regex such as <code>(?&lt;=^|\s)([#@+]|\/\/)([^\s#@'\"]*\w)</code>.</li>
+<li>Furthermore, every checkbox in the text (even ones that are not tagged by any inline #tag) may be defined as a tag using a custom regex such as <code>(?&lt;=^|\s)([#]|\-\s\[[x\s@\?!~]\])([^\s'\"]*\w)?</code>.
+<ul>
+<li>You may then use queries to search for tag-tasks based on their state (<code>- [ ]</code>, <code>- [x]</code>, <code>- [@]</code>, ...).</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Supported additional checkbox styles</li>
