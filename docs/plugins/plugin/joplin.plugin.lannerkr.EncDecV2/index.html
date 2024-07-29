@@ -181,9 +181,13 @@
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
 			<h1>Joplin Plugin EnC/DeC Mode</h1>
+<h1>caution : version 1 and version 2 and version 3 are not compatable with each other</h1>
 <ul>
 <li>encode and decode sensitive string with user password.</li>
 <li>it's not secure encryption, it's just XOR encoding/decoding to hide sesitive strings to be displayed</li>
+<li>version 1 : encode and decode with password key</li>
+<li>version 2 : version 1 + password key verification</li>
+<li>version 3 : version 2 + multibyte languages support</li>
 <li></li>
 </ul>
 <p>// XORCipher - Super simple encryption using XOR and Base64 (<a href="https://gist.github.com/sukima/XORCipher.js">https://gist.github.com/sukima/XORCipher.js</a>)
@@ -213,6 +217,14 @@
 <li>-&gt; Enter password and click 'OK', then decoded strings will be displayed in popup.</li>
 <li>-&gt; Enter password and click 'Permanent', then selected strings will be decoded.</li>
 </ul>
+<ol>
+<li>
+<p>Password verification is added in V2</p>
+</li>
+<li>
+<p>multibyte lanaguage support in V3</p>
+</li>
+</ol>
 
 		</div>
 	</div>
