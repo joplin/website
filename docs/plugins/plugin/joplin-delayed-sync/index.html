@@ -167,6 +167,9 @@
 					<tr>
 						<th>Maintainers:</th>
 						<td>
+								<a href="./?search=maintainer%3D%22lzambarda%22%20max-results%3D20" class="maintainer-link">
+									lzambarda
+								</a>
 						</td>
 					</tr>
 					<tr><th>Version:</th><td>1.0.0</td></tr>
@@ -178,7 +181,16 @@
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
-			<p>No README</p>
+			<h1>Joplin Plugin Delayed Sync</h1>
+<p>This simple plugin introduces the ability to synchronize after a note has been modified, with a delay. It is intended for people who quickly jot something down on Joplin and then go about their day forgetting to synchronize! :P</p>
+<h2>Options</h2>
+<p>The plugin only has two options:</p>
+<ul>
+<li><strong>Sync Delay</strong>: how many milliseconds to wait after a note has been edited, before triggering a synchronization. Defaults to <code>5000</code> milliseconds. I would not make this too small as it also behaves as a debouncer, clearing the timer with each note edit.</li>
+<li><strong>Queue Syncs</strong>: whether to queue another sync if a synchronization is already happening after <strong>Sync Delay</strong> seconds have passed. This is to make sure that all note changes are saved "in time". Defaults to <code>true</code>.</li>
+</ul>
+<h2>Notes</h2>
+<p>I have noticed a slight delay between executing the synchronization command and the Sync button actually showing some activity. Not sure why, but in case that's too long, you can decrease the delay.</p>
 
 		</div>
 	</div>
