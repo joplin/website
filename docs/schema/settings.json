@@ -291,6 +291,11 @@
 			"default": false,
 			"$comment": "private"
 		},
+		"editor.pluginCompatibilityBannerDismissedFor": {
+			"type": "array",
+			"default": [],
+			"$comment": "private"
+		},
 		"firstStart": {
 			"type": "boolean",
 			"default": true,
@@ -941,7 +946,7 @@
 		"editor.spellcheckBeta": {
 			"type": "boolean",
 			"default": false,
-			"description": "Enable spell checking in Markdown editor? (WARNING BETA feature). Spell checker in the Markdown editor was previously unstable (cursor location was not stable, sometimes edits would not be saved or reflected in the viewer, etc.) however it appears to be more reliable now. If you notice any issue, please report it on GitHub or the Joplin Forum (Help -> Joplin Forum)"
+			"description": "Enable spell checking in Markdown editor?. Checks spelling in most non-code regions of the Markdown editor."
 		},
 		"imageeditor.jsdrawToolbar": {
 			"type": "string",
@@ -957,7 +962,13 @@
 		"editor.beta": {
 			"type": "boolean",
 			"default": false,
-			"description": "Opt-in to the editor beta. This beta adds improved accessibility and plugin API compatibility with the mobile editor. If you find bugs, please report them in the Discourse forum."
+			"description": "Opt-in to the editor beta. Currently unused",
+			"$comment": "private"
+		},
+		"editor.legacyMarkdown": {
+			"type": "boolean",
+			"default": false,
+			"description": "Use the legacy Markdown editor. Enable the the legacy Markdown editor. Some plugins require this editor to function. However, it has accessibility issues and other plugins will not work."
 		},
 		"linking.extraAllowedExtensions": {
 			"type": "array",
