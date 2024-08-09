@@ -380,6 +380,16 @@
 			"default": false,
 			"description": "Enable optical character recognition (OCR). When enabled, the application will scan your attachments and extract the text from it. This will allow you to search for text in these attachments."
 		},
+		"ocr.languageDataPath": {
+			"type": "string",
+			"default": "",
+			"description": "OCR: Language data URL or path"
+		},
+		"ocr.clearLanguageDataCache": {
+			"type": "boolean",
+			"default": false,
+			"$comment": "private"
+		},
 		"theme": {
 			"type": "integer",
 			"default": 1,
