@@ -762,6 +762,11 @@
 			"default": -1,
 			"$comment": "private"
 		},
+		"keychain.lastAvailableDrivers": {
+			"type": "array",
+			"default": [],
+			"$comment": "private"
+		},
 		"db.ftsEnabled": {
 			"type": "integer",
 			"default": -1,
