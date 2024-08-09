@@ -243,6 +243,11 @@
 <li>Example: Every word in the text may be defined as a tag using a custom regex such as <code>[A-Za-z0-9]+[\w]*</code>.</li>
 </ul>
 </li>
+<li>You may also define an exclusion rule to ignore certain tags.
+<ul>
+<li>Example: Numeric (<code>#123</code>) or hexanumeric (<code>#C0FF1E</code>) tags can be filtered using an exclusion regex such as <code>#(\d+|[a-fA-F0-9]{6})$</code>.</li>
+</ul>
+</li>
 <li>Inline TODOs:
 <ul>
 <li>Filter results by pending tasks (<code>"- [ ]"</code>) or ones done (<code>"- [x]"</code>).</li>
