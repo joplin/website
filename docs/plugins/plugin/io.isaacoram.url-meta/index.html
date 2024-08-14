@@ -205,9 +205,25 @@
 <ul>
 <li>Fixed issue <a href="https://github.com/IsaacAKAJupiter/joplin-url-meta/issues/2">#2</a> by displaying URLs in reverse order and only skipping URLs if there is a container already containing that specific URL.</li>
 </ul>
+<h3>v1.0.5</h3>
+<ul>
+<li>Added new setting "Metadata In Markdown Display Method" (special thanks to <a href="https://github.com/IsaacAKAJupiter/joplin-url-meta/issues/2#issuecomment-2285087563">deepspaceaxolotl</a> for the idea). This can be one of the following options.
+<ul>
+<li>Default: Requires empty line between links.</li>
+<li>Compact: Requires line break (not an extra empty line) between links.</li>
+<li>Ultra Compact: Renders immediately after the link no matter what.</li>
+</ul>
+</li>
+<li>Slight fix for the regex for matching URLs (a link with a hash containing a hyphen would break).
+<ul>
+<li>E.g: <a href="https://example.com/abc#test-123">https://example.com/abc#test-123</a> would not work.</li>
+</ul>
+</li>
+<li>Links appearing multiple times within a note are now rendered every time, not just the bottommost.</li>
+<li>Missing resource will no longer cause the "URL Meta Tags" panel to indefinitely load.</li>
+</ul>
 <h2>Roadmap/Known Issues</h2>
 <ul>
-<li>Issue: Missing resource will not allow the panel to load.</li>
 <li>Possible Issue: It seems as of pre release v3.1.1 images in markdown-it will not display properly (no longer file:// src?).</li>
 </ul>
 
