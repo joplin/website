@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.1.0</td></tr>
+					<tr><th>Version:</th><td>1.2.0</td></tr>
 					<tr><th>Minimum app version:</th><td>2.8</td></tr>
-					<tr><th>Downloads: This version:</th><td>503</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2023-06-27T16:36:53Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -183,10 +183,16 @@
 
 			<h1>joplin-plugin-publish</h1>
 <p>This plugin provides an easy way to publish your notes on github using gist so that others can use and give feedback.</p>
-<p>Updating a published gist isn't implemented yet</p>
+<p><a href="https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists">What are gists?</a></p>
 <h2>settings</h2>
 <p>You'll need to get an auth code from github <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> and you must specificy the gist scope for it to work</p>
-<p><a href="https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists">What are gists?</a></p>
+<p>You can choose to publish gist as public or private. if you need to change the
+scope, you can delete the gist, change the setting, and make a new one. Once
+it's published as a scope, that's it.</p>
+<ul>
+<li><code>github auth token</code>: The github token you get from the link above</li>
+<li><code>public</code>: The scope of the gist, either <code>public</code> or <code>private</code>. default is private</li>
+</ul>
 
 		</div>
 	</div>
