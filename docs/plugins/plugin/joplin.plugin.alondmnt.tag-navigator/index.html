@@ -183,7 +183,7 @@
 					</tr>
 					<tr><th>Version:</th><td>1.2.1</td></tr>
 					<tr><th>Minimum app version:</th><td>2.10</td></tr>
-					<tr><th>Downloads: This version:</th><td>3</td></tr>
+					<tr><th>Downloads: This version:</th><td>21</td></tr>
 					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-08-16T02:09:02Z</td></tr>
 				</tbody>
 			</table>
@@ -228,9 +228,9 @@
 <p>After installing the plugin, check the commands listed under <code>Tag Navigator</code> in the <code>Tools</code> menu, as well as the corresponding settings section.</p>
 <h2>Demos</h2>
 <ul>
-<li>Watch the tag search demo on YouTube:</li>
+<li>Watch the tag search demo:</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=im0zjQFoXb0"><img src="https://img.youtube.com/vi/im0zjQFoXb0/hqdefault.jpg" width="80%" /></a></p>
+<p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/tag-navigator-search.gif" width="80%" /></p>
 <ul>
 <li>Watch the navigation panel demo:</li>
 </ul>
@@ -241,7 +241,17 @@
 <img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/tag-navigator-insert.gif" width="80%" />
 <h2>Tips</h2>
 <ul>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#custom-tag-definitions">Custom tag definitions</a></li>
+<li><a href="#inline-todos">Inline TODOs</a></li>
+<li><a href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
+</ul>
+<h3>Troubleshooting</h3>
+<ul>
 <li>If any of the actions on note results does not work (toggling checkboxes, editing tags), this is usually resolved by a database update (Ctrl+Shift+D).</li>
+</ul>
+<h3>Custom tag definitions</h3>
+<ul>
 <li>The definition of a "tag" can be adjusted with user-defined regular expressions.
 <ul>
 <li>Example: Every word in the text may be defined as a tag using a custom regex such as <code>[A-Za-z0-9]+[\w]*</code>.</li>
@@ -252,7 +262,8 @@
 <li>Example: Numeric (<code>#123</code>) or hexanumeric (<code>#C0FF1E</code>) tags can be filtered using an exclusion regex such as <code>#(\d+|[a-fA-F0-9]{6})$</code>.</li>
 </ul>
 </li>
-<li>Inline TODOs:
+</ul>
+<h3>Inline TODOs</h3>
 <ul>
 <li>Filter results by pending tasks (<code>"- [ ]"</code>) or ones done (<code>"- [x]"</code>).</li>
 <li>Add support for <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates using a custom tag regex such as <code>(?&lt;=^|\s)([#@+]|\/\/)([^\s#@'\"]*\w)</code>.</li>
@@ -261,14 +272,53 @@
 <li>You may then use queries to search for tag-tasks based on their state (<code>- [ ]</code>, <code>- [x]</code>, <code>- [@]</code>, ...).</li>
 </ul>
 </li>
+<li>Supported additional checkbox styles
+<ul>
+<li>Set as done by clicking on a checkbox in the search panel.</li>
+<li>Toggle between all states by right-clicking on a checkbox.</li>
 </ul>
 </li>
-<li>Supported additional checkbox styles</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/checkboxes.png" alt="custom checkboxes" /></p>
 <ul>
 <li>You may increase the checkbox size on smaller screens by setting <code>Search: Panel style</code> with the CSS <code>.itags-search-checkbox { width: 18px; height: 18px; font-size: 18px }</code> (adjust as needed).</li>
-<li>Tag / note filter keyboard shortcuts:</li>
+</ul>
+<h3>Keyboard shortcuts</h3>
+<ul>
+<li>Default command shortcuts
+<ul>
+<li>These can be set up in Joplin's keyboard shortcut settings.</li>
+</ul>
+</li>
+</ul>
+<table class="table table-hover undefined">
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + Shift + T</td>
+<td>Toggle search panel</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + I</td>
+<td>Focus on search panel (search tag / insert tag)</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + D</td>
+<td>Update tag database</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + L</td>
+<td>Load search query from current note</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Tag / note filter (search panel) shortcuts</li>
 </ul>
 <table class="table table-hover undefined">
 <thead>
@@ -280,7 +330,7 @@
 <tbody>
 <tr>
 <td>Enter</td>
-<td>Add tag(s) / note to query / note</td>
+<td>Add tag(s) / note to query / note (see config)</td>
 </tr>
 <tr>
 <td>2nd Enter</td>
