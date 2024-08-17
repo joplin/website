@@ -1177,6 +1177,11 @@
 			"default": false,
 			"$comment": "private"
 		},
+		"featureFlag.autoUpdaterServiceEnabled": {
+			"type": "boolean",
+			"default": true,
+			"description": "Enable auto-updates. Enable this feature to receive notifications about updates and install them instead of manually downloading them. Restart app to start receiving auto-updates."
+		},
 		"sync.allowUnsupportedProviders": {
 			"type": "integer",
 			"default": -1,
