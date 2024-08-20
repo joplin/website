@@ -183,7 +183,7 @@
 					</tr>
 					<tr><th>Version:</th><td>1.2.1</td></tr>
 					<tr><th>Minimum app version:</th><td>2.10</td></tr>
-					<tr><th>Downloads: This version:</th><td>54</td></tr>
+					<tr><th>Downloads: This version:</th><td>72</td></tr>
 					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-08-16T02:09:02Z</td></tr>
 				</tbody>
 			</table>
@@ -267,21 +267,24 @@
 <ul>
 <li>Filter results by pending tasks (<code>"- [ ]"</code>) or ones done (<code>"- [x]"</code>).</li>
 <li>Add support for <a href="https://github.com/CalebJohn/joplin-inline-todo?tab=readme-ov-file#confluence-style">additional tags</a> for @mentions, +projects and //due-dates using a custom tag regex such as <code>(?&lt;=^|\s)([#@+]|\/\/)([^\s#@'\"]*\w)</code>.</li>
-<li>Furthermore, every checkbox in the text (even ones that are not tagged by any inline #tag) may be defined as a tag using a custom regex such as <code>(?&lt;=^|\s)([#]|\-\s\[[x\s@\?!~]\])([^\s#'\"]*\w)?</code>.
+<li>Supported additional checkbox styles (inspired by <code>[x]it!</code>).
 <ul>
-<li>You may then use queries to search for tag-tasks based on their state (<code>- [ ]</code>, <code>- [x]</code>, <code>- [@]</code>, ...).</li>
-</ul>
-</li>
-<li>Supported additional checkbox styles
-<ul>
-<li>Set as done by clicking on a checkbox in the search panel.</li>
-<li>Toggle between all states by right-clicking on a checkbox.</li>
+<li>Set any of them to done by clicking the checkbox in the search panel.</li>
 </ul>
 </li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/checkboxes.png" alt="custom checkboxes" /></p>
 <ul>
+<li>Toggle between all states by right-clicking on a checkbox.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/alondmnt/joplin-plugin-tag-navigator/HEAD/img/checkboxes-commands.png" alt="checkbox commands" /></p>
+<ul>
 <li>You may increase the checkbox size on smaller screens by setting <code>Search: Panel style</code> with the CSS <code>.itags-search-checkbox { width: 18px; height: 18px; font-size: 18px }</code> (adjust as needed).</li>
+<li>Furthermore, every checkbox in the text (even ones that are not tagged by any inline #tag) may be defined as a tag using a custom regex such as <code>(?&lt;=^|\s)([#]|\-\s\[[x\s@\?!~]\])([^\s#'\"]*\w)?</code>.
+<ul>
+<li>You may then use queries to search for tag-tasks based on their state (<code>- [ ]</code>, <code>- [x]</code>, <code>- [@]</code>, ...).</li>
+</ul>
+</li>
 </ul>
 <h3>Keyboard shortcuts</h3>
 <ul>
