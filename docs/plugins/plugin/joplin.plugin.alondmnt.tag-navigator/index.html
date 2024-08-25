@@ -210,20 +210,21 @@
 <li><strong>Save search queries</strong> in notes and sync them across devices (<a href="https://www.youtube.com/watch?v=GuzCwYxyYZ0">video</a>).</li>
 <li><strong>Tag-by-notes:</strong> Search for links or [[wikilinks]] to notes (including backlinks to the current note).</li>
 <li><strong>Edit tags:</strong> Add, replace and remove inline tags via the panel context menu (right-click on a tag).</li>
-<li><strong>Toggle checkboxes</strong> / TODOs from the panel, including <a href="https://xit.jotaen.net">[x]it! style</a> checkboxes (click, or right-click for 6 task states).</li>
-<li><strong>Nested tags</strong> hierarchy: Search parent tags to find the locations of their children. Example: #parent/child.</li>
+<li><strong>Insert tags</strong> from the panel into the note editor (<a href="#tag-insertion">video</a>).</li>
+<li><strong>Toggle checkboxes</strong> / TODOs from the panel, including <a href="https://xit.jotaen.net">[x]it! style</a> checkboxes (click, or right-click for 6 task states). See also <a href="#inline-todos">tips</a>.</li>
+<li><strong>Nested tags</strong> hierarchy: Search parent tags to find the locations of their children (<a href="https://www.youtube.com/watch?v=h-HdX7npbIw">video</a>). Example: #parent/child.</li>
 <li>Search for a <strong>range of tags</strong>, according to their lexicographic order. Example: #2024/07 -&gt; #2024/08</li>
 <li>Search tags by <strong>today's date</strong>. Examples: #today, #today+1 (tomorrow), #today-10 (ten days ago)</li>
 </ul>
 </li>
-<li>It can generate a note with all tagged paragaraphs that match a saved query (dynamically updated).
+<li>It can generate a note with all tagged paragaraphs that match a saved query (dynamically updated) (<a href="https://www.youtube.com/watch?v=GuzCwYxyYZ0">video</a>).
 <ul>
 <li>Save a query in a note, and switch note view on: <code>Tools --&gt; Tag Navigator --&gt; Toggle search results display in note</code></li>
 </ul>
 </li>
 <li>It adds a panel for quickly navigating between inline tags that appear in the current note, or in all notes (<a href="https://www.youtube.com/watch?v=h-HdX7npbIw">video</a>).</li>
 <li>It can convert your existing inline tags to native Joplin tags, so that they are accessible using Joplin's built-in tag search.</li>
-<li>It can convert your existing native Joplin tags to inline tags, so that they are accessible using inline tag search (this plugin).</li>
+<li>It can convert your existing native Joplin tags to inline tags, so that they are accessible using inline tag search (this plugin). See also <a href="#converting-joplin-tags">tips</a>.</li>
 </ol>
 <p>After installing the plugin, check the commands listed under <code>Tag Navigator</code> in the <code>Tools</code> menu, as well as the corresponding settings section.</p>
 <h2>Demos</h2>
@@ -247,6 +248,7 @@
 <li><a href="#custom-tag-definitions">Custom tag definitions</a></li>
 <li><a href="#inline-todos">Inline TODOs</a></li>
 <li><a href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
+<li><a href="#converting-joplin-tags">Converting Joplin tags</a></li>
 </ul>
 <h3>Troubleshooting</h3>
 <ul>
@@ -363,6 +365,30 @@
 </tr>
 </tbody>
 </table>
+<h3>Converting Joplin tags</h3>
+<ol>
+<li>It is recommended (as for any other plugin), before converting all notes:
+<ul>
+<li>Test a few individual notes (one command above the all-note conversion).</li>
+<li>Backup your note database.</li>
+</ul>
+</li>
+<li>If you would like organise your tags hierarchically (using nested tags) rename your Joplin tags first, before the conversion.
+<ul>
+<li>Example: <code>#child</code> -&gt; <code>#parent/child</code></li>
+<li>You may also choose to rename your inline tags after the conversion, using the plugin's <code>Replace all</code> command. However, this will create a divergence between your inline and Joplin tags.</li>
+</ul>
+</li>
+<li>Select your preferred conversion settings.
+<ul>
+<li>Converted inline tags will appear at the top / bottom depending on the <code>Location</code> advanced setting.</li>
+<li>Converted inline tags will have the prefix # depending on the <code>Tag prefix</code> advanced setting.</li>
+<li>The list of converted inline tags will begin with the text 'tags: ' depending on the <code>List prefix</code> advanced setting.</li>
+<li>Spaces in Joplin tags will be converted to inline tags depending on the <code>Space replacement</code> advanced setting. When converting inline tags back to Joplin spaces will be introduced back to tags. For example: [Joplin: <code>tag with space</code>] -&gt; [inline: <code>#tag_with_space</code>] -&gt; [Joplin: <code>tag with space</code>]</li>
+</ul>
+</li>
+<li>After the conversion all Joplin tags remain assigned to their notes. They are not deleted, and only a single line of text is added to each note.</li>
+</ol>
 <h2>Companion plugins</h2>
 <ul>
 <li>The excellent <a href="https://github.com/roman-r-m/joplin-inline-tags-plugin">Inline Tags</a> plugin can autocomplete tags while typing.</li>
