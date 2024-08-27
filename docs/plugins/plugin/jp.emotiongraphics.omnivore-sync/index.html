@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Omnivore Sync</title>
+
+	<meta property="og:title" content="Joplin Plugin: Omnivore Sync"/>
+	<meta property="og:description" content="Sync articles and highlights from Omnivore to Joplin"/>
+	<meta property="og:image" content=""/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://joplinapp.org/">
+			<img src="/plugins/joplin-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins">Plugins</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/news/">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/help/">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://discourse.joplinapp.org/">Forum</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="container breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Omnivore Sync</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="spacer">
+		</div>
+		<div class="plugin-page-header">
+			<div class="title plugin-page-title">
+				<img
+					class="icon plugin-icon -missing"
+					src=""
+					alt="Plugin icon"
+				/>
+				<div>
+					<h1 class="card-title">Omnivore Sync</h1>
+					<div class="card-title pb-2">
+						by
+						<a
+							href="./?search=author%3D%22Rino%22%20max-results%3D20"
+							style="display: inline;"
+						>
+							Rino
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=jp.emotiongraphics.omnivore-sync"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="container section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Sync articles and highlights from Omnivore to Joplin</p>
+		</div>
+		<div class="container section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;rinodrops&#x2F;joplin-plugin-omnivore-sync style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;rinodrops&#x2F;joplin-plugin-omnivore-sync style="display: block;"><i class="fa-solid fa-link"></i> Homepage</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=jp.emotiongraphics.omnivore-sync"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22rinodrops%22%20max-results%3D20" class="maintainer-link">
+									rinodrops
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>0.1.4</td></tr>
+					<tr><th>Minimum app version:</th><td>2.13</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container section" id="readme" data--is-rendered-markdown>
+
+			<h1>Joplin Omnivore Sync Plugin</h1>
+<p>This plugin allows you to sync your <a href="https://omnivore.app/">Omnivore</a> articles and highlights directly into <a href="https://joplinapp.org/">Joplin</a>, a free, open-source note taking and to-do application.</p>
+<h2>Features</h2>
+<ul>
+<li>Sync articles from Omnivore to Joplin</li>
+<li>Sync highlights and annotations from Omnivore to Joplin</li>
+<li>Choose between syncing all content, only articles, or only highlights</li>
+<li>Customize the sync interval</li>
+<li>Select a target notebook for synced content</li>
+<li>Choose from predefined templates for highlight formatting</li>
+</ul>
+<h2>Installation</h2>
+<h3>Marketplace</h3>
+<ol>
+<li>Open Joplin and navigate to Tools &gt; Options &gt; Plugins</li>
+<li>Search for "Omnivore Sync" in the plugins marketplace</li>
+<li>Click on Install</li>
+<li>Restart Joplin to activate the plugin</li>
+</ol>
+<h3>Manual</h3>
+<p>Copy <code>publish/jp.emotiongraphics.omnivore-sync.jpl</code> file to your <code>plugin</code> directory.
+(It is <code>~/.config/joplin-desktop/plugins</code> on macOS)</p>
+<h2>Configuration</h2>
+<p>After installation, you need to configure the plugin:</p>
+<ol>
+<li>Go to Tools &gt; Options &gt; Omnivore Sync</li>
+<li>Enter your Omnivore API Key (You can get this from your <a href="https://omnivore.app/settings/api">Omnivore settings</a>)</li>
+<li>Choose your sync preferences:
+<ul>
+<li>Sync Type (All, Articles only, or Highlights only)</li>
+<li>Sync Interval (in minutes, 0 for manual sync only)</li>
+<li>Target Notebook (where synced content will be saved)</li>
+<li>Highlight Template (choose from predefined templates)</li>
+<li>Timezone ("local" for system timezone)</li>
+<li>Highlight Sync Period (days)</li>
+<li>Highlight Note Title Prefix (followed by the date)</li>
+</ul>
+</li>
+</ol>
+<h2>Usage</h2>
+<h3>Manual Sync</h3>
+<p>You can manually trigger a sync by going to Tools &gt; Sync Omnivore Articles</p>
+<h3>Automatic Sync</h3>
+<p>If you've set a sync interval, the plugin will automatically sync at the specified interval.</p>
+<h3>Reset Sync Data</h3>
+<p>If you need to reset the sync data (e.g., to re-sync all content), go to Tools &gt; Reset Omnivore Sync Data</p>
+<h2>Templates</h2>
+<p>The plugin offers three predefined templates for formatting highlights:</p>
+<ol>
+<li>Default: Includes a full markdown layout with the article title, quote, source link, creation date, and annotation</li>
+<li>Minimal: Includes only the quote, annotation (if any), and a link to the source</li>
+</ol>
+<h2>Contributing</h2>
+<p>Contributions are welcome! Please feel free to submit a Pull Request. If you encounter any problems or have any questions, please open an issue on this GitHub repository.</p>
+<h2>License</h2>
+<p>This project is licensed under the MIT License - see the <a href="https://raw.githubusercontent.com/rinodrops/joplin-plugin-omnivore-sync/HEAD/LICENSE">LICENSE</a> file for details.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="links legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="link terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="link privacy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
