@@ -172,7 +172,7 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>0.1.4</td></tr>
+					<tr><th>Version:</th><td>0.1.6</td></tr>
 					<tr><th>Minimum app version:</th><td>2.13</td></tr>
 					<tr><th>Downloads: This version:</th><td>0</td></tr>
 					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
@@ -188,6 +188,8 @@
 <li>Sync articles from Omnivore to Joplin</li>
 <li>Sync highlights and annotations from Omnivore to Joplin</li>
 <li>Choose between syncing all content, only articles, or only highlights</li>
+<li>Filter articles and highlights by labels</li>
+<li>Group highlights by date or by article</li>
 <li>Customize the sync interval</li>
 <li>Select a target notebook for synced content</li>
 <li>Choose from predefined templates for highlight formatting</li>
@@ -214,9 +216,12 @@
 <li>Sync Interval (in minutes, 0 for manual sync only)</li>
 <li>Target Notebook (where synced content will be saved)</li>
 <li>Highlight Template (choose from predefined templates)</li>
+<li>Highlight Grouping (By Date or By Article)</li>
+<li>Article Labels (comma-separated list of labels to filter articles)</li>
+<li>Highlight Labels (comma-separated list of labels to filter highlights)</li>
 <li>Timezone ("local" for system timezone)</li>
 <li>Highlight Sync Period (days)</li>
-<li>Highlight Note Title Prefix (followed by the date)</li>
+<li>Highlight Note Title Prefix (followed by the date or article title)</li>
 </ul>
 </li>
 </ol>
@@ -226,15 +231,31 @@
 <h3>Automatic Sync</h3>
 <p>If you've set a sync interval, the plugin will automatically sync at the specified interval.</p>
 <h3>Reset Sync Data</h3>
-<p>If you need to reset the sync data (e.g., to re-sync all content), go to Tools &gt; Reset Omnivore Sync Data</p>
+<p>If you need to reset the sync data (e.g., to re-sync all content), go to Tools &gt; Reset Omnivore Sync Data.
+Note that it does not delete any notes on both Omnivore and Joplin. This menu just clear the plugin's internal data (the last sync date and all synced article/highlight IDs)</p>
+<h2>Highlight Syncing Behavior</h2>
+<h3>By Date</h3>
+<ul>
+<li>Highlights are grouped by the date they were created</li>
+<li>Within each date group, highlights are sorted chronologically (older on top)</li>
+<li>Highlights are further grouped by article within each date</li>
+<li>The note title is "{Prefix} {Date}"</li>
+</ul>
+<h3>By Article</h3>
+<ul>
+<li>All highlights from the same article within the sync period are grouped together</li>
+<li>Highlights are sorted by their position in the article</li>
+<li>The note title is "{Prefix} - {Article Title}"</li>
+</ul>
 <h2>Templates</h2>
 <p>The plugin offers three predefined templates for formatting highlights:</p>
 <ol>
-<li>Default: Includes a full markdown layout with the article title, quote, source link, creation date, and annotation</li>
-<li>Minimal: Includes only the quote, annotation (if any), and a link to the source</li>
+<li>Default: Includes a full markdown layout with the article title, highlights, annotations, creation date, and source link</li>
+<li>Title, Highlight and Note</li>
+<li>Highlight and Note: Suitable for "By Article"</li>
 </ol>
 <h2>Contributing</h2>
-<p>Contributions are welcome! Please feel free to submit a Pull Request. If you encounter any problems or have any questions, please open an issue on this GitHub repository.</p>
+<p>Contributions are welcome! Please feel free to submit a Pull Request. If you encounter any problems or have any questions, please open an issue on <a href="https://github.com/rinodrops/joplin-plugin-omnivore-sync">this GitHub repository</a>. I also watch the Joplin Forum.</p>
 <h2>License</h2>
 <p>This project is licensed under the MIT License - see the <a href="https://raw.githubusercontent.com/rinodrops/joplin-plugin-omnivore-sync/HEAD/LICENSE">LICENSE</a> file for details.</p>
 
