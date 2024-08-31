@@ -340,7 +340,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="listrendererdependency" class="tsd-anchor"></a>
 					<h3>List<wbr>Renderer<wbr>Dependency</h3>
-					<div class="tsd-signature tsd-kind-icon">List<wbr>Renderer<wbr>Dependency<span class="tsd-signature-symbol">:</span> <a href="globals.html#listrendererdatabasedependency" class="tsd-signature-type">ListRendererDatabaseDependency</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.index"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.selected"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.size.height"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.size.width"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.folder.title"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.isWatched"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.tags"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.titleHtml"</span></div>
+					<div class="tsd-signature tsd-kind-icon">List<wbr>Renderer<wbr>Dependency<span class="tsd-signature-symbol">:</span> <a href="globals.html#listrendererdatabasedependency" class="tsd-signature-type">ListRendererDatabaseDependency</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.index"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.selected"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.size.height"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"item.size.width"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.folder.title"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.isWatched"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.tags"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.todoStatusText"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"note.titleHtml"</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -349,6 +349,9 @@
 								complemented with special properties such as <code>note.isWatched</code>, to know if a note is currently
 							opened in the external editor, and <code>note.tags</code> to get the list tags associated with the note.</p>
 						</div>
+						<p>The <code>note.todoStatusText</code> property is a localised description of the to-do status (e.g.
+							&quot;to-do, incomplete&quot;). If you include an <code>&lt;input type=&#39;checkbox&#39; ... /&gt;</code> for to-do items that would
+						otherwise be unlabelled, consider adding <code>note.todoStatusText</code> as the checkbox&#39;s <code>aria-label</code>.</p>
 						<a href="#item-properties" id="item-properties" style="color: inherit; text-decoration: none;">
 							<h2>Item properties</h2>
 						</a>
