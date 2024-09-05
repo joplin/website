@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Recipe Scaler</title>
+
+	<meta property="og:title" content="Joplin Plugin: Recipe Scaler"/>
+	<meta property="og:description" content="scales recipes to desired serving counts and displays helpful information in beautiful info cards."/>
+	<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;drewmarsh&#x2F;joplin-recipe-scaler&#x2F;HEAD&#x2F;icons&#x2F;icon-128x125.png"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://joplinapp.org/">
+			<img src="/plugins/joplin-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins">Plugins</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/news/">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/help/">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://discourse.joplinapp.org/">Forum</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="container breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Recipe Scaler</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="spacer">
+		</div>
+		<div class="plugin-page-header">
+			<div class="title plugin-page-title">
+				<img
+					class="icon plugin-icon -dark-mode-shadow"
+					src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;drewmarsh&#x2F;joplin-recipe-scaler&#x2F;HEAD&#x2F;icons&#x2F;icon-128x125.png"
+					alt="Plugin icon"
+				/>
+				<div>
+					<h1 class="card-title">Recipe Scaler</h1>
+					<div class="card-title pb-2">
+						by
+						<a
+							href="./?search=author%3D%22Drew Marshall%22%20max-results%3D20"
+							style="display: inline;"
+						>
+							Drew Marshall
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-editor">
+						<i class="fas fa-tag"></i> editor
+					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-appearance">
+						<i class="fas fa-tag"></i> appearance
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=plugin.drewmarshall.recipe-scaler"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;drewmarsh&#x2F;joplin-recipe-scaler&#x2F;HEAD&#x2F;preview&#x2F;hawaiian-ice-example.png" alt="Hawaiian Ice Recipe Example"/>
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="container section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">scales recipes to desired serving counts and displays helpful information in beautiful info cards.</p>
+		</div>
+		<div class="container section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;drewmarsh&#x2F;joplin-recipe-scaler style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=plugin.drewmarshall.recipe-scaler"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22drewmarsh%22%20max-results%3D20" class="maintainer-link">
+									drewmarsh
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>0.9.0</td></tr>
+					<tr><th>Minimum app version:</th><td>2.13</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container section" id="readme" data--is-rendered-markdown>
+
+			
+<p align="center">
+  <a href="https://github.com/drewmarsh/joplin-recipe-scaler">
+    <img src="https://raw.githubusercontent.com/drewmarsh/joplin-recipe-scaler/HEAD//preview/logo.svg" width="325" height="325" alt="Logo" />
+  </a>
+</p>
+<a></a>
+<p><img src="https://raw.githubusercontent.com/drewmarsh/joplin-recipe-scaler/HEAD//preview/hawaiian-ice-example.png" alt="hawaiian-ice-example" /></p>
+<p><img src="https://raw.githubusercontent.com/drewmarsh/joplin-recipe-scaler/HEAD//preview/cherry-limeade-example.png" alt="cherry-limeade-example" /></p>
+<br />
+<h1>🍽️ The 5 Courses</h1>
+<h3><a href="#preview">🔎 Preview</a></h3>
+<h3><a href="#recipe-cards">✨ Recipe Cards</a></h3>
+<h3><a href="#recipe-scaling">⚖️ Recipe Scaling</a></h3>
+<h3><a href="#example-note">📜 Example Note</a></h3>
+<h3><a href="#contributing">🛠️ Contributing</a></h3>
+<br />
+<p><a></a></p>
+<h1>✨ Recipe Cards</h1>
+<p>Recipe cards can be used to efficiently display recipe information in as many beautiful and highly-customizable cards as you desire.</p>
+<p>These cards are encapsulated between square brackets <code>[ ]</code> in the Markdown editor and can take in many different <strong>attributes</strong> that tell the plugin how you want the card to behave.</p>
+<p>The available <strong>attributes</strong> are as listed below:</p>
+<ul>
+<li>
+<h4><code>card</code></h4>
+<ul>
+<li>Necessary to tell the plugin that you're trying to render a new recipe card. It is <strong>not</strong> necessary to set it equal to anything.</li>
+</ul>
+</li>
+<li>
+<h4><code>title=</code></h4>
+<ul>
+<li>Adds a title to the recipe card.</li>
+</ul>
+</li>
+<li>
+<h4><code>original=</code> and <code>scaled=</code></h4>
+<ul>
+<li>These two <strong>attributes</strong> should be only used in <em>one recipe card per note</em> and the Markdown for this card should be at the <em>very top</em> of the note. They tell the plugin how many servings the original recipe made and how many servings you want to scale the recipe to. If you don't plan to use the <a href="#recipe-scaling">recipe scaling</a> feature, these <strong>attributes</strong>  can be omitted from the note entirely.</li>
+</ul>
+</li>
+<li>
+<h4><code>label= value</code></h4>
+<ul>
+<li>This <strong>attribute</strong> is different from the rest as it's fully customizable. You don't actually write <code>label</code> or <code>value</code>. Instead, you can write anything you want, such as: <code>calories= 481</code>, <code>protein= 51g</code>,  <code>carbs= 62</code>, <code>fat = 34g</code>, <code>sugars= 2g</code>. These label/value pairs will be neatly organized in a list.</li>
+</ul>
+</li>
+<li>
+<h4><code>chip=</code></h4>
+<ul>
+<li>Adds chip(s) to the recipe card. This can either be one chip: <code>chip = Example Chip</code> or multiple chips like this: <code>chip= Chip 1+Chip 2+Chip 3</code></li>
+</ul>
+</li>
+<li>
+<h4><code>color=</code></h4>
+<ul>
+<li>Assigns color(s) to the recipe card. This can either be one solid color: <code>color= red</code> / <code>color= #ff0000</code> or you can make it a gradient like this: <code>color= red+white+blue</code>.</li>
+</ul>
+</li>
+</ul>
+<br />
+<p>An example of a recipe card that utilizes each and every one of the above <strong>attributes</strong> would look like this in the Markdown editor:</p>
+<p><code>[card, title=🍇 Example Title, original= 12, scaled= 24, example label 1 = example value 1, example label 2 = example value 2, chip= Example Chip 1+Example Chip 2, color= indigo+#ee82ee]</code></p>
+<p>And would come out rendered in the Rich Text Editor like this:</p>
+<p><img src="https://raw.githubusercontent.com/drewmarsh/joplin-recipe-scaler/HEAD//preview/recipe-card+border_example.png" alt="recipe-card+border_example" /></p>
+<p>Of course, the background of this card depends on your Joplin theme.</p>
+<br />
+<p><a></a></p>
+<h1>⚖️ Recipe Scaling</h1>
+<p>The first step in using the scaling feature is to have a recipe card at the <em>top</em> of your note that specifies your desired effect.</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p>While you can add as many recipe cards throughout your recipe as you want, the one at the very <em>top</em> of your note is the only one that will enforce scaling logic.</p>
+</blockquote>
+<p>If you have a recipe that originally made 12 cookies but you want to scale it to make 24, your recipe card would look like this:</p>
+<ul>
+<li><code>[card, original= 12, scaled= 24]</code></li>
+</ul>
+<p>This is the very minimum that your recipe card will need to specify in order for the scaling feature to function. However, <a href="#recipe-cards">many more customization options are also available</a>.</p>
+<p>For the plugin to know what values to scale throughout your recipe, these values will need to be encapsulated in either curly braces <code>{ }</code> or angled brackets <code>&lt; &gt;</code> depending on the unit being scaled.</p>
+<p>For example, values that should be scaled decimally (grams, pounds, ounces) should be closed between curly braces <code>{ }</code> in the Markdown editor. This could look like:</p>
+<ul>
+<li><code>{15} grams honey</code></li>
+<li><code>{2.5}lbs of chicken breast or roughly {6} breasts</code></li>
+<li><code>{8} ounces of shredded mozzarella</code></li>
+</ul>
+<p>Alternatively, values that should be scaled fractionally (cups, teaspoons, tablespoons) should be closed between angled brackets <code>&lt; &gt;</code> in the Markdown editor. The following formats are acceptable:</p>
+<ul>
+<li><code>&lt;9 ¾&gt;</code> teaspoons salt</li>
+<li><code>&lt;9 3/4&gt;</code> cups sugar</li>
+<li><code>&lt;9-3/4&gt;</code> tablespoons baking soda</li>
+<li><code>&lt;9&gt;</code> pints milk</li>
+<li><code>&lt;3/4&gt;</code> tablespoons butter</li>
+<li><code>&lt;¾&gt;</code> quart honey</li>
+</ul>
+<p>After updating the <code>original=</code>, <code>scaled=</code>, or any scalable values throughout your note, you have to click the <code>gear icon</code> on your toolbar to trigger the plugin to update the note accordingly.</p>
+<p><img src="https://raw.githubusercontent.com/drewmarsh/joplin-recipe-scaler/HEAD//preview/gear-icon+border_example.png" alt="recipe-card+border_example" /></p>
+<br />
+<p><a></a></p>
+<h1>📜 Example Note</h1>
+<p>This example demonstrates how to use the recipe card and recipe scaling features in a Joplin note. It showcases the Markdown syntax and the resulting rendered output in the Rich Text Editor.</p>
+<h4>Markdown:</h4>
+<pre class="hljs"><code>[card, original=6, scaled=12, title=🌯 Savory Chicken Burritos, calories=620, protein=52g, carbs=79g, fat=17g, color=orange+brick, chip=Freezable+High Protein]
+
+**INGREDIENTS**
+
+- &lt;6, 12&gt; Large Tortillas (see above recipe)
+- {700, 1400} g of cooked chicken breast (roughly {3, 6} breasts), cubed
+- {8, 16} oz ({226, 452} g) part skim shredded mozzarella cheese
+- {4, 8} wedges of Laughing Cow Cream Cheese (Original)
+- {1, 2} lime or &lt;1, 2&gt; Tbsp lime juice concentrate
+- {1, 2} can tri-blend beans or beans of choice
+- {1, 2} can tomato sauce
+- {1, 2} bell pepper (yellow)
+- {1, 2} Jalapeño
+- Cilantro (optional)
+
+**INSTRUCTIONS**
+
+- [ ] Dice peppers
+- [ ] Cook peppers and beans in a bit of water to soften
+- [ ] Mix in tomato sauce and spices
+- [ ] Add in prepped chicken and both cheeses
+- [ ] Add lime juice if desired
+- [ ] Cool mixture in fridge for 20 minutes, uncovered
+- [ ] Evenly disperse mixture across {6, 12} large tortillas and fold
+- [ ] Store in freezer in parchment paper until ready to eat
+
+[💡= tip: Heat up the tortillas before rolling to reduce the chance of tearing, color=yellow+orange, card]
+
+**REHEATING**
+
+- Ideally, you'd defrost overnight and then heat for ~1 minute on both sides
+- If heating from frozen then heat for ~2 minutes and then flip the burrito and cut it in half before heating for another ~2 minutes
+</code></pre>
+<h4>Rich Text Editor:</h4>
+<img src="https://raw.githubusercontent.com/drewmarsh/joplin-recipe-scaler/HEAD//preview/example-note+border.png" width="700" alt="Example Note" />
+<br />
+<p><a></a></p>
+<h1>🛠️ Contributing</h1>
+<h4>🚧 Building the plugin</h4>
+<p>To help develop this plugin further then you'll need to know how to build the plugin once you make your changes.</p>
+<p>The plugin is built using Webpack, which creates the compiled code in <code>/dist</code>. A JPL archive will also be created at the root, which can be used to distribute the plugin.</p>
+<p>To build the plugin, simply run <code>npm run dist</code>.</p>
+<p>If this returns an error, you likely need to first install Webpack globally with <code>npm install -g webpack</code>.</p>
+<h4>🧪 Testing the plugin in Joplin dev mode</h4>
+<p>Once the plugin is built, it's best to test things out in Joplin dev mode. To access dev mode, open the normal Joplin application and navigate to <code>Help &gt; Copy dev mode command to clipboard &gt; OK</code>. You can now close out of the normal Joplin window. Then, open the terminal and paste this command and press enter. A dev mode version of Joplin will launch.</p>
+<p>Next, in Joplin dev mode, navigate to <code>Tools &gt; Options &gt; Plugins &gt; Show Advanced Settings</code>.  Add the plugin path into the <code>Development plugins</code> text field. This should be the path to your main plugin directory which will look something like: <code>C:\Users\username\Downloads\joplin-recipe-scaler</code>.</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="links legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="link terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="link privacy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
