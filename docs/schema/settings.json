@@ -407,7 +407,7 @@
 		},
 		"themeAutoDetect": {
 			"type": "boolean",
-			"default": false,
+			"default": true,
 			"description": "Automatically switch theme to match system theme"
 		},
 		"preferredLightTheme": {
