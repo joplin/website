@@ -24,6 +24,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
+          corepack enable
           cd website-plugin-discovery
           yarn install
           yarn build-production /plugins
