@@ -15,9 +15,9 @@
 	<!-- Scripts used by all pages -->
 	<script src="&#x2F;plugins/bundle-main.js"></script>
 	<script src="&#x2F;plugins/bundle-components.js"></script>
-	<title>Joplin Plugins - Extra markdown editor settings</title>
+	<title>Joplin Plugins - Extra Markdown editor settings</title>
 
-	<meta property="og:title" content="Joplin Plugin: Extra markdown editor settings"/>
+	<meta property="og:title" content="Joplin Plugin: Extra Markdown editor settings"/>
 	<meta property="og:description" content="Line numbers, code folding, space highlighting, word count, and other built-in options for the CodeMirror 6 editor."/>
 	<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-extra-cm6-settings&#x2F;HEAD&#x2F;images&#x2F;icon-256.autoinvert.png"/>
 
@@ -67,7 +67,7 @@
 				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
 			</li>
 			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
-			<li class="breadcrumb-item active" aria-current="page">Extra markdown editor settings</li>
+			<li class="breadcrumb-item active" aria-current="page">Extra Markdown editor settings</li>
 		</ol>
 	</nav>
 	<div class="plugin-overview">
@@ -81,7 +81,7 @@
 					alt="Plugin icon"
 				/>
 				<div>
-					<h1 class="card-title">Extra markdown editor settings</h1>
+					<h1 class="card-title">Extra Markdown editor settings</h1>
 					<div class="card-title pb-2">
 						by
 						<a
@@ -114,6 +114,7 @@
 			<div class="content" id="screenshots-container">
 				<div id="raw-screenshots">
 						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-extra-cm6-settings&#x2F;HEAD&#x2F;images&#x2F;screenshot.png" alt="Screenshot: Shows line numbers, autocomplete, and folding in use"/>
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;personalizedrefrigerator&#x2F;joplin-plugin-extra-cm6-settings&#x2F;HEAD&#x2F;images&#x2F;screenshot-settings.png" alt="Screenshot: Shows the available settings: line numbers, code folding, autocomplete, highlight line gutter, highlight active line, highlight spaces, highlight trailing spaces, and more."/>
 				</div>	
 
 				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
@@ -173,18 +174,33 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.3.0</td></tr>
+					<tr><th>Version:</th><td>1.4.1</td></tr>
 					<tr><th>Minimum app version:</th><td>3.0.3</td></tr>
-					<tr><th>Downloads: This version:</th><td>72</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-09-23T20:39:19Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="container section" id="readme" data--is-rendered-markdown>
 
-			<h1>Extended markdown editor settings</h1>
-<p>This plugin exposes several CodeMirror 6 settings, including line numbers and code folding.</p>
-<p>To use this plugin, first enable the beta editor in settings (Options &gt; General &gt; Opt in to the editor beta).</p>
+			<h1>Extended Markdown editor settings</h1>
+<p>This plugin adds several additional Markdown editor settings. Many of these settings are built in to Joplin's <a href="https://codemirror.net/">CodeMirror</a> editor.</p>
+<p><strong>In Joplin Desktop &lt; 3.1.x</strong>: To use this plugin, first enable the beta editor in settings (Options &gt; General &gt; Opt in to the editor beta).</p>
+<h2>Available settings</h2>
+<p><img src="https://raw.githubusercontent.com/personalizedrefrigerator/joplin-plugin-extra-cm6-settings/HEAD/images/screenshot-settings.png" alt="Screenshot of Joplin Desktop's settings screen for the Extended Markdown editor settings plugin" /></p>
+<ul>
+<li><strong>Show line numbers</strong>: Shows line numbers to the left of the editor.</li>
+<li><strong>Enable code folding</strong>: Adds expand/collapse buttons to the editor gutter.</li>
+<li><strong>Enable autocomplete</strong>: Shows a completion dialog in certain code blocks.</li>
+<li><strong>Highlight the gutter for the active line</strong>: If a gutter is shown (e.g. for line numbers), the gutter for the current line is shown in a different color.</li>
+<li><strong>Highlight spaces</strong>: Makes spaces and tabs visible.</li>
+<li><strong>Highlight trailing spaces</strong>: Highlights space characters at the end of lines.</li>
+<li><strong>Highlight selection matches</strong>: If text is selected, other visible instances of the same text are highlighted.</li>
+<li><strong>Show background grid pattern</strong>: Shows a grid pattern behind the editor's content.</li>
+<li><strong>Show word count</strong>: Adds a panel that shows the number of words in the open note. This number is calculated differently from Joplin's built-in word counter.</li>
+<li><strong>Show visual sync indicator</strong>: Shows an icon or text panel that indicates Joplin's current sync status.</li>
+<li><strong>Text direction</strong> (advanced): Allows setting the editor's text direction to right-to-left or left-to-right for all lines, regardless of system language settings.</li>
+</ul>
 
 		</div>
 	</div>
