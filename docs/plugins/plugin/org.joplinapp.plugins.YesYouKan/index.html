@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Common page configuration that goes in the <head></head> tag -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,viewport-fit=cover"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: ; style-src 'self' 'unsafe-inline' ; child-src 'none' ; connect-src 'self' raw.githubusercontent.com ;"/>
+	<link rel="icon" type="image/x-icon" href="&#x2F;plugins/favicon.png" />
+	<link rel="stylesheet" href="&#x2F;plugins/fontawesome-6.4.2/css/all.min.css" type="text/css"/>
+
+	<!-- Allow included JavaScipt files to determine the root directory of this site. -->
+	<script id="site-root" type="text/plain">/plugins</script>
+
+	<!-- Scripts used by all pages -->
+	<script src="&#x2F;plugins/bundle-main.js"></script>
+	<script src="&#x2F;plugins/bundle-components.js"></script>
+	<title>Joplin Plugins - Kanban</title>
+
+	<meta property="og:title" content="Joplin Plugin: Kanban"/>
+	<meta property="og:description" content="Create and manage Kanban boards from Joplin"/>
+	<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;joplin&#x2F;plugin-yesyoukan&#x2F;HEAD&#x2F;doc&#x2F;images&#x2F;icon128.png"/>
+
+	<script src="&#x2F;plugins/bundle-pluginPage.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://joplinapp.org/">
+			<img src="/plugins/joplin-logo.png" alt="Home"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/plugins">Plugins</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/news/">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://joplinapp.org/help/">Help</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://discourse.joplinapp.org/">Forum</a>
+				</li>
+			</ul>
+			<div class="search-field col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
+				<i class="fa-solid fa-magnifying-glass search-icon" alt=""></i>
+				<input
+					type="search"
+					class="form-control search-input"
+					placeholder="Search..."
+					id="search-input"/>
+				<div class="search-results" id="search-results-container" aria-live="polite"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<main class="plugin-details">
+	<nav aria-label="breadcrumb" class="container breadcrumb-container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="&#x2F;plugins"><i class="fas fa-home"></i> Home</a>
+			</li>
+			<li class="breadcrumb-item"><a id="current-category-nav-link" href="&#x2F;plugins/">All</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Kanban</li>
+		</ol>
+	</nav>
+	<div class="plugin-overview">
+		<div class="spacer">
+		</div>
+		<div class="plugin-page-header">
+			<div class="title plugin-page-title">
+				<img
+					class="icon plugin-icon -dark-mode-shadow"
+					src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;joplin&#x2F;plugin-yesyoukan&#x2F;HEAD&#x2F;doc&#x2F;images&#x2F;icon128.png"
+					alt="Plugin icon"
+				/>
+				<div>
+					<h1 class="card-title">Kanban</h1>
+					<div class="card-title pb-2">
+						by
+						<a
+							href="./?search=author%3D%22Laurent Cozic%22%20max-results%3D20"
+							style="display: inline;"
+						>
+							Laurent Cozic
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="categories">
+					<a class="plugin-category me-2 badge" href="&#x2F;plugins/#tab-productivity">
+						<i class="fas fa-tag"></i> productivity
+					</a>
+			</div>
+		</div>
+		<div class="download-link-container">
+			<a
+				href="/plugins/downloadPlugin.html?plugin=org.joplinapp.plugins.YesYouKan"
+				class="btn btn-primary process--append-parent-tab-to-href"
+			>
+				Install Plugin
+			</a>
+		</div>
+	</div>
+	<div class="plugin-content">
+		<div class="secondary-section">
+			<div class="content" id="screenshots-container">
+				<div id="raw-screenshots">
+						<img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;joplin&#x2F;plugin-yesyoukan&#x2F;HEAD&#x2F;doc&#x2F;images&#x2F;ExampleBoardAndNote.png" alt="Kanban board example"/>
+				</div>	
+
+				<!-- See https://getbootstrap.com/docs/5.3/components/carousel/ -->
+				<div id="screenshots-carousel" class="carousel slide">
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#screenshots-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>							
+				</div>
+			</div>
+		</div>
+		<div class="container section">
+			<h3>Description</h3>
+			<p class="card-text pb-4">Create and manage Kanban boards from Joplin</p>
+		</div>
+		<div class="container section">
+			<h3>Additional Information</h3>
+			<table class="additional-information-table">
+				<tbody>
+					<tr>
+						<th>Links:</th>
+						<td>
+							<ul class="list-group list-group-flush text-break">
+									<li><a href=https:&#x2F;&#x2F;github.com&#x2F;joplin&#x2F;plugin-yesyoukan style="display: block;"><i class="fa-solid fa-link"></i> Repository</a></li>
+								<li>
+									<a
+										id="view-plugin-source-link"
+										href="&#x2F;plugins/view-source.html?plugin=org.joplinapp.plugins.YesYouKan"
+										class="process--append-parent-tab-to-href"
+									>
+										<i class="fa-solid fa-code"></i> View source
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Maintainers:</th>
+						<td>
+								<a href="./?search=maintainer%3D%22laurent22%22%20max-results%3D20" class="maintainer-link">
+									laurent22
+								</a>
+						</td>
+					</tr>
+					<tr><th>Version:</th><td>1.0.1</td></tr>
+					<tr><th>Minimum app version:</th><td>2.13</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container section" id="readme" data--is-rendered-markdown>
+
+			<h1>YesYouKan - Kanban plugin for Joplin</h1>
+<img src="https://raw.githubusercontent.com/joplin/plugin-yesyoukan/HEAD/doc/images/icon48.png" />
+<p>YesYouKan is a Kanban plugin for Joplin. To begin, install the plugin, then go to the menu and select <strong>Tools</strong> =&gt; <strong>Create Kanban Board</strong>.</p>
+<p>YesYouKan converts a note into a Kanban board format. An H1 heading represents a column (or stack), while an H2 heading serves as a card within that column. Any text below the H2 heading acts as the card's description.</p>
+<p>To identify a note as a Kanban board, it must include a <code>kanban-settings</code> code block at the end. This block is required, even if left empty, to ensure the note is recognised as a Kanban board.</p>
+<h2>Example</h2>
+<p>This is how a board would look like:</p>
+<p><img src="https://raw.githubusercontent.com/joplin/plugin-yesyoukan/HEAD/doc/images/ExampleBoard.png" alt="Example kanban board" /></p>
+<p>For a note like this:</p>
+<pre class="hljs"><code><span class="hljs-section"># ⏰ To Do</span>
+
+<span class="hljs-section">## 💰 Secure funding</span>
+
+Research loans or investors to finance the business.
+
+<span class="hljs-section">## 🏬 Find a retail location</span>
+
+Identify a suitable shop space with good foot traffic and visibility.
+
+<span class="hljs-section">## 🎹 Choose piano brands</span>
+
+Decide on the brands of pianos and accessories to stock based on market demand.
+
+<span class="hljs-section"># 🚀 In Progress</span>
+
+<span class="hljs-section">## 🧾 Negotiate lease</span>
+
+Finalize the lease agreement with the property owner, ensuring terms are favorable.
+
+<span class="hljs-section">## 📚 Order initial inventory</span>
+
+Place orders for pianos, accessories, and other essentials to stock the store.
+
+<span class="hljs-section"># 🎉 Done</span>
+
+<span class="hljs-section">## 📒 Register the business</span>
+
+Complete legal paperwork to officially establish the business.
+
+<span class="hljs-section">## 📋 Create business plan</span>
+
+Draft a comprehensive plan outlining business strategy, target market, and financial projections.
+
+<span class="hljs-code">```kanban-settings
+# Do not remove this block
+```</span>
+</code></pre>
+<h2>To do</h2>
+<ul>
+<li>Allow using an existing note as a card</li>
+<li>Implement support for a few options</li>
+<li>Create an option dialog to change the options</li>
+</ul>
+<h2>Credits</h2>
+<ul>
+<li>Kanban icon created by <a href="https://www.flaticon.com/authors/muhammad-usman">Muhammad_Usman</a></li>
+</ul>
+<h2>License</h2>
+<p>MIT</p>
+
+		</div>
+	</div>
+</main>
+
+<footer class="page-footer">
+	<div class="plugin-documentation-section">
+		<div class="heading">
+			Would you like to submit or develop a plugin? Consult our documentation:
+		</div>
+		<a class="btn btn-outline-primary" href="https://joplinapp.org/help/api/get_started/plugins">
+			See documentation
+		</a>
+	</div>
+
+	<div class="links legal-and-about-links">
+		<div class="copyright">© Joplin 2023</div>
+		<a class="link terms-and-conditions" href="&#x2F;plugins/terms-and-conditions.html">Terms and conditions</a>
+		<a class="link privacy" href="&#x2F;plugins/privacy-policy.html">Privacy policy</a>
+	</div>
+
+
+	<div class="site-links">
+		<a
+			class="a-github"
+			href="https://github.com/joplin/website-plugin-discovery"
+			aria-label="GitHub"
+			title="GitHub"
+		>
+			<i class="fab fa-github"></i>
+		</a>
+		<a
+			class="a-discord"
+			href="https://discord.com/invite/VSj7AFHvpq"
+			aria-label="Discord"
+			title="Discord"
+		>
+			<i class="fab fa-discord"></i>
+		</a>
+		<a
+			class="a-linkedin"
+			href="https://www.linkedin.com/company/joplin"
+			aria-label="LinkedIn"
+			title="LinkedIn"
+		>
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a
+			class="a-twitter"
+			href="https://twitter.com/joplinapp"
+			aria-label="Twitter"
+			title="Twitter"
+		>
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a
+			class="a-mastodon"
+			href="https://mastodon.social/@joplinapp"
+			aria-label="Mastodon"
+			title="Mastodon"
+		>
+			<i class="fab fa-mastodon"></i>
+		</a>
+		<a
+			class="a-patreon"
+			href="https://www.patreon.com/joplin"
+			aria-label="Patreon"
+			title="Patreon"
+		>
+			<i class="fab fa-patreon"></i>
+		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
+
