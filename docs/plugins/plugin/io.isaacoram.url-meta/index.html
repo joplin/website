@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.7</td></tr>
+					<tr><th>Version:</th><td>1.0.8</td></tr>
 					<tr><th>Minimum app version:</th><td>2.13</td></tr>
-					<tr><th>Downloads: This version:</th><td>197</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-08-18T23:39:24Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -230,6 +230,23 @@
 <h3>v1.0.7</h3>
 <ul>
 <li>Remove BR elements if using compact/ultraCompact display type when they exist right after the anchor tags. This should make the display closer to how it would render without the plugin (with just an injection for the meta information).</li>
+</ul>
+<h3>v1.0.8</h3>
+<ul>
+<li>Added new setting "Metadata In Markdown Click Behaviour" (special thanks to <a href="https://github.com/IsaacAKAJupiter/joplin-url-meta/issues/4#issue-2591373344">deepspaceaxolotl</a> for the idea). This can be one of the following options.
+<ul>
+<li>Dialog (with option of copy/open)</li>
+<li>Copy</li>
+<li>Open</li>
+<li>Do Nothing</li>
+</ul>
+</li>
+<li>Added fallback to the webpage title if no title meta tag found.
+<ul>
+<li>This fixes <a href="https://github.com/IsaacAKAJupiter/joplin-url-meta/issues/3#issuecomment-2416413276">this issue</a>.</li>
+</ul>
+</li>
+<li>Add new advanced setting for "Debug Copy HTML Content". If enabled, the entire webpage used to parse the meta tags will be copied to the clipboard. This is mainly for use in Github issues.</li>
 </ul>
 <h2>Roadmap/Known Issues</h2>
 
