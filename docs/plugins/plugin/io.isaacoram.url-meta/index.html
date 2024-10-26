@@ -172,10 +172,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.8</td></tr>
+					<tr><th>Version:</th><td>1.0.9</td></tr>
 					<tr><th>Minimum app version:</th><td>2.13</td></tr>
-					<tr><th>Downloads: This version:</th><td>5</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-10-24T23:09:54Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -247,6 +247,20 @@
 </ul>
 </li>
 <li>Add new advanced setting for "Debug Copy HTML Content". If enabled, the entire webpage used to parse the meta tags will be copied to the clipboard. This is mainly for use in Github issues.</li>
+</ul>
+<h3>v1.0.9</h3>
+<ul>
+<li>Added new setting "YouTube Data API v3 Key" to fetch YouTube video (including shorts) and playlist metadata via the API instead of a normal GET request.
+<ul>
+<li>This fixes <a href="https://github.com/IsaacAKAJupiter/joplin-url-meta/issues/3">this issue</a></li>
+<li>Note, this will most-likely <strong>not</strong> work for private videos/playlists.</li>
+<li>To get an <strong>API Key</strong>, follow <a href="https://developers.google.com/youtube/v3/getting-started">this</a> getting started guide by Google.
+<ul>
+<li>When creating credentials, it may ask you <strong>What data will you be accessing?</strong> For this, choose <strong>Public data</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h2>Roadmap/Known Issues</h2>
 
