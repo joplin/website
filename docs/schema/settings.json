@@ -490,6 +490,11 @@
 			"default": true,
 			"description": "Auto-pair braces, parentheses, quotations, etc."
 		},
+		"editor.autocompleteMarkup": {
+			"type": "boolean",
+			"default": true,
+			"description": "Autocomplete Markdown and HTML. Enables Markdown list continuation, auto-closing HTML tags, and other markup autocompletions."
+		},
 		"notes.columns": {
 			"type": "array",
 			"default": [
@@ -1187,6 +1192,11 @@
 			"default": true,
 			"description": "Enable sync locks. This is an experimental setting to disable sync locks"
 		},
+		"featureFlag.useBetaEncryptionMethod": {
+			"type": "boolean",
+			"default": false,
+			"description": "Use beta encryption. Set beta encryption methods as the default methods. This applies to all clients and takes effect after restarting the app."
+		},
 		"sync.allowUnsupportedProviders": {
 			"type": "integer",
 			"default": -1,
@@ -1201,6 +1211,16 @@
 			"type": "string",
 			"default": "",
 			"description": "Voice typing language files (URL). Leave it blank to download the language files from the default website",
+			"$comment": "private"
+		},
+		"voiceTyping.preferredProvider": {
+			"type": "string",
+			"default": "whisper-tiny",
+			"description": "Preferred voice typing provider",
+			"enum": [
+				"vosk",
+				"whisper-tiny"
+			],
 			"$comment": "private"
 		},
 		"trash.autoDeletionEnabled": {
