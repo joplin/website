@@ -174,10 +174,10 @@
 								</a>
 						</td>
 					</tr>
-					<tr><th>Version:</th><td>1.0.2</td></tr>
+					<tr><th>Version:</th><td>1.0.3</td></tr>
 					<tr><th>Minimum app version:</th><td>2.13</td></tr>
-					<tr><th>Downloads: This version:</th><td>22</td></tr>
-					<tr><th>Last updated:</th><td class="process--format-as-local-time">2024-10-23T08:09:46Z</td></tr>
+					<tr><th>Downloads: This version:</th><td>0</td></tr>
+					<tr><th>Last updated:</th><td class="process--format-as-local-time">N&#x2F;A</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -212,7 +212,7 @@
 </li>
 <li>But most components are left as is and the external appearance is preserved</li>
 </ol>
-<p>As You can see, this software is feature rich and alleviates the creation of formluae. My hope is one will get further support by the integration into <em>Joplin</em> as a plugin.</p>
+<p>As You can see, this software is feature rich and alleviates the creation of formulae. My hope is one will get further support by the integration into <em>Joplin</em> as a plugin.</p>
 <p>This software is available on the net <a href="https://visualmatheditor.equatheque.net/VisualMathEditor.html?runLocal&amp;codeType=Latex&amp;encloseAllFormula=false&amp;style=aguas&amp;localType=en_US">here</a> and You can view at it to get an impression.</p>
 <h2>Features</h2>
 <ol>
@@ -230,13 +230,20 @@
 <img src="https://raw.githubusercontent.com/Mick2nd/Katex-Input-Helper/HEAD/img/Custom-Equations.png" width="500" />
 <h2>Known Problems</h2>
 <ul>
-<li>Sometimes a start of the dialog crashes. Mainly I could observe this for first time starts of the
-production version. Perhaps this has to do with caching of the plugin. Restart helps.</li>
-<li>A minor problem is a missing update of the language of the data grid paging bar in the <em>Custom
-Equations</em> dialog. This only appears during language change during an actual activation of the
-dialog.</li>
+<li>Sometimes a start of the dialog crashes. Mainly I could observe this for first time starts of the production version. Perhaps this has to do with caching of the plugin. Restart helps.</li>
+<li>A minor problem is a missing update of the language of the data grid paging bar in the <em>Custom Equations</em> dialog. This only appears during language change during an actual activation of the dialog.</li>
+<li>Only 2 languages are fully localized: English and German. In the original software 7 languages are supported: French, Spanish, Russian, Vietnamese and Arabian in addition to the 2 above. The missing phrases fall back to the English version.</li>
 </ul>
 <h2>Release Notes</h2>
+<h3>1.0.3</h3>
+<p>Fixed the following problems:</p>
+<ul>
+<li><em>Custom Equations</em> dialog inserted formula twice on click.</li>
+<li>Certain insertions did select the insertion afterwards. This is fixed now and enables easy successive insertions.</li>
+<li>The sort functionality of the <em>Custom Equations</em> dialog did not work properly. One can click on the <em>Title</em> head to sort formulae.</li>
+<li>Some dialog windows were modal ones instead of non-modal. This prevented the selection of text in the editor during display of the dialog.</li>
+<li>The restore of window size and position was not reliable.</li>
+</ul>
 <h3>1.0.2</h3>
 <p>In the last release a few bugs have sneaked in. Those have been fixed now:</p>
 <ul>
