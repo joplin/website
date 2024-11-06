@@ -36,7 +36,7 @@ jobs:
       # Send to the main website workflow.
       # See https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts#passing-data-between-jobs-in-a-workflow
       - name: Upload built plugins
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: plugin-website
           path: plugin-website.tar.gz
@@ -64,7 +64,7 @@ jobs:
           path: 'joplin-website'
 
       - name: Download built plugin website
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: plugin-website
 
