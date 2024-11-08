@@ -60,7 +60,6 @@ jobs:
         with:
           repository: 'joplin/website'
           ref: master
-          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
           path: 'joplin-website'
 
       - name: Download built plugin website
@@ -89,3 +88,13 @@ jobs:
             CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
         run: |
           ./joplin/packages/tools/release-website.sh
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'joplin-website/docs/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
