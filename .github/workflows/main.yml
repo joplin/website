@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Joplin plugin website repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: 'joplin/website-plugin-discovery'
           ref: main
@@ -36,7 +36,7 @@ jobs:
       # Send to the main website workflow.
       # See https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts#passing-data-between-jobs-in-a-workflow
       - name: Upload built plugins
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: plugin-website
           path: plugin-website.tar.gz
@@ -48,7 +48,7 @@ jobs:
     steps:
 
       - name: Checkout main Joplin repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: 'laurent22/joplin'
           ref: dev
@@ -56,15 +56,14 @@ jobs:
           path: 'joplin'
 
       - name: Checkout Joplin website repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: 'joplin/website'
           ref: master
-          ssh-key: ${{ secrets.JOPLIN_BOT_SSH_PRIVATE_KEY }}
           path: 'joplin-website'
 
       - name: Download built plugin website
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: plugin-website
 
@@ -89,3 +88,13 @@ jobs:
             CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
         run: |
           ./joplin/packages/tools/release-website.sh
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'joplin-website/docs/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
