@@ -95,6 +95,15 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'joplin-website/docs/'
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: Main
+    permissions:
+      # Permissions needed for pages deployment. See
+      # https://github.com/actions/deploy-pages
+      pages: write
+      id-token: write
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
