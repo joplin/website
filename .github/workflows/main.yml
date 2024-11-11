@@ -5,7 +5,6 @@ on:
   workflow_dispatch:
 # Permissions required for deployment to GitHub pages
 permissions:
-  contents: read
   pages: write
   id-token: write
 jobs:
