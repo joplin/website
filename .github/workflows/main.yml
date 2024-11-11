@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
+# Permissions required for deployment to GitHub pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   # We run the plugin website CI in a separate job that doesn't have
   # SSH key access for extra security because it handles untrusted markdown.
